@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState, type CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
 import catalog from "./data/catalog.json";
 
 type MarketObservation = {
@@ -25,13 +25,10 @@ type CatalogRecord = {
 const records = catalog.records as CatalogRecord[];
 
 function normalize(value: string) {
-  return value
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase();
+  return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
-function currency(value: number | null) {
+function money(value: number | null) {
   if (value === null) return "—";
   return new Intl.NumberFormat("pt-BR", {
     style: "currency",
@@ -40,302 +37,200 @@ function currency(value: number | null) {
   }).format(value);
 }
 
-function palette(record: CatalogRecord) {
-  const seed = [...`${record.artist}${record.title}`].reduce(
-    (total, character) => total + character.charCodeAt(0),
-    0,
-  );
-  return {
-    "--cover-hue": `${seed % 360}`,
-    "--cover-turn": `${(seed % 9) - 4}deg`,
-  } as CSSProperties;
+function source(record: CatalogRecord, name: string) {
+  return record.market.find((item) => item.source === name)?.display ?? "—";
 }
 
-function median(values: number[]) {
-  const ordered = [...values].sort((a, b) => a - b);
-  const middle = Math.floor(ordered.length / 2);
-  return ordered.length % 2
-    ? ordered[middle]
-    : Math.round((ordered[middle - 1] + ordered[middle]) / 2);
+function referencePrice(record: CatalogRecord) {
+  const values = [record.auctionPrice, record.marketMin].filter(
+    (value): value is number => value !== null && value > 0,
+  );
+  return values.length ? Math.min(...values) : null;
+}
+
+function assessment(offer: number | null, reference: number | null) {
+  if (offer === null) return { label: "—", tone: "neutral", delta: null };
+  if (reference === null) return { label: "Sem referência", tone: "unknown", delta: null };
+  const delta = Math.round(((offer - reference) / reference) * 100);
+  if (offer <= reference * 0.7) return { label: "Muito barato", tone: "great", delta };
+  if (offer <= reference * 0.9) return { label: "Barato", tone: "good", delta };
+  if (offer <= reference * 1.1) return { label: "Na faixa", tone: "fair", delta };
+  return { label: "Caro", tone: "high", delta };
 }
 
 export default function Home() {
   const [query, setQuery] = useState("");
   const [decade, setDecade] = useState("todas");
-  const [priceFilter, setPriceFilter] = useState("todos");
-  const [sort, setSort] = useState("planilha");
-  const [visible, setVisible] = useState(36);
-  const [selected, setSelected] = useState<CatalogRecord | null>(null);
+  const [coverage, setCoverage] = useState("todos");
+  const [sort, setSort] = useState("artista");
+  const [offers, setOffers] = useState<Record<string, string>>({});
+
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem("preco-de-disco-ofertas");
+      if (saved) setOffers(JSON.parse(saved));
+    } catch { /* preferência local opcional */ }
+  }, []);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("preco-de-disco-ofertas", JSON.stringify(offers));
+    } catch { /* preferência local opcional */ }
+  }, [offers]);
 
   const decades = useMemo(
-    () =>
-      [...new Set(records.flatMap((record) => record.year ? [Math.floor(record.year / 10) * 10] : []))]
-        .sort((a, b) => a - b),
+    () => [...new Set(records.flatMap((record) => record.year ? [Math.floor(record.year / 10) * 10] : []))].sort(),
     [],
   );
 
-  const stats = useMemo(() => {
-    const auctionValues = records.flatMap((record) =>
-      record.auctionPrice === null ? [] : [record.auctionPrice],
-    );
-    return {
-      auction: auctionValues.length,
-      market: records.filter((record) => record.market.length > 0).length,
-      dated: records.filter((record) => record.year !== null).length,
-      median: median(auctionValues),
-    };
-  }, []);
-
   const filtered = useMemo(() => {
     const needle = normalize(query.trim());
-    const result = records.filter((record) => {
-      const matchesQuery = !needle || normalize(
-        `${record.artist} ${record.title} ${record.year ?? ""} ${record.tags.join(" ")}`,
-      ).includes(needle);
-      const matchesDecade = decade === "todas"
-        || (record.year !== null && Math.floor(record.year / 10) * 10 === Number(decade));
-      const matchesPrice = priceFilter === "todos"
-        || (priceFilter === "leilao" && record.auctionPrice !== null)
-        || (priceFilter === "mercado" && record.market.length > 0)
-        || (priceFilter === "sem-ano" && record.year === null);
-      return matchesQuery && matchesDecade && matchesPrice;
-    });
+    return records
+      .filter((record) => {
+        const matchesQuery = !needle || normalize(`${record.artist} ${record.title} ${record.year ?? ""}`).includes(needle);
+        const matchesDecade = decade === "todas" || (record.year !== null && Math.floor(record.year / 10) * 10 === Number(decade));
+        const reference = referencePrice(record);
+        const matchesCoverage = coverage === "todos"
+          || (coverage === "com-referencia" && reference !== null)
+          || (coverage === "mercado" && record.market.length > 0)
+          || (coverage === "sem-referencia" && reference === null)
+          || (coverage === "com-oferta" && Boolean(offers[record.id]));
+        return matchesQuery && matchesDecade && matchesCoverage;
+      })
+      .sort((a, b) => {
+        if (sort === "planilha") return a.sourceRow - b.sourceRow;
+        if (sort === "album") return a.title.localeCompare(b.title, "pt-BR");
+        if (sort === "ano") return (b.year ?? 0) - (a.year ?? 0);
+        if (sort === "referencia-menor") return (referencePrice(a) ?? Infinity) - (referencePrice(b) ?? Infinity);
+        if (sort === "referencia-maior") return (referencePrice(b) ?? -1) - (referencePrice(a) ?? -1);
+        if (sort === "melhor-oferta") {
+          const scoreA = offers[a.id] && referencePrice(a) ? Number(offers[a.id].replace(",", ".")) / referencePrice(a)! : Infinity;
+          const scoreB = offers[b.id] && referencePrice(b) ? Number(offers[b.id].replace(",", ".")) / referencePrice(b)! : Infinity;
+          return scoreA - scoreB;
+        }
+        return a.artist.localeCompare(b.artist, "pt-BR") || a.title.localeCompare(b.title, "pt-BR");
+      });
+  }, [query, decade, coverage, sort, offers]);
 
-    result.sort((a, b) => {
-      if (sort === "artista") return a.artist.localeCompare(b.artist, "pt-BR");
-      if (sort === "ano") return (b.year ?? 0) - (a.year ?? 0);
-      if (sort === "preco-menor") return (a.auctionPrice ?? Number.MAX_VALUE) - (b.auctionPrice ?? Number.MAX_VALUE);
-      if (sort === "preco-maior") return (b.auctionPrice ?? -1) - (a.auctionPrice ?? -1);
-      return a.sourceRow - b.sourceRow;
-    });
-    return result;
-  }, [query, decade, priceFilter, sort]);
-
-  useEffect(() => {
-    setVisible(36);
-  }, [query, decade, priceFilter, sort]);
-
-  useEffect(() => {
-    if (!selected) return;
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelected(null);
-    };
-    window.addEventListener("keydown", closeOnEscape);
-    return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [selected]);
+  const comparedCount = Object.values(offers).filter(Boolean).length;
 
   return (
     <main>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Acervo 33 — início">
-          <span className="brand-mark" aria-hidden="true"><i /></span>
-          <span>Acervo <strong>33</strong></span>
-        </a>
-        <nav aria-label="Navegação principal">
-          <a href="#catalogo">Catálogo</a>
-          <a href="#sobre">Sobre a base</a>
-        </nav>
-        <span className="edition-label">Edição 01 · 2026</span>
+      <header className="topbar">
+        <div className="identity">
+          <span className="record-dot" aria-hidden="true"><i /></span>
+          <div><strong>Preço de Disco</strong><span>lista de consulta</span></div>
+        </div>
+        <div className="base-status">
+          <span><b>{records.length}</b> discos</span>
+          <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
+          <span><b>{comparedCount}</b> ofertas comparadas</span>
+        </div>
       </header>
 
-      <section className="hero" id="inicio">
-        <div className="hero-copy">
-          <p className="eyebrow"><span /> Arquivo independente de vinil</p>
-          <h1>Discos, histórias<br />e preços <em>na mesma estante.</em></h1>
-          <p className="hero-intro">
-            Um catálogo vivo construído a partir de pesquisas, lotes e leilões.
-            Procure um título, atravesse décadas e acompanhe os valores já observados.
-          </p>
-          <a className="primary-action" href="#catalogo">
-            Explorar o acervo <span aria-hidden="true">↓</span>
-          </a>
+      <section className="intro">
+        <div>
+          <p className="kicker">Consulta rápida de preços de vinil</p>
+          <h1>Quanto vale esse disco?</h1>
+          <p>Pesquise, compare as referências e digite o preço que encontrou. A lista mostra na hora se está barato.</p>
         </div>
-        <div className="hero-object" aria-hidden="true">
-          <div className="sleeve sleeve-back" />
-          <div className="sleeve sleeve-front">
-            <span className="sleeve-kicker">Arquivo sonoro</span>
-            <span className="sleeve-number">556</span>
-            <span className="sleeve-caption">registros<br />catalogados</span>
-            <i className="sleeve-cutout" />
-          </div>
-          <div className="vinyl"><span /></div>
+        <div className="legend" aria-label="Legenda da comparação">
+          <span><i className="great" /> muito barato</span>
+          <span><i className="good" /> barato</span>
+          <span><i className="fair" /> na faixa</span>
+          <span><i className="high" /> caro</span>
         </div>
       </section>
 
-      <section className="stat-strip" aria-label="Resumo do acervo">
-        <div><strong>{records.length}</strong><span>discos na base</span></div>
-        <div><strong>{stats.auction}</strong><span>valores de leilão</span></div>
-        <div><strong>{stats.dated}</strong><span>anos identificados</span></div>
-        <div><strong>{currency(stats.median)}</strong><span>mediana em leilão</span></div>
+      <section className="controls" aria-label="Busca e filtros">
+        <label className="search-box">
+          <span className="search-symbol" aria-hidden="true" />
+          <span className="sr-only">Buscar disco</span>
+          <input
+            type="search"
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder="Artista, álbum ou ano..."
+            autoFocus
+          />
+          {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
+        </label>
+        <label><span>Década</span><select value={decade} onChange={(event) => setDecade(event.target.value)}><option value="todas">Todas</option>{decades.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
+        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
+        <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
       </section>
 
-      <section className="catalog-section" id="catalogo">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow"><span /> Pesquisa de prateleira</p>
-            <h2>Explore o catálogo</h2>
-          </div>
-          <p>{filtered.length} {filtered.length === 1 ? "resultado" : "resultados"}</p>
-        </div>
+      <div className="result-line">
+        <strong>{filtered.length}</strong> {filtered.length === 1 ? "disco encontrado" : "discos encontrados"}
+        <span>Referência = menor valor registrado entre leilão e pesquisa</span>
+      </div>
 
-        <div className="search-panel">
-          <label className="search-field">
-            <span className="search-icon" aria-hidden="true" />
-            <span className="sr-only">Buscar por artista ou álbum</span>
-            <input
-              type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Busque por artista, álbum ou ano..."
-            />
-            {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
-          </label>
-          <div className="filter-row">
-            <label>
-              <span>Década</span>
-              <select value={decade} onChange={(event) => setDecade(event.target.value)}>
-                <option value="todas">Todas</option>
-                {decades.map((value) => <option key={value} value={value}>Anos {value}</option>)}
-              </select>
-            </label>
-            <label>
-              <span>Dados disponíveis</span>
-              <select value={priceFilter} onChange={(event) => setPriceFilter(event.target.value)}>
-                <option value="todos">Todos os registros</option>
-                <option value="leilao">Com preço de leilão</option>
-                <option value="mercado">Com pesquisa de mercado</option>
-                <option value="sem-ano">Precisam de ano</option>
-              </select>
-            </label>
-            <label>
-              <span>Ordenar por</span>
-              <select value={sort} onChange={(event) => setSort(event.target.value)}>
-                <option value="planilha">Ordem da planilha</option>
-                <option value="artista">Artista, A–Z</option>
-                <option value="ano">Ano, mais recente</option>
-                <option value="preco-menor">Menor preço de leilão</option>
-                <option value="preco-maior">Maior preço de leilão</option>
-              </select>
-            </label>
-          </div>
-        </div>
-
-        {filtered.length ? (
-          <>
-            <div className="record-grid">
-              {filtered.slice(0, visible).map((record) => (
-                <button
-                  className="record-card"
-                  key={record.id}
-                  type="button"
-                  onClick={() => setSelected(record)}
-                  aria-label={`Ver detalhes de ${record.title}, de ${record.artist}`}
-                >
-                  <span className="cover-art" style={palette(record)}>
-                    <span className="cover-index">{String(record.sourceRow).padStart(3, "0")}</span>
-                    <span className="cover-monogram">{record.artist.charAt(0)}</span>
-                    <span className="cover-record"><i /></span>
-                  </span>
-                  <span className="record-meta">
-                    <span className="record-topline">
-                      <span>{record.year ?? "Ano n/d"}</span>
-                      {record.lot !== null && <span>Lote {record.lot}</span>}
-                    </span>
-                    <strong>{record.title}</strong>
-                    <span className="artist-name">{record.artist}</span>
-                    <span className="record-bottom">
-                      <span>{record.auctionPrice !== null ? "Leilão" : record.market.length ? "Mercado" : "Em pesquisa"}</span>
-                      <b>{currency(record.auctionPrice ?? record.marketMin)}</b>
-                    </span>
-                  </span>
-                </button>
-              ))}
-            </div>
-            {visible < filtered.length && (
-              <button className="load-more" type="button" onClick={() => setVisible((count) => count + 36)}>
-                Mostrar mais <span>{Math.min(36, filtered.length - visible)} discos</span>
-              </button>
-            )}
-          </>
-        ) : (
-          <div className="empty-state">
-            <span className="brand-mark" aria-hidden="true"><i /></span>
-            <h3>Nenhum disco nessa busca</h3>
-            <p>Tente outro artista, álbum ou remova algum filtro.</p>
-            <button type="button" onClick={() => { setQuery(""); setDecade("todas"); setPriceFilter("todos"); }}>
-              Limpar filtros
-            </button>
-          </div>
-        )}
-      </section>
-
-      <section className="about-section" id="sobre">
-        <p className="eyebrow"><span /> Em construção permanente</p>
-        <div className="about-grid">
-          <h2>Uma base que melhora<br /><em>a cada audição.</em></h2>
-          <div>
-            <p>
-              Este primeiro acervo reúne registros de leilões e pesquisas de preço
-              feitas ao longo do tempo. Alguns discos ainda pedem ano, edição ou origem —
-              e isso agora aparece como parte do processo, não como obstáculo.
-            </p>
-            <div className="progress-note">
-              <span><i style={{ width: `${Math.round((stats.dated / records.length) * 100)}%` }} /></span>
-              <small>{Math.round((stats.dated / records.length) * 100)}% dos registros já possuem ano identificado</small>
-            </div>
-          </div>
-        </div>
+      <section className="table-shell" aria-label="Lista de preços de discos">
+        <table>
+          <thead>
+            <tr>
+              <th className="col-index">#</th>
+              <th className="col-artist">Artista</th>
+              <th className="col-album">Álbum / edição</th>
+              <th>Ano</th>
+              <th>Lote</th>
+              <th>Mercado Livre</th>
+              <th>OLX</th>
+              <th>Shopee</th>
+              <th>Leilão visto</th>
+              <th>Valor leilão</th>
+              <th className="reference-head">Referência</th>
+              <th className="offer-head">Preço encontrado</th>
+              <th className="verdict-head">Avaliação</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map((record, index) => {
+              const reference = referencePrice(record);
+              const offerText = offers[record.id] ?? "";
+              const parsedOffer = offerText ? Number(offerText.replace(",", ".")) : null;
+              const validOffer = parsedOffer !== null && Number.isFinite(parsedOffer) && parsedOffer >= 0 ? parsedOffer : null;
+              const result = assessment(validOffer, reference);
+              return (
+                <tr key={record.id} className={offerText ? `compared ${result.tone}` : undefined}>
+                  <td className="row-number">{index + 1}</td>
+                  <td className="artist-cell">{record.artist}</td>
+                  <td className="album-cell">{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</td>
+                  <td className={record.year === null ? "missing" : ""}>{record.year ?? "n/d"}</td>
+                  <td>{record.lot ?? "—"}</td>
+                  <td className="price-source">{source(record, "Mercado Livre")}</td>
+                  <td className="price-source">{source(record, "OLX")}</td>
+                  <td className="price-source">{source(record, "Shopee")}</td>
+                  <td className="price-source">{source(record, "Leilão observado")}</td>
+                  <td className="money-cell">{money(record.auctionPrice)}</td>
+                  <td className="reference-cell">{money(reference)}</td>
+                  <td className="offer-cell">
+                    <span>R$</span>
+                    <input
+                      inputMode="decimal"
+                      aria-label={`Preço encontrado para ${record.artist} — ${record.title}`}
+                      value={offerText}
+                      onChange={(event) => setOffers((current) => ({ ...current, [record.id]: event.target.value.replace(/[^0-9,.]/g, "") }))}
+                      placeholder="0"
+                    />
+                    {offerText && <button type="button" onClick={() => setOffers((current) => ({ ...current, [record.id]: "" }))} aria-label="Apagar preço">×</button>}
+                  </td>
+                  <td className={`verdict-cell ${result.tone}`}>
+                    <strong>{result.label}</strong>
+                    {result.delta !== null && <small>{result.delta > 0 ? "+" : ""}{result.delta}%</small>}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {filtered.length === 0 && <div className="empty"><strong>Nenhum disco encontrado.</strong><button type="button" onClick={() => { setQuery(""); setDecade("todas"); setCoverage("todos"); }}>Limpar filtros</button></div>}
       </section>
 
       <footer>
-        <div className="brand"><span className="brand-mark" aria-hidden="true"><i /></span><span>Acervo <strong>33</strong></span></div>
-        <p>Catálogo independente · preços em reais · base em evolução</p>
-        <a href="#inicio">Voltar ao topo ↑</a>
+        <span>A lista preserva os dados da planilha original.</span>
+        <span>Os preços digitados ficam somente neste navegador.</span>
       </footer>
-
-      {selected && (
-        <div className="modal-backdrop" role="presentation" onMouseDown={() => setSelected(null)}>
-          <section
-            className="record-dialog"
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="record-title"
-            onMouseDown={(event) => event.stopPropagation()}
-          >
-            <button className="dialog-close" type="button" onClick={() => setSelected(null)} aria-label="Fechar detalhes">×</button>
-            <div className="dialog-cover cover-art" style={palette(selected)}>
-              <span className="cover-index">FICHA {String(selected.sourceRow).padStart(3, "0")}</span>
-              <span className="cover-monogram">{selected.artist.charAt(0)}</span>
-              <span className="cover-record"><i /></span>
-            </div>
-            <div className="dialog-content">
-              <p className="eyebrow"><span /> Registro do acervo</p>
-              <h2 id="record-title">{selected.title}</h2>
-              <p className="dialog-artist">{selected.artist}</p>
-              <div className="detail-list">
-                <div><span>Ano</span><strong>{selected.year ?? "Não identificado"}</strong></div>
-                <div><span>Lote</span><strong>{selected.lot ?? "—"}</strong></div>
-                <div><span>Valor de leilão</span><strong>{currency(selected.auctionPrice)}</strong></div>
-                <div><span>Menor preço pesquisado</span><strong>{currency(selected.marketMin)}</strong></div>
-              </div>
-              {selected.tags.length > 0 && (
-                <div className="tag-list">{selected.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-              )}
-              {selected.market.length > 0 ? (
-                <div className="market-list">
-                  <h3>Pesquisa de mercado</h3>
-                  {selected.market.map((item, index) => (
-                    <div key={`${item.source}-${index}`}><span>{item.source}</span><strong>{item.display}</strong></div>
-                  ))}
-                </div>
-              ) : (
-                <p className="no-market">Ainda não há pesquisa de marketplace para este disco.</p>
-              )}
-              <small className="source-note">Origem: linha {selected.sourceRow} da planilha</small>
-            </div>
-          </section>
-        </div>
-      )}
     </main>
   );
 }

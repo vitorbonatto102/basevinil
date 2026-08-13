@@ -6,7 +6,6 @@ async function render() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
-
   return worker.fetch(
     new Request("http://localhost/", { headers: { accept: "text/html" } }),
     { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
@@ -14,29 +13,26 @@ async function render() {
   );
 }
 
-test("renders the Acervo 33 catalog", async () => {
+test("renders the price-reference list", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-
   const html = await response.text();
-  assert.match(html, /<title>Acervo 33 — catálogo e preços de discos<\/title>/i);
-  assert.match(html, /Acervo/);
-  assert.match(html, /Explore o catálogo/);
-  assert.match(html, /556/);
-  assert.doesNotMatch(html, /codex-preview|Your site is taking shape/i);
+  assert.match(html, /<title>Preço de Disco — lista de consulta<\/title>/i);
+  assert.match(html, /Quanto vale esse disco\?/);
+  assert.match(html, /Preço encontrado/);
+  assert.match(html, /Mercado Livre/);
+  assert.doesNotMatch(html, /Explore o catálogo|role="dialog"|cover-art/i);
 });
 
-test("ships real catalog data and interactive controls", async () => {
+test("keeps all data visible and compares offers inline", async () => {
   const [page, catalog] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/data/catalog.json", import.meta.url), "utf8"),
   ]);
-  const parsed = JSON.parse(catalog);
-
-  assert.equal(parsed.records.length, 556);
-  assert.match(page, /type="search"/);
-  assert.match(page, /Com preço de leilão/);
-  assert.match(page, /role="dialog"/);
-  assert.match(page, /prefers-reduced-motion|setSelected/);
+  assert.equal(JSON.parse(catalog).records.length, 556);
+  assert.match(page, /<table>/);
+  assert.match(page, /Muito barato/);
+  assert.match(page, /localStorage/);
+  assert.doesNotMatch(page, /setSelected|record-card|load-more/);
 });
