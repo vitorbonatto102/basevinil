@@ -1,0 +1,7304 @@
+{
+  "generatedAt": "2026-08-13T14:20:56.012Z",
+  "source": "Planilha original de preços de discos",
+  "records": [
+    {
+      "id": "planilha-2",
+      "sourceRow": 2,
+      "lot": null,
+      "artist": "Mike Oldfield",
+      "title": "Islands - 1987 (Usado)",
+      "year": 1987,
+      "auctionPrice": null,
+      "marketMin": 27,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "27/35",
+          "numeric": 27
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-3",
+      "sourceRow": 3,
+      "lot": null,
+      "artist": "Mike Oudfield",
+      "title": "Hergest Ridge (Usado)",
+      "year": null,
+      "auctionPrice": 10,
+      "marketMin": 47,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "47/60",
+          "numeric": 47
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-4",
+      "sourceRow": 4,
+      "lot": null,
+      "artist": "MIKE OLDFIELD",
+      "title": "OMMADAWN",
+      "year": null,
+      "auctionPrice": 10,
+      "marketMin": 80,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 80",
+          "numeric": 80
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-5",
+      "sourceRow": 5,
+      "lot": null,
+      "artist": "The Beatles",
+      "title": "Yellow Submarine",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 80,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "80/139",
+          "numeric": 80
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-6",
+      "sourceRow": 6,
+      "lot": null,
+      "artist": "Michael Jackson",
+      "title": "dangerous Duplo",
+      "year": null,
+      "auctionPrice": 65,
+      "marketMin": -50,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 160",
+          "numeric": 160
+        },
+        {
+          "source": "OLX",
+          "display": "R$ -50",
+          "numeric": -50
+        }
+      ],
+      "tags": [
+        "Duplo"
+      ]
+    },
+    {
+      "id": "planilha-7",
+      "sourceRow": 7,
+      "lot": null,
+      "artist": "Earth Wind Fire",
+      "title": "I Am Capa Dupla",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-8",
+      "sourceRow": 8,
+      "lot": null,
+      "artist": "Earth Wind Fire",
+      "title": "RAISE",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 52,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 52",
+          "numeric": 52
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-9",
+      "sourceRow": 9,
+      "lot": null,
+      "artist": "supertramp",
+      "title": "autobiography supertramp",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 60",
+          "numeric": 60
+        },
+        {
+          "source": "Shopee",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-10",
+      "sourceRow": 10,
+      "lot": null,
+      "artist": "foghat",
+      "title": "fool for the city",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 110,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 130",
+          "numeric": 130
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 110",
+          "numeric": 110
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-11",
+      "sourceRow": 11,
+      "lot": null,
+      "artist": "Novela Sol de Verão",
+      "title": "Trilha Sonora Nacional",
+      "year": 1982,
+      "auctionPrice": null,
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "Shopee",
+          "display": "R$ 20",
+          "numeric": 20
+        },
+        {
+          "source": "Leilão observado",
+          "display": "R$ 25",
+          "numeric": 25
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-12",
+      "sourceRow": 12,
+      "lot": null,
+      "artist": "John Lennon",
+      "title": "Imagine",
+      "year": 1971,
+      "auctionPrice": null,
+      "marketMin": 45,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 45",
+          "numeric": 45
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-13",
+      "sourceRow": 13,
+      "lot": null,
+      "artist": "Crosby stills nash",
+      "title": "so far",
+      "year": null,
+      "auctionPrice": 35,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "69/80",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-14",
+      "sourceRow": 14,
+      "lot": null,
+      "artist": "deep purple",
+      "title": "in rock",
+      "year": 1973,
+      "auctionPrice": 70,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "80/100",
+          "numeric": 80
+        },
+        {
+          "source": "Leilão observado",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-15",
+      "sourceRow": 15,
+      "lot": null,
+      "artist": "Klaatu",
+      "title": "Klaatu",
+      "year": 1976,
+      "auctionPrice": 40,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 200",
+          "numeric": 200
+        },
+        {
+          "source": "OLX",
+          "display": "100(site)",
+          "numeric": 100
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-16",
+      "sourceRow": 16,
+      "lot": null,
+      "artist": "guilherme arantes",
+      "title": "guilherme arantes",
+      "year": 1976,
+      "auctionPrice": 30,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-17",
+      "sourceRow": 17,
+      "lot": null,
+      "artist": "djavan",
+      "title": "coisas de acender",
+      "year": 1992,
+      "auctionPrice": null,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 175",
+          "numeric": 175
+        },
+        {
+          "source": "OLX",
+          "display": "100(+40)",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-18",
+      "sourceRow": 18,
+      "lot": null,
+      "artist": "the who",
+      "title": "who's next",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 199",
+          "numeric": 199
+        },
+        {
+          "source": "OLX",
+          "display": "90(+50)",
+          "numeric": 50
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-19",
+      "sourceRow": 19,
+      "lot": null,
+      "artist": "dire straits",
+      "title": "money for nothing",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-23",
+      "sourceRow": 23,
+      "lot": 1,
+      "artist": "Iron Maiden",
+      "title": "Somewhere In Time",
+      "year": 1986,
+      "auctionPrice": 129,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-24",
+      "sourceRow": 24,
+      "lot": 2,
+      "artist": "The Beatles",
+      "title": "20 Greatest Hits",
+      "year": 1986,
+      "auctionPrice": 89,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-25",
+      "sourceRow": 25,
+      "lot": 3,
+      "artist": "Bob Marley & The Wailers",
+      "title": "Live!",
+      "year": 1981,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-26",
+      "sourceRow": 26,
+      "lot": 4,
+      "artist": "Terra Molhada",
+      "title": "Beatles",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-27",
+      "sourceRow": 27,
+      "lot": 6,
+      "artist": "U2",
+      "title": "Live 'Under A Blood Red Sky'",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-28",
+      "sourceRow": 28,
+      "lot": 7,
+      "artist": "Bob Dylan",
+      "title": "Jokerman",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-29",
+      "sourceRow": 29,
+      "lot": 8,
+      "artist": "Paul McCartney",
+      "title": "Flowers In The Dirt",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-30",
+      "sourceRow": 30,
+      "lot": 9,
+      "artist": "Tina Turner",
+      "title": "Break Every Rule",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-31",
+      "sourceRow": 31,
+      "lot": 10,
+      "artist": "Marillion",
+      "title": "B'Sides Themselves",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-32",
+      "sourceRow": 32,
+      "lot": 11,
+      "artist": "Erasure",
+      "title": "Crackers International",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-33",
+      "sourceRow": 33,
+      "lot": 12,
+      "artist": "Duran Duran",
+      "title": "Liberty",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-34",
+      "sourceRow": 34,
+      "lot": 13,
+      "artist": "U2",
+      "title": "War",
+      "year": null,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-35",
+      "sourceRow": 35,
+      "lot": 14,
+      "artist": "Eurythmics",
+      "title": "Savage",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-36",
+      "sourceRow": 36,
+      "lot": 15,
+      "artist": "Duran Duran",
+      "title": "Big Thing",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-37",
+      "sourceRow": 37,
+      "lot": 16,
+      "artist": "Jean-Michel Jarre",
+      "title": "The Concerts In China",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-38",
+      "sourceRow": 38,
+      "lot": 17,
+      "artist": "The Boomtown Rats",
+      "title": "The Fine Art Of Surfacing",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-39",
+      "sourceRow": 39,
+      "lot": 18,
+      "artist": "America (2)",
+      "title": "Perspective",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-40",
+      "sourceRow": 40,
+      "lot": 19,
+      "artist": "Kiss",
+      "title": "Creatures Of The Night",
+      "year": 1982,
+      "auctionPrice": 50,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-41",
+      "sourceRow": 41,
+      "lot": 20,
+      "artist": "Iron Maiden",
+      "title": "No Prayer For The Dying",
+      "year": 1990,
+      "auctionPrice": 90,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-42",
+      "sourceRow": 42,
+      "lot": 21,
+      "artist": "Bee Gees",
+      "title": "Bee Gees Love Hits",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-43",
+      "sourceRow": 43,
+      "lot": 22,
+      "artist": "AC/DC",
+      "title": "If You Want Blood Youve Got It",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-44",
+      "sourceRow": 44,
+      "lot": 23,
+      "artist": "Fine Young Cannibals",
+      "title": "The Raw & The Cooked",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-45",
+      "sourceRow": 45,
+      "lot": 24,
+      "artist": "a-ha",
+      "title": "Stay On These Roads",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": 46,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 46",
+          "numeric": 46
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-46",
+      "sourceRow": 46,
+      "lot": 25,
+      "artist": "Tears For Fears",
+      "title": "Songs From The Big Chair",
+      "year": 1985,
+      "auctionPrice": 69,
+      "marketMin": 46,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "126(80+46 frete)/140 (sm disco voador)/230",
+          "numeric": 46
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 150",
+          "numeric": 150
+        },
+        {
+          "source": "Shopee",
+          "display": "R$ 239",
+          "numeric": 239
+        },
+        {
+          "source": "Leilão observado",
+          "display": "R$ 140",
+          "numeric": 140
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-47",
+      "sourceRow": 47,
+      "lot": 26,
+      "artist": "Various",
+      "title": "Top Gun (Trilha Sonora Original Do Filme 'Ases Indomáveis')",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-48",
+      "sourceRow": 48,
+      "lot": 27,
+      "artist": "General Public",
+      "title": "Hand To Mouth",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-49",
+      "sourceRow": 49,
+      "lot": 28,
+      "artist": "Various",
+      "title": "Special Rock Festival",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-50",
+      "sourceRow": 50,
+      "lot": 29,
+      "artist": "David Bowie",
+      "title": "Absolute Beginners",
+      "year": 1986,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-51",
+      "sourceRow": 51,
+      "lot": 30,
+      "artist": "Siouxsie & The Banshees",
+      "title": "Once Upon A Time/The Singles",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-52",
+      "sourceRow": 52,
+      "lot": 31,
+      "artist": "Peter Cetera",
+      "title": "Glory Of Love (Theme From Karate Kid Part II)",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-53",
+      "sourceRow": 53,
+      "lot": 33,
+      "artist": "Bee Gees",
+      "title": "Collector's Item",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-54",
+      "sourceRow": 54,
+      "lot": 34,
+      "artist": "Culture Club",
+      "title": "Move Away (Extended)",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-55",
+      "sourceRow": 55,
+      "lot": 35,
+      "artist": "Renaissance (4)",
+      "title": "A Song For All Seasons",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-56",
+      "sourceRow": 56,
+      "lot": 36,
+      "artist": "Eurythmics",
+      "title": "We Too Are One",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-57",
+      "sourceRow": 57,
+      "lot": 37,
+      "artist": "Van Halen",
+      "title": "For Unlawful Carnal Knowledge",
+      "year": 1991,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-58",
+      "sourceRow": 58,
+      "lot": 38,
+      "artist": "Europe (2)",
+      "title": "Out Of This World",
+      "year": 1988,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-59",
+      "sourceRow": 59,
+      "lot": 39,
+      "artist": "Mick Jagger",
+      "title": "Wandering Spirit",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-60",
+      "sourceRow": 60,
+      "lot": 40,
+      "artist": "The Doors",
+      "title": "Absolutely Live",
+      "year": 1987,
+      "auctionPrice": 50,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-61",
+      "sourceRow": 61,
+      "lot": 41,
+      "artist": "The Rolling Stones",
+      "title": "Dirty Work",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-62",
+      "sourceRow": 62,
+      "lot": 42,
+      "artist": "Roger Hodgson",
+      "title": "In The Eye Of The Storm",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-63",
+      "sourceRow": 63,
+      "lot": 43,
+      "artist": "The Rolling Stones",
+      "title": "Some Girls",
+      "year": null,
+      "auctionPrice": 49,
+      "marketMin": 140,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 140",
+          "numeric": 140
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-64",
+      "sourceRow": 64,
+      "lot": 44,
+      "artist": "Pink Floyd",
+      "title": "The Dark Side Of The Moon",
+      "year": 1973,
+      "auctionPrice": 120,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-65",
+      "sourceRow": 65,
+      "lot": 45,
+      "artist": "Pink Floyd",
+      "title": "Atom Heart Mother",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": 98,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 98",
+          "numeric": 98
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 130",
+          "numeric": 130
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-66",
+      "sourceRow": 66,
+      "lot": 46,
+      "artist": "Various",
+      "title": "Danke '81",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-67",
+      "sourceRow": 67,
+      "lot": 47,
+      "artist": "Carpenters",
+      "title": "Passage",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-68",
+      "sourceRow": 68,
+      "lot": 48,
+      "artist": "Village People",
+      "title": "Village People",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-69",
+      "sourceRow": 69,
+      "lot": 49,
+      "artist": "Nikka Costa",
+      "title": "Nikka Costa",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-70",
+      "sourceRow": 70,
+      "lot": 50,
+      "artist": "Jean-Michel Jarre",
+      "title": "Equinoxe",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-71",
+      "sourceRow": 71,
+      "lot": 51,
+      "artist": "The Beatles",
+      "title": "1967-1970",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-72",
+      "sourceRow": 72,
+      "lot": 52,
+      "artist": "John Lennon', 'The Plastic Ono Band",
+      "title": "John Lennon / Plastic Ono Band",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": 280,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 280",
+          "numeric": 280
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-73",
+      "sourceRow": 73,
+      "lot": 53,
+      "artist": "The Beatles",
+      "title": "Help!",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": 80,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 80",
+          "numeric": 80
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-74",
+      "sourceRow": 74,
+      "lot": 54,
+      "artist": "Poco (3)",
+      "title": "The Very Best Of Poco",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-75",
+      "sourceRow": 75,
+      "lot": 55,
+      "artist": "Renaissance (4)",
+      "title": "Prologue",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-76",
+      "sourceRow": 76,
+      "lot": 56,
+      "artist": "Jon Petersen & Skyliner",
+      "title": "Non Stop Disco Dance with Jon Petersen & Skyliner",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-77",
+      "sourceRow": 77,
+      "lot": 57,
+      "artist": "a-ha",
+      "title": "On Tour In Brazil",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-78",
+      "sourceRow": 78,
+      "lot": 58,
+      "artist": "B.J. Thomas",
+      "title": "Billy Joe Thomas",
+      "year": 1972,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-79",
+      "sourceRow": 79,
+      "lot": 59,
+      "artist": "America (2)",
+      "title": "Your Move",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-80",
+      "sourceRow": 80,
+      "lot": 60,
+      "artist": "Erasure",
+      "title": "Wild!",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-81",
+      "sourceRow": 81,
+      "lot": 61,
+      "artist": "Jonathan Butler",
+      "title": "Jonathan Butler",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-82",
+      "sourceRow": 82,
+      "lot": 62,
+      "artist": "Queen",
+      "title": "The Miracle",
+      "year": 1989,
+      "auctionPrice": 49,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-83",
+      "sourceRow": 83,
+      "lot": 63,
+      "artist": "The Beatles",
+      "title": "In The Beginning",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-84",
+      "sourceRow": 84,
+      "lot": 64,
+      "artist": "Elvis Presley",
+      "title": "Carrossel De Emoções",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-85",
+      "sourceRow": 85,
+      "lot": 65,
+      "artist": "Elvis Presley",
+      "title": "Com Caipira Não Se Brinca",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-86",
+      "sourceRow": 86,
+      "lot": 66,
+      "artist": "The Beatles",
+      "title": "Beatlemania",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-87",
+      "sourceRow": 87,
+      "lot": 67,
+      "artist": "Whitesnake",
+      "title": "Ready An' Willing",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-88",
+      "sourceRow": 88,
+      "lot": 68,
+      "artist": "a-ha",
+      "title": "Scoundrel Days",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 40",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-89",
+      "sourceRow": 89,
+      "lot": 69,
+      "artist": "Axwell', 'Sebastian Ingrosso",
+      "title": "Together",
+      "year": 2005,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-90",
+      "sourceRow": 90,
+      "lot": 70,
+      "artist": "Harmony Cats",
+      "title": "The Harmony Cats Show",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-91",
+      "sourceRow": 91,
+      "lot": 71,
+      "artist": "David Blue",
+      "title": "Com'n Back For More",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-92",
+      "sourceRow": 92,
+      "lot": 72,
+      "artist": "James Taylor (2)",
+      "title": "In The Pocket",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-93",
+      "sourceRow": 93,
+      "lot": 73,
+      "artist": "Billy Idol",
+      "title": "Whiplash Smile",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-94",
+      "sourceRow": 94,
+      "lot": 74,
+      "artist": "Carly Simon",
+      "title": "Another Passenger",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-95",
+      "sourceRow": 95,
+      "lot": 75,
+      "artist": "The Singers Unlimited",
+      "title": "Four Of Us",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-96",
+      "sourceRow": 96,
+      "lot": 76,
+      "artist": "Linda Ronstadt",
+      "title": "Boleros Y Rancheras",
+      "year": 1994,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-97",
+      "sourceRow": 97,
+      "lot": 77,
+      "artist": "Various",
+      "title": "Promo - Disco Internacional Nº 69",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-98",
+      "sourceRow": 98,
+      "lot": 78,
+      "artist": "Journey",
+      "title": "Frontiers",
+      "year": 1983,
+      "auctionPrice": 140,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-99",
+      "sourceRow": 99,
+      "lot": 79,
+      "artist": "Blondie",
+      "title": "AutoAmerican",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-100",
+      "sourceRow": 100,
+      "lot": 80,
+      "artist": "Banda Sinfônica da Academia da Força Aérea', 'Coral Ninho das Águias",
+      "title": "Academia de Força Aérea - FAB",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-101",
+      "sourceRow": 101,
+      "lot": 81,
+      "artist": "Santana",
+      "title": "Abraxas",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-102",
+      "sourceRow": 102,
+      "lot": 82,
+      "artist": "Pink Floyd",
+      "title": "Delicate Sound Of Thunder",
+      "year": 1988,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-103",
+      "sourceRow": 103,
+      "lot": 83,
+      "artist": "Led Zeppelin",
+      "title": "Houses Of The Holy",
+      "year": 1973,
+      "auctionPrice": 100,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-104",
+      "sourceRow": 104,
+      "lot": 84,
+      "artist": "Pink Floyd",
+      "title": "Soundtrack From The Film 'More'",
+      "year": 1969,
+      "auctionPrice": 19,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "OLX",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-105",
+      "sourceRow": 105,
+      "lot": 85,
+      "artist": "Blitz (11)",
+      "title": "Rádio Atividade",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-106",
+      "sourceRow": 106,
+      "lot": 86,
+      "artist": "Titãs",
+      "title": "Cabeça Dinossauro",
+      "year": 1986,
+      "auctionPrice": 49,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-107",
+      "sourceRow": 107,
+      "lot": 87,
+      "artist": "Ed Motta', 'Conexão Japeri",
+      "title": "Ed Motta & Conexão Japeri",
+      "year": 1988,
+      "auctionPrice": 57,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-108",
+      "sourceRow": 108,
+      "lot": 88,
+      "artist": "Egotrip (4)",
+      "title": "Egotrip",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-109",
+      "sourceRow": 109,
+      "lot": 89,
+      "artist": "Raul Seixas",
+      "title": "Rock Vol. 2",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-110",
+      "sourceRow": 110,
+      "lot": 90,
+      "artist": "Heróis Da Resistência",
+      "title": "Heróis Da Resistência",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-111",
+      "sourceRow": 111,
+      "lot": 91,
+      "artist": "Zero (7)",
+      "title": "Carne Humana",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-112",
+      "sourceRow": 112,
+      "lot": 92,
+      "artist": "Engenheiros Do Hawaii",
+      "title": "Longe Demais Das Capitais",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-113",
+      "sourceRow": 113,
+      "lot": 93,
+      "artist": "Engenheiros Do Hawaii",
+      "title": "Ouça O Que Eu Digo, Não Ouça Ninguém",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-114",
+      "sourceRow": 114,
+      "lot": 94,
+      "artist": "Camisa de Vênus",
+      "title": "Duplo Sentido",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Duplo"
+      ]
+    },
+    {
+      "id": "planilha-115",
+      "sourceRow": 115,
+      "lot": 95,
+      "artist": "João Penca E Seus Miquinhos Amestrados",
+      "title": "Cem Anos De Rock'N'Roll",
+      "year": 1991,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-116",
+      "sourceRow": 116,
+      "lot": 96,
+      "artist": "Barão Vermelho",
+      "title": "Rock'N Geral",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-117",
+      "sourceRow": 117,
+      "lot": 97,
+      "artist": "Lulu Santos",
+      "title": "Lá Vem O Sol",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-118",
+      "sourceRow": 118,
+      "lot": 98,
+      "artist": "Herva Doce",
+      "title": "Amante Profissional",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-119",
+      "sourceRow": 119,
+      "lot": 99,
+      "artist": "Kid Vinil",
+      "title": "Kid Vinil",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-120",
+      "sourceRow": 120,
+      "lot": 100,
+      "artist": "Lobão', 'Os Ronaldos",
+      "title": "Ronaldo Foi Pra Guerra",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-121",
+      "sourceRow": 121,
+      "lot": 101,
+      "artist": "Kid Abelha",
+      "title": "Iê Iê Iê",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-122",
+      "sourceRow": 122,
+      "lot": 102,
+      "artist": "Inocentes",
+      "title": "Pânico Em S.P.",
+      "year": 1986,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-123",
+      "sourceRow": 123,
+      "lot": 103,
+      "artist": "Inocentes",
+      "title": "Adeus Carne",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-124",
+      "sourceRow": 124,
+      "lot": 104,
+      "artist": "Titãs",
+      "title": "Go Back",
+      "year": 1988,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-125",
+      "sourceRow": 125,
+      "lot": 105,
+      "artist": "Herva Doce",
+      "title": "Topete",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-126",
+      "sourceRow": 126,
+      "lot": 106,
+      "artist": "Legião Urbana",
+      "title": "V",
+      "year": 1991,
+      "auctionPrice": 49,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-127",
+      "sourceRow": 127,
+      "lot": 107,
+      "artist": "Rita Lee & Roberto",
+      "title": "Saúde",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-128",
+      "sourceRow": 128,
+      "lot": 108,
+      "artist": "Utopia (33)",
+      "title": "Utopia",
+      "year": 1992,
+      "auctionPrice": 160,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-129",
+      "sourceRow": 129,
+      "lot": 109,
+      "artist": "Gabriel O Pensador",
+      "title": "Gabriel O Pensador",
+      "year": 1993,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-130",
+      "sourceRow": 130,
+      "lot": 110,
+      "artist": "Engenheiros Do Hawaii",
+      "title": "Várias Variáveis",
+      "year": 1991,
+      "auctionPrice": 50,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-131",
+      "sourceRow": 131,
+      "lot": 111,
+      "artist": "Titãs",
+      "title": "Televisão",
+      "year": 1985,
+      "auctionPrice": 79,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-132",
+      "sourceRow": 132,
+      "lot": 112,
+      "artist": "Lobão",
+      "title": "Sob O Sol De Parador",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-133",
+      "sourceRow": 133,
+      "lot": 113,
+      "artist": "Sociedade Da Grã-Ordem Kavernista",
+      "title": "Sociedade Da Grã-Ordem Kavernista Apresenta: Sessão Das 10",
+      "year": 1974,
+      "auctionPrice": 89,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-134",
+      "sourceRow": 134,
+      "lot": 114,
+      "artist": "Lobão",
+      "title": "Vida Bandida",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-135",
+      "sourceRow": 135,
+      "lot": 115,
+      "artist": "Rita Lee', 'Tutti Frutti (3)",
+      "title": "Entradas E Bandeiras",
+      "year": 1976,
+      "auctionPrice": 69,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-136",
+      "sourceRow": 136,
+      "lot": 116,
+      "artist": "Uakti",
+      "title": "Uakti II",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-137",
+      "sourceRow": 137,
+      "lot": 117,
+      "artist": "Rita Lee & Roberto",
+      "title": "Rita Lee - Roberto De Carvalho",
+      "year": 1982,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-138",
+      "sourceRow": 138,
+      "lot": 118,
+      "artist": "O Têrço",
+      "title": "Criaturas Da Noite",
+      "year": 1975,
+      "auctionPrice": 65,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-139",
+      "sourceRow": 139,
+      "lot": 119,
+      "artist": "Rita Lee",
+      "title": "Rita Lee",
+      "year": 1979,
+      "auctionPrice": 49,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-140",
+      "sourceRow": 140,
+      "lot": 120,
+      "artist": "Casa Das Máquinas",
+      "title": "Casa De Rock",
+      "year": 1976,
+      "auctionPrice": 109,
+      "marketMin": 279,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 279",
+          "numeric": 279
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-141",
+      "sourceRow": 141,
+      "lot": 121,
+      "artist": "Plebe Rude",
+      "title": "Nunca Fomos Tão Brasileiros",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-142",
+      "sourceRow": 142,
+      "lot": 122,
+      "artist": "Os Paralamas Do Sucesso",
+      "title": "Bora-Bora",
+      "year": 1988,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-143",
+      "sourceRow": 143,
+      "lot": 123,
+      "artist": "Cássia Eller",
+      "title": "Cássia Eller",
+      "year": 1990,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-144",
+      "sourceRow": 144,
+      "lot": 124,
+      "artist": "Capital Inicial",
+      "title": "Capital Inicial",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-145",
+      "sourceRow": 145,
+      "lot": 125,
+      "artist": "Legião Urbana",
+      "title": "Legião Urbana",
+      "year": 1985,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-146",
+      "sourceRow": 146,
+      "lot": 126,
+      "artist": "Various",
+      "title": "Kaleidoscópio No. 2",
+      "year": 1967,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-147",
+      "sourceRow": 147,
+      "lot": 127,
+      "artist": "Racionais MC's",
+      "title": "Fim De Semana No Parque",
+      "year": 1994,
+      "auctionPrice": 59,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 280",
+          "numeric": 280
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-148",
+      "sourceRow": 148,
+      "lot": 128,
+      "artist": "Eumir Deodato",
+      "title": "Prelude",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-149",
+      "sourceRow": 149,
+      "lot": 129,
+      "artist": "Belchior",
+      "title": "Era Uma Vez Um Homem E O Seu Tempo",
+      "year": 1979,
+      "auctionPrice": 59,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-150",
+      "sourceRow": 150,
+      "lot": 130,
+      "artist": "Wando",
+      "title": "Mulheres",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-151",
+      "sourceRow": 151,
+      "lot": 131,
+      "artist": "Tim Maia",
+      "title": "Tim Maia",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-152",
+      "sourceRow": 152,
+      "lot": 132,
+      "artist": "wando",
+      "title": "wando",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-153",
+      "sourceRow": 153,
+      "lot": 133,
+      "artist": "Roupa Nova",
+      "title": "O Melhor De Roupa Nova",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-154",
+      "sourceRow": 154,
+      "lot": 134,
+      "artist": "Various",
+      "title": "Plunct Plact Zuuum",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-155",
+      "sourceRow": 155,
+      "lot": 135,
+      "artist": "Beto Guedes",
+      "title": "Beto Guedes Ao Vivo",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-156",
+      "sourceRow": 156,
+      "lot": 136,
+      "artist": "Luiz Carlos Vinhas', 'Roger Williams (2)",
+      "title": "Piano Maravilhoso",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-157",
+      "sourceRow": 157,
+      "lot": 137,
+      "artist": "Luiz Vieira",
+      "title": "O Melhor De Luiz Vieira",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-158",
+      "sourceRow": 158,
+      "lot": 138,
+      "artist": "Luiz Sacopã",
+      "title": "Luiz Sacopã",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-159",
+      "sourceRow": 159,
+      "lot": 139,
+      "artist": "Os Cariocas",
+      "title": "Minha Namorada",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-160",
+      "sourceRow": 160,
+      "lot": 140,
+      "artist": "Guilherme Arantes",
+      "title": "Grandes Sucessos De Guilherme Arantes",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-161",
+      "sourceRow": 161,
+      "lot": 141,
+      "artist": "João Gilberto",
+      "title": "O Talento De João Gilberto",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-162",
+      "sourceRow": 162,
+      "lot": 142,
+      "artist": "Antonio Adolfo",
+      "title": "Encontro Musical",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-163",
+      "sourceRow": 163,
+      "lot": 143,
+      "artist": "Caetano Veloso",
+      "title": "Circuladô Vivo",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-164",
+      "sourceRow": 164,
+      "lot": 144,
+      "artist": "Sandra De Sá",
+      "title": "Sandra Sá",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-165",
+      "sourceRow": 165,
+      "lot": 145,
+      "artist": "Sandra De Sá",
+      "title": "Sandra De Sá",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-166",
+      "sourceRow": 166,
+      "lot": 146,
+      "artist": "Vinicius De Moraes",
+      "title": "Testamento...",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-167",
+      "sourceRow": 167,
+      "lot": 147,
+      "artist": "Sérgio Mendes & Brasil '66",
+      "title": "Fool On The Hill",
+      "year": 1968,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-168",
+      "sourceRow": 168,
+      "lot": 148,
+      "artist": "Maysa Matarazzo', 'Enrico Simonetti', 'Orquestra RGE",
+      "title": "Voltei",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-169",
+      "sourceRow": 169,
+      "lot": 149,
+      "artist": "Nana Caymmi', 'Wagner Tiso",
+      "title": "Só Louco",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-170",
+      "sourceRow": 170,
+      "lot": 150,
+      "artist": "Jair Rodrigues",
+      "title": "10 Anos Depois",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-171",
+      "sourceRow": 171,
+      "lot": 151,
+      "artist": "Secos & Molhados",
+      "title": "Secos & Molhados",
+      "year": 1990,
+      "auctionPrice": 55,
+      "marketMin": 160,
+      "market": [
+        {
+          "source": "Leilão observado",
+          "display": "R$ 160",
+          "numeric": 160
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-172",
+      "sourceRow": 172,
+      "lot": 152,
+      "artist": "14 Bis",
+      "title": "A Nave Vai",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-173",
+      "sourceRow": 173,
+      "lot": 153,
+      "artist": "Gilberto Gil",
+      "title": "Chororô",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-174",
+      "sourceRow": 174,
+      "lot": 154,
+      "artist": "Abdullah (3)",
+      "title": "Sonho Secreto",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-175",
+      "sourceRow": 175,
+      "lot": 155,
+      "artist": "Elba Ramalho",
+      "title": "Elba",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-176",
+      "sourceRow": 176,
+      "lot": 156,
+      "artist": "João Dias",
+      "title": "30 Anos de João Dias",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-177",
+      "sourceRow": 177,
+      "lot": 158,
+      "artist": "Gilberto Gil",
+      "title": "O Poeta e o Mundo",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-178",
+      "sourceRow": 178,
+      "lot": 159,
+      "artist": "Baden Powell",
+      "title": "LAme De Baden Powell",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-179",
+      "sourceRow": 179,
+      "lot": 160,
+      "artist": "Boca Livre",
+      "title": "Bicicleta",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-180",
+      "sourceRow": 180,
+      "lot": 161,
+      "artist": "Biafra",
+      "title": "Menino",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-181",
+      "sourceRow": 181,
+      "lot": 162,
+      "artist": "Toquinho",
+      "title": "Canção De Todas As Crianças",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-182",
+      "sourceRow": 182,
+      "lot": 163,
+      "artist": "Francis Hime",
+      "title": "Se Porém Fosse Portanto",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-183",
+      "sourceRow": 183,
+      "lot": 164,
+      "artist": "The Fevers",
+      "title": "The Fevers",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-184",
+      "sourceRow": 184,
+      "lot": 165,
+      "artist": "Nelson Gonçalves",
+      "title": "Buquê De Melodias",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-185",
+      "sourceRow": 185,
+      "lot": 166,
+      "artist": "Leila Pinheiro",
+      "title": "Bênção, Bossa Nova",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-186",
+      "sourceRow": 186,
+      "lot": 167,
+      "artist": "Toquinho & Vinicius",
+      "title": "Um Pouco De Ilusão",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-187",
+      "sourceRow": 187,
+      "lot": 168,
+      "artist": "Almirante",
+      "title": "Almirante, A Maior Patente Do Rádio",
+      "year": 1968,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-188",
+      "sourceRow": 188,
+      "lot": 169,
+      "artist": "Boca Livre",
+      "title": "Em Concerto",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-189",
+      "sourceRow": 189,
+      "lot": 170,
+      "artist": "Toquinho",
+      "title": "Aquarela",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-190",
+      "sourceRow": 190,
+      "lot": 171,
+      "artist": "Ruban",
+      "title": "Vitrine",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-191",
+      "sourceRow": 191,
+      "lot": 172,
+      "artist": "Celeste (7)",
+      "title": "Cinco E Triste Da Manhã",
+      "year": 1978,
+      "auctionPrice": 69,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-192",
+      "sourceRow": 192,
+      "lot": 173,
+      "artist": "Various",
+      "title": "MPB Independente",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-193",
+      "sourceRow": 193,
+      "lot": 174,
+      "artist": "Caetano Veloso",
+      "title": "Uns",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-194",
+      "sourceRow": 194,
+      "lot": 175,
+      "artist": "Caetano Veloso",
+      "title": "Transa",
+      "year": 1972,
+      "auctionPrice": 59,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "OLX",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-195",
+      "sourceRow": 195,
+      "lot": 176,
+      "artist": "Duo Em Preto E Branco",
+      "title": "Canto Operário",
+      "year": 1985,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-196",
+      "sourceRow": 196,
+      "lot": 177,
+      "artist": "Chico Buarque",
+      "title": "Almanaque",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-197",
+      "sourceRow": 197,
+      "lot": 178,
+      "artist": "Nara Leão",
+      "title": "Abraços E Beijinhos E Carinhos Sem Ter Fim...",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-198",
+      "sourceRow": 198,
+      "lot": 179,
+      "artist": "Marisa Monte",
+      "title": "MM",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-199",
+      "sourceRow": 199,
+      "lot": 180,
+      "artist": "Various",
+      "title": "Cartola - Bate Outra Vez...",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-200",
+      "sourceRow": 200,
+      "lot": 181,
+      "artist": "Nara Leão",
+      "title": "Os Meus Amigos São Um Barato",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-201",
+      "sourceRow": 201,
+      "lot": 182,
+      "artist": "Paulinho Pedra Azul",
+      "title": "Uma Janela Dentro Dos Meus Olhos",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-202",
+      "sourceRow": 202,
+      "lot": 183,
+      "artist": "Nouvelle Cuisine (3)",
+      "title": "Slow Food",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-203",
+      "sourceRow": 203,
+      "lot": 184,
+      "artist": "Ana Clara (2)",
+      "title": "Ilumina",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-204",
+      "sourceRow": 204,
+      "lot": 185,
+      "artist": "Gazolina",
+      "title": "Gazolina Presents The New Brasas Samba Show",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-205",
+      "sourceRow": 205,
+      "lot": 186,
+      "artist": "Quinteto Violado",
+      "title": "Berra Boi",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-206",
+      "sourceRow": 206,
+      "lot": 187,
+      "artist": "Quinteto Violado",
+      "title": "O Prestígio De Quinteto Violado",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-207",
+      "sourceRow": 207,
+      "lot": 188,
+      "artist": "Luiz Melodia",
+      "title": "Pintando O Sete",
+      "year": 1991,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-208",
+      "sourceRow": 208,
+      "lot": 189,
+      "artist": "Guilherme Arantes",
+      "title": "Romances Modernos",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-209",
+      "sourceRow": 209,
+      "lot": 190,
+      "artist": "Os Incríveis",
+      "title": "O Milionário",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-210",
+      "sourceRow": 210,
+      "lot": 191,
+      "artist": "Fernando Lopes (3), Antônio Carlos Gomes",
+      "title": "O Piano Brazileiro De Carlos Gomes",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-211",
+      "sourceRow": 211,
+      "lot": 192,
+      "artist": "Caetano Veloso",
+      "title": "Totalmente Demais",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-212",
+      "sourceRow": 212,
+      "lot": 193,
+      "artist": "Juarez Araújo",
+      "title": "Saxsambando",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-213",
+      "sourceRow": 213,
+      "lot": 194,
+      "artist": "João Gilberto",
+      "title": "O Amor, O Sorriso E A Flor",
+      "year": 1972,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-214",
+      "sourceRow": 214,
+      "lot": 195,
+      "artist": "Baiano & Os Novos Caetanos",
+      "title": "A Volta",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-215",
+      "sourceRow": 215,
+      "lot": 196,
+      "artist": "Raimundo Fagner",
+      "title": "Beleza",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-216",
+      "sourceRow": 216,
+      "lot": 197,
+      "artist": "Pau Brasil (2)",
+      "title": "O Samba E Suas Origens",
+      "year": 1978,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-217",
+      "sourceRow": 217,
+      "lot": 198,
+      "artist": "Kleiton & Kledir",
+      "title": "Kleiton & Kledir",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-218",
+      "sourceRow": 218,
+      "lot": 199,
+      "artist": "Almir Sater",
+      "title": "Almir Sater No Pantanal",
+      "year": 1990,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-219",
+      "sourceRow": 219,
+      "lot": 200,
+      "artist": "Erasmo Carlos",
+      "title": "Erasmo Carlos Convida...",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-220",
+      "sourceRow": 220,
+      "lot": 201,
+      "artist": "Ivan Lins",
+      "title": "Mãos",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-221",
+      "sourceRow": 221,
+      "lot": 202,
+      "artist": "Ivan Lins",
+      "title": "Ivan Lins - 20 Anos Ao Vivo",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-222",
+      "sourceRow": 222,
+      "lot": 203,
+      "artist": "Os Mutantes",
+      "title": "Mutantes E Seus Cometas No País Do Baurets",
+      "year": 1972,
+      "auctionPrice": 90,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-223",
+      "sourceRow": 223,
+      "lot": 204,
+      "artist": "Ivan Lins",
+      "title": "Ivan Lins",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-224",
+      "sourceRow": 224,
+      "lot": 205,
+      "artist": "Ivan Lins",
+      "title": "Juntos",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-225",
+      "sourceRow": 225,
+      "lot": 206,
+      "artist": "Nilo Amaro E Seus Cantores De Ébano",
+      "title": "Raízes",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-226",
+      "sourceRow": 226,
+      "lot": 207,
+      "artist": "Biafra",
+      "title": "Despertar",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-227",
+      "sourceRow": 227,
+      "lot": 208,
+      "artist": "João Bosco",
+      "title": "Galos De Briga",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-228",
+      "sourceRow": 228,
+      "lot": 209,
+      "artist": "Gal Costa",
+      "title": "Fantasia",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-229",
+      "sourceRow": 229,
+      "lot": 210,
+      "artist": "Gal Costa",
+      "title": "Minha Voz",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-230",
+      "sourceRow": 230,
+      "lot": 211,
+      "artist": "Gal Costa",
+      "title": "Personalidade",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-231",
+      "sourceRow": 231,
+      "lot": 212,
+      "artist": "Gal Costa",
+      "title": "A Arte De Gal Costa",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-232",
+      "sourceRow": 232,
+      "lot": 213,
+      "artist": "Gal Costa",
+      "title": "Índia",
+      "year": 2022,
+      "auctionPrice": 69,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-233",
+      "sourceRow": 233,
+      "lot": 214,
+      "artist": "Gal Costa",
+      "title": "Gal",
+      "year": 2014,
+      "auctionPrice": 89,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-234",
+      "sourceRow": 234,
+      "lot": 215,
+      "artist": "Gal Costa",
+      "title": "Aquarela Do Brasil",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-235",
+      "sourceRow": 235,
+      "lot": 216,
+      "artist": "Gal Costa",
+      "title": "O Prestígio De Gal Costa",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-236",
+      "sourceRow": 236,
+      "lot": 217,
+      "artist": "Gal Costa",
+      "title": "Profana",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-237",
+      "sourceRow": 237,
+      "lot": 218,
+      "artist": "Gal Costa",
+      "title": "Lua De Mel Como O Diabo Gosta",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-238",
+      "sourceRow": 238,
+      "lot": 219,
+      "artist": "Gal Costa",
+      "title": "Plural",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-239",
+      "sourceRow": 239,
+      "lot": 220,
+      "artist": "Gal Costa",
+      "title": "Meu Bem, Meu Mal",
+      "year": 1985,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-240",
+      "sourceRow": 240,
+      "lot": 221,
+      "artist": "Gal Costa",
+      "title": "Gal Costa",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-241",
+      "sourceRow": 241,
+      "lot": 222,
+      "artist": "Gal Costa",
+      "title": "Gal Canta Caymmi",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-242",
+      "sourceRow": 242,
+      "lot": 223,
+      "artist": "Gal Costa",
+      "title": "Água Viva",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-243",
+      "sourceRow": 243,
+      "lot": 224,
+      "artist": "Gal Costa",
+      "title": "Gal Tropical",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-244",
+      "sourceRow": 244,
+      "lot": 225,
+      "artist": "Gal Costa",
+      "title": "Meu Nome É Gal (O Melhor De Gal Gosta)",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-245",
+      "sourceRow": 245,
+      "lot": 226,
+      "artist": "Gal Costa",
+      "title": "Bem Bom",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-246",
+      "sourceRow": 246,
+      "lot": 227,
+      "artist": "Jorge Ben",
+      "title": "Personalidade",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-247",
+      "sourceRow": 247,
+      "lot": 228,
+      "artist": "Antonio Adolfo",
+      "title": "Antonio Adolfo",
+      "year": 1972,
+      "auctionPrice": 129,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-248",
+      "sourceRow": 248,
+      "lot": 229,
+      "artist": "Sá, Rodrix & Guarabyra",
+      "title": "Terra",
+      "year": 1973,
+      "auctionPrice": 79,
+      "marketMin": 480,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 480",
+          "numeric": 480
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-249",
+      "sourceRow": 249,
+      "lot": 230,
+      "artist": "Antonio Carlos Jobim",
+      "title": "Urubu",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-250",
+      "sourceRow": 250,
+      "lot": 231,
+      "artist": "Various",
+      "title": "Super Personalidade",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-251",
+      "sourceRow": 251,
+      "lot": 232,
+      "artist": "Emilio Santiago",
+      "title": "O Canto Crescente De Emilio Santiago",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-252",
+      "sourceRow": 252,
+      "lot": 233,
+      "artist": "Béto Mi",
+      "title": "Um Tempo Pra Sonhar",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-253",
+      "sourceRow": 253,
+      "lot": 234,
+      "artist": "Wilson Simonal",
+      "title": "Alegria, Alegria !!!",
+      "year": 1970,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-254",
+      "sourceRow": 254,
+      "lot": 235,
+      "artist": "Sueli",
+      "title": "Princesa Do Pontal",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-255",
+      "sourceRow": 255,
+      "lot": 236,
+      "artist": "Nelson Gonçalves",
+      "title": "Só Nós Dois",
+      "year": 1970,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-256",
+      "sourceRow": 256,
+      "lot": 237,
+      "artist": "Ato De Criação",
+      "title": "Aurora Boreal",
+      "year": 1990,
+      "auctionPrice": 40,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-257",
+      "sourceRow": 257,
+      "lot": 238,
+      "artist": "Dulce Quental",
+      "title": "Viver",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-258",
+      "sourceRow": 258,
+      "lot": 240,
+      "artist": "Ney Matogrosso",
+      "title": "Ney Matogrosso",
+      "year": 1981,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-259",
+      "sourceRow": 259,
+      "lot": 241,
+      "artist": "Toquinho",
+      "title": "À Sombra De Um Jatobá",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-260",
+      "sourceRow": 260,
+      "lot": 242,
+      "artist": "Dalto",
+      "title": "Um Coração Em Mil",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-261",
+      "sourceRow": 261,
+      "lot": 243,
+      "artist": "Tim Maia",
+      "title": "Somos América",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-262",
+      "sourceRow": 262,
+      "lot": 244,
+      "artist": "Sublimes",
+      "title": "Sublimes",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-263",
+      "sourceRow": 263,
+      "lot": 245,
+      "artist": "Coral Grafado",
+      "title": "Serra Leoa",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-264",
+      "sourceRow": 264,
+      "lot": 246,
+      "artist": "Raimundo Fagner",
+      "title": "Raimundo Fagner",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-265",
+      "sourceRow": 265,
+      "lot": 247,
+      "artist": "Armandinho E O Trio Elétrico Dodô & Osmar",
+      "title": "E Sua Ligação Colorida",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-266",
+      "sourceRow": 266,
+      "lot": 248,
+      "artist": "Oswaldo Montenegro",
+      "title": "Seu Francisco",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-267",
+      "sourceRow": 267,
+      "lot": 249,
+      "artist": "Gilberto Gil",
+      "title": "Refazenda",
+      "year": 1975,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-268",
+      "sourceRow": 268,
+      "lot": 250,
+      "artist": "Rita Lee & Roberto",
+      "title": "Rita Lee E Roberto De Carvalho",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-269",
+      "sourceRow": 269,
+      "lot": 251,
+      "artist": "Gonzaguinha",
+      "title": "Gonzaguinha Da Vida",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-270",
+      "sourceRow": 270,
+      "lot": 252,
+      "artist": "Maria Bethânia",
+      "title": "Ao Vivo",
+      "year": 1970,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-271",
+      "sourceRow": 271,
+      "lot": 253,
+      "artist": "Sabino Loguércio, O Museu Do Som",
+      "title": "Vivessências",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-272",
+      "sourceRow": 272,
+      "lot": 254,
+      "artist": "Zizi Possi",
+      "title": "Amor & Música",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-273",
+      "sourceRow": 273,
+      "lot": 255,
+      "artist": "Emilio Santiago",
+      "title": "A Arte De Emilio Santiago",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-274",
+      "sourceRow": 274,
+      "lot": 256,
+      "artist": "Caetano Veloso",
+      "title": "Outras Palavras",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-275",
+      "sourceRow": 275,
+      "lot": 257,
+      "artist": "Caetano Veloso",
+      "title": "Minha História",
+      "year": 1993,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-276",
+      "sourceRow": 276,
+      "lot": 258,
+      "artist": "Caetano Veloso",
+      "title": "Fina Estampa",
+      "year": 1994,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-277",
+      "sourceRow": 277,
+      "lot": 259,
+      "artist": "Zé Ramalho",
+      "title": "Força Verde",
+      "year": 1982,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-278",
+      "sourceRow": 278,
+      "lot": 260,
+      "artist": "Pepeu Gomes",
+      "title": "Pepeu Gomes",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-279",
+      "sourceRow": 279,
+      "lot": 261,
+      "artist": "Antonio Carlos E Jocafi",
+      "title": "Feitiço Moleque",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-280",
+      "sourceRow": 280,
+      "lot": 262,
+      "artist": "Rita Lee & Roberto",
+      "title": "Rita Hits",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-281",
+      "sourceRow": 281,
+      "lot": 263,
+      "artist": "Nilson Chaves, Vital Lima",
+      "title": "Interior",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-282",
+      "sourceRow": 282,
+      "lot": 264,
+      "artist": "Various",
+      "title": "História Da Música Popular Brasileira - Noel Rosa",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-283",
+      "sourceRow": 283,
+      "lot": 265,
+      "artist": "Milton Nascimento",
+      "title": "Geraes",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-284",
+      "sourceRow": 284,
+      "lot": 266,
+      "artist": "Sonora Tropical (3)",
+      "title": "Dançando Na Discoteca Do Chacrinha Com A Sonora Tropical",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-285",
+      "sourceRow": 285,
+      "lot": 267,
+      "artist": "Dick Farney, Claudette Soares",
+      "title": "O Amor Em Paz",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-286",
+      "sourceRow": 286,
+      "lot": 268,
+      "artist": "Various",
+      "title": "Man Of LaMancha",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-287",
+      "sourceRow": 287,
+      "lot": 269,
+      "artist": "Os Trapalhões",
+      "title": "O Trapalhão Na Arca De Noé - Trilha Sonora Do Filme",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-288",
+      "sourceRow": 288,
+      "lot": 270,
+      "artist": "Various",
+      "title": "More Dirty Dancing (More Original Music From The Hit Motion Picture Dirty Dancing)",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Picture disc"
+      ]
+    },
+    {
+      "id": "planilha-289",
+      "sourceRow": 289,
+      "lot": 271,
+      "artist": "John Barry",
+      "title": "A História De Elza (Trilha Sonora do Filme)",
+      "year": 1967,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-290",
+      "sourceRow": 290,
+      "lot": 272,
+      "artist": "Various",
+      "title": "Cocktail (Trilha Sonora Original Do Filme)",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-291",
+      "sourceRow": 291,
+      "lot": 273,
+      "artist": "Various",
+      "title": "Rocky IV (Original Motion Picture Soundtrack)",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Picture disc"
+      ]
+    },
+    {
+      "id": "planilha-292",
+      "sourceRow": 292,
+      "lot": 274,
+      "artist": "Various",
+      "title": "Festival Dos Festivais",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-293",
+      "sourceRow": 293,
+      "lot": 275,
+      "artist": "Various",
+      "title": "James Bond Greatest Hits",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-294",
+      "sourceRow": 294,
+      "lot": 276,
+      "artist": "Stewart Copeland, Georges Delerue",
+      "title": "Wall Street / Salvador Original Motion Picture Soundtracks",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Picture disc"
+      ]
+    },
+    {
+      "id": "planilha-295",
+      "sourceRow": 295,
+      "lot": 277,
+      "artist": "Various",
+      "title": "The Rocky Story",
+      "year": 1990,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-296",
+      "sourceRow": 296,
+      "lot": 278,
+      "artist": "Al Caiola",
+      "title": "The Worlds Favorite T.V. Western Themes",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-297",
+      "sourceRow": 297,
+      "lot": 279,
+      "artist": "Various",
+      "title": "Where The Buffalo Roam (The Original Movie Soundtrack)",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-298",
+      "sourceRow": 298,
+      "lot": 280,
+      "artist": "The Kendalls",
+      "title": "Stickin Together",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-299",
+      "sourceRow": 299,
+      "lot": 281,
+      "artist": "Various",
+      "title": "Cabaret - Original Soundtrack Recording",
+      "year": 1972,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-300",
+      "sourceRow": 300,
+      "lot": 282,
+      "artist": "James Newton Howard",
+      "title": "Dying Young (Trilha Sonora Original Do Filme Tudo Por Amor)",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-301",
+      "sourceRow": 301,
+      "lot": 283,
+      "artist": "Royal Philharmonic Orchestra, Fred Steiner",
+      "title": "Star Trek (Music Adapted From Selected Episodes Of The Paramount TV Series)",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-302",
+      "sourceRow": 302,
+      "lot": 284,
+      "artist": "Elmer Bernstein",
+      "title": "True Grit = Trilha Sonora Original Do Filme Bravura Indômita",
+      "year": 1969,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-303",
+      "sourceRow": 303,
+      "lot": 285,
+      "artist": "John Barry",
+      "title": "Trilha Sonora Original Do Filme O Dia Do Gafanhoto",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-304",
+      "sourceRow": 304,
+      "lot": 286,
+      "artist": "Various",
+      "title": "Fright Night (Trilha Sonora Original Do Filme - A Hora Do Espanto)",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-305",
+      "sourceRow": 305,
+      "lot": 287,
+      "artist": "David Bowie, Trevor Jones",
+      "title": "Labyrinth (From The Original Soundtrack Of The Jim Henson Film)",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-306",
+      "sourceRow": 306,
+      "lot": 288,
+      "artist": "Various",
+      "title": "O Casarão (Trilha Sonora Original Da Novela)",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-307",
+      "sourceRow": 307,
+      "lot": 289,
+      "artist": "Various",
+      "title": "Os Imigrantes (Parte Italiana)",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-308",
+      "sourceRow": 308,
+      "lot": 290,
+      "artist": "Various",
+      "title": "Sol De Verão (Nacional)",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-309",
+      "sourceRow": 309,
+      "lot": 291,
+      "artist": "Various",
+      "title": "Uma Rosa Com Amor (Internacional)",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-310",
+      "sourceRow": 310,
+      "lot": 292,
+      "artist": "Various",
+      "title": "Rainha Da Sucata (Internacional)",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-311",
+      "sourceRow": 311,
+      "lot": 293,
+      "artist": "Various",
+      "title": "Que Rei Sou Eu?",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-312",
+      "sourceRow": 312,
+      "lot": 294,
+      "artist": "Various",
+      "title": "Meu Bem Meu Mal (Internacional)",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-313",
+      "sourceRow": 313,
+      "lot": 295,
+      "artist": "Os Motokas",
+      "title": "As 30 Mais Vol. 5",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-314",
+      "sourceRow": 314,
+      "lot": 296,
+      "artist": "Os Motokas",
+      "title": "As 30 Mais - Volume 7",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-315",
+      "sourceRow": 315,
+      "lot": 297,
+      "artist": "Various",
+      "title": "Atlantic Dance Mix 2",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-316",
+      "sourceRow": 316,
+      "lot": 298,
+      "artist": "Various",
+      "title": "Rock In Rio II - Internacional",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-317",
+      "sourceRow": 317,
+      "lot": 299,
+      "artist": "I Festival De Música Da Guanabara",
+      "title": "Gravado Ao Vivo No Teatro Municipal",
+      "year": 1969,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-318",
+      "sourceRow": 318,
+      "lot": 300,
+      "artist": "Inezita Barroso",
+      "title": "Jóia Da Música Sertaneja",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-319",
+      "sourceRow": 319,
+      "lot": 301,
+      "artist": "Chitãozinho & Xororó",
+      "title": "Aguenta Coração",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-320",
+      "sourceRow": 320,
+      "lot": 302,
+      "artist": "Various",
+      "title": "A História De Ana Raio E Zé Trovão - Volume 2",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-321",
+      "sourceRow": 321,
+      "lot": 303,
+      "artist": "Zenilton",
+      "title": "Quando Eu Ia Ela Voltava, Quando Ela Voltava Eu Ia",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-322",
+      "sourceRow": 322,
+      "lot": 304,
+      "artist": "Luiz Gonzaga",
+      "title": "Homenagem Das Pernambucanas A Luiz Gonzaga",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-323",
+      "sourceRow": 323,
+      "lot": 305,
+      "artist": "Leandro & Leonardo",
+      "title": "Leandro & Leonardo",
+      "year": 1990,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-324",
+      "sourceRow": 324,
+      "lot": 306,
+      "artist": "Leandro & Leonardo",
+      "title": "Leandro & Leonardo",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-325",
+      "sourceRow": 325,
+      "lot": 307,
+      "artist": "Zezé Di Camargo & Luciano",
+      "title": "Zezé Di Camargo & Luciano",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-326",
+      "sourceRow": 326,
+      "lot": 308,
+      "artist": "Luiz Gonzaga",
+      "title": "Quadrilhas E Marchinhas Juninas",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-327",
+      "sourceRow": 327,
+      "lot": 309,
+      "artist": "Fernando Mendes",
+      "title": "Fernando Mendes",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-328",
+      "sourceRow": 328,
+      "lot": 310,
+      "artist": "Trio Nordestino",
+      "title": "Os Grandes Sucessos De Trio Nordestino",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-329",
+      "sourceRow": 329,
+      "lot": 311,
+      "artist": "Chitãozinho & Xororó",
+      "title": "Somos Apaixonados",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-330",
+      "sourceRow": 330,
+      "lot": 312,
+      "artist": "Trio Nordestino",
+      "title": "Procurando Tú",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-331",
+      "sourceRow": 331,
+      "lot": 313,
+      "artist": "João Mineiro & Marciano",
+      "title": "Tarde Demais Para Esquecer",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-332",
+      "sourceRow": 332,
+      "lot": 314,
+      "artist": "Zezé Di Camargo & Luciano",
+      "title": "Zezé Di Camargo & Luciano",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-333",
+      "sourceRow": 333,
+      "lot": 315,
+      "artist": "Elba Ramalho",
+      "title": "Remexer",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-334",
+      "sourceRow": 334,
+      "lot": 316,
+      "artist": "Luiz Gonzaga",
+      "title": "Aí Tem",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-335",
+      "sourceRow": 335,
+      "lot": 318,
+      "artist": "Trio Parada Dura",
+      "title": "País de Caruaru",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-336",
+      "sourceRow": 336,
+      "lot": 319,
+      "artist": "Duduca & Dalvan",
+      "title": "Anistia De Amor",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-337",
+      "sourceRow": 337,
+      "lot": 320,
+      "artist": "Evaldo Braga",
+      "title": "Os Grandes Sucessos de Evaldo Braga",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-338",
+      "sourceRow": 338,
+      "lot": 321,
+      "artist": "Elba Ramalho",
+      "title": "Coração Brasileiro",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-339",
+      "sourceRow": 339,
+      "lot": 322,
+      "artist": "Bartô Galeno",
+      "title": "Só Lembranças",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-340",
+      "sourceRow": 340,
+      "lot": 323,
+      "artist": "Almir Rogério",
+      "title": "Sertao Jovem",
+      "year": 1982,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-341",
+      "sourceRow": 341,
+      "lot": 324,
+      "artist": "Luiz Gonzaga",
+      "title": "Sanfoneiro Macho",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-342",
+      "sourceRow": 342,
+      "lot": 325,
+      "artist": "Various",
+      "title": "Sertão Querido - Gala 79",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-343",
+      "sourceRow": 343,
+      "lot": 326,
+      "artist": "Matogrosso & Mathias",
+      "title": "Ponto de Chegada",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-344",
+      "sourceRow": 344,
+      "lot": 327,
+      "artist": "Zé Duarte",
+      "title": "Eu Amo A Bahia",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-345",
+      "sourceRow": 345,
+      "lot": 328,
+      "artist": "Amelinha",
+      "title": "Frevo Mulher",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-346",
+      "sourceRow": 346,
+      "lot": 329,
+      "artist": "Trio Parada Dura",
+      "title": "Barco De Papel",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-347",
+      "sourceRow": 347,
+      "lot": 330,
+      "artist": "Amado Batista",
+      "title": "85",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-348",
+      "sourceRow": 348,
+      "lot": 331,
+      "artist": "Duduca & Dalvan",
+      "title": "Quem Sou Eu",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-349",
+      "sourceRow": 349,
+      "lot": 332,
+      "artist": "Aretha Franklin, George Michael",
+      "title": "I Knew You Were Waiting (For Me)",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-350",
+      "sourceRow": 350,
+      "lot": 333,
+      "artist": "The Isley Brothers",
+      "title": "May I?",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-351",
+      "sourceRow": 351,
+      "lot": 334,
+      "artist": "Janet Jackson",
+      "title": "Control",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-352",
+      "sourceRow": 352,
+      "lot": 335,
+      "artist": "Stevie Wonder",
+      "title": "In Square Circle",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-353",
+      "sourceRow": 353,
+      "lot": 336,
+      "artist": "Frédéric Chopin, Orchestre National De LOpéra De Monte-Carlo, Dinorah Varsi, Jan Krenz",
+      "title": "Conciertos Para Piano Y Orquesta",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-354",
+      "sourceRow": 354,
+      "lot": 337,
+      "artist": "Joseph Haydn, London Symphony Orchestra, Philharmonia Hungarica, Antal Dorati",
+      "title": "Sinfonia En Re Mayor, H. I N.º 101 El Reloj / Sinfonia En Sol Mayor, H. I N.º 94 La Sorpresa",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-355",
+      "sourceRow": 355,
+      "lot": 338,
+      "artist": "Antonio Vivaldi, Félix Ayo, Jeffrey Tate, Fritz Klingenstein, Kammerorchester Berlin, Vittorio Negri",
+      "title": "Las Cuatro Estaciones - Conciertos Para Violín Y Orquesta, Op. 8 No. 1, 2, 3 y 4",
+      "year": 1981,
+      "auctionPrice": 49,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-356",
+      "sourceRow": 356,
+      "lot": 339,
+      "artist": "Barbra Streisand",
+      "title": "Yentl - Original Motion Picture Soundtrack",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Picture disc"
+      ]
+    },
+    {
+      "id": "planilha-357",
+      "sourceRow": 357,
+      "lot": 340,
+      "artist": "Papete",
+      "title": "Rompendo Fogo",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-358",
+      "sourceRow": 358,
+      "lot": 341,
+      "artist": "Scott Cossu",
+      "title": "Islands",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-359",
+      "sourceRow": 359,
+      "lot": 342,
+      "artist": "Louis Armstrong",
+      "title": "A Personificação Do Jazz",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-360",
+      "sourceRow": 360,
+      "lot": 343,
+      "artist": "Mercedes Sosa",
+      "title": "A Arte De Mercedes Sosa",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-361",
+      "sourceRow": 361,
+      "lot": 344,
+      "artist": "Blue System",
+      "title": "Backstreet Dreams",
+      "year": 1993,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-362",
+      "sourceRow": 362,
+      "lot": 345,
+      "artist": "David Foster",
+      "title": "David Foster",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-363",
+      "sourceRow": 363,
+      "lot": 347,
+      "artist": "Rique Pantoja",
+      "title": "I love Country",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-364",
+      "sourceRow": 364,
+      "lot": 348,
+      "artist": "Joan Baez",
+      "title": "Gracias A La Vida / Heres To Life",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-365",
+      "sourceRow": 365,
+      "lot": 349,
+      "artist": "Chick Corea",
+      "title": "My Spanish Heart",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-366",
+      "sourceRow": 366,
+      "lot": 350,
+      "artist": "Billy Ocean",
+      "title": "Get Outta My Dreams, Get Into My Car",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-367",
+      "sourceRow": 367,
+      "lot": 351,
+      "artist": "James Brown",
+      "title": "Todos Hacen El Hustle = Everybodys Doin The Hustle & Dead On The Double Bump",
+      "year": 1976,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Duplo"
+      ]
+    },
+    {
+      "id": "planilha-368",
+      "sourceRow": 368,
+      "lot": 352,
+      "artist": "The Crusaders",
+      "title": "Free As The Wind",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-369",
+      "sourceRow": 369,
+      "lot": 353,
+      "artist": "Johnny Hammond",
+      "title": "Higher Ground",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-370",
+      "sourceRow": 370,
+      "lot": 354,
+      "artist": "Dionne Warwick",
+      "title": "Without Your Love",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-371",
+      "sourceRow": 371,
+      "lot": 356,
+      "artist": "Carly Simon",
+      "title": "The Love Dream",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-372",
+      "sourceRow": 372,
+      "lot": 357,
+      "artist": "Enya",
+      "title": "Shepherd Moons",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-373",
+      "sourceRow": 373,
+      "lot": 358,
+      "artist": "Stéphane Grappelli",
+      "title": "Stephane Grappelli",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-374",
+      "sourceRow": 374,
+      "lot": 359,
+      "artist": "Wayne Horvitz",
+      "title": "This New Generation",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-375",
+      "sourceRow": 375,
+      "lot": 360,
+      "artist": "Various",
+      "title": "Jazz Spectrum Vol. 15 - The Chicagoans",
+      "year": 1971,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-376",
+      "sourceRow": 376,
+      "lot": 361,
+      "artist": "Intergalactic Touring Band",
+      "title": "The Intergalactic Touring Band",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-377",
+      "sourceRow": 377,
+      "lot": 362,
+      "artist": "Sérgio & Odair Assad, Radamés Gnattali, Astor Piazzolla, Joaquín Rodrigo",
+      "title": "Gnatalli Piazzolla Rodrigo",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-378",
+      "sourceRow": 378,
+      "lot": 363,
+      "artist": "Stéphane Grappelli",
+      "title": "Young Django",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-379",
+      "sourceRow": 379,
+      "lot": 364,
+      "artist": "Ella Fitzgerald",
+      "title": "The Johnny Mercer Song Book",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-380",
+      "sourceRow": 380,
+      "lot": 365,
+      "artist": "Carly Simon",
+      "title": "Come Upstairs",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-381",
+      "sourceRow": 381,
+      "lot": 366,
+      "artist": "Gallagher & Lyle",
+      "title": "Showdown",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-382",
+      "sourceRow": 382,
+      "lot": 367,
+      "artist": "Louis Armstrong",
+      "title": "O Inesquecível Louis Armstrong",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-383",
+      "sourceRow": 383,
+      "lot": 368,
+      "artist": "José Feliciano",
+      "title": "Jose Feliciano",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-384",
+      "sourceRow": 384,
+      "lot": 369,
+      "artist": "Kenny G (2)",
+      "title": "Silhouette",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-385",
+      "sourceRow": 385,
+      "lot": 370,
+      "artist": "Nellie Lutcher",
+      "title": "Nellie Lutcher",
+      "year": 1956,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-386",
+      "sourceRow": 386,
+      "lot": 371,
+      "artist": "Lionel Richie",
+      "title": "Lionel Richie",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-387",
+      "sourceRow": 387,
+      "lot": 372,
+      "artist": "Lloyd Cole & The Commotions",
+      "title": "Easy Pieces",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-388",
+      "sourceRow": 388,
+      "lot": 373,
+      "artist": "Luther Vandross",
+      "title": "Give Me The Reason",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-389",
+      "sourceRow": 389,
+      "lot": 374,
+      "artist": "Katrina And The Waves",
+      "title": "Waves",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-390",
+      "sourceRow": 390,
+      "lot": 375,
+      "artist": "Whitney Houston",
+      "title": "How Will I Know",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-391",
+      "sourceRow": 391,
+      "lot": 376,
+      "artist": "The Pretenders",
+      "title": "Get Close",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-392",
+      "sourceRow": 392,
+      "lot": 377,
+      "artist": "Carly Simon",
+      "title": "Spoiled Girl",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-393",
+      "sourceRow": 393,
+      "lot": 378,
+      "artist": "Dhar Braxton",
+      "title": "Jump Back (Set Me Free)",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-394",
+      "sourceRow": 394,
+      "lot": 379,
+      "artist": "Chuck Mangione",
+      "title": "Feels So Good",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-395",
+      "sourceRow": 395,
+      "lot": 380,
+      "artist": "Erroll Garner",
+      "title": "Feeling Is Believing",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-396",
+      "sourceRow": 396,
+      "lot": 381,
+      "artist": "Marlos Nobre, Quinteto De Sopros Da UnB, Conjunto Música Nova Do RJ",
+      "title": "Marlos Nobre",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-397",
+      "sourceRow": 397,
+      "lot": 382,
+      "artist": "Freddie Mercury",
+      "title": "The Freddie Mercury Album",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-398",
+      "sourceRow": 398,
+      "lot": 383,
+      "artist": "Pink Floyd",
+      "title": "The Wall",
+      "year": 1979,
+      "auctionPrice": 109,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-399",
+      "sourceRow": 399,
+      "lot": 384,
+      "artist": "Yes",
+      "title": "Union",
+      "year": 1991,
+      "auctionPrice": 29,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-400",
+      "sourceRow": 400,
+      "lot": 385,
+      "artist": "Jethro Tull",
+      "title": "Crest Of A Knave",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-401",
+      "sourceRow": 401,
+      "lot": 386,
+      "artist": "The Rolling Stones",
+      "title": "30 Greatest Hits",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-402",
+      "sourceRow": 402,
+      "lot": 387,
+      "artist": "Sadao Watanabe",
+      "title": "California Shower",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-403",
+      "sourceRow": 403,
+      "lot": 388,
+      "artist": "Tears For Fears",
+      "title": "The Seeds Of Love",
+      "year": 1989,
+      "auctionPrice": 60,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 79",
+          "numeric": 79
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 79",
+          "numeric": 79
+        },
+        {
+          "source": "Shopee",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-404",
+      "sourceRow": 404,
+      "lot": 389,
+      "artist": "Van Halen",
+      "title": "1984",
+      "year": 1984,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-405",
+      "sourceRow": 405,
+      "lot": 390,
+      "artist": "Bruce Springsteen",
+      "title": "Lucky Town",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-406",
+      "sourceRow": 406,
+      "lot": 391,
+      "artist": "Guns N Roses",
+      "title": "Appetite For Destruction",
+      "year": 1991,
+      "auctionPrice": 29,
+      "marketMin": 130,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 130",
+          "numeric": 130
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-407",
+      "sourceRow": 407,
+      "lot": 392,
+      "artist": "La Bionda",
+      "title": "La Bionda",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-408",
+      "sourceRow": 408,
+      "lot": 393,
+      "artist": "Various",
+      "title": "Sucessos Em Orbita Volume 5",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-409",
+      "sourceRow": 409,
+      "lot": 394,
+      "artist": "Kool & The Gang",
+      "title": "Ladies Night / If You Feel Like Dancin",
+      "year": 1980,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-410",
+      "sourceRow": 410,
+      "lot": 396,
+      "artist": "Whitney Houston",
+      "title": "Son DJ 91",
+      "year": 1996,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-411",
+      "sourceRow": 411,
+      "lot": 397,
+      "artist": "Various",
+      "title": "Flipper Hits 2",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-412",
+      "sourceRow": 412,
+      "lot": 398,
+      "artist": "Various",
+      "title": "Hit Parade",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-413",
+      "sourceRow": 413,
+      "lot": 399,
+      "artist": "Various",
+      "title": "Lets Dance",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-414",
+      "sourceRow": 414,
+      "lot": 400,
+      "artist": "Various",
+      "title": "Funk Explosion",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-415",
+      "sourceRow": 415,
+      "lot": 401,
+      "artist": "Tony Garcia",
+      "title": "Tony Garcia",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-416",
+      "sourceRow": 416,
+      "lot": 402,
+      "artist": "Various",
+      "title": "Terremoto Discotheque",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-417",
+      "sourceRow": 417,
+      "lot": 403,
+      "artist": "Chic",
+      "title": "Take It Off",
+      "year": 1981,
+      "auctionPrice": 59,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-418",
+      "sourceRow": 418,
+      "lot": 404,
+      "artist": "Laura Branigan",
+      "title": "Touch",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-419",
+      "sourceRow": 419,
+      "lot": 405,
+      "artist": "Patrick Hernandez",
+      "title": "Born To Be Alive",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-420",
+      "sourceRow": 420,
+      "lot": 406,
+      "artist": "Jota Quest",
+      "title": "Mais Uma Vez (Remixes)",
+      "year": 2002,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-421",
+      "sourceRow": 421,
+      "lot": 407,
+      "artist": "Various",
+      "title": "Stars On Hits 3",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-422",
+      "sourceRow": 422,
+      "lot": 408,
+      "artist": "Various",
+      "title": "Break Dance",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-423",
+      "sourceRow": 423,
+      "lot": 409,
+      "artist": "Various",
+      "title": "The Big Apple Show",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-424",
+      "sourceRow": 424,
+      "lot": 410,
+      "artist": "Various",
+      "title": "House Music Vol.2",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-425",
+      "sourceRow": 425,
+      "lot": 411,
+      "artist": "Various",
+      "title": "Street Chram Vol.III",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-426",
+      "sourceRow": 426,
+      "lot": 413,
+      "artist": "Sempre Livre",
+      "title": "Programado para Detonar",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-427",
+      "sourceRow": 427,
+      "lot": 414,
+      "artist": "Various",
+      "title": "Star Beats",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-428",
+      "sourceRow": 428,
+      "lot": 416,
+      "artist": "Various",
+      "title": "Dance Power IV",
+      "year": 1994,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-429",
+      "sourceRow": 429,
+      "lot": 417,
+      "artist": "Various",
+      "title": "House Remix Internacional",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-430",
+      "sourceRow": 430,
+      "lot": 418,
+      "artist": "Various",
+      "title": "Charme Especial II",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-431",
+      "sourceRow": 431,
+      "lot": 419,
+      "artist": "Various",
+      "title": "Farofa Vol. 2",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-432",
+      "sourceRow": 432,
+      "lot": 420,
+      "artist": "Tom Tom Club",
+      "title": "Boom Boom Chi Boom Boom",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-433",
+      "sourceRow": 433,
+      "lot": 421,
+      "artist": "Various",
+      "title": "Furacão 2000",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-434",
+      "sourceRow": 434,
+      "lot": 422,
+      "artist": "Various",
+      "title": "BMG Goes Dancing Vol. 08",
+      "year": 1991,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-435",
+      "sourceRow": 435,
+      "lot": 423,
+      "artist": "Various",
+      "title": "BMG Goes Dancing Vol. 04",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-436",
+      "sourceRow": 436,
+      "lot": 424,
+      "artist": "Boy George",
+      "title": "Sold",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-437",
+      "sourceRow": 437,
+      "lot": 425,
+      "artist": "Wet Wet Wet",
+      "title": "Popped In Souled Out",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-438",
+      "sourceRow": 438,
+      "lot": 426,
+      "artist": "Debbie Gibson",
+      "title": "Anything Is Possible",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-439",
+      "sourceRow": 439,
+      "lot": 427,
+      "artist": "Various",
+      "title": "Double Mix",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Duplo"
+      ]
+    },
+    {
+      "id": "planilha-440",
+      "sourceRow": 440,
+      "lot": 428,
+      "artist": "Various",
+      "title": "Disco-Trek",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-441",
+      "sourceRow": 441,
+      "lot": 429,
+      "artist": "Various",
+      "title": "Soundcheck",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-442",
+      "sourceRow": 442,
+      "lot": 430,
+      "artist": "Various",
+      "title": "Resumo Da Ópera",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-443",
+      "sourceRow": 443,
+      "lot": 431,
+      "artist": "Various",
+      "title": "Sucessos Da Manchete",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-444",
+      "sourceRow": 444,
+      "lot": 432,
+      "artist": "Various",
+      "title": "Os Anos 60",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-445",
+      "sourceRow": 445,
+      "lot": 433,
+      "artist": "Various",
+      "title": "Super Dance Discotheque",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-446",
+      "sourceRow": 446,
+      "lot": 434,
+      "artist": "Sonia",
+      "title": "Everybody Knows",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-447",
+      "sourceRow": 447,
+      "lot": 435,
+      "artist": "Filosofia De Rua",
+      "title": "Valeu A Experiência",
+      "year": 1994,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-448",
+      "sourceRow": 448,
+      "lot": 436,
+      "artist": "LL Cool J",
+      "title": "Walking With A Panther",
+      "year": 1989,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-449",
+      "sourceRow": 449,
+      "lot": 437,
+      "artist": "Various",
+      "title": "Nova Transa",
+      "year": 1986,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-450",
+      "sourceRow": 450,
+      "lot": 438,
+      "artist": "Various",
+      "title": "Big Hits",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-451",
+      "sourceRow": 451,
+      "lot": 439,
+      "artist": "Various",
+      "title": "Casino Disco Club O Som Do Charme Vol.III",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-452",
+      "sourceRow": 452,
+      "lot": 440,
+      "artist": "Various",
+      "title": "Cash Box Volume 08",
+      "year": 1993,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Box set"
+      ]
+    },
+    {
+      "id": "planilha-453",
+      "sourceRow": 453,
+      "lot": 441,
+      "artist": "Various",
+      "title": "Som Mágico Padrão 670",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-454",
+      "sourceRow": 454,
+      "lot": 442,
+      "artist": "Various",
+      "title": "Yesterdays",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-455",
+      "sourceRow": 455,
+      "lot": 443,
+      "artist": "Bananarama",
+      "title": "Shy Boy (Dont It Make You Feel Good)",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-456",
+      "sourceRow": 456,
+      "lot": 444,
+      "artist": "Various",
+      "title": "Dance Total 05",
+      "year": 1995,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-457",
+      "sourceRow": 457,
+      "lot": 445,
+      "artist": "The Movement (3)",
+      "title": "Jump!",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-458",
+      "sourceRow": 458,
+      "lot": 446,
+      "artist": "2 Unlimited",
+      "title": "The Magic Friend",
+      "year": 1992,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-459",
+      "sourceRow": 459,
+      "lot": 447,
+      "artist": "Various",
+      "title": "The Jive Juke Box",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Box set"
+      ]
+    },
+    {
+      "id": "planilha-460",
+      "sourceRow": 460,
+      "lot": 448,
+      "artist": "Commodores",
+      "title": "The Best Of Commodores",
+      "year": 1985,
+      "auctionPrice": 29,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-461",
+      "sourceRow": 461,
+      "lot": 449,
+      "artist": "Toto",
+      "title": "Isolation",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-462",
+      "sourceRow": 462,
+      "lot": 450,
+      "artist": "Genesis",
+      "title": "Genesis",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": 45,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 45",
+          "numeric": 45
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-463",
+      "sourceRow": 463,
+      "lot": 451,
+      "artist": "Joe Cocker",
+      "title": "Unchain My Heart",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-464",
+      "sourceRow": 464,
+      "lot": 452,
+      "artist": "Talking Heads",
+      "title": "Naked",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-465",
+      "sourceRow": 465,
+      "lot": 453,
+      "artist": "Duran Duran",
+      "title": "Seven And The Ragged Tiger",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-466",
+      "sourceRow": 466,
+      "lot": 454,
+      "artist": "Prince",
+      "title": "Lovesexy",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-467",
+      "sourceRow": 467,
+      "lot": 455,
+      "artist": "The Cult",
+      "title": "Electric",
+      "year": 1989,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-468",
+      "sourceRow": 468,
+      "lot": 456,
+      "artist": "Jermaine Jackson",
+      "title": "Jermaine Jackson",
+      "year": 1984,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-469",
+      "sourceRow": 469,
+      "lot": 457,
+      "artist": "Simon & Garfunkel",
+      "title": "The Definitive Simon And Garfunkel",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-470",
+      "sourceRow": 470,
+      "lot": 458,
+      "artist": "Johannes Brahms, Richard Wagner, Mitglieder Des Wiener Oktetts",
+      "title": "Clarinet Quintet & Adagio For Clarinet & String Quintet",
+      "year": 1971,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-471",
+      "sourceRow": 471,
+      "lot": 459,
+      "artist": "Bread",
+      "title": "Golden Hits",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-472",
+      "sourceRow": 472,
+      "lot": 460,
+      "artist": "Ludwig van Beethoven, Zubin Mehta, New York Philharmonic",
+      "title": "Symphony No. 3 Eroica",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-473",
+      "sourceRow": 473,
+      "lot": 461,
+      "artist": "Maria Callas",
+      "title": "A Arte Magnífica de Maria Callas",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-474",
+      "sourceRow": 474,
+      "lot": 463,
+      "artist": "Ludwig van Beethoven, Berliner Philharmoniker, Herbert von Karajan",
+      "title": "Natal Brasileiro",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-475",
+      "sourceRow": 475,
+      "lot": 464,
+      "artist": "Thelma Houston",
+      "title": "Any Way You Like It",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-476",
+      "sourceRow": 476,
+      "lot": 465,
+      "artist": "Oscar Peterson, Count Basie",
+      "title": "Satch And Josh",
+      "year": 1975,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-477",
+      "sourceRow": 477,
+      "lot": 466,
+      "artist": "Frank Sinatra",
+      "title": "Ol Blue Eyes Is Back",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-478",
+      "sourceRow": 478,
+      "lot": 467,
+      "artist": "Ella Fitzgerald, Cole Porter",
+      "title": "Dream Dancing",
+      "year": 1978,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-479",
+      "sourceRow": 479,
+      "lot": 468,
+      "artist": "J.J. Johnson",
+      "title": "Concepts In Blue",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-480",
+      "sourceRow": 480,
+      "lot": 469,
+      "artist": "Joe Pass",
+      "title": "Virtuoso",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-481",
+      "sourceRow": 481,
+      "lot": 470,
+      "artist": "Count Basie Orchestra",
+      "title": "Warm Breeze",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-482",
+      "sourceRow": 482,
+      "lot": 471,
+      "artist": "Stan Kenton And His Orchestra",
+      "title": "Artistry In Jazz",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-483",
+      "sourceRow": 483,
+      "lot": 472,
+      "artist": "Count Basie, Oscar Peterson",
+      "title": "Night Rider",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-484",
+      "sourceRow": 484,
+      "lot": 473,
+      "artist": "Gene Loves Jezebel",
+      "title": "Discover",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-485",
+      "sourceRow": 485,
+      "lot": 474,
+      "artist": "Eddy Grant",
+      "title": "Walking On Sunshine",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-486",
+      "sourceRow": 486,
+      "lot": 475,
+      "artist": "Quiet Riot",
+      "title": "Metal Health",
+      "year": null,
+      "auctionPrice": 59,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-487",
+      "sourceRow": 487,
+      "lot": 476,
+      "artist": "Rush",
+      "title": "Grace Under Pressure",
+      "year": 1984,
+      "auctionPrice": 39,
+      "marketMin": 80,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 80",
+          "numeric": 80
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-488",
+      "sourceRow": 488,
+      "lot": 477,
+      "artist": "Jimi Hendrix",
+      "title": "Purple Haze",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-489",
+      "sourceRow": 489,
+      "lot": 478,
+      "artist": "Deep Purple",
+      "title": "The House Of Blue Light",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-490",
+      "sourceRow": 490,
+      "lot": 479,
+      "artist": "Triumvirat",
+      "title": "Spartacus",
+      "year": 1977,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-491",
+      "sourceRow": 491,
+      "lot": 480,
+      "artist": "Simple Minds",
+      "title": "Street Fighting Years",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-492",
+      "sourceRow": 492,
+      "lot": 481,
+      "artist": "Tracy Chapman",
+      "title": "Tracy Chapman",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-493",
+      "sourceRow": 493,
+      "lot": 482,
+      "artist": "Elton John",
+      "title": "Ice On Fire",
+      "year": 1985,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-494",
+      "sourceRow": 494,
+      "lot": 483,
+      "artist": "Suzanne Vega",
+      "title": "Solitude Standing",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-495",
+      "sourceRow": 495,
+      "lot": 484,
+      "artist": "Pet Shop Boys",
+      "title": "So Hard",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-496",
+      "sourceRow": 496,
+      "lot": 485,
+      "artist": "Supertramp",
+      "title": "Paris",
+      "year": 1980,
+      "auctionPrice": 39,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-497",
+      "sourceRow": 497,
+      "lot": 486,
+      "artist": "The Smiths",
+      "title": "Panic",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-498",
+      "sourceRow": 498,
+      "lot": 488,
+      "artist": "Ringo Starr",
+      "title": "Ringos Rotogravure",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-499",
+      "sourceRow": 499,
+      "lot": 489,
+      "artist": "Jon Bon Jovi",
+      "title": "Blaze Of Glory",
+      "year": 1990,
+      "auctionPrice": 40,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-500",
+      "sourceRow": 500,
+      "lot": 490,
+      "artist": "Carpenters",
+      "title": "The Best Of Carpenters",
+      "year": 1994,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-501",
+      "sourceRow": 501,
+      "lot": 491,
+      "artist": "Bad Company (3)",
+      "title": "Run With The Pack",
+      "year": 1976,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-502",
+      "sourceRow": 502,
+      "lot": 492,
+      "artist": "Triumph (2)",
+      "title": "Never Surrender",
+      "year": 1983,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-503",
+      "sourceRow": 503,
+      "lot": 493,
+      "artist": "The Beatles",
+      "title": "With The Beatles",
+      "year": 1977,
+      "auctionPrice": 70,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-504",
+      "sourceRow": 504,
+      "lot": 494,
+      "artist": "Prince And The Revolution",
+      "title": "Parade",
+      "year": 1986,
+      "auctionPrice": 30,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-505",
+      "sourceRow": 505,
+      "lot": 495,
+      "artist": "Bob Dylan",
+      "title": "Bob Dylan At Budokan",
+      "year": null,
+      "auctionPrice": 39,
+      "marketMin": 75,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 75",
+          "numeric": 75
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-506",
+      "sourceRow": 506,
+      "lot": 496,
+      "artist": "a-ha",
+      "title": "Scoundrel Days",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 40",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-507",
+      "sourceRow": 507,
+      "lot": 497,
+      "artist": "Ella Fitzgerald, Count Basie, Joe Pass, Niels-Henning Ørsted Pedersen",
+      "title": "Digital III At Montreux",
+      "year": 1981,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-508",
+      "sourceRow": 508,
+      "lot": 498,
+      "artist": "Kenny Rogers",
+      "title": "They Dont Make Them Like They Used To",
+      "year": 1987,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-509",
+      "sourceRow": 509,
+      "lot": 499,
+      "artist": "Donna Summer",
+      "title": "The Wanderer",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-510",
+      "sourceRow": 510,
+      "lot": 500,
+      "artist": "Aretha Franklin",
+      "title": "Let Me In Your Life",
+      "year": 1974,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-511",
+      "sourceRow": 511,
+      "lot": 501,
+      "artist": "Woody Herman",
+      "title": "Capitol Jazz Classics Vol.9",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-512",
+      "sourceRow": 512,
+      "lot": 502,
+      "artist": "Nacha Guevara",
+      "title": "Nacha Guevara Canta",
+      "year": 1968,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-513",
+      "sourceRow": 513,
+      "lot": 503,
+      "artist": "Jim Dale",
+      "title": "Barnum (The New Musical)",
+      "year": 1980,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-514",
+      "sourceRow": 514,
+      "lot": 504,
+      "artist": "Elvis Presley",
+      "title": "Elvis Now",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-515",
+      "sourceRow": 515,
+      "lot": 505,
+      "artist": "Jon Secada",
+      "title": "Heart, Soul & A Voice",
+      "year": 1994,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-516",
+      "sourceRow": 516,
+      "lot": 506,
+      "artist": "Michael Jackson",
+      "title": "Thriller",
+      "year": 1982,
+      "auctionPrice": 80,
+      "marketMin": 45,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "79/100",
+          "numeric": 79
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 100",
+          "numeric": 100
+        },
+        {
+          "source": "Shopee",
+          "display": "R$ 179",
+          "numeric": 179
+        },
+        {
+          "source": "Leilão observado",
+          "display": "R$ 45",
+          "numeric": 45
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-517",
+      "sourceRow": 517,
+      "lot": 507,
+      "artist": "The Touch, Terence Trent DArby",
+      "title": "Early Works",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-518",
+      "sourceRow": 518,
+      "lot": 508,
+      "artist": "Janis Joplin",
+      "title": "Pearl",
+      "year": null,
+      "auctionPrice": 29,
+      "marketMin": 85,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "89/120",
+          "numeric": 89
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 85",
+          "numeric": 85
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-519",
+      "sourceRow": 519,
+      "lot": 509,
+      "artist": "Big Brother & The Holding Company",
+      "title": "Cheap Thrills",
+      "year": 1978,
+      "auctionPrice": 89,
+      "marketMin": 119,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 119",
+          "numeric": 119
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-520",
+      "sourceRow": 520,
+      "lot": 510,
+      "artist": "Creedence Clearwater Revival",
+      "title": "Mardi Gras",
+      "year": 1983,
+      "auctionPrice": 59,
+      "marketMin": 80,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 80",
+          "numeric": 80
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-521",
+      "sourceRow": 521,
+      "lot": 511,
+      "artist": "a-ha",
+      "title": "Stay On These Roads",
+      "year": 1988,
+      "auctionPrice": 19,
+      "marketMin": 46,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 46",
+          "numeric": 46
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-522",
+      "sourceRow": 522,
+      "lot": 512,
+      "artist": "MFSB",
+      "title": "Love Is The Message",
+      "year": 1973,
+      "auctionPrice": 19,
+      "marketMin": 125,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 125",
+          "numeric": 125
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-523",
+      "sourceRow": 523,
+      "lot": 513,
+      "artist": "The Police",
+      "title": "Ghost In The Machine",
+      "year": 1982,
+      "auctionPrice": 29,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 45",
+          "numeric": 45
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 40",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-524",
+      "sourceRow": 524,
+      "lot": 514,
+      "artist": "Information Society",
+      "title": "Peace And Love, Inc.",
+      "year": 1992,
+      "auctionPrice": 19,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 40",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-525",
+      "sourceRow": 525,
+      "lot": 515,
+      "artist": "Tracy Chapman",
+      "title": "Subcity",
+      "year": 1990,
+      "auctionPrice": 19,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-526",
+      "sourceRow": 526,
+      "lot": 516,
+      "artist": "Elvis Presley",
+      "title": "Our Memories Of Elvis Volume 2",
+      "year": 1979,
+      "auctionPrice": 19,
+      "marketMin": 90,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 90",
+          "numeric": 90
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-527",
+      "sourceRow": 527,
+      "lot": 517,
+      "artist": "Earth, Wind & Fire",
+      "title": "Earth, Wind & Fire In Brazil",
+      "year": 1980,
+      "auctionPrice": 29,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 70",
+          "numeric": 70
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-528",
+      "sourceRow": 528,
+      "lot": 518,
+      "artist": "Pink Floyd",
+      "title": "Animals",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": 160,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "180/188/215",
+          "numeric": 180
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 160",
+          "numeric": 160
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-529",
+      "sourceRow": 529,
+      "lot": 519,
+      "artist": "Various",
+      "title": "Promo - Disco Internacional No. 28",
+      "year": 1989,
+      "auctionPrice": 19,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-530",
+      "sourceRow": 530,
+      "lot": 520,
+      "artist": "Alice Cooper",
+      "title": "Billion Dollar Babies",
+      "year": null,
+      "auctionPrice": 19,
+      "marketMin": 40,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 40",
+          "numeric": 40
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-531",
+      "sourceRow": 531,
+      "lot": 521,
+      "artist": "Spin Doctors",
+      "title": "Pocket Full Of Kryptonite",
+      "year": 1991,
+      "auctionPrice": 39,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-532",
+      "sourceRow": 532,
+      "lot": null,
+      "artist": "ARTISTA",
+      "title": "ALBUM",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "VALOR(+baixo)",
+          "numeric": null
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-533",
+      "sourceRow": 533,
+      "lot": null,
+      "artist": "elton john",
+      "title": "captain fantastic",
+      "year": null,
+      "auctionPrice": 120,
+      "marketMin": 60,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 60",
+          "numeric": 60
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-534",
+      "sourceRow": 534,
+      "lot": null,
+      "artist": "emerson lake and palmer",
+      "title": "welmcome back my friends",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-535",
+      "sourceRow": 535,
+      "lot": null,
+      "artist": "grand funk",
+      "title": "e pluribus funk",
+      "year": null,
+      "auctionPrice": 160,
+      "marketMin": null,
+      "market": [],
+      "tags": []
+    },
+    {
+      "id": "planilha-536",
+      "sourceRow": 536,
+      "lot": null,
+      "artist": "pink floyd",
+      "title": "meddle",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 90,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 90",
+          "numeric": 90
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-537",
+      "sourceRow": 537,
+      "lot": null,
+      "artist": "crosby stills nash and young",
+      "title": "deja vu",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 90,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 90",
+          "numeric": 90
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-538",
+      "sourceRow": 538,
+      "lot": null,
+      "artist": "the police",
+      "title": "synchronicity",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 57,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 57",
+          "numeric": 57
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-539",
+      "sourceRow": 539,
+      "lot": null,
+      "artist": "supertramp",
+      "title": "breakfast in america",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-540",
+      "sourceRow": 540,
+      "lot": null,
+      "artist": "pink floyd",
+      "title": "the wall + compacto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 159,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 159",
+          "numeric": 159
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-541",
+      "sourceRow": 541,
+      "lot": null,
+      "artist": "frank zappa",
+      "title": "grand wazoo",
+      "year": null,
+      "auctionPrice": 102,
+      "marketMin": 180,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 180",
+          "numeric": 180
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-542",
+      "sourceRow": 542,
+      "lot": null,
+      "artist": "frank zappa",
+      "title": "tinselltown rebellion",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 115,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 115",
+          "numeric": 115
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-545",
+      "sourceRow": 545,
+      "lot": null,
+      "artist": "criolo",
+      "title": "duas de cinco single",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "Single"
+      ]
+    },
+    {
+      "id": "planilha-546",
+      "sourceRow": 546,
+      "lot": null,
+      "artist": "gilberto gil",
+      "title": "luar",
+      "year": null,
+      "auctionPrice": 30,
+      "marketMin": 57,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 57",
+          "numeric": 57
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-547",
+      "sourceRow": 547,
+      "lot": null,
+      "artist": "jota.pê",
+      "title": "se meu peito fosse o mundo",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-548",
+      "sourceRow": 548,
+      "lot": null,
+      "artist": "milton nascimento",
+      "title": "minas + geraes",
+      "year": null,
+      "auctionPrice": 30,
+      "marketMin": 44,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "44+70",
+          "numeric": 44
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-549",
+      "sourceRow": 549,
+      "lot": null,
+      "artist": "queen",
+      "title": "news of the world",
+      "year": null,
+      "auctionPrice": 40,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-550",
+      "sourceRow": 550,
+      "lot": null,
+      "artist": "crosby still",
+      "title": "whistling down the wire JAPAN",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 34,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 34",
+          "numeric": 34
+        }
+      ],
+      "tags": [
+        "Japão"
+      ]
+    },
+    {
+      "id": "planilha-551",
+      "sourceRow": 551,
+      "lot": null,
+      "artist": "the who",
+      "title": "faces dances USA",
+      "year": null,
+      "auctionPrice": 90,
+      "marketMin": 67,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 67",
+          "numeric": 67
+        }
+      ],
+      "tags": [
+        "EUA"
+      ]
+    },
+    {
+      "id": "planilha-552",
+      "sourceRow": 552,
+      "lot": null,
+      "artist": "supertramp",
+      "title": "breakfast in america JAPAN",
+      "year": null,
+      "auctionPrice": 140,
+      "marketMin": 76,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 76",
+          "numeric": 76
+        }
+      ],
+      "tags": [
+        "Japão"
+      ]
+    },
+    {
+      "id": "planilha-553",
+      "sourceRow": 553,
+      "lot": null,
+      "artist": "the who",
+      "title": "whos missing EUA",
+      "year": null,
+      "auctionPrice": 50,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "EUA"
+      ]
+    },
+    {
+      "id": "planilha-554",
+      "sourceRow": 554,
+      "lot": null,
+      "artist": "alans parsons",
+      "title": "ammonia avenue JAPAO",
+      "year": null,
+      "auctionPrice": 90,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Japão"
+      ]
+    },
+    {
+      "id": "planilha-555",
+      "sourceRow": 555,
+      "lot": null,
+      "artist": "three dog night",
+      "title": "harmony USA",
+      "year": null,
+      "auctionPrice": 81,
+      "marketMin": 35,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 35",
+          "numeric": 35
+        }
+      ],
+      "tags": [
+        "EUA"
+      ]
+    },
+    {
+      "id": "planilha-556",
+      "sourceRow": 556,
+      "lot": null,
+      "artist": "suzi quatro",
+      "title": "aggrophobia JAPAO",
+      "year": null,
+      "auctionPrice": 95,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Japão"
+      ]
+    },
+    {
+      "id": "planilha-557",
+      "sourceRow": 557,
+      "lot": null,
+      "artist": "fontaines d.c.",
+      "title": "romance",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": null,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "x",
+          "numeric": null
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "planilha-558",
+      "sourceRow": 558,
+      "lot": null,
+      "artist": "jimi hendrix",
+      "title": "roots of hendrix importado",
+      "year": null,
+      "auctionPrice": 50,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Importado"
+      ]
+    },
+    {
+      "id": "planilha-559",
+      "sourceRow": 559,
+      "lot": null,
+      "artist": "dio",
+      "title": "pcture importado",
+      "year": null,
+      "auctionPrice": 60,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Importado"
+      ]
+    },
+    {
+      "id": "planilha-560",
+      "sourceRow": 560,
+      "lot": null,
+      "artist": "hendrix",
+      "title": "importado japao",
+      "year": null,
+      "auctionPrice": 45,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Japão",
+        "Importado"
+      ]
+    },
+    {
+      "id": "planilha-561",
+      "sourceRow": 561,
+      "lot": null,
+      "artist": "ten yeras after",
+      "title": "japao",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Japão"
+      ]
+    },
+    {
+      "id": "planilha-562",
+      "sourceRow": 562,
+      "lot": null,
+      "artist": "vuur",
+      "title": "importado alemanha",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Alemanha",
+        "Importado"
+      ]
+    }
+  ]
+}
