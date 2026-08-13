@@ -20,6 +20,7 @@ type CatalogRecord = {
   marketMin: number | null;
   market: MarketObservation[];
   tags: string[];
+  adornosPrice?: number | null;
 };
 
 const records = catalog.records as CatalogRecord[];
@@ -42,7 +43,7 @@ function source(record: CatalogRecord, name: string) {
 }
 
 function referencePrice(record: CatalogRecord) {
-  const values = [record.auctionPrice, record.marketMin].filter(
+  const values = [record.auctionPrice, record.marketMin, record.adornosPrice ?? null].filter(
     (value): value is number => value !== null && value > 0,
   );
   return values.length ? Math.min(...values) : null;
@@ -92,6 +93,7 @@ export default function Home() {
         const reference = referencePrice(record);
         const matchesCoverage = coverage === "todos"
           || (coverage === "com-referencia" && reference !== null)
+          || (coverage === "adornos" && record.adornosPrice != null)
           || (coverage === "mercado" && record.market.length > 0)
           || (coverage === "sem-referencia" && reference === null)
           || (coverage === "com-oferta" && Boolean(offers[record.id]));
@@ -124,6 +126,7 @@ export default function Home() {
         <div className="base-status">
           <span><b>{records.length}</b> discos</span>
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
+          <span><b>{records.filter((record) => record.adornosPrice != null).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
         </div>
       </header>
@@ -156,13 +159,13 @@ export default function Home() {
           {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
         </label>
         <label><span>Década</span><select value={decade} onChange={(event) => setDecade(event.target.value)}><option value="todas">Todas</option>{decades.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
-        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
+        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
         <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
       </section>
 
       <div className="result-line">
         <strong>{filtered.length}</strong> {filtered.length === 1 ? "disco encontrado" : "discos encontrados"}
-        <span>Referência = menor valor registrado entre leilão e pesquisa</span>
+        <span>Referência = menor valor registrado entre leilão, pesquisa e Adornos</span>
       </div>
 
       <section className="table-shell" aria-label="Lista de preços de discos">
@@ -179,6 +182,7 @@ export default function Home() {
               <th>Shopee</th>
               <th>Leilão visto</th>
               <th>Valor leilão</th>
+              <th className="adornos-head">Adornos</th>
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>
               <th className="verdict-head">Avaliação</th>
@@ -203,6 +207,7 @@ export default function Home() {
                   <td className="price-source">{source(record, "Shopee")}</td>
                   <td className="price-source">{source(record, "Leilão observado")}</td>
                   <td className="money-cell">{money(record.auctionPrice)}</td>
+                  <td className="adornos-cell">{money(record.adornosPrice ?? null)}</td>
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
                     <span>R$</span>
