@@ -27,9 +27,10 @@ test("renders the price-reference list", async () => {
 });
 
 test("keeps all data visible and compares offers inline", async () => {
-  const [page, catalog] = await Promise.all([
+  const [page, catalog, css] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/data/catalog.json", import.meta.url), "utf8"),
+    readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
   assert.equal(parsed.records.length, 771);
@@ -38,4 +39,6 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.doesNotMatch(page, /setSelected|record-card|load-more/);
+  assert.match(css, /thead \{ position: relative;/);
+  assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);
 });
