@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T21:44:29.118Z",
+  "generatedAt": "2026-08-15T21:51:01.396Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -8235,7 +8235,11 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 189
+      "adornosPrice": 148,
+      "adornosPrices": [
+        148,
+        189
+      ]
     },
     {
       "id": "adornos-62",

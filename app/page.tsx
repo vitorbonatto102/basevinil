@@ -21,6 +21,7 @@ type CatalogRecord = {
   market: MarketObservation[];
   tags: string[];
   adornosPrice?: number | null;
+  adornosPrices?: number[];
 };
 
 const records = catalog.records as CatalogRecord[];
@@ -42,8 +43,26 @@ function source(record: CatalogRecord, name: string) {
   return record.market.find((item) => item.source === name)?.display ?? "—";
 }
 
+function adornosValues(record: CatalogRecord) {
+  const values = record.adornosPrices?.length
+    ? record.adornosPrices
+    : record.adornosPrice != null
+      ? [record.adornosPrice]
+      : [];
+  return [...new Set(values.filter((value) => value > 0))];
+}
+
+function adornosDisplay(record: CatalogRecord) {
+  const values = adornosValues(record);
+  if (!values.length) return "—";
+  const formatted = values.map((value) => new Intl.NumberFormat("pt-BR", {
+    maximumFractionDigits: 0,
+  }).format(value));
+  return `R$ ${formatted.join("/")}`;
+}
+
 function referencePrice(record: CatalogRecord) {
-  const values = [record.auctionPrice, record.marketMin, record.adornosPrice ?? null].filter(
+  const values = [record.auctionPrice, record.marketMin, ...adornosValues(record)].filter(
     (value): value is number => value !== null && value > 0,
   );
   return values.length ? Math.min(...values) : null;
@@ -93,7 +112,7 @@ export default function Home() {
         const reference = referencePrice(record);
         const matchesCoverage = coverage === "todos"
           || (coverage === "com-referencia" && reference !== null)
-          || (coverage === "adornos" && record.adornosPrice != null)
+          || (coverage === "adornos" && adornosValues(record).length > 0)
           || (coverage === "mercado" && record.market.length > 0)
           || (coverage === "sem-referencia" && reference === null)
           || (coverage === "com-oferta" && Boolean(offers[record.id]));
@@ -126,7 +145,7 @@ export default function Home() {
         <div className="base-status">
           <span><b>{records.length}</b> discos</span>
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
-          <span><b>{records.filter((record) => record.adornosPrice != null).length}</b> Adornos</span>
+          <span><b>{records.filter((record) => adornosValues(record).length > 0).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
         </div>
       </header>
@@ -207,7 +226,7 @@ export default function Home() {
                   <td className="price-source">{source(record, "Shopee")}</td>
                   <td className="price-source">{source(record, "Leilão observado")}</td>
                   <td className="money-cell">{money(record.auctionPrice)}</td>
-                  <td className="adornos-cell">{money(record.adornosPrice ?? null)}</td>
+                  <td className="adornos-cell">{adornosDisplay(record)}</td>
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
                     <span>R$</span>
