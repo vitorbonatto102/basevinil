@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T15:06:03.281Z",
+  "generatedAt": "2026-08-15T21:44:29.118Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -6579,7 +6579,8 @@
           "numeric": 85
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 189
     },
     {
       "id": "planilha-519",
@@ -8234,7 +8235,7 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 148
+      "adornosPrice": 189
     },
     {
       "id": "adornos-62",
@@ -10545,6 +10546,261 @@
         "Adornos"
       ],
       "adornosPrice": 21
+    },
+    {
+      "id": "adornos-216",
+      "sourceRow": 778,
+      "lot": null,
+      "artist": "Joy Division",
+      "title": "Closer",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-217",
+      "sourceRow": 779,
+      "lot": null,
+      "artist": "Garotos Podres",
+      "title": "Pisando Na M...",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-218",
+      "sourceRow": 780,
+      "lot": null,
+      "artist": "Metallica",
+      "title": "1989",
+      "year": 1989,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-219",
+      "sourceRow": 781,
+      "lot": null,
+      "artist": "Motörhead",
+      "title": "Over Kill",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-220",
+      "sourceRow": 782,
+      "lot": null,
+      "artist": "The Doors",
+      "title": "Trilha Do Filme",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-221",
+      "sourceRow": 783,
+      "lot": null,
+      "artist": "Eagles",
+      "title": "The Long Run",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-222",
+      "sourceRow": 784,
+      "lot": null,
+      "artist": "Hüsker Dü",
+      "title": "Warehouse (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-223",
+      "sourceRow": 785,
+      "lot": null,
+      "artist": "Iron Maiden",
+      "title": "1980",
+      "year": 1980,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-224",
+      "sourceRow": 786,
+      "lot": null,
+      "artist": "Deep Purple",
+      "title": "The Book Of Taliesyn",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-225",
+      "sourceRow": 787,
+      "lot": null,
+      "artist": "Black Sabbath",
+      "title": "Live Evil (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-226",
+      "sourceRow": 788,
+      "lot": null,
+      "artist": "Blue Öyster Cult",
+      "title": "Fire Of Unknown Origin",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-227",
+      "sourceRow": 789,
+      "lot": null,
+      "artist": "David Bowie",
+      "title": "Changes Two",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-228",
+      "sourceRow": 790,
+      "lot": null,
+      "artist": "Os Replicantes",
+      "title": "O Futuro É Vortex",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-229",
+      "sourceRow": 791,
+      "lot": null,
+      "artist": "The Smiths",
+      "title": "Hatful Of Hollow",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-230",
+      "sourceRow": 792,
+      "lot": null,
+      "artist": "Pink Floyd",
+      "title": "The Division Bell",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-231",
+      "sourceRow": 793,
+      "lot": null,
+      "artist": "The Cure",
+      "title": "Wish (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-232",
+      "sourceRow": 794,
+      "lot": null,
+      "artist": "Ozzy Osbourne",
+      "title": "Bark At The Moon",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Adornos"
+      ],
+      "adornosPrice": 189
     }
   ],
   "sources": [
