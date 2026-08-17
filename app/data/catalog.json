@@ -10805,10 +10805,34 @@
         "Adornos"
       ],
       "adornosPrice": 189
+    },
+    {
+      "id": "mercado-livre-1",
+      "sourceRow": 795,
+      "lot": null,
+      "artist": "Led Zeppelin",
+      "title": "Mothership Box (4LP, 180g, Importado)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 1253,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 1.253",
+          "numeric": 1253
+        }
+      ],
+      "tags": [
+        "Box",
+        "4LP",
+        "180g",
+        "Importado"
+      ]
     }
   ],
   "sources": [
     "Planilha original de preços de discos",
-    "Adornos"
+    "Adornos",
+    "Mercado Livre"
   ]
 }
