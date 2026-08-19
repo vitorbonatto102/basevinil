@@ -23,6 +23,9 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Preço encontrado/);
   assert.match(html, /Mercado Livre/);
   assert.match(html, /Adornos/);
+  assert.match(html, /Próximos leilões/);
+  assert.match(html, /Bruce Angeiras/);
+  assert.match(html, /E Pluribus Funk/);
   assert.doesNotMatch(html, /Explore o catálogo|role="dialog"|cover-art/i);
 });
 
@@ -33,8 +36,8 @@ test("keeps all data visible and compares offers inline", async () => {
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
-  assert.equal(parsed.records.length, 771);
-  assert.equal(parsed.records.filter((record) => record.adornosPrice != null).length, 236);
+  assert.equal(parsed.records.length, 789);
+  assert.equal(parsed.records.filter((record) => record.adornosPrice != null).length, 254);
   assert.match(page, /<table>/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);

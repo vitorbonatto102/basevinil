@@ -24,7 +24,81 @@ type CatalogRecord = {
   adornosPrices?: number[];
 };
 
+type AuctionWatch = {
+  lot: number;
+  artist: string;
+  title: string;
+  date: string;
+  condition: string;
+  currentBid: number;
+  nextBid: number;
+  ceiling: number;
+  priority: string;
+  tone: "high" | "medium" | "careful";
+  note: string;
+  url: string;
+};
+
 const records = catalog.records as CatalogRecord[];
+
+const auctionWatch: AuctionWatch[] = [
+  {
+    lot: 52,
+    artist: "INXS",
+    title: "Kick",
+    date: "24 ago · 15h",
+    condition: "Disco e capa em bom estado",
+    currentBid: 40,
+    nextBid: 50,
+    ceiling: 75,
+    priority: "Prioridade alta",
+    tone: "high",
+    note: "Confirmar prensagem e encarte.",
+    url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31531012",
+  },
+  {
+    lot: 604,
+    artist: "Grand Funk",
+    title: "Phoenix",
+    date: "25 ago · 15h",
+    condition: "Leves riscos; capa com desgaste nas extremidades",
+    currentBid: 40,
+    nextBid: 50,
+    ceiling: 50,
+    priority: "Cautela",
+    tone: "careful",
+    note: "Não disputar acima do próximo lance sem rever o mercado.",
+    url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31719579",
+  },
+  {
+    lot: 643,
+    artist: "Grand Funk Railroad",
+    title: "Survival",
+    date: "26 ago · 15h",
+    condition: "Disco e capa em ótimo estado",
+    currentBid: 60,
+    nextBid: 70,
+    ceiling: 110,
+    priority: "1ª prioridade",
+    tone: "high",
+    note: "Melhor relação entre estado, lance e referências atuais.",
+    url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31726396",
+  },
+  {
+    lot: 644,
+    artist: "Grand Funk Railroad",
+    title: "E Pluribus Funk",
+    date: "26 ago · 15h",
+    condition: "Disco bom; capa com leves desgastes",
+    currentBid: 70,
+    nextBid: 80,
+    ceiling: 110,
+    priority: "Prioridade alta",
+    tone: "medium",
+    note: "Piso ativo visto: R$ 185. Confirmar encarte/moeda.",
+    url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31726422",
+  },
+];
 
 function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -36,6 +110,15 @@ function money(value: number | null) {
     style: "currency",
     currency: "BRL",
     maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function exactMoney(value: number) {
+  return new Intl.NumberFormat("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: value % 1 === 0 ? 0 : 2,
+    maximumFractionDigits: 2,
   }).format(value);
 }
 
@@ -147,6 +230,7 @@ export default function Home() {
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
           <span><b>{records.filter((record) => adornosValues(record).length > 0).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
+          <a href="#proximos-leiloes"><b>{auctionWatch.length}</b> em leilão</a>
         </div>
       </header>
 
@@ -161,6 +245,59 @@ export default function Home() {
           <span><i className="good" /> barato</span>
           <span><i className="fair" /> na faixa</span>
           <span><i className="high" /> caro</span>
+        </div>
+      </section>
+
+      <section className="auction-watch" id="proximos-leiloes" aria-labelledby="auction-title">
+        <div className="auction-heading">
+          <div>
+            <p className="kicker">Radar de oportunidades</p>
+            <h2 id="auction-title">Próximos leilões</h2>
+            <p>Os discos que você escolheu acompanhar, com o custo da comissão e um teto prático para não se empolgar no lance.</p>
+          </div>
+          <a className="auction-catalog-link" href="https://www.bruceangeirasleiloeiro.com.br/catalogo.asp?Num=63353&fav=1&p=on" target="_blank" rel="noreferrer">
+            Abrir catálogo completo <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div className="auction-board">
+          <div className="auction-meta">
+            <div><span>Casa</span><strong>Bruce Angeiras</strong></div>
+            <div><span>Leilão</span><strong>47º Meier · 8º exclusivo de mídias</strong></div>
+            <div><span>Quando</span><strong>24, 25 e 26 de agosto · 15h</strong></div>
+            <div><span>Custos</span><strong>5% de comissão + frete</strong></div>
+          </div>
+
+          <div className="auction-cards">
+            {auctionWatch.map((item) => {
+              const withCommission = item.currentBid * 1.05;
+              return (
+                <article className={`auction-card ${item.tone}`} key={item.lot}>
+                  <div className="auction-card-top">
+                    <span>Lote {item.lot} · {item.date}</span>
+                    <b>{item.priority}</b>
+                  </div>
+                  <h3>{item.artist}<span>{item.title}</span></h3>
+                  <p className="auction-condition">{item.condition}</p>
+                  <dl>
+                    <div><dt>Lance atual</dt><dd>{money(item.currentBid)}</dd></div>
+                    <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
+                    <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
+                    <div className="ceiling"><dt>Teto automático</dt><dd>{money(item.ceiling)}</dd></div>
+                  </dl>
+                  <p className="auction-note">{item.note}</p>
+                  <a href={item.url} target="_blank" rel="noreferrer" aria-label={`Abrir lote ${item.lot}: ${item.artist} — ${item.title}`}>
+                    Conferir lote e lance atual <span aria-hidden="true">↗</span>
+                  </a>
+                </article>
+              );
+            })}
+          </div>
+
+          <div className="auction-footnote">
+            <span>Atualizado em 19 ago 2026</span>
+            <p>Os lances mudam. Antes de ofertar, abra o lote e some comissão, frete e embalagem.</p>
+          </div>
         </div>
       </section>
 

@@ -30,6 +30,8 @@ button, input, select { font: inherit; }
 .record-dot i { position: absolute; width: 4px; height: 4px; background: var(--accent); border-radius: 50%; }
 .base-status { display: flex; align-items: center; gap: 26px; font: 10px "DM Mono", monospace; text-transform: uppercase; color: var(--muted); }
 .base-status b { color: var(--ink); }
+.base-status a { color: var(--accent); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 2px; }
+.base-status a b { color: inherit; }
 
 .intro { padding: 38px 28px 30px; display: flex; justify-content: space-between; align-items: end; gap: 40px; border-bottom: 1px solid var(--line); }
 .kicker { margin: 0 0 8px; font: 9px "DM Mono", monospace; color: var(--accent); text-transform: uppercase; letter-spacing: .12em; }
@@ -42,6 +44,43 @@ button, input, select { font: inherit; }
 .legend .good { background: #76a86c; }
 .legend .fair { background: var(--yellow); }
 .legend .high { background: var(--red); }
+
+.auction-watch { padding: 34px 28px 40px; border-bottom: 1px solid var(--ink); background: #ece8de; scroll-margin-top: 12px; }
+.auction-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 20px; }
+.auction-heading h2 { margin: 0; font-size: clamp(27px, 3vw, 40px); line-height: 1; letter-spacing: -.05em; }
+.auction-heading > div > p:last-child { max-width: 720px; margin: 11px 0 0; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.auction-catalog-link { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 11px 14px; border: 1px solid var(--ink); color: var(--ink); background: var(--panel); text-decoration: none; font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+.auction-catalog-link:hover { color: var(--panel); background: var(--ink); }
+.auction-board { border: 1px solid var(--ink); background: var(--panel); box-shadow: 8px 8px 0 rgba(23,24,21,.08); }
+.auction-meta { display: grid; grid-template-columns: 1fr 1.7fr 1.4fr 1fr; border-bottom: 1px solid var(--ink); }
+.auction-meta > div { min-width: 0; padding: 13px 15px; border-right: 1px solid var(--line); }
+.auction-meta > div:last-child { border-right: 0; }
+.auction-meta span { display: block; margin-bottom: 4px; color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .08em; }
+.auction-meta strong { display: block; font-size: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.auction-cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.auction-card { min-width: 0; padding: 17px 15px 15px; border-right: 1px solid var(--line); position: relative; }
+.auction-card:last-child { border-right: 0; }
+.auction-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--yellow); }
+.auction-card.high::before { background: var(--green); }
+.auction-card.careful::before { background: var(--red); }
+.auction-card-top { display: flex; align-items: center; justify-content: space-between; gap: 8px; font: 8px "DM Mono", monospace; text-transform: uppercase; color: var(--muted); }
+.auction-card-top b { color: var(--ink); font-weight: 500; }
+.auction-card.high .auction-card-top b { color: var(--green); }
+.auction-card.careful .auction-card-top b { color: var(--red); }
+.auction-card h3 { margin: 17px 0 0; font-size: 13px; line-height: 1.2; letter-spacing: -.02em; }
+.auction-card h3 span { display: block; margin-top: 2px; font-size: 22px; letter-spacing: -.045em; }
+.auction-condition { min-height: 38px; margin: 8px 0 14px; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.auction-card dl { display: grid; grid-template-columns: 1fr 1fr; margin: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+.auction-card dl > div { padding: 8px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.auction-card dt { margin-bottom: 3px; color: var(--muted); font: 7px "DM Mono", monospace; text-transform: uppercase; }
+.auction-card dd { margin: 0; font-size: 13px; font-weight: 800; }
+.auction-card dl .ceiling { background: #f1e7c5; }
+.auction-note { min-height: 38px; margin: 11px 0 9px; color: #51524d; font-size: 9px; line-height: 1.45; }
+.auction-card > a { display: inline-flex; gap: 5px; color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink); font: 500 8px "DM Mono", monospace; text-transform: uppercase; }
+.auction-card > a:hover { color: var(--accent); border-color: var(--accent); }
+.auction-footnote { min-height: 44px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 9px 15px; border-top: 1px solid var(--ink); color: var(--muted); }
+.auction-footnote span { flex: 0 0 auto; font: 8px "DM Mono", monospace; text-transform: uppercase; }
+.auction-footnote p { margin: 0; font-size: 9px; }
 
 .controls { min-height: 70px; display: grid; grid-template-columns: minmax(320px, 1fr) 140px 220px 205px; border-bottom: 1px solid var(--ink); background: var(--panel); box-shadow: 0 4px 15px rgba(40,37,30,.05); }
 .controls > label { min-width: 0; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 10px 18px; border-right: 1px solid var(--line); }
@@ -111,6 +150,13 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .legend { margin-top: 24px; display: flex; flex-wrap: wrap; }
   .controls { grid-template-columns: 1fr 125px; }
   .controls > label { border-bottom: 1px solid var(--line); }
+  .auction-heading { align-items: start; }
+  .auction-meta { grid-template-columns: 1fr 1fr; }
+  .auction-meta > div:nth-child(2) { border-right: 0; }
+  .auction-meta > div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+  .auction-cards { grid-template-columns: 1fr 1fr; }
+  .auction-card:nth-child(2) { border-right: 0; }
+  .auction-card:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
 }
 @media (max-width: 560px) {
   .topbar, .intro, .result-line, footer { padding-left: 16px; padding-right: 16px; }
@@ -120,5 +166,17 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .search-box { grid-column: 1 / -1; height: 60px; }
   .result-line span { display: none; }
   footer { flex-direction: column; }
+  .base-status a { display: none; }
+  .auction-watch { padding: 27px 16px 32px; }
+  .auction-heading { display: block; }
+  .auction-catalog-link { margin-top: 17px; }
+  .auction-meta { grid-template-columns: 1fr; }
+  .auction-meta > div { border-right: 0; border-bottom: 1px solid var(--line); }
+  .auction-meta > div:last-child { border-bottom: 0; }
+  .auction-cards { grid-template-columns: 1fr; }
+  .auction-card { border-right: 0; border-bottom: 1px solid var(--line); }
+  .auction-card:last-child { border-bottom: 0; }
+  .auction-condition, .auction-note { min-height: 0; }
+  .auction-footnote { align-items: start; flex-direction: column; gap: 4px; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
