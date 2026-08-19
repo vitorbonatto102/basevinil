@@ -26,6 +26,8 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
   assert.match(html, /E Pluribus Funk/);
+  assert.match(html, /<details[^>]*auction-window/i);
+  assert.match(html, /<summary>/i);
   assert.doesNotMatch(html, /Explore o catálogo|role="dialog"|cover-art/i);
 });
 

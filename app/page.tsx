@@ -39,6 +39,17 @@ type AuctionWatch = {
   url: string;
 };
 
+type AuctionEvent = {
+  id: string;
+  house: string;
+  title: string;
+  dates: string;
+  costs: string;
+  catalogUrl: string;
+  updatedAt: string;
+  items: AuctionWatch[];
+};
+
 const records = catalog.records as CatalogRecord[];
 
 const auctionWatch: AuctionWatch[] = [
@@ -97,6 +108,19 @@ const auctionWatch: AuctionWatch[] = [
     tone: "medium",
     note: "Piso ativo visto: R$ 185. Confirmar encarte/moeda.",
     url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31726422",
+  },
+];
+
+const auctionEvents: AuctionEvent[] = [
+  {
+    id: "bruce-angeiras-63353",
+    house: "Bruce Angeiras",
+    title: "47º Meier · 8º exclusivo de mídias",
+    dates: "24, 25 e 26 de agosto · 15h",
+    costs: "5% de comissão + frete",
+    catalogUrl: "https://www.bruceangeirasleiloeiro.com.br/catalogo.asp?Num=63353&fav=1&p=on",
+    updatedAt: "19 ago 2026",
+    items: auctionWatch,
   },
 ];
 
@@ -255,49 +279,61 @@ export default function Home() {
             <h2 id="auction-title">Próximos leilões</h2>
             <p>Os discos que você escolheu acompanhar, com o custo da comissão e um teto prático para não se empolgar no lance.</p>
           </div>
-          <a className="auction-catalog-link" href="https://www.bruceangeirasleiloeiro.com.br/catalogo.asp?Num=63353&fav=1&p=on" target="_blank" rel="noreferrer">
-            Abrir catálogo completo <span aria-hidden="true">↗</span>
-          </a>
         </div>
 
-        <div className="auction-board">
-          <div className="auction-meta">
-            <div><span>Casa</span><strong>Bruce Angeiras</strong></div>
-            <div><span>Leilão</span><strong>47º Meier · 8º exclusivo de mídias</strong></div>
-            <div><span>Quando</span><strong>24, 25 e 26 de agosto · 15h</strong></div>
-            <div><span>Custos</span><strong>5% de comissão + frete</strong></div>
-          </div>
+        <div className="auction-windows">
+          {auctionEvents.map((event, eventIndex) => (
+            <details className="auction-window" key={event.id} open={eventIndex === 0}>
+              <summary>
+                <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
+                <strong>{event.house}<small>{event.title}</small></strong>
+                <span className="auction-window-date">{event.dates}</span>
+                <span className="auction-window-count"><b>{event.items.length}</b> discos</span>
+                <i className="auction-window-arrow" aria-hidden="true" />
+              </summary>
 
-          <div className="auction-cards">
-            {auctionWatch.map((item) => {
-              const withCommission = item.currentBid * 1.05;
-              return (
-                <article className={`auction-card ${item.tone}`} key={item.lot}>
-                  <div className="auction-card-top">
-                    <span>Lote {item.lot} · {item.date}</span>
-                    <b>{item.priority}</b>
-                  </div>
-                  <h3>{item.artist}<span>{item.title}</span></h3>
-                  <p className="auction-condition">{item.condition}</p>
-                  <dl>
-                    <div><dt>Lance atual</dt><dd>{money(item.currentBid)}</dd></div>
-                    <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
-                    <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
-                    <div className="ceiling"><dt>Teto automático</dt><dd>{money(item.ceiling)}</dd></div>
-                  </dl>
-                  <p className="auction-note">{item.note}</p>
-                  <a href={item.url} target="_blank" rel="noreferrer" aria-label={`Abrir lote ${item.lot}: ${item.artist} — ${item.title}`}>
-                    Conferir lote e lance atual <span aria-hidden="true">↗</span>
-                  </a>
-                </article>
-              );
-            })}
-          </div>
+              <div className="auction-board">
+                <div className="auction-meta">
+                  <div><span>Casa</span><strong>{event.house}</strong></div>
+                  <div><span>Leilão</span><strong>{event.title}</strong></div>
+                  <div><span>Quando</span><strong>{event.dates}</strong></div>
+                  <div><span>Custos</span><strong>{event.costs}</strong></div>
+                </div>
 
-          <div className="auction-footnote">
-            <span>Atualizado em 19 ago 2026</span>
-            <p>Os lances mudam. Antes de ofertar, abra o lote e some comissão, frete e embalagem.</p>
-          </div>
+                <div className="auction-cards">
+                  {event.items.map((item) => {
+                    const withCommission = item.currentBid * 1.05;
+                    return (
+                      <article className={`auction-card ${item.tone}`} key={item.lot}>
+                        <div className="auction-card-top">
+                          <span>Lote {item.lot} · {item.date}</span>
+                          <b>{item.priority}</b>
+                        </div>
+                        <h3>{item.artist}<span>{item.title}</span></h3>
+                        <p className="auction-condition">{item.condition}</p>
+                        <dl>
+                          <div><dt>Lance atual</dt><dd>{money(item.currentBid)}</dd></div>
+                          <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
+                          <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
+                          <div className="ceiling"><dt>Teto automático</dt><dd>{money(item.ceiling)}</dd></div>
+                        </dl>
+                        <p className="auction-note">{item.note}</p>
+                        <a href={item.url} target="_blank" rel="noreferrer" aria-label={`Abrir lote ${item.lot}: ${item.artist} — ${item.title}`}>
+                          Conferir lote e lance atual <span aria-hidden="true">↗</span>
+                        </a>
+                      </article>
+                    );
+                  })}
+                </div>
+
+                <div className="auction-footnote">
+                  <span>Atualizado em {event.updatedAt}</span>
+                  <p>Os lances mudam. Antes de ofertar, abra o lote e some comissão, frete e embalagem.</p>
+                  <a href={event.catalogUrl} target="_blank" rel="noreferrer">Abrir este leilão <span aria-hidden="true">↗</span></a>
+                </div>
+              </div>
+            </details>
+          ))}
         </div>
       </section>
 
