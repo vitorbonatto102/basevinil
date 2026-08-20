@@ -23,7 +23,9 @@ type CatalogRecord = {
   artist: string;
   title: string;
   year: number | null;
+  years?: number[];
   auctionPrice: number | null;
+  auctionPrices?: number[];
   auctionPriceStatus?: "unverified-copy";
   marketMin: number | null;
   market: MarketObservation[];
@@ -463,7 +465,22 @@ function exactMoney(value: number) {
 }
 
 function source(record: CatalogRecord, name: string) {
-  return record.market.find((item) => item.source === name)?.display ?? "—";
+  const displays = [...new Set(record.market
+    .filter((item) => item.source === name)
+    .map((item) => item.display))];
+  if (!displays.length) return "—";
+  if (displays.length === 1) return displays[0];
+  return `R$ ${displays.map((display) => display.replace(/^R\$\s*/, "")).join("/")}`;
+}
+
+function yearDisplay(record: CatalogRecord) {
+  const years = record.years?.length ? record.years : record.year != null ? [record.year] : [];
+  return years.length ? years.join("/") : "n/d";
+}
+
+function auctionDisplay(record: CatalogRecord) {
+  const values = record.auctionPrices?.length ? record.auctionPrices : record.auctionPrice != null ? [record.auctionPrice] : [];
+  return values.length ? `R$ ${values.map((value) => new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 }).format(value)).join("/")}` : "—";
 }
 
 function adornosValues(record: CatalogRecord) {
@@ -705,7 +722,6 @@ export default function Home() {
               <th className="col-artist">Artista</th>
               <th className="col-album">Álbum / edição</th>
               <th>Ano</th>
-              <th>Lote</th>
               <th>Mercado Livre</th>
               <th>OLX</th>
               <th>Shopee</th>
@@ -730,13 +746,12 @@ export default function Home() {
                   <td className="row-number">{index + 1}</td>
                   <td className="artist-cell">{record.artist}</td>
                   <td className="album-cell">{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</td>
-                  <td className={record.year === null ? "missing" : ""}>{record.year ?? "n/d"}</td>
-                  <td>{record.lot ?? "—"}</td>
+                  <td className={record.year === null && !record.years?.length ? "missing" : ""}>{yearDisplay(record)}</td>
                   <td className="price-source">{source(record, "Mercado Livre")}</td>
                   <td className="price-source">{source(record, "OLX")}</td>
                   <td className="price-source">{source(record, "Shopee")}</td>
                   <td className="price-source">{source(record, "Leilão observado")}</td>
-                  <td className="money-cell">{money(record.auctionPrice)}</td>
+                  <td className="money-cell">{auctionDisplay(record)}</td>
                   <td className="price-source">{source(record, "Vinyl Social Club")}</td>
                   <td className="adornos-cell">{adornosDisplay(record)}</td>
                   <td className="reference-cell">{money(reference)}</td>

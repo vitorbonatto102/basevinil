@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T20:02:45.341Z",
+  "generatedAt": "2026-08-20T23:12:28.704Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -662,7 +662,11 @@
           "numeric": 46
         }
       ],
-      "tags": []
+      "tags": [],
+      "sourceLots": [
+        24,
+        511
+      ]
     },
     {
       "id": "planilha-46",
@@ -1292,7 +1296,11 @@
           "numeric": 59
         }
       ],
-      "tags": []
+      "tags": [],
+      "sourceLots": [
+        68,
+        496
+      ]
     },
     {
       "id": "planilha-89",
@@ -4316,22 +4324,22 @@
       "artist": "Leandro & Leonardo",
       "title": "Leandro & Leonardo",
       "year": 1990,
-      "auctionPrice": 29,
-      "marketMin": null,
-      "market": [],
-      "tags": []
-    },
-    {
-      "id": "planilha-324",
-      "sourceRow": 324,
-      "lot": 306,
-      "artist": "Leandro & Leonardo",
-      "title": "Leandro & Leonardo",
-      "year": 1992,
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "years": [
+        1990,
+        1992
+      ],
+      "sourceLots": [
+        305,
+        306
+      ],
+      "auctionPrices": [
+        19,
+        29
+      ]
     },
     {
       "id": "planilha-325",
@@ -4339,11 +4347,19 @@
       "lot": 307,
       "artist": "Zezé Di Camargo & Luciano",
       "title": "Zezé Di Camargo & Luciano",
-      "year": 1992,
+      "year": 1991,
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "years": [
+        1991,
+        1992
+      ],
+      "sourceLots": [
+        307,
+        314
+      ]
     },
     {
       "id": "planilha-326",
@@ -4412,18 +4428,6 @@
       "artist": "João Mineiro & Marciano",
       "title": "Tarde Demais Para Esquecer",
       "year": 1990,
-      "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
-      "tags": []
-    },
-    {
-      "id": "planilha-332",
-      "sourceRow": 332,
-      "lot": 314,
-      "artist": "Zezé Di Camargo & Luciano",
-      "title": "Zezé Di Camargo & Luciano",
-      "year": 1991,
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
@@ -6674,24 +6678,6 @@
       "tags": []
     },
     {
-      "id": "planilha-506",
-      "sourceRow": 506,
-      "lot": 496,
-      "artist": "a-ha",
-      "title": "Scoundrel Days",
-      "year": 1987,
-      "auctionPrice": 19,
-      "marketMin": 40,
-      "market": [
-        {
-          "source": "Mercado Livre",
-          "display": "R$ 40",
-          "numeric": 40
-        }
-      ],
-      "tags": []
-    },
-    {
       "id": "planilha-507",
       "sourceRow": 507,
       "lot": 497,
@@ -6901,24 +6887,6 @@
           "source": "Mercado Livre",
           "display": "R$ 80",
           "numeric": 80
-        }
-      ],
-      "tags": []
-    },
-    {
-      "id": "planilha-521",
-      "sourceRow": 521,
-      "lot": 511,
-      "artist": "a-ha",
-      "title": "Stay On These Roads",
-      "year": 1988,
-      "auctionPrice": 19,
-      "marketMin": 46,
-      "market": [
-        {
-          "source": "Mercado Livre",
-          "display": "R$ 46",
-          "numeric": 46
         }
       ],
       "tags": []

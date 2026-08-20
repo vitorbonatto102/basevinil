@@ -51,8 +51,11 @@ test("keeps all data visible and compares offers inline", async () => {
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
-  assert.ok(parsed.records.length >= 984);
+  assert.ok(parsed.records.length >= 980);
   assert.equal(new Set(parsed.records.map((record) => record.id)).size, parsed.records.length);
+  const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+  const catalogKeys = parsed.records.map((record) => `${normalize(record.artist)}|${normalize(record.title)}`);
+  assert.equal(new Set(catalogKeys).size, catalogKeys.length);
   assert.ok(parsed.sources.includes("Vinyl Social Club"));
   const vinylSocialClubRecords = parsed.records.filter((record) =>
     record.market.some((entry) => entry.source === "Vinyl Social Club"),
@@ -73,6 +76,7 @@ test("keeps all data visible and compares offers inline", async () => {
   ));
   assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 254);
   assert.match(page, /<table>/);
+  assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
