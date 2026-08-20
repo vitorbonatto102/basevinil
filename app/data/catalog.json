@@ -1970,7 +1970,7 @@
       "title": "Fim De Semana No Parque",
       "year": 1994,
       "auctionPrice": 59,
-      "marketMin": 250,
+      "marketMin": 300,
       "market": [
         {
           "source": "Mercado Livre",
@@ -10898,8 +10898,8 @@
         },
         {
           "source": "OLX",
-          "display": "R$ 250/649",
-          "numeric": 250
+          "display": "R$ 300/370/649",
+          "numeric": 300
         },
         {
           "source": "Shopee",
