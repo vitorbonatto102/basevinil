@@ -10880,6 +10880,40 @@
       "tags": [
         "Mercado Livre"
       ]
+    },
+    {
+      "id": "adornos-marina-sena-vicio-inerente",
+      "sourceRow": 799,
+      "lot": null,
+      "artist": "Marina Sena",
+      "title": "Vício Inerente (LP azul + revista)",
+      "year": 2023,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 452/479/540",
+          "numeric": 452
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 250/649",
+          "numeric": 250
+        },
+        {
+          "source": "Shopee",
+          "display": "Esgotado: R$ 170/212,50",
+          "numeric": null
+        }
+      ],
+      "tags": [
+        "Adornos",
+        "Noize Record Club",
+        "LP azul",
+        "Revista"
+      ],
+      "adornosPrice": 189
     }
   ],
   "sources": [
