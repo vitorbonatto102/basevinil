@@ -26,6 +26,7 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
   assert.match(html, /RT Leilões/);
+  assert.match(html, /24, 25 e 26 de agosto · 18h/);
   assert.match(html, /Out Of Time/);
   assert.match(html, /Plural/);
   assert.match(html, /Sonsual/);
