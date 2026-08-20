@@ -10844,6 +10844,22 @@
         "Epic",
         "Coletânea"
       ]
+    },
+    {
+      "id": "catavento-32019382",
+      "sourceRow": 797,
+      "lot": 296,
+      "artist": "Emerson, Lake & Palmer",
+      "title": "Pictures at an Exhibition",
+      "year": 1972,
+      "auctionPrice": 18,
+      "marketMin": null,
+      "market": [],
+      "tags": [
+        "Catavento Discos",
+        "ATCO",
+        "Ao vivo"
+      ]
     }
   ],
   "sources": [
