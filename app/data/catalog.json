@@ -10860,6 +10860,26 @@
         "ATCO",
         "Ao vivo"
       ]
+    },
+    {
+      "id": "mercado-livre-faith-no-more-real-thing",
+      "sourceRow": 798,
+      "lot": null,
+      "artist": "Faith No More",
+      "title": "The Real Thing",
+      "year": 1990,
+      "auctionPrice": null,
+      "marketMin": 60,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 60/80",
+          "numeric": 60
+        }
+      ],
+      "tags": [
+        "Mercado Livre"
+      ]
     }
   ],
   "sources": [
