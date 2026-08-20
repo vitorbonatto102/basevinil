@@ -17,6 +17,13 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Manrope", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+
+/* The catalog is intentionally dense, but its original desktop scale was too
+   small at 100% browser zoom. This approximates the comfortable 133% view
+   without making the mobile layout cramped. */
+@media (min-width: 901px) {
+  body { width: 76.9231%; zoom: 1.3; }
+}
 button, input, select { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
