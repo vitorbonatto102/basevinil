@@ -25,6 +25,11 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Adornos/);
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
+  assert.match(html, /RT Leilões/);
+  assert.match(html, /Out Of Time/);
+  assert.match(html, /Plural/);
+  assert.match(html, /Sonsual/);
+  assert.match(html, /The Turn Of A Friendly Card/);
   assert.match(html, /E Pluribus Funk/);
   assert.match(html, /Love Songs \(2LP\)/);
   assert.match(html, /Cosmo&#x27;s Factory|Cosmo's Factory/);

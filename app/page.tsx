@@ -32,6 +32,7 @@ type AuctionWatch = {
   condition: string;
   currentBid: number;
   nextBid: number;
+  bidLabel?: string;
   ceiling: number;
   priority: string;
   tone: "high" | "medium" | "careful";
@@ -153,7 +154,164 @@ const auctionWatch: AuctionWatch[] = [
   },
 ];
 
+const rtAuctionWatch: AuctionWatch[] = [
+  {
+    lot: 198,
+    artist: "R.E.M.",
+    title: "Out Of Time",
+    date: "25 ago",
+    condition: "Com encarte; capa com pequenos desgastes; disco com riscos sutis",
+    currentBid: 50,
+    nextBid: 55,
+    ceiling: 110,
+    priority: "Melhor do catálogo",
+    tone: "high",
+    note: "Nacional de 1991. Anúncios ativos comparáveis começam em R$ 139; testar os riscos antes de subir o teto.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32153082",
+  },
+  {
+    lot: 200,
+    artist: "Gal Costa",
+    title: "Plural",
+    date: "25 ago",
+    condition: "Com encarte; capa com pequenos desgastes; risco superficial no disco",
+    currentBid: 10,
+    nextBid: 15,
+    ceiling: 40,
+    priority: "Garimpo forte",
+    tone: "high",
+    note: "Edição de 1990. Piso ativo visto em R$ 44–49; várias cópias entre R$ 63 e R$ 90.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152815",
+  },
+  {
+    lot: 64,
+    artist: "Finis Africae",
+    title: "Finis Africae",
+    date: "24 ago",
+    condition: "Com encarte; capa com desgastes; risco bem sutil no disco",
+    currentBid: 15,
+    nextBid: 15,
+    bidLabel: "Abertura",
+    ceiling: 40,
+    priority: "Garimpo forte",
+    tone: "high",
+    note: "Edição EMI de 1987. Comparáveis ativos aparecem de R$ 50 a R$ 89; não confundir com o mini-LP.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152978",
+  },
+  {
+    lot: 363,
+    artist: "Killing Joke",
+    title: "Brighter Than A Thousand Suns",
+    date: "26 ago",
+    condition: "Capa dupla e encarte; desgaste leve; risco superficial sem afetar a reprodução",
+    currentBid: 40,
+    nextBid: 45,
+    ceiling: 90,
+    priority: "Boa oportunidade",
+    tone: "high",
+    note: "Comparável brasileiro localizado a R$ 185,55; confiança média porque a amostra ainda é pequena.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152948",
+  },
+  {
+    lot: 211,
+    artist: "Cazuza",
+    title: "Burguesia (2LP)",
+    date: "25 ago",
+    condition: "Com encarte; capa e os dois discos em bom estado",
+    currentBid: 35,
+    nextBid: 40,
+    ceiling: 55,
+    priority: "Boa oportunidade",
+    tone: "high",
+    note: "Original duplo de 1989. Piso comparável ativo em torno de R$ 65–79; cópias completas aparecem acima disso.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152967",
+  },
+  {
+    lot: 118,
+    artist: "Zero",
+    title: "Passos no Escuro",
+    date: "24 ago",
+    condition: "Com encarte; capa e disco em bom estado",
+    currentBid: 15,
+    nextBid: 15,
+    bidLabel: "Abertura",
+    ceiling: 30,
+    priority: "Boa oportunidade",
+    tone: "high",
+    note: "Comparáveis ativos começam perto de R$ 35–40, com várias cópias entre R$ 58 e R$ 85.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152951",
+  },
+  {
+    lot: 77,
+    artist: "The Alan Parsons Project",
+    title: "The Turn Of A Friendly Card",
+    date: "24 ago",
+    condition: "Capa com pequenos desgastes; risco superficial em uma faixa",
+    currentBid: 20,
+    nextBid: 20,
+    bidLabel: "Abertura",
+    ceiling: 45,
+    priority: "Você marcou",
+    tone: "high",
+    note: "Comparáveis ativos aparecem por R$ 73–80; o risco em uma faixa segura o teto.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32153078",
+  },
+  {
+    lot: 435,
+    artist: "Pink Floyd",
+    title: "Animals",
+    date: "26 ago",
+    condition: "Capa dupla e encarte; capa gasta; muitos riscos, com raros estalos",
+    currentBid: 50,
+    nextBid: 50,
+    bidLabel: "Abertura",
+    ceiling: 65,
+    priority: "Você marcou · cautela",
+    tone: "careful",
+    note: "Cópias nacionais melhores passam de R$ 239, mas esta é uma cópia de audição arriscada; não pagar preço de VG.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152847",
+  },
+  {
+    lot: 442,
+    artist: "O Têrço",
+    title: "Mudança de Tempo",
+    date: "26 ago",
+    condition: "Reedição de 1991; capa dupla e encarte; capa e disco em bom estado",
+    currentBid: 60,
+    nextBid: 65,
+    ceiling: 65,
+    priority: "Só até o teto",
+    tone: "medium",
+    note: "Há anúncios da mesma reedição por R$ 80–89; a margem desaparece rapidamente com comissão e frete.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152952",
+  },
+  {
+    lot: 14,
+    artist: "Jorge Ben",
+    title: "Sonsual",
+    date: "24 ago",
+    condition: "Com encarte; capa com pequenos desgastes; disco em bom estado",
+    currentBid: 60,
+    nextBid: 65,
+    ceiling: 60,
+    priority: "Você marcou · passar",
+    tone: "careful",
+    note: "Já existe cópia equivalente anunciada por R$ 50. Com 5%, o lance atual vira R$ 63 antes do frete.",
+    url: "https://www.rtleiloes.com.br/peca.asp?ID=32152938",
+  },
+];
+
 const auctionEvents: AuctionEvent[] = [
+  {
+    id: "rt-leiloes-64580",
+    house: "RT Leilões",
+    title: "LD Colecionismo · Vinis, CDs e DVDs",
+    dates: "24, 25 e 26 de agosto",
+    costs: "5% de comissão + frete/embalagem",
+    catalogUrl: "https://www.rtleiloes.com.br/catalogo.asp?Num=64580&p=on&Dia=&Tipo=&artista=&pesquisa=&Srt=10",
+    updatedAt: "20 ago 2026",
+    items: rtAuctionWatch,
+  },
   {
     id: "bruce-angeiras-63353",
     house: "Bruce Angeiras",
@@ -165,6 +323,8 @@ const auctionEvents: AuctionEvent[] = [
     items: auctionWatch,
   },
 ];
+
+const auctionWatchCount = auctionEvents.reduce((total, event) => total + event.items.length, 0);
 
 function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
@@ -296,7 +456,7 @@ export default function Home() {
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
           <span><b>{records.filter((record) => adornosValues(record).length > 0).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
-          <a href="#proximos-leiloes"><b>{auctionWatch.length}</b> em leilão</a>
+          <a href="#proximos-leiloes"><b>{auctionWatchCount}</b> em leilão</a>
         </div>
       </header>
 
@@ -354,7 +514,7 @@ export default function Home() {
                         <h3>{item.artist}<span>{item.title}</span></h3>
                         <p className="auction-condition">{item.condition}</p>
                         <dl>
-                          <div><dt>Lance atual</dt><dd>{money(item.currentBid)}</dd></div>
+                          <div><dt>{item.bidLabel ?? "Lance atual"}</dt><dd>{money(item.currentBid)}</dd></div>
                           <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
                           <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
                           <div className="ceiling"><dt>Teto automático</dt><dd>{money(item.ceiling)}</dd></div>
