@@ -22,6 +22,7 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Quanto vale esse disco\?/);
   assert.match(html, /Preço encontrado/);
   assert.match(html, /Mercado Livre/);
+  assert.match(html, /Vinyl Social Club/);
   assert.match(html, /Adornos/);
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
@@ -50,9 +51,19 @@ test("keeps all data visible and compares offers inline", async () => {
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
-  assert.equal(parsed.records.length, 789);
-  assert.equal(parsed.records.filter((record) => record.adornosPrice != null).length, 254);
+  assert.ok(parsed.records.length >= 984);
+  assert.equal(new Set(parsed.records.map((record) => record.id)).size, parsed.records.length);
+  assert.ok(parsed.sources.includes("Vinyl Social Club"));
+  const vinylSocialClubRecords = parsed.records.filter((record) =>
+    record.market.some((entry) => entry.source === "Vinyl Social Club"),
+  );
+  assert.ok(vinylSocialClubRecords.length >= 214);
+  assert.ok(vinylSocialClubRecords.every((record) =>
+    record.market.some((entry) => entry.source === "Vinyl Social Club" && entry.numeric > 0),
+  ));
+  assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 254);
   assert.match(page, /<table>/);
+  assert.match(page, /Vinyl Social Club/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.doesNotMatch(page, /setSelected|record-card|load-more/);

@@ -859,8 +859,14 @@
       "title": "Dirty Work",
       "year": 1986,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
       "tags": [],
       "adornosPrice": 87
     },
@@ -985,8 +991,14 @@
       "title": "Equinoxe",
       "year": 1979,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
       "tags": []
     },
     {
@@ -1231,6 +1243,11 @@
           "source": "Mercado Livre",
           "display": "R$ 40",
           "numeric": 40
+        },
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": []
@@ -1508,8 +1525,14 @@
       "title": "Heróis Da Resistência",
       "year": 1986,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
       "tags": []
     },
     {
@@ -1801,8 +1824,14 @@
       "title": "Vida Bandida",
       "year": 1987,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
       "tags": []
     },
     {
@@ -2632,8 +2661,14 @@
       "title": "Os Meus Amigos São Um Barato",
       "year": 1977,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
       "tags": []
     },
     {
@@ -2975,8 +3010,14 @@
       "title": "Fantasia",
       "year": 1981,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
       "tags": [],
       "adornosPrice": 43
     },
@@ -3012,8 +3053,14 @@
       "title": "A Arte De Gal Costa",
       "year": 1975,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
       "tags": []
     },
     {
@@ -3182,8 +3229,14 @@
       "title": "Bem Bom",
       "year": 1985,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
       "tags": []
     },
     {
@@ -3536,8 +3589,14 @@
       "title": "Outras Palavras",
       "year": 1981,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
       "tags": [],
       "adornosPrice": 87
     },
@@ -5522,8 +5581,14 @@
       "title": "Sold",
       "year": 1987,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
       "tags": []
     },
     {
@@ -5895,8 +5960,14 @@
       "title": "Lovesexy",
       "year": 1988,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
       "tags": []
     },
     {
@@ -6207,8 +6278,14 @@
       "title": "Street Fighting Years",
       "year": 1989,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
       "tags": []
     },
     {
@@ -6857,6 +6934,11 @@
           "source": "Mercado Livre",
           "display": "R$ 60",
           "numeric": 60
+        },
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
         }
       ],
       "tags": []
@@ -7720,8 +7802,14 @@
       "title": "Estrangeiro",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -8414,8 +8502,14 @@
       "title": "Trem Caipira",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -9134,8 +9228,14 @@
       "title": "Educação Sentimental",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -9329,8 +9429,14 @@
       "title": "Próxima Parada",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -9479,8 +9585,14 @@
       "title": "Encontros E Despedidas",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -9614,8 +9726,14 @@
       "title": "1981",
       "year": 1981,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10124,8 +10242,14 @@
       "title": "1986",
       "year": 1986,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10259,8 +10383,14 @@
       "title": "Fotografias",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10853,8 +10983,14 @@
       "title": "Pictures at an Exhibition",
       "year": 1972,
       "auctionPrice": 18,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
       "tags": [
         "Catavento Discos",
         "ATCO",
@@ -10914,11 +11050,3832 @@
         "Revista"
       ],
       "adornosPrice": 189
+    },
+    {
+      "id": "vinyl-social-club-800",
+      "sourceRow": 800,
+      "lot": null,
+      "artist": "14 Bis",
+      "title": "Além do Paraíso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-801",
+      "sourceRow": 801,
+      "lot": null,
+      "artist": "A cor do som",
+      "title": "Intuição",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-802",
+      "sourceRow": 802,
+      "lot": null,
+      "artist": "Alcione",
+      "title": "E vamos à luta",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-803",
+      "sourceRow": 803,
+      "lot": null,
+      "artist": "Alice Cooper",
+      "title": "Goes to hell",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-804",
+      "sourceRow": 804,
+      "lot": null,
+      "artist": "Amelinha",
+      "title": "Água e luz",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-805",
+      "sourceRow": 805,
+      "lot": null,
+      "artist": "Amelinha",
+      "title": "Mulher Nova bonita e carinhosa faz o homem gemer sem dor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-806",
+      "sourceRow": 806,
+      "lot": null,
+      "artist": "Aretha Franklin",
+      "title": "Aretha (1986)",
+      "year": 1986,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-807",
+      "sourceRow": 807,
+      "lot": null,
+      "artist": "Ataulfo Alves",
+      "title": "É bossa mesmo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-808",
+      "sourceRow": 808,
+      "lot": null,
+      "artist": "Ataulfo Alves",
+      "title": "A Popularidade De",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-809",
+      "sourceRow": 809,
+      "lot": null,
+      "artist": "Baby Consuelo",
+      "title": "Sem pecado e Sem Juízo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-810",
+      "sourceRow": 810,
+      "lot": null,
+      "artist": "Baby Consuelo",
+      "title": "Kryshna Baby",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-811",
+      "sourceRow": 811,
+      "lot": null,
+      "artist": "Barão Vermelho",
+      "title": "Na calada da noite",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-812",
+      "sourceRow": 812,
+      "lot": null,
+      "artist": "Beth Carvalho",
+      "title": "Alma do Brasil",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-813",
+      "sourceRow": 813,
+      "lot": null,
+      "artist": "Beto Guedes",
+      "title": "Lumiar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-814",
+      "sourceRow": 814,
+      "lot": null,
+      "artist": "Beto Guedes",
+      "title": "Amor de Índio",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-815",
+      "sourceRow": 815,
+      "lot": null,
+      "artist": "Bezerra da Silva e os Partideiros Nota Dez",
+      "title": "O melhor do partido alto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-816",
+      "sourceRow": 816,
+      "lot": null,
+      "artist": "Bill Wyman",
+      "title": "1982",
+      "year": 1982,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-817",
+      "sourceRow": 817,
+      "lot": null,
+      "artist": "Billy Joel",
+      "title": "The Bridge",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-818",
+      "sourceRow": 818,
+      "lot": null,
+      "artist": "Biquini Cavadão",
+      "title": "Cidades em Torrente",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-819",
+      "sourceRow": 819,
+      "lot": null,
+      "artist": "Biquini Cavadão",
+      "title": "A era da incerteza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-820",
+      "sourceRow": 820,
+      "lot": null,
+      "artist": "Boy George",
+      "title": "Tense Nervous Headache",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-821",
+      "sourceRow": 821,
+      "lot": null,
+      "artist": "Bread",
+      "title": "Baby I'm-A Want You",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-822",
+      "sourceRow": 822,
+      "lot": null,
+      "artist": "Caetano Veloso",
+      "title": "Circuladô",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-823",
+      "sourceRow": 823,
+      "lot": null,
+      "artist": "Camisa de Vênus",
+      "title": "Correndo o Risco",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-824",
+      "sourceRow": 824,
+      "lot": null,
+      "artist": "Capital Inicial",
+      "title": "Independência",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-825",
+      "sourceRow": 825,
+      "lot": null,
+      "artist": "Carly Simon",
+      "title": "Hotcakes",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-826",
+      "sourceRow": 826,
+      "lot": null,
+      "artist": "Carpenters",
+      "title": "Close to you",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-827",
+      "sourceRow": 827,
+      "lot": null,
+      "artist": "Cat Stevens",
+      "title": "Catch bull at four",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-828",
+      "sourceRow": 828,
+      "lot": null,
+      "artist": "Clara Nunes",
+      "title": "Claridade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-829",
+      "sourceRow": 829,
+      "lot": null,
+      "artist": "Clara Nunes",
+      "title": "Morena",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-830",
+      "sourceRow": 830,
+      "lot": null,
+      "artist": "Clara Nunes",
+      "title": "Guerreira",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-831",
+      "sourceRow": 831,
+      "lot": null,
+      "artist": "Clara Nunes",
+      "title": "Clara (Canto das Três Raças)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-832",
+      "sourceRow": 832,
+      "lot": null,
+      "artist": "Culture Club",
+      "title": "Club",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-833",
+      "sourceRow": 833,
+      "lot": null,
+      "artist": "Cyndi Lauper",
+      "title": "True Colors",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-834",
+      "sourceRow": 834,
+      "lot": null,
+      "artist": "Deep Purple",
+      "title": "Stormbringer",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-835",
+      "sourceRow": 835,
+      "lot": null,
+      "artist": "Denise LaSalle",
+      "title": "Denise LaSalle",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-836",
+      "sourceRow": 836,
+      "lot": null,
+      "artist": "Diana Ross",
+      "title": "Theme from Mahagony",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-837",
+      "sourceRow": 837,
+      "lot": null,
+      "artist": "Diana Ross",
+      "title": "To Love Again",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-838",
+      "sourceRow": 838,
+      "lot": null,
+      "artist": "Diana Ross",
+      "title": "Swept Away",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-839",
+      "sourceRow": 839,
+      "lot": null,
+      "artist": "Dionne Warwick",
+      "title": "Soulful",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-840",
+      "sourceRow": 840,
+      "lot": null,
+      "artist": "Donna Summer",
+      "title": "All Systems Go",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-841",
+      "sourceRow": 841,
+      "lot": null,
+      "artist": "Donna Summer",
+      "title": "I Remember Yesterday",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-842",
+      "sourceRow": 842,
+      "lot": null,
+      "artist": "Durval Souto",
+      "title": "Durval Souto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-843",
+      "sourceRow": 843,
+      "lot": null,
+      "artist": "Egberto Gismonti",
+      "title": "Alma",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-844",
+      "sourceRow": 844,
+      "lot": null,
+      "artist": "Elba Ramalho",
+      "title": "Fruto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-845",
+      "sourceRow": 845,
+      "lot": null,
+      "artist": "Elba Ramalho",
+      "title": "Felicidade Urgente",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-846",
+      "sourceRow": 846,
+      "lot": null,
+      "artist": "Elizeth Cardoso",
+      "title": "Noturno",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-847",
+      "sourceRow": 847,
+      "lot": null,
+      "artist": "Elizeth Cardoso",
+      "title": "1976",
+      "year": 1976,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-848",
+      "sourceRow": 848,
+      "lot": null,
+      "artist": "Elizeth Cardoso e Rafael Rabello",
+      "title": "Todo o sentimento",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-849",
+      "sourceRow": 849,
+      "lot": null,
+      "artist": "Elomar",
+      "title": "Em concerto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-850",
+      "sourceRow": 850,
+      "lot": null,
+      "artist": "Elton John",
+      "title": "Too Low For Zero",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-851",
+      "sourceRow": 851,
+      "lot": null,
+      "artist": "Erasmo Carlos",
+      "title": "Mulher",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-852",
+      "sourceRow": 852,
+      "lot": null,
+      "artist": "Erasmo Carlos",
+      "title": "Amar para viver ou morrer de amor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-853",
+      "sourceRow": 853,
+      "lot": null,
+      "artist": "Erasmo Carlos",
+      "title": "1985",
+      "year": 1985,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-854",
+      "sourceRow": 854,
+      "lot": null,
+      "artist": "Eugênia Melo de Castro",
+      "title": "Coração Imprevisto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-855",
+      "sourceRow": 855,
+      "lot": null,
+      "artist": "Fafá de Belém",
+      "title": "1983",
+      "year": 1983,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-856",
+      "sourceRow": 856,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "Beleza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-857",
+      "sourceRow": 857,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "Raimundo Fagner (1976)",
+      "year": 1976,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-858",
+      "sourceRow": 858,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "O último Pau de Arara (Com Canteiros)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-859",
+      "sourceRow": 859,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "Orós",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-860",
+      "sourceRow": 860,
+      "lot": null,
+      "artist": "Flávio Venturini",
+      "title": "Nascente",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-861",
+      "sourceRow": 861,
+      "lot": null,
+      "artist": "Frank Sinatra",
+      "title": "Watertown",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-862",
+      "sourceRow": 862,
+      "lot": null,
+      "artist": "Genesis",
+      "title": "1983",
+      "year": 1983,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-863",
+      "sourceRow": 863,
+      "lot": null,
+      "artist": "Genesis",
+      "title": "Winds & Wuthering",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-864",
+      "sourceRow": 864,
+      "lot": null,
+      "artist": "George Harrison",
+      "title": "Thirty Three & 1/3",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-865",
+      "sourceRow": 865,
+      "lot": null,
+      "artist": "Geraldo Vandré",
+      "title": "Das terras de Benvirá",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-866",
+      "sourceRow": 866,
+      "lot": null,
+      "artist": "Gilberto Gil e Germano Mathias",
+      "title": "Antologia do Samba-Choro",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-867",
+      "sourceRow": 867,
+      "lot": null,
+      "artist": "GNR",
+      "title": "Psicopátria",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-868",
+      "sourceRow": 868,
+      "lot": null,
+      "artist": "Guilherme Arantes",
+      "title": "Ligação",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-869",
+      "sourceRow": 869,
+      "lot": null,
+      "artist": "Guilherme Arantes",
+      "title": "1979",
+      "year": 1979,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-870",
+      "sourceRow": 870,
+      "lot": null,
+      "artist": "Guilherme Arantes",
+      "title": "1976",
+      "year": 1976,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-871",
+      "sourceRow": 871,
+      "lot": null,
+      "artist": "Herbie Hancock",
+      "title": "Soundtrack to Round Midnight",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-872",
+      "sourceRow": 872,
+      "lot": null,
+      "artist": "Isaura Garcia",
+      "title": "Chico Buarque e Noel Rosa Na voz de",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-873",
+      "sourceRow": 873,
+      "lot": null,
+      "artist": "Isaurinha Garcia",
+      "title": "Nua e Crua Ao Vivo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-874",
+      "sourceRow": 874,
+      "lot": null,
+      "artist": "Ivan Lins",
+      "title": "A noite",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-875",
+      "sourceRow": 875,
+      "lot": null,
+      "artist": "Ivan Lins",
+      "title": "Novo tempo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-876",
+      "sourceRow": 876,
+      "lot": null,
+      "artist": "James Taylor",
+      "title": "Live In Rio",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-877",
+      "sourceRow": 877,
+      "lot": null,
+      "artist": "James Taylor",
+      "title": "In The Pocket",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-878",
+      "sourceRow": 878,
+      "lot": null,
+      "artist": "James Taylor",
+      "title": "Sweet Baby James",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-879",
+      "sourceRow": 879,
+      "lot": null,
+      "artist": "Jean Michel Jarre",
+      "title": "Rendez-Vous",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-880",
+      "sourceRow": 880,
+      "lot": null,
+      "artist": "Jean Michel Jarre",
+      "title": "Magnetic Fields",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-881",
+      "sourceRow": 881,
+      "lot": null,
+      "artist": "Jethro Tull",
+      "title": "A (1980)",
+      "year": 1980,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-882",
+      "sourceRow": 882,
+      "lot": null,
+      "artist": "Jimmy Cliff",
+      "title": "Hanging Fire",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-883",
+      "sourceRow": 883,
+      "lot": null,
+      "artist": "Jorge Ben Jor",
+      "title": "Mestres da MPB Ao Vivo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-884",
+      "sourceRow": 884,
+      "lot": null,
+      "artist": "Joyce",
+      "title": "Tom Jobim",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-885",
+      "sourceRow": 885,
+      "lot": null,
+      "artist": "Juca Chaves",
+      "title": "Ninguém Segura esse nariz",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-886",
+      "sourceRow": 886,
+      "lot": null,
+      "artist": "Julian Lennon",
+      "title": "Valotte",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-887",
+      "sourceRow": 887,
+      "lot": null,
+      "artist": "Julian Lennon",
+      "title": "Mr. Jordan",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-888",
+      "sourceRow": 888,
+      "lot": null,
+      "artist": "Kid Abelha",
+      "title": "Tudo é Permitido",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-889",
+      "sourceRow": 889,
+      "lot": null,
+      "artist": "Kid Abelha",
+      "title": "Tomate (e os abóboras Selvagens)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-890",
+      "sourceRow": 890,
+      "lot": null,
+      "artist": "Kleiton e Kledir",
+      "title": "1985",
+      "year": 1985,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-891",
+      "sourceRow": 891,
+      "lot": null,
+      "artist": "Leci Brandão",
+      "title": "Um beijo no seu coração",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-892",
+      "sourceRow": 892,
+      "lot": null,
+      "artist": "Led Zeppelin",
+      "title": "In Through the out Door",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-893",
+      "sourceRow": 893,
+      "lot": null,
+      "artist": "Lulu Santos",
+      "title": "Lulupopsambalanço",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-894",
+      "sourceRow": 894,
+      "lot": null,
+      "artist": "Lulu Santos",
+      "title": "Normal",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-895",
+      "sourceRow": 895,
+      "lot": null,
+      "artist": "Marco Antônio Araújo",
+      "title": "Influências",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-896",
+      "sourceRow": 896,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Alteza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-897",
+      "sourceRow": 897,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Dezembros",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-898",
+      "sourceRow": 898,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Talismã",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-899",
+      "sourceRow": 899,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Ciclos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-900",
+      "sourceRow": 900,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Recital na Boite Barroco",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-901",
+      "sourceRow": 901,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Pássaro da Manhã",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-902",
+      "sourceRow": 902,
+      "lot": null,
+      "artist": "Marillion",
+      "title": "Real to reel",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-903",
+      "sourceRow": 903,
+      "lot": null,
+      "artist": "Marina",
+      "title": "Bateu no Paladar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-904",
+      "sourceRow": 904,
+      "lot": null,
+      "artist": "Martinho da Vila",
+      "title": "Martinho de Vila Isabel",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-905",
+      "sourceRow": 905,
+      "lot": null,
+      "artist": "Maysa",
+      "title": "Ternura é",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-906",
+      "sourceRow": 906,
+      "lot": null,
+      "artist": "Maysa",
+      "title": "Por ela mesma",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-907",
+      "sourceRow": 907,
+      "lot": null,
+      "artist": "MFSB",
+      "title": "Universal Love",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-908",
+      "sourceRow": 908,
+      "lot": null,
+      "artist": "Mick Jagger",
+      "title": "She's the Boss",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-909",
+      "sourceRow": 909,
+      "lot": null,
+      "artist": "Midnight Star",
+      "title": "Midnight Star",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-910",
+      "sourceRow": 910,
+      "lot": null,
+      "artist": "Miles Davis",
+      "title": "Round About Midnight",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-911",
+      "sourceRow": 911,
+      "lot": null,
+      "artist": "Milt Jackson",
+      "title": "Bob Bop",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-912",
+      "sourceRow": 912,
+      "lot": null,
+      "artist": "Milton Nascimento",
+      "title": "Paixão e Fé",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-913",
+      "sourceRow": 913,
+      "lot": null,
+      "artist": "Moraes Moreira",
+      "title": "Coleção Sucessos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-914",
+      "sourceRow": 914,
+      "lot": null,
+      "artist": "Moraes Moreira",
+      "title": "Coisa Acesa",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-915",
+      "sourceRow": 915,
+      "lot": null,
+      "artist": "Moraes Moreira",
+      "title": "O melhor de",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-916",
+      "sourceRow": 916,
+      "lot": null,
+      "artist": "MPB4",
+      "title": "Bons tempos hein?!",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-917",
+      "sourceRow": 917,
+      "lot": null,
+      "artist": "Nana Caymmi",
+      "title": "Pérola",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-918",
+      "sourceRow": 918,
+      "lot": null,
+      "artist": "Nana Caymmi",
+      "title": "Nana",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-919",
+      "sourceRow": 919,
+      "lot": null,
+      "artist": "Nana Caymmi",
+      "title": "1975",
+      "year": 1975,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-920",
+      "sourceRow": 920,
+      "lot": null,
+      "artist": "Nara Leão",
+      "title": "Meus sonhos dourados",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-921",
+      "sourceRow": 921,
+      "lot": null,
+      "artist": "Nara Leão",
+      "title": "Meu primeiro amor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-922",
+      "sourceRow": 922,
+      "lot": null,
+      "artist": "Neil Diamond",
+      "title": "Serenade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-923",
+      "sourceRow": 923,
+      "lot": null,
+      "artist": "Neil Diamond",
+      "title": "On the Way to the Sky",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-924",
+      "sourceRow": 924,
+      "lot": null,
+      "artist": "Nelson Gonçalves",
+      "title": "Ele e Elas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-925",
+      "sourceRow": 925,
+      "lot": null,
+      "artist": "New Kids From the Block",
+      "title": "Step by Step",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-926",
+      "sourceRow": 926,
+      "lot": null,
+      "artist": "Ney Matogrosso",
+      "title": "Bugre",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-927",
+      "sourceRow": 927,
+      "lot": null,
+      "artist": "Ney Matogrosso",
+      "title": "Mato grosso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-928",
+      "sourceRow": 928,
+      "lot": null,
+      "artist": "Nina Hagen",
+      "title": "NunsSextMonkRock",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-929",
+      "sourceRow": 929,
+      "lot": null,
+      "artist": "Noel Rosa",
+      "title": "Inédito e Desconhecido",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-930",
+      "sourceRow": 930,
+      "lot": null,
+      "artist": "Os Demônios da Garoa",
+      "title": "Abre a Gira",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-931",
+      "sourceRow": 931,
+      "lot": null,
+      "artist": "Os Paralamas do Sucesso",
+      "title": "Arquivo Maiores Sucessos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-932",
+      "sourceRow": 932,
+      "lot": null,
+      "artist": "Pantanal",
+      "title": "2",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-933",
+      "sourceRow": 933,
+      "lot": null,
+      "artist": "Paul Anka",
+      "title": "Os grandes sucessos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-934",
+      "sourceRow": 934,
+      "lot": null,
+      "artist": "Paul McCartney",
+      "title": "Press to Play",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-935",
+      "sourceRow": 935,
+      "lot": null,
+      "artist": "Paul McCartney",
+      "title": "Tug of War",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-936",
+      "sourceRow": 936,
+      "lot": null,
+      "artist": "Paul Simon",
+      "title": "The Rhythim of the Saints",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-937",
+      "sourceRow": 937,
+      "lot": null,
+      "artist": "Paulinho Pedra Azul",
+      "title": "Papagaio de Papel",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-938",
+      "sourceRow": 938,
+      "lot": null,
+      "artist": "Peaches and Herb",
+      "title": "2 hot",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-939",
+      "sourceRow": 939,
+      "lot": null,
+      "artist": "Pepeu Gomes",
+      "title": "Um raio lazer",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-940",
+      "sourceRow": 940,
+      "lot": null,
+      "artist": "Pepeu Gomes",
+      "title": "Masculino e Feminino",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-941",
+      "sourceRow": 941,
+      "lot": null,
+      "artist": "Phono 73",
+      "title": "O canto de um povo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-942",
+      "sourceRow": 942,
+      "lot": null,
+      "artist": "Queen",
+      "title": "Jazz",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-943",
+      "sourceRow": 943,
+      "lot": null,
+      "artist": "Queen",
+      "title": "The Works",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-944",
+      "sourceRow": 944,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "Personalidade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-945",
+      "sourceRow": 945,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "A pedra do gênesis",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-946",
+      "sourceRow": 946,
+      "lot": null,
+      "artist": "Raul Seixas e Marcelo Nova",
+      "title": "Carpinteiro do Universo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-947",
+      "sourceRow": 947,
+      "lot": null,
+      "artist": "Renato Teixeira",
+      "title": "Azul",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-948",
+      "sourceRow": 948,
+      "lot": null,
+      "artist": "Rick Wakeman",
+      "title": "Journey To The Centre Of The Earth",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-949",
+      "sourceRow": 949,
+      "lot": null,
+      "artist": "Rita Lee",
+      "title": "Bombom",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-950",
+      "sourceRow": 950,
+      "lot": null,
+      "artist": "Rita Lee",
+      "title": "Entradas e Bandeiras",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-951",
+      "sourceRow": 951,
+      "lot": null,
+      "artist": "Roberto Carlos",
+      "title": "1977",
+      "year": 1977,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-952",
+      "sourceRow": 952,
+      "lot": null,
+      "artist": "Roberto Carlos",
+      "title": "1966",
+      "year": 1966,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-953",
+      "sourceRow": 953,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Under Cover",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-954",
+      "sourceRow": 954,
+      "lot": null,
+      "artist": "Ronnie Von",
+      "title": "Sinal dos Tempos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-955",
+      "sourceRow": 955,
+      "lot": null,
+      "artist": "Ronnie Von",
+      "title": "1973",
+      "year": 1973,
+      "auctionPrice": null,
+      "marketMin": 79,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 79",
+          "numeric": 79
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-956",
+      "sourceRow": 956,
+      "lot": null,
+      "artist": "Ronnie Von",
+      "title": "nº 3",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-957",
+      "sourceRow": 957,
+      "lot": null,
+      "artist": "Rush",
+      "title": "Exit... stage left",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-958",
+      "sourceRow": 958,
+      "lot": null,
+      "artist": "Sammy Hagar",
+      "title": "1987",
+      "year": 1987,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-959",
+      "sourceRow": 959,
+      "lot": null,
+      "artist": "Secos & Molhados",
+      "title": "2",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-960",
+      "sourceRow": 960,
+      "lot": null,
+      "artist": "Shirley Murdock",
+      "title": "A woman's point of view",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-961",
+      "sourceRow": 961,
+      "lot": null,
+      "artist": "Sivuca",
+      "title": "Cabelo de Milho",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-962",
+      "sourceRow": 962,
+      "lot": null,
+      "artist": "Sivuca",
+      "title": "Seleção de Ouro",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-963",
+      "sourceRow": 963,
+      "lot": null,
+      "artist": "Solomon Burke",
+      "title": "A Change is Gonna Come",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-964",
+      "sourceRow": 964,
+      "lot": null,
+      "artist": "Sting",
+      "title": "The Dream Of The Blue Turtles",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-965",
+      "sourceRow": 965,
+      "lot": null,
+      "artist": "Supertramp",
+      "title": "Crime of the Century",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-966",
+      "sourceRow": 966,
+      "lot": null,
+      "artist": "Supertramp",
+      "title": "Brother where you bound",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-967",
+      "sourceRow": 967,
+      "lot": null,
+      "artist": "Supertramp",
+      "title": "The Early Years",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-968",
+      "sourceRow": 968,
+      "lot": null,
+      "artist": "Supla",
+      "title": "Encoleirado",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-969",
+      "sourceRow": 969,
+      "lot": null,
+      "artist": "Taiguara",
+      "title": "Sucessos de",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-970",
+      "sourceRow": 970,
+      "lot": null,
+      "artist": "Tetê Espíndola",
+      "title": "Escrito nas Estrelas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-971",
+      "sourceRow": 971,
+      "lot": null,
+      "artist": "The Alan Parsons Project",
+      "title": "Stereotomy",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-972",
+      "sourceRow": 972,
+      "lot": null,
+      "artist": "The Alan Parsons Project",
+      "title": "I Robot",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-973",
+      "sourceRow": 973,
+      "lot": null,
+      "artist": "The Beatles",
+      "title": "In Hamburg",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-974",
+      "sourceRow": 974,
+      "lot": null,
+      "artist": "The Chimes",
+      "title": "1990",
+      "year": 1990,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-975",
+      "sourceRow": 975,
+      "lot": null,
+      "artist": "The Kinks",
+      "title": "Misfits",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-976",
+      "sourceRow": 976,
+      "lot": null,
+      "artist": "The Moody Blues",
+      "title": "Seventh Sojourn",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-977",
+      "sourceRow": 977,
+      "lot": null,
+      "artist": "The Style Council",
+      "title": "The Singular Adventures Of",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-978",
+      "sourceRow": 978,
+      "lot": null,
+      "artist": "Tim Maia",
+      "title": "Interpreta clássicos da Bossa Nova",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-979",
+      "sourceRow": 979,
+      "lot": null,
+      "artist": "U2",
+      "title": "The Joshua Tree",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-980",
+      "sourceRow": 980,
+      "lot": null,
+      "artist": "Uriah Heep",
+      "title": "Wonderworld",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 149,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 149",
+          "numeric": 149
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-981",
+      "sourceRow": 981,
+      "lot": null,
+      "artist": "Vangelis",
+      "title": "Mask",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-982",
+      "sourceRow": 982,
+      "lot": null,
+      "artist": "Vanusa",
+      "title": "30 anos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 29,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 29",
+          "numeric": 29
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-983",
+      "sourceRow": 983,
+      "lot": null,
+      "artist": "Wagner Tiso",
+      "title": "Trem Mineiro",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-984",
+      "sourceRow": 984,
+      "lot": null,
+      "artist": "Wagner Tiso",
+      "title": "Branco e Preto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-985",
+      "sourceRow": 985,
+      "lot": null,
+      "artist": "Willie Nelson",
+      "title": "Island in the Sea",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-986",
+      "sourceRow": 986,
+      "lot": null,
+      "artist": "Willie Nelson",
+      "title": "What A Wonderful World",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-987",
+      "sourceRow": 987,
+      "lot": null,
+      "artist": "Wings",
+      "title": "London Town",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 129,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 129",
+          "numeric": 129
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-988",
+      "sourceRow": 988,
+      "lot": null,
+      "artist": "Zé Geraldo",
+      "title": "Estradas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-989",
+      "sourceRow": 989,
+      "lot": null,
+      "artist": "Zezé Motta",
+      "title": "Negritude",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "vinyl-social-club-990",
+      "sourceRow": 990,
+      "lot": null,
+      "artist": "Zezé Motta",
+      "title": "Dengo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Vinyl Social Club",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": [
+        "Vinyl Social Club"
+      ]
     }
   ],
   "sources": [
     "Planilha original de preços de discos",
     "Adornos",
-    "Mercado Livre"
+    "Mercado Livre",
+    "Vinyl Social Club"
   ]
 }

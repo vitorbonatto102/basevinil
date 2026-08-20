@@ -697,6 +697,7 @@ export default function Home() {
               <th>Shopee</th>
               <th>Leilão visto</th>
               <th>Valor leilão</th>
+              <th>Vinyl Social Club</th>
               <th className="adornos-head">Adornos</th>
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>
@@ -722,6 +723,7 @@ export default function Home() {
                   <td className="price-source">{source(record, "Shopee")}</td>
                   <td className="price-source">{source(record, "Leilão observado")}</td>
                   <td className="money-cell">{money(record.auctionPrice)}</td>
+                  <td className="price-source">{source(record, "Vinyl Social Club")}</td>
                   <td className="adornos-cell">{adornosDisplay(record)}</td>
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
