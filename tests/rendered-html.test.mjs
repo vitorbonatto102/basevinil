@@ -61,6 +61,16 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.ok(vinylSocialClubRecords.every((record) =>
     record.market.some((entry) => entry.source === "Vinyl Social Club" && entry.numeric > 0),
   ));
+  const researchedMarketplaceRecords = parsed.records.filter((record) =>
+    record.market.some((entry) => entry.checkedAt === "2026-08-20"),
+  );
+  assert.equal(researchedMarketplaceRecords.length, 15);
+  assert.ok(researchedMarketplaceRecords.every((record) =>
+    record.auctionPrice === 19 && record.auctionPriceStatus === "unverified-copy",
+  ));
+  assert.ok(researchedMarketplaceRecords.every((record) =>
+    record.market.every((entry) => entry.checkedAt !== "2026-08-20" || (entry.url && entry.shipping)),
+  ));
   assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 254);
   assert.match(page, /<table>/);
   assert.match(page, /Vinyl Social Club/);

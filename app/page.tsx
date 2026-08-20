@@ -7,6 +7,13 @@ type MarketObservation = {
   source: string;
   display: string;
   numeric: number | null;
+  url?: string;
+  checkedAt?: string;
+  status?: string;
+  edition?: string;
+  condition?: string;
+  shipping?: string;
+  note?: string;
 };
 
 type CatalogRecord = {
@@ -17,6 +24,7 @@ type CatalogRecord = {
   title: string;
   year: number | null;
   auctionPrice: number | null;
+  auctionPriceStatus?: "unverified-copy";
   marketMin: number | null;
   market: MarketObservation[];
   tags: string[];
@@ -477,7 +485,13 @@ function adornosDisplay(record: CatalogRecord) {
 }
 
 function referencePrice(record: CatalogRecord) {
-  const values = [record.auctionPrice, record.marketMin, ...adornosValues(record)].filter(
+  // Several rows came from one pasted auction list whose repeated R$ 19 was not
+  // tied to a verifiable lot. Keep that historical value visible, but do not let
+  // it override a newly researched marketplace price.
+  const auctionReference = record.auctionPriceStatus === "unverified-copy"
+    ? null
+    : record.auctionPrice;
+  const values = [auctionReference, record.marketMin, ...adornosValues(record)].filter(
     (value): value is number => value !== null && value > 0,
   );
   return values.length ? Math.min(...values) : null;
