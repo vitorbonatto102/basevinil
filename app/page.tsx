@@ -326,6 +326,14 @@ const auctionEvents: AuctionEvent[] = [
 
 const auctionWatchCount = auctionEvents.reduce((total, event) => total + event.items.length, 0);
 
+function auctionGroups(items: AuctionWatch[]) {
+  const grouped = new Map<string, AuctionWatch[]>();
+  [...items]
+    .sort((a, b) => (Number.parseInt(a.date, 10) - Number.parseInt(b.date, 10)) || a.lot - b.lot)
+    .forEach((item) => grouped.set(item.date, [...(grouped.get(item.date) ?? []), item]));
+  return [...grouped.entries()];
+}
+
 function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
@@ -484,8 +492,8 @@ export default function Home() {
         </div>
 
         <div className="auction-windows">
-          {auctionEvents.map((event, eventIndex) => (
-            <details className="auction-window" key={event.id} open={eventIndex === 0}>
+          {auctionEvents.map((event) => (
+            <details className="auction-window" key={event.id}>
               <summary>
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
                 <strong>{event.house}<small>{event.title}</small></strong>
@@ -502,30 +510,45 @@ export default function Home() {
                   <div><span>Custos</span><strong>{event.costs}</strong></div>
                 </div>
 
-                <div className="auction-cards">
-                  {event.items.map((item) => {
-                    const withCommission = item.currentBid * 1.05;
-                    return (
-                      <article className={`auction-card ${item.tone}`} key={item.lot}>
-                        <div className="auction-card-top">
-                          <span>Lote {item.lot} · {item.date}</span>
-                          <b>{item.priority}</b>
-                        </div>
-                        <h3>{item.artist}<span>{item.title}</span></h3>
-                        <p className="auction-condition">{item.condition}</p>
-                        <dl>
-                          <div><dt>{item.bidLabel ?? "Lance atual"}</dt><dd>{money(item.currentBid)}</dd></div>
-                          <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
-                          <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
-                          <div className="ceiling"><dt>Teto automático</dt><dd>{money(item.ceiling)}</dd></div>
-                        </dl>
-                        <p className="auction-note">{item.note}</p>
-                        <a href={item.url} target="_blank" rel="noreferrer" aria-label={`Abrir lote ${item.lot}: ${item.artist} — ${item.title}`}>
-                          Conferir lote e lance atual <span aria-hidden="true">↗</span>
-                        </a>
-                      </article>
-                    );
-                  })}
+                <div className="auction-days">
+                  {auctionGroups(event.items).map(([date, items]) => (
+                    <section className="auction-day" key={date} aria-label={`Lotes de ${date}`}>
+                      <header>
+                        <strong>{date}</strong>
+                        <span>{items.length} {items.length === 1 ? "disco" : "discos"} · por lote</span>
+                      </header>
+                      <div className="auction-list-head" aria-hidden="true">
+                        <span>Lote</span><span>Disco / estado</span>
+                        <span className="auction-price-head"><i>Lance</i><i>Próximo</i><i>Com 5%</i><i>Teto</i></span>
+                        <span>Leitura</span><span />
+                      </div>
+                      <div className="auction-list">
+                        {items.map((item) => {
+                          const withCommission = item.currentBid * 1.05;
+                          return (
+                            <article className={`auction-row ${item.tone}`} key={item.lot}>
+                              <div className="auction-lot"><span>Lote</span><b>{item.lot}</b></div>
+                              <div className="auction-record">
+                                <h3>{item.artist}<span>{item.title}</span></h3>
+                                <p title={item.condition}>{item.condition}</p>
+                                <small title={item.note}>{item.note}</small>
+                              </div>
+                              <dl className="auction-row-prices">
+                                <div><dt>{item.bidLabel ?? "Lance"}</dt><dd>{money(item.currentBid)}</dd></div>
+                                <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
+                                <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
+                                <div className="ceiling"><dt>Teto</dt><dd>{money(item.ceiling)}</dd></div>
+                              </dl>
+                              <div className="auction-priority"><b>{item.priority}</b></div>
+                              <a className="auction-open-lot" href={item.url} target="_blank" rel="noreferrer" aria-label={`Abrir lote ${item.lot}: ${item.artist} — ${item.title}`} title="Conferir lote e lance atual">
+                                <span aria-hidden="true">↗</span>
+                              </a>
+                            </article>
+                          );
+                        })}
+                      </div>
+                    </section>
+                  ))}
                 </div>
 
                 <div className="auction-footnote">

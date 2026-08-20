@@ -36,6 +36,9 @@ test("renders the price-reference list", async () => {
   assert.match(html, /The Game/);
   assert.match(html, /<details[^>]*auction-window/i);
   assert.match(html, /<summary>/i);
+  assert.doesNotMatch(html, /<details[^>]*auction-window[^>]*\sopen(?:=|\s|>)/i);
+  assert.match(html, /auction-day/i);
+  assert.doesNotMatch(html, /auction-card/i);
   assert.doesNotMatch(html, /Explore o catálogo|role="dialog"|cover-art/i);
 });
 
