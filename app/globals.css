@@ -18,12 +18,6 @@
 html { scroll-behavior: smooth; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Manrope", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 
-/* The catalog is intentionally dense, but its original desktop scale was too
-   small at 100% browser zoom. This approximates the comfortable 133% view
-   without making the mobile layout cramped. */
-@media (min-width: 901px) {
-  body { width: 76.9231%; zoom: 1.3; }
-}
 button, input, select { font: inherit; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
 
@@ -177,6 +171,41 @@ tr.compared.high td:first-child { box-shadow: inset 4px 0 var(--red); }
 .empty button { border: 0; border-bottom: 1px solid var(--ink); background: transparent; cursor: pointer; }
 
 footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .07em; }
+
+/* Readable desktop density without CSS zoom. Keeping the document at its real
+   width prevents the right side from being clipped on ultrawide displays. */
+@media (min-width: 901px) {
+  .identity strong { font-size: 18px; }
+  .identity span, .kicker, .legend span { font-size: 11px; }
+  .base-status { font-size: 12px; }
+  .intro > div > p:last-child { font-size: 15px; }
+  .auction-heading > div > p:last-child { font-size: 14px; }
+  .auction-window-status, .auction-window-date, .auction-window-count,
+  .auction-window > summary strong small, .auction-meta span,
+  .auction-day > header span, .auction-footnote span, .auction-footnote a { font-size: 10px; }
+  .auction-window > summary strong { font-size: 17px; }
+  .auction-window-count b, .auction-meta strong { font-size: 12px; }
+  .auction-day > header strong, .auction-record h3 { font-size: 14px; }
+  .auction-list-head, .auction-lot span, .auction-row-prices dt { font-size: 9px; }
+  .auction-lot b { font-size: 16px; }
+  .auction-record h3 span { font-size: 17px; }
+  .auction-record p, .auction-record small, .auction-priority b,
+  .auction-footnote p { font-size: 10px; }
+  .auction-row-prices dd { font-size: 14px; }
+  .controls > label > span { font-size: 10px; }
+  .controls select { font-size: 13px; }
+  .search-box input { font-size: 19px; }
+  .result-line { font-size: 11px; }
+  table { min-width: 1940px; font-size: 14px; }
+  th { height: 47px; font-size: 10px; }
+  td { height: 54px; padding: 8px 11px; }
+  .row-number, .price-source { font-size: 11px; }
+  .album-cell small { font-size: 9px; }
+  .adornos-cell, .reference-cell { font-size: 14px; }
+  .offer-cell > span, .verdict-cell strong { font-size: 12px; }
+  .verdict-cell small { font-size: 10px; }
+  footer { font-size: 10px; }
+}
 
 @media (max-width: 900px) {
   .base-status { gap: 12px; }
