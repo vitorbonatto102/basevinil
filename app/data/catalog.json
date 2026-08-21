@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T23:12:28.704Z",
+  "generatedAt": "2026-08-21T14:20:00.000Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -15047,6 +15047,60 @@
       ],
       "tags": [
         "Vinyl Social Club"
+      ]
+    },
+    {
+      "id": "catalogo-991-pat-metheny-group-travels",
+      "sourceRow": 991,
+      "lot": null,
+      "artist": "Pat Metheny Group",
+      "title": "Travels (2LP, usado)",
+      "year": 1983,
+      "auctionPrice": 80,
+      "marketMin": 93,
+      "market": [
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 110",
+          "numeric": 110,
+          "status": "anúncio ativo",
+          "condition": "usado",
+          "shipping": "frete grátis",
+          "checkedAt": "2026-08-21"
+        },
+        {
+          "source": "OLX",
+          "display": "R$ 123 vendido",
+          "numeric": 123,
+          "status": "vendido",
+          "condition": "descrito como impecável",
+          "shipping": "não informado",
+          "checkedAt": "2026-08-21"
+        },
+        {
+          "source": "Shopee",
+          "display": "R$ 93",
+          "numeric": 93,
+          "status": "anúncio ativo",
+          "condition": "usado",
+          "shipping": "não informado",
+          "note": "Mesmo comerciante responsável pelo lote atual da Catavento.",
+          "checkedAt": "2026-08-21"
+        },
+        {
+          "source": "Leilão observado",
+          "display": "R$ 80 atual",
+          "numeric": 80,
+          "status": "lance atual",
+          "condition": "não confirmada",
+          "shipping": "comissão e frete não incluídos",
+          "note": "Leilão Catavento Discos.",
+          "checkedAt": "2026-08-21"
+        }
+      ],
+      "tags": [
+        "2LP",
+        "Catavento"
       ]
     }
   ],
