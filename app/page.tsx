@@ -818,7 +818,7 @@ export default function Home() {
   useEffect(() => {
     const updateClock = () => setClock(Date.now());
     updateClock();
-    const timer = window.setInterval(updateClock, 60_000);
+    const timer = window.setInterval(updateClock, 86_400_000);
     return () => window.clearInterval(timer);
   }, []);
 
