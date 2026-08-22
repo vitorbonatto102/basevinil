@@ -55,6 +55,7 @@ type AuctionEvent = {
   house: string;
   title: string;
   dates: string;
+  expiresAt: string;
   costs: string;
   catalogUrl: string;
   updatedAt: string;
@@ -514,12 +515,156 @@ const cataventoAuctionWatch: AuctionWatch[] = [
   },
 ];
 
+const credanAuctionWatch: AuctionWatch[] = [
+  {
+    lot: 126,
+    artist: "Live",
+    title: "Mental Jewelry",
+    date: "27 ago · 18h",
+    condition: "Brasil 1992; capa EX+, encarte NM e disco EX",
+    currentBid: 60,
+    nextBid: 70,
+    ceiling: 140,
+    priority: "Melhor oportunidade",
+    tone: "high",
+    note: "Mesmo catálogo com encarte aparece ativo a partir de R$ 230; há venda internacional concluída por € 89. Teto já considera a incerteza do mercado local.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122211",
+  },
+  {
+    lot: 237,
+    artist: "Temple of the Dog",
+    title: "Temple of the Dog",
+    date: "27 ago · 18h",
+    condition: "Brasil 1992; capa VG+, encarte EX e disco M",
+    currentBid: 160,
+    nextBid: 170,
+    ceiling: 300,
+    priority: "Prioridade alta",
+    tone: "high",
+    note: "Pedidos ativos da primeira brasileira com encarte estão em R$ 800–850. A venda concluída encontrada é antiga; não perseguir acima do teto.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122322",
+  },
+  {
+    lot: 245,
+    artist: "U2",
+    title: "Achtung Baby",
+    date: "27 ago · 18h",
+    condition: "Brasil 1991; capa VG+; confirmar disco e encarte",
+    currentBid: 30,
+    nextBid: 40,
+    ceiling: 90,
+    priority: "Garimpo forte",
+    tone: "high",
+    note: "Anúncios brasileiros usados começam perto de R$ 130. Confirmar o encarte antes de ampliar o teto.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122330",
+  },
+  {
+    lot: 9,
+    artist: "Art Popular",
+    title: "Nova Era",
+    date: "27 ago · 18h",
+    condition: "Brasil 1995; capa VG+; confirmar mídia",
+    currentBid: 15,
+    nextBid: 20,
+    ceiling: 50,
+    priority: "Boa oportunidade",
+    tone: "high",
+    note: "Pedidos ativos vistos de R$ 80 a R$ 200, mas a liquidez é incerta. Comprar pelo preço, não pelo topo dos anúncios.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122094",
+  },
+  {
+    lot: 8,
+    artist: "Art Popular",
+    title: "O Canto da Razão",
+    date: "27 ago · 18h",
+    condition: "Brasil 1993; capa VG; confirmar mídia",
+    currentBid: 15,
+    nextBid: 20,
+    ceiling: 40,
+    priority: "Boa oportunidade",
+    tone: "medium",
+    note: "Comparáveis ativos aparecem por R$ 60–80. O estado VG e a amostra pequena seguram o teto.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122093",
+  },
+  {
+    lot: 14,
+    artist: "The Beatles",
+    title: "Os Reis do Iê Iê Iê",
+    date: "27 ago · 18h",
+    condition: "Brasil 1964 mono; capa VG+, disco VG e sem encarte",
+    currentBid: 30,
+    nextBid: 40,
+    ceiling: 60,
+    priority: "Boa oportunidade",
+    tone: "medium",
+    note: "Mesmo número de catálogo está anunciado por R$ 100 e R$ 180; houve oferta esgotada perto de R$ 60. Estado impede nota maior.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122099",
+  },
+  {
+    lot: 239,
+    artist: "Titãs",
+    title: "Go Back",
+    date: "27 ago · 18h",
+    condition: "Brasil 1988; capa M, encarte NM e disco M",
+    currentBid: 30,
+    nextBid: 40,
+    ceiling: 65,
+    priority: "Boa oportunidade",
+    tone: "medium",
+    note: "Conservação muito acima da média. Referência local ativa vista em R$ 80; o catálogo também guarda lance antigo de R$ 29.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122324",
+  },
+  {
+    lot: 25,
+    artist: "The Bolshoi",
+    title: "Friends",
+    date: "27 ago · 18h",
+    condition: "Brasil 1987; capa VG+; confirmar encarte e mídia",
+    currentBid: 20,
+    nextBid: 30,
+    ceiling: 40,
+    priority: "Preço interessante",
+    tone: "medium",
+    note: "Há cópia sem encarte por R$ 30 e várias entre R$ 50 e R$ 80. Só elevar o teto se estiver completo.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122110",
+  },
+  {
+    lot: 246,
+    artist: "Ugly Kid Joe",
+    title: "America's Least Wanted",
+    date: "27 ago · 18h",
+    condition: "Brasil 1992; capa NM, disco VG e sem encarte",
+    currentBid: 80,
+    nextBid: 90,
+    ceiling: 110,
+    priority: "Cautela",
+    tone: "careful",
+    note: "Pedidos ativos começam em R$ 150, mas disco VG e ausência de encarte eliminam boa parte da margem.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122331",
+  },
+  {
+    lot: 180,
+    artist: "Red Hot Chili Peppers",
+    title: "Blood Sugar Sex Magik (2LP)",
+    date: "27 ago · 18h",
+    condition: "Brasil 1991; capa e internos NM; discos NM/M",
+    currentBid: 240,
+    nextBid: 260,
+    ceiling: 300,
+    priority: "Monitorar sem perseguir",
+    tone: "careful",
+    note: "Pedidos ativos equivalentes começam perto de R$ 349, mas existe referência de loja bem menor sem disponibilidade confirmada.",
+    url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122265",
+  },
+];
+
 const auctionEvents: AuctionEvent[] = [
   {
     id: "catavento-discos-64297",
     house: "Catavento Discos",
     title: "61º Leilão · discos, CDs e equipamentos vintage",
     dates: "20 e 21 de agosto · 20h",
+    expiresAt: "2026-08-22T20:00:00-03:00",
     costs: "5% de comissão + frete/embalagem",
     catalogUrl: "https://leiloes.cataventodiscos.com.br/catalogo.asp?Num=64297&Nav=lista&Sec=Catalogo&Pag=1&Srt=1&dia=2",
     updatedAt: "21 ago 2026 · 1h07",
@@ -530,6 +675,7 @@ const auctionEvents: AuctionEvent[] = [
     house: "RT Leilões",
     title: "LD Colecionismo · Vinis, CDs e DVDs",
     dates: "24, 25 e 26 de agosto · 18h",
+    expiresAt: "2026-08-27T18:00:00-03:00",
     costs: "5% de comissão + frete/embalagem",
     catalogUrl: "https://www.rtleiloes.com.br/catalogo.asp?Num=64580&p=on&Dia=&Tipo=&artista=&pesquisa=&Srt=10",
     updatedAt: "20 ago 2026",
@@ -540,14 +686,24 @@ const auctionEvents: AuctionEvent[] = [
     house: "Bruce Angeiras",
     title: "47º Meier · 8º exclusivo de mídias",
     dates: "24, 25 e 26 de agosto · 15h",
+    expiresAt: "2026-08-27T15:00:00-03:00",
     costs: "5% de comissão + frete",
     catalogUrl: "https://www.bruceangeirasleiloeiro.com.br/catalogo.asp?Num=63353&fav=1&p=on",
     updatedAt: "20 ago 2026",
     items: auctionWatch,
   },
+  {
+    id: "credan-64533",
+    house: "Credance Leilões",
+    title: "106º · Desapego de colecionador — do rock à MPB 2",
+    dates: "27 de agosto · 18h",
+    expiresAt: "2026-08-28T18:00:00-03:00",
+    costs: "5% de comissão + R$ 6 de embalagem + frete",
+    catalogUrl: "https://www.credanceleiloes.com.br/catalogo.asp?Num=64533&Nav=lista&Sec=Catalogo&pag=1&Srt=1",
+    updatedAt: "22 ago 2026",
+    items: credanAuctionWatch,
+  },
 ];
-
-const auctionWatchCount = auctionEvents.reduce((total, event) => total + event.items.length, 0);
 
 function auctionGroups(items: AuctionWatch[]) {
   const grouped = new Map<string, AuctionWatch[]>();
@@ -645,6 +801,7 @@ export default function Home() {
   const [coverage, setCoverage] = useState("todos");
   const [sort, setSort] = useState("artista");
   const [offers, setOffers] = useState<Record<string, string>>({});
+  const [clock, setClock] = useState<number | null>(null);
 
   useEffect(() => {
     try {
@@ -658,6 +815,13 @@ export default function Home() {
       window.localStorage.setItem("preco-de-disco-ofertas", JSON.stringify(offers));
     } catch { /* preferência local opcional */ }
   }, [offers]);
+  useEffect(() => {
+    const updateClock = () => setClock(Date.now());
+    updateClock();
+    const timer = window.setInterval(updateClock, 60_000);
+    return () => window.clearInterval(timer);
+  }, []);
+
 
   const decades = useMemo(
     () => [...new Set(records.flatMap((record) => record.year ? [Math.floor(record.year / 10) * 10] : []))].sort(),
@@ -695,6 +859,12 @@ export default function Home() {
   }, [query, decade, coverage, sort, offers]);
 
   const comparedCount = Object.values(offers).filter(Boolean).length;
+
+  const visibleAuctionEvents = useMemo(
+    () => auctionEvents.filter((event) => clock === null || clock < new Date(event.expiresAt).getTime()),
+    [clock],
+  );
+  const auctionWatchCount = visibleAuctionEvents.reduce((total, event) => total + event.items.length, 0);
 
   return (
     <main>
@@ -736,7 +906,7 @@ export default function Home() {
         </div>
 
         <div className="auction-windows">
-          {auctionEvents.map((event) => (
+          {visibleAuctionEvents.map((event) => (
             <details className="auction-window" key={event.id}>
               <summary>
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
