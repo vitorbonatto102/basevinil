@@ -75,7 +75,7 @@ button, input, select { font: inherit; }
 .wanted-result { min-height: 34px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 7px 13px; border-bottom: 1px solid var(--line); color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; }
 .wanted-result b { color: var(--ink); }
 .wanted-list { max-height: 510px; overflow: auto; }
-.wanted-list-head, .wanted-row { display: grid; grid-template-columns: 82px 76px minmax(180px, .75fr) minmax(280px, 1.4fr) 145px; align-items: center; }
+.wanted-list-head, .wanted-row { display: grid; grid-template-columns: 82px 76px minmax(180px, .75fr) minmax(280px, 1.4fr); align-items: center; }
 .wanted-list-head { min-height: 29px; padding: 0 12px; border-bottom: 1px solid var(--line); background: #ebe6da; color: var(--muted); font: 7px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .06em; }
 .wanted-row { min-height: 47px; padding: 0 12px; border-bottom: 1px solid var(--line); }
 .wanted-row:nth-child(even) { background: #f4f1e9; }
@@ -89,9 +89,6 @@ button, input, select { font: inherit; }
 .wanted-artist, .wanted-title { min-width: 0; padding-right: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .wanted-artist { font-size: 11px; font-weight: 800; }
 .wanted-title { font-size: 11px; font-weight: 600; }
-.wanted-reference { justify-self: stretch; min-height: 30px; border: 1px solid var(--line); background: transparent; color: var(--green); font: 700 9px "DM Mono", monospace; cursor: pointer; }
-.wanted-reference:hover:not(:disabled) { border-color: var(--green); background: #e9f2ea; }
-.wanted-reference:disabled { color: #aaa8a0; cursor: default; }
 .wanted-hit { display: inline-block; margin-top: 4px; padding: 3px 5px; border: 1px solid #81a68e; background: #dce9df; color: #236544; font: 700 7px "DM Mono", monospace; font-style: normal; text-transform: uppercase; }
 
 .auction-watch { padding: 34px 28px 40px; border-bottom: 1px solid var(--ink); background: #ece8de; scroll-margin-top: 12px; }
@@ -231,7 +228,7 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .wanted-summary span, .wanted-result, .wanted-priority span { font-size: 10px; }
   .wanted-summary b { font-size: 16px; }
   .wanted-search input { font-size: 17px; }
-  .wanted-copy, .wanted-badge, .wanted-reference { font-size: 11px; }
+  .wanted-copy, .wanted-badge { font-size: 11px; }
   .wanted-list-head, .wanted-check { font-size: 9px; }
   .wanted-artist, .wanted-title { font-size: 13px; }
   .auction-window-status, .auction-window-date, .auction-window-count,
@@ -266,7 +263,7 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .wanted-heading { align-items: start; }
   .wanted-summary { display: grid; grid-template-columns: 1fr 1fr; }
   .wanted-controls { grid-template-columns: minmax(240px, 1fr) 125px 160px; }
-  .wanted-list-head, .wanted-row { grid-template-columns: 74px 60px minmax(150px, .75fr) minmax(230px, 1.4fr) 125px; }
+  .wanted-list-head, .wanted-row { grid-template-columns: 74px 60px minmax(150px, .75fr) minmax(230px, 1.4fr); }
   .base-status span:nth-child(2) { display: none; }
   .intro { display: block; }
   .legend { margin-top: 24px; display: flex; flex-wrap: wrap; }
@@ -306,7 +303,6 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .wanted-badge { grid-column: 2; grid-row: 1 / span 2; }
   .wanted-artist { grid-column: 3; grid-row: 1; align-self: end; padding: 0 0 2px; }
   .wanted-title { grid-column: 3; grid-row: 2; align-self: start; padding: 2px 0 0; }
-  .wanted-reference { grid-column: 1 / -1; grid-row: 3; margin-top: 7px; }
   .auction-heading { display: block; }
   .auction-window { box-shadow: 5px 5px 0 rgba(23,24,21,.08); }
   .auction-window > summary { min-height: 62px; grid-template-columns: 1fr 54px 18px; gap: 8px; padding: 10px 12px; }

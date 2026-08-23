@@ -76,6 +76,11 @@ type SiteView = "catalogo" | "marcio";
 
 const records = catalog.records as CatalogRecord[];
 const wantedItems = wantedData as WantedItem[];
+const preparedWanted = wantedItems.map((item) => ({
+  item,
+  artistKey: lookupText(item.artist),
+  titleKey: lookupText(item.title),
+}));
 
 const auctionWatch: AuctionWatch[] = [
   {
@@ -992,7 +997,15 @@ const auctionEvents: AuctionEvent[] = [
 function auctionGroups(items: AuctionWatch[]) {
   const grouped = new Map<string, AuctionWatch[]>();
   [...items]
-    .sort((a, b) => (Number.parseInt(a.date, 10) - Number.parseInt(b.date, 10)) || a.lot - b.lot)
+    .sort((a, b) => {
+      const dateOrder = Number.parseInt(a.date, 10) - Number.parseInt(b.date, 10);
+      if (dateOrder) return dateOrder;
+      const ranks = { "A+": 0, A: 1, B: 2 } as const;
+      const aWanted = wantedMatch(a.artist, a.title);
+      const bWanted = wantedMatch(b.artist, b.title);
+      const priorityOrder = (aWanted ? ranks[aWanted.priority] : 3) - (bWanted ? ranks[bWanted.priority] : 3);
+      return priorityOrder || a.lot - b.lot;
+    })
     .forEach((item) => grouped.set(item.date, [...(grouped.get(item.date) ?? []), item]));
   return [...grouped.entries()];
 }
@@ -1011,13 +1024,10 @@ function lookupText(value: string) {
 function wantedMatch(artist: string, title: string) {
   const artistKey = lookupText(artist);
   const titleKey = lookupText(title);
-  return wantedItems.find((item) => {
-    const wantedArtist = lookupText(item.artist);
-    const wantedTitle = lookupText(item.title);
-    return artistKey === wantedArtist
+  return preparedWanted.find(({ artistKey: wantedArtist, titleKey: wantedTitle }) =>
+    artistKey === wantedArtist
       && (titleKey === wantedTitle || (titleKey.length > 5 && wantedTitle.length > 5
-        && (titleKey.includes(wantedTitle) || wantedTitle.includes(titleKey))));
-  });
+        && (titleKey.includes(wantedTitle) || wantedTitle.includes(titleKey)))))?.item;
 }
 
 function money(value: number | null) {
@@ -1152,6 +1162,7 @@ export default function Home() {
   );
 
   const filtered = useMemo(() => {
+    if (activeView !== "catalogo") return [];
     const needle = normalize(query.trim());
     return records
       .filter((record) => {
@@ -1162,7 +1173,6 @@ export default function Home() {
           || (coverage === "com-referencia" && reference !== null)
           || (coverage === "adornos" && adornosValues(record).length > 0)
           || (coverage === "mercado" && record.market.length > 0)
-          || (coverage === "procuras" && Boolean(wantedMatch(record.artist, record.title)))
           || (coverage === "sem-referencia" && reference === null)
           || (coverage === "com-oferta" && Boolean(offers[record.id]));
         return matchesQuery && matchesDecade && matchesCoverage;
@@ -1180,32 +1190,20 @@ export default function Home() {
         }
         return a.artist.localeCompare(b.artist, "pt-BR") || a.title.localeCompare(b.title, "pt-BR");
       });
-  }, [query, decade, coverage, sort, offers]);
+  }, [activeView, query, decade, coverage, sort, offers]);
 
   const comparedCount = Object.values(offers).filter(Boolean).length;
   const separatedCount = Object.values(wantedSeparated).filter(Boolean).length;
 
   const filteredWanted = useMemo(() => {
+    if (activeView !== "marcio") return [];
     const needle = lookupText(wantedQuery);
     return wantedItems.filter((item) => {
       const matchesQuery = !needle || lookupText(item.artist + " " + item.title).includes(needle);
       const matchesPriority = wantedPriority === "todas" || item.priority === wantedPriority;
       return matchesQuery && matchesPriority;
     });
-  }, [wantedPriority, wantedQuery]);
-
-  function catalogMatch(item: WantedItem) {
-    return records.find((record) => wantedMatch(record.artist, record.title)?.id === item.id);
-  }
-
-  function openCatalogMatch(item: WantedItem) {
-    selectView("catalogo");
-    setQuery(item.artist + " " + item.title);
-    setDecade("todas");
-    setCoverage("todos");
-    setSort("artista");
-    window.requestAnimationFrame(() => document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" }));
-  }
+  }, [activeView, wantedPriority, wantedQuery]);
 
   async function copySeparated() {
     const selected = wantedItems.filter((item) => wantedSeparated[item.id]);
@@ -1326,12 +1324,10 @@ export default function Home() {
           </div>
 
           <div className="wanted-list-head" aria-hidden="true">
-            <span>Separei</span><span>Prioridade</span><span>Artista</span><span>Álbum</span><span>Referência na base</span>
+            <span>Separei</span><span>Prioridade</span><span>Artista</span><span>Álbum</span>
           </div>
           <div className="wanted-list">
-            {filteredWanted.map((item) => {
-              const match = catalogMatch(item);
-              const reference = match ? referencePrice(match) : null;
+            {activeView === "marcio" && filteredWanted.map((item) => {
               const separated = Boolean(wantedSeparated[item.id]);
               return (
                 <article className={"wanted-row" + (separated ? " separated" : "")} key={item.id}>
@@ -1347,15 +1343,7 @@ export default function Home() {
                   <strong className={"wanted-badge priority-" + item.priority.replace("+", "plus")}>{item.priority}</strong>
                   <span className="wanted-artist">{item.artist}</span>
                   <span className="wanted-title">{item.title}</span>
-                  <button
-                    className="wanted-reference"
-                    type="button"
-                    onClick={() => openCatalogMatch(item)}
-                    disabled={!match}
-                    title={match ? "Abrir preços no catálogo" : "Ainda sem correspondência na base de preços"}
-                  >
-                    {match ? money(reference) + " ↘" : "sem referência"}
-                  </button>
+
                 </article>
               );
             })}
@@ -1373,7 +1361,7 @@ export default function Home() {
         </div>
 
         <div className="auction-windows">
-          {visibleAuctionEvents.map((event) => (
+          {activeView === "catalogo" && visibleAuctionEvents.map((event) => (
             <details className="auction-window" key={event.id}>
               <summary>
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
@@ -1406,13 +1394,14 @@ export default function Home() {
                       <div className="auction-list">
                         {items.map((item) => {
                           const withCommission = item.currentBid * 1.05;
+                          const wanted = wantedMatch(item.artist, item.title);
                           return (
                             <article className={`auction-row ${item.tone}`} key={item.lot}>
                               <div className="auction-lot"><span>Lote</span><b>{item.lot}</b></div>
                               <div className="auction-record">
                                 <h3>{item.artist}<span>{item.title}</span></h3>
-                                {wantedMatch(item.artist, item.title) && (
-                                  <em className="wanted-hit">Procura {wantedMatch(item.artist, item.title)?.priority}</em>
+                                {wanted && (
+                                  <em className="wanted-hit">Procura Márcio · {wanted.priority}</em>
                                 )}
                                 <p title={item.condition}>{item.condition}</p>
                                 <small title={item.note}>{item.note}</small>
@@ -1460,7 +1449,7 @@ export default function Home() {
           {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
         </label>
         <label><span>Década</span><select value={decade} onChange={(event) => setDecade(event.target.value)}><option value="todas">Todas</option>{decades.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
-        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="procuras">Na lista de procuras</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
+        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
         <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
       </section>
 
@@ -1490,7 +1479,7 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {filtered.map((record, index) => {
+            {activeView === "catalogo" && filtered.map((record, index) => {
               const reference = referencePrice(record);
               const offerText = offers[record.id] ?? "";
               const parsedOffer = offerText ? Number(offerText.replace(",", ".")) : null;

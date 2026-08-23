@@ -29,7 +29,6 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Preços e leilões/);
   assert.match(html, /aria-pressed="true"/);
   assert.match(html, /Copiar separados/);
-  assert.match(html, /Unknown Pleasures/);
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
   assert.match(html, /RT Leilões/);
@@ -105,8 +104,10 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.match(page, /preco-de-disco-procuras-separadas/);
-  assert.match(page, /coverage === "procuras"/);
+  assert.match(page, /Procura Márcio/);
   assert.match(page, /wanted-hit/);
+  assert.match(page, /activeView === "marcio" && filteredWanted\.map/);
+  assert.doesNotMatch(page, /function catalogMatch|function openCatalogMatch|wanted-reference|coverage === "procuras"/);
   assert.doesNotMatch(page, /setSelected|record-card|load-more/);
   assert.match(css, /thead \{ position: relative;/);
   assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);
