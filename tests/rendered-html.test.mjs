@@ -40,6 +40,7 @@ test("renders the price-reference list", async () => {
   assert.match(html, /E Pluribus Funk/);
   assert.match(html, /Love Songs \(2LP\)/);
   assert.match(html, /Cosmo&#x27;s Factory|Cosmo's Factory/);
+  assert.match(html, /Willy and the Poor Boys/);
   assert.match(html, /The Game/);
   assert.match(html, /<details[^>]*auction-window/i);
   assert.match(html, /<summary>/i);

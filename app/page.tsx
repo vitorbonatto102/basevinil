@@ -84,6 +84,19 @@ const preparedWanted = wantedItems.map((item) => ({
 
 const auctionWatch: AuctionWatch[] = [
   {
+    lot: 134,
+    artist: "Creedence Clearwater Revival",
+    title: "Willy and the Poor Boys",
+    date: "24 ago · 15h",
+    condition: "Disco e capa em bom estado",
+    currentBid: 60,
+    nextBid: 70,
+    ceiling: 100,
+    priority: "Procura Márcio · A",
+    tone: "high",
+    note: "Boa oportunidade no lance atual; confirmar selo e contracapa. Teto de R$ 100 sem confirmação da primeira edição brasileira Liberty FLP-35080.",
+    url: "https://www.bruceangeirasleiloeiro.com.br/peca.asp?ID=31542976",
+  },  {
     lot: 136,
     artist: "Creedence Clearwater Revival",
     title: "Cosmo's Factory",
