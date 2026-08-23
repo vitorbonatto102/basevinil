@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import catalog from "./data/catalog.json";
+import wantedData from "./data/wanted.json";
 
 type MarketObservation = {
   source: string;
@@ -62,7 +63,17 @@ type AuctionEvent = {
   items: AuctionWatch[];
 };
 
+type WantedPriority = "A+" | "A" | "B";
+
+type WantedItem = {
+  id: string;
+  artist: string;
+  title: string;
+  priority: WantedPriority;
+};
+
 const records = catalog.records as CatalogRecord[];
+const wantedItems = wantedData as WantedItem[];
 
 const auctionWatch: AuctionWatch[] = [
   {
@@ -988,6 +999,25 @@ function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
 
+function lookupText(value: string) {
+  return normalize(value)
+    .replace(/\b(disco de vinil|vinil|lp|usado|lacrado)\b/g, " ")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+function wantedMatch(artist: string, title: string) {
+  const artistKey = lookupText(artist);
+  const titleKey = lookupText(title);
+  return wantedItems.find((item) => {
+    const wantedArtist = lookupText(item.artist);
+    const wantedTitle = lookupText(item.title);
+    return artistKey === wantedArtist
+      && (titleKey === wantedTitle || (titleKey.length > 5 && wantedTitle.length > 5
+        && (titleKey.includes(wantedTitle) || wantedTitle.includes(titleKey))));
+  });
+}
+
 function money(value: number | null) {
   if (value === null) return "—";
   return new Intl.NumberFormat("pt-BR", {
@@ -1068,6 +1098,10 @@ function assessment(offer: number | null, reference: number | null) {
 
 export default function Home() {
   const [query, setQuery] = useState("");
+  const [wantedQuery, setWantedQuery] = useState("");
+  const [wantedPriority, setWantedPriority] = useState("todas");
+  const [wantedSeparated, setWantedSeparated] = useState<Record<string, boolean>>({});
+  const [copyFeedback, setCopyFeedback] = useState("");
   const [decade, setDecade] = useState("todas");
   const [coverage, setCoverage] = useState("todos");
   const [sort, setSort] = useState("artista");
@@ -1078,6 +1112,8 @@ export default function Home() {
     try {
       const saved = window.localStorage.getItem("preco-de-disco-ofertas");
       if (saved) setOffers(JSON.parse(saved));
+      const savedWanted = window.localStorage.getItem("preco-de-disco-procuras-separadas");
+      if (savedWanted) setWantedSeparated(JSON.parse(savedWanted));
     } catch { /* preferência local opcional */ }
   }, []);
 
@@ -1086,6 +1122,12 @@ export default function Home() {
       window.localStorage.setItem("preco-de-disco-ofertas", JSON.stringify(offers));
     } catch { /* preferência local opcional */ }
   }, [offers]);
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("preco-de-disco-procuras-separadas", JSON.stringify(wantedSeparated));
+    } catch { /* preferência local opcional */ }
+  }, [wantedSeparated]);
   useEffect(() => {
     const updateClock = () => setClock(Date.now());
     updateClock();
@@ -1110,6 +1152,7 @@ export default function Home() {
           || (coverage === "com-referencia" && reference !== null)
           || (coverage === "adornos" && adornosValues(record).length > 0)
           || (coverage === "mercado" && record.market.length > 0)
+          || (coverage === "procuras" && Boolean(wantedMatch(record.artist, record.title)))
           || (coverage === "sem-referencia" && reference === null)
           || (coverage === "com-oferta" && Boolean(offers[record.id]));
         return matchesQuery && matchesDecade && matchesCoverage;
@@ -1130,6 +1173,42 @@ export default function Home() {
   }, [query, decade, coverage, sort, offers]);
 
   const comparedCount = Object.values(offers).filter(Boolean).length;
+  const separatedCount = Object.values(wantedSeparated).filter(Boolean).length;
+
+  const filteredWanted = useMemo(() => {
+    const needle = lookupText(wantedQuery);
+    return wantedItems.filter((item) => {
+      const matchesQuery = !needle || lookupText(item.artist + " " + item.title).includes(needle);
+      const matchesPriority = wantedPriority === "todas" || item.priority === wantedPriority;
+      return matchesQuery && matchesPriority;
+    });
+  }, [wantedPriority, wantedQuery]);
+
+  function catalogMatch(item: WantedItem) {
+    return records.find((record) => wantedMatch(record.artist, record.title)?.id === item.id);
+  }
+
+  function openCatalogMatch(item: WantedItem) {
+    setQuery(item.artist + " " + item.title);
+    setDecade("todas");
+    setCoverage("todos");
+    setSort("artista");
+    window.requestAnimationFrame(() => document.getElementById("catalogo")?.scrollIntoView({ behavior: "smooth" }));
+  }
+
+  async function copySeparated() {
+    const selected = wantedItems.filter((item) => wantedSeparated[item.id]);
+    if (!selected.length) {
+      setCopyFeedback("Marque os discos que você separou");
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(selected.map((item) => item.artist + " — " + item.title).join("\n"));
+      setCopyFeedback(selected.length + (selected.length === 1 ? " disco copiado" : " discos copiados"));
+    } catch {
+      setCopyFeedback("Não foi possível copiar neste navegador");
+    }
+  }
 
   const visibleAuctionEvents = useMemo(
     () => auctionEvents.filter((event) => clock === null || clock < new Date(event.expiresAt).getTime()),
@@ -1149,6 +1228,7 @@ export default function Home() {
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
           <span><b>{records.filter((record) => adornosValues(record).length > 0).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
+          <a href="#procuras"><b>{wantedItems.length}</b> procurados</a>
           <a href="#proximos-leiloes"><b>{auctionWatchCount}</b> em leilão</a>
         </div>
       </header>
@@ -1164,6 +1244,90 @@ export default function Home() {
           <span><i className="good" /> barato</span>
           <span><i className="fair" /> na faixa</span>
           <span><i className="high" /> caro</span>
+        </div>
+      </section>
+
+      <section className="wanted-watch" id="procuras" aria-labelledby="wanted-title">
+        <div className="wanted-heading">
+          <div>
+            <p className="kicker">Fila de procura</p>
+            <h2 id="wanted-title">Discos para encontrar</h2>
+            <p>Lista recebida com 132 títulos pendentes. A+ vem primeiro; marque “separei” quando encontrar uma cópia e copie a seleção para enviar ao contato.</p>
+          </div>
+          <div className="wanted-summary" aria-label="Resumo das prioridades">
+            <span><b>{wantedItems.filter((item) => item.priority === "A+").length}</b> A+</span>
+            <span><b>{wantedItems.filter((item) => item.priority === "A").length}</b> A</span>
+            <span><b>{wantedItems.filter((item) => item.priority === "B").length}</b> B</span>
+            <span><b>{separatedCount}</b> separados</span>
+          </div>
+        </div>
+
+        <div className="wanted-panel">
+          <div className="wanted-controls">
+            <label className="wanted-search">
+              <span className="sr-only">Buscar na lista de procuras</span>
+              <input
+                type="search"
+                value={wantedQuery}
+                onChange={(event) => setWantedQuery(event.target.value)}
+                placeholder="Buscar artista ou álbum na lista..."
+              />
+              {wantedQuery && <button type="button" onClick={() => setWantedQuery("")} aria-label="Limpar busca da lista">×</button>}
+            </label>
+            <label className="wanted-priority">
+              <span>Prioridade</span>
+              <select value={wantedPriority} onChange={(event) => setWantedPriority(event.target.value)}>
+                <option value="todas">Todas</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B">B</option>
+              </select>
+            </label>
+            <button className="wanted-copy" type="button" onClick={copySeparated}>
+              Copiar separados <b>{separatedCount}</b>
+            </button>
+          </div>
+
+          <div className="wanted-result">
+            <span><b>{filteredWanted.length}</b> na lista</span>
+            <span aria-live="polite">{copyFeedback}</span>
+          </div>
+
+          <div className="wanted-list-head" aria-hidden="true">
+            <span>Separei</span><span>Prioridade</span><span>Artista</span><span>Álbum</span><span>Referência na base</span>
+          </div>
+          <div className="wanted-list">
+            {filteredWanted.map((item) => {
+              const match = catalogMatch(item);
+              const reference = match ? referencePrice(match) : null;
+              const separated = Boolean(wantedSeparated[item.id]);
+              return (
+                <article className={"wanted-row" + (separated ? " separated" : "")} key={item.id}>
+                  <label className="wanted-check">
+                    <input
+                      type="checkbox"
+                      checked={separated}
+                      onChange={(event) => setWantedSeparated((current) => ({ ...current, [item.id]: event.target.checked }))}
+                      aria-label={"Marcar como separado: " + item.artist + " — " + item.title}
+                    />
+                    <span>{separated ? "Sim" : "Não"}</span>
+                  </label>
+                  <strong className={"wanted-badge priority-" + item.priority.replace("+", "plus")}>{item.priority}</strong>
+                  <span className="wanted-artist">{item.artist}</span>
+                  <span className="wanted-title">{item.title}</span>
+                  <button
+                    className="wanted-reference"
+                    type="button"
+                    onClick={() => openCatalogMatch(item)}
+                    disabled={!match}
+                    title={match ? "Abrir preços no catálogo" : "Ainda sem correspondência na base de preços"}
+                  >
+                    {match ? money(reference) + " ↘" : "sem referência"}
+                  </button>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 
@@ -1215,6 +1379,9 @@ export default function Home() {
                               <div className="auction-lot"><span>Lote</span><b>{item.lot}</b></div>
                               <div className="auction-record">
                                 <h3>{item.artist}<span>{item.title}</span></h3>
+                                {wantedMatch(item.artist, item.title) && (
+                                  <em className="wanted-hit">Procura {wantedMatch(item.artist, item.title)?.priority}</em>
+                                )}
                                 <p title={item.condition}>{item.condition}</p>
                                 <small title={item.note}>{item.note}</small>
                               </div>
@@ -1247,7 +1414,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="controls" aria-label="Busca e filtros">
+      <section className="controls" id="catalogo" aria-label="Busca e filtros">
         <label className="search-box">
           <span className="search-symbol" aria-hidden="true" />
           <span className="sr-only">Buscar disco</span>
@@ -1261,7 +1428,7 @@ export default function Home() {
           {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
         </label>
         <label><span>Década</span><select value={decade} onChange={(event) => setDecade(event.target.value)}><option value="todas">Todas</option>{decades.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
-        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
+        <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="procuras">Na lista de procuras</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
         <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
       </section>
 

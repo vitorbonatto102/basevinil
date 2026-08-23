@@ -24,6 +24,10 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Mercado Livre/);
   assert.match(html, /Vinyl Social Club/);
   assert.match(html, /Adornos/);
+  assert.match(html, /Discos para encontrar/);
+  assert.match(html, /132 títulos pendentes/);
+  assert.match(html, /Copiar separados/);
+  assert.match(html, /Unknown Pleasures/);
   assert.match(html, /Próximos leilões/);
   assert.match(html, /Bruce Angeiras/);
   assert.match(html, /RT Leilões/);
@@ -45,13 +49,20 @@ test("renders the price-reference list", async () => {
 });
 
 test("keeps all data visible and compares offers inline", async () => {
-  const [page, catalog, css] = await Promise.all([
+  const [page, catalog, wanted, css] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/data/catalog.json", import.meta.url), "utf8"),
+    readFile(new URL("../app/data/wanted.json", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
+  const wantedItems = JSON.parse(wanted);
   assert.ok(parsed.records.length >= 980);
+  assert.equal(wantedItems.length, 132);
+  assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
+  assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
+  assert.equal(wantedItems.filter((item) => item.priority === "B").length, 6);
+  assert.equal(new Set(wantedItems.map((item) => item.artist + "|" + item.title)).size, wantedItems.length);
   assert.equal(new Set(parsed.records.map((record) => record.id)).size, parsed.records.length);
   const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
   const catalogKeys = parsed.records.map((record) => `${normalize(record.artist)}|${normalize(record.title)}`);
@@ -80,6 +91,9 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /Vinyl Social Club/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
+  assert.match(page, /preco-de-disco-procuras-separadas/);
+  assert.match(page, /coverage === "procuras"/);
+  assert.match(page, /wanted-hit/);
   assert.doesNotMatch(page, /setSelected|record-card|load-more/);
   assert.match(css, /thead \{ position: relative;/);
   assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);

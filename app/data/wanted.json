@@ -1,0 +1,794 @@
+[
+  {
+    "id": "procura-1",
+    "artist": "The Beatles",
+    "title": "Abbey Road",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-2",
+    "artist": "The Beatles",
+    "title": "Revolver",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-3",
+    "artist": "Led Zeppelin",
+    "title": "Led Zeppelin II",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-4",
+    "artist": "Led Zeppelin",
+    "title": "Physical Graffiti",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-5",
+    "artist": "AC/DC",
+    "title": "Highway to Hell",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-6",
+    "artist": "AC/DC",
+    "title": "Back in Black",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-7",
+    "artist": "Black Sabbath",
+    "title": "Master of Reality",
+    "priority": "A"
+  },
+  {
+    "id": "procura-8",
+    "artist": "Ozzy Osbourne",
+    "title": "Diary of a Madman",
+    "priority": "A"
+  },
+  {
+    "id": "procura-9",
+    "artist": "The Who",
+    "title": "Who's Next",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-10",
+    "artist": "The Who",
+    "title": "Quadrophenia",
+    "priority": "A"
+  },
+  {
+    "id": "procura-11",
+    "artist": "Deep Purple",
+    "title": "Machine Head",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-12",
+    "artist": "Deep Purple",
+    "title": "Made in Japan",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-13",
+    "artist": "Neil Young",
+    "title": "Harvest",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-14",
+    "artist": "Neil Young",
+    "title": "After the Gold Rush",
+    "priority": "A"
+  },
+  {
+    "id": "procura-15",
+    "artist": "Neil Young",
+    "title": "Rust Never Sleeps",
+    "priority": "A"
+  },
+  {
+    "id": "procura-16",
+    "artist": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-17",
+    "artist": "Pink Floyd",
+    "title": "The Wall",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-18",
+    "artist": "Pink Floyd",
+    "title": "Animals",
+    "priority": "A"
+  },
+  {
+    "id": "procura-19",
+    "artist": "Pink Floyd",
+    "title": "Meddle",
+    "priority": "B"
+  },
+  {
+    "id": "procura-20",
+    "artist": "David Bowie",
+    "title": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-21",
+    "artist": "The Rolling Stones",
+    "title": "Sticky Fingers",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-22",
+    "artist": "The Doors",
+    "title": "L.A. Woman",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-23",
+    "artist": "Jimi Hendrix",
+    "title": "Electric Ladyland",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-24",
+    "artist": "Dire Straits",
+    "title": "Brothers in Arms",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-25",
+    "artist": "Supertramp",
+    "title": "Breakfast in America",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-26",
+    "artist": "Supertramp",
+    "title": "Even in the Quietest Moments...",
+    "priority": "A"
+  },
+  {
+    "id": "procura-27",
+    "artist": "Supertramp",
+    "title": "Crisis? What Crisis?",
+    "priority": "B"
+  },
+  {
+    "id": "procura-28",
+    "artist": "Jethro Tull",
+    "title": "Aqualung",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-29",
+    "artist": "Jethro Tull",
+    "title": "Thick as a Brick",
+    "priority": "A"
+  },
+  {
+    "id": "procura-30",
+    "artist": "Jethro Tull",
+    "title": "Stand Up",
+    "priority": "B"
+  },
+  {
+    "id": "procura-31",
+    "artist": "Creedence Clearwater Revival",
+    "title": "Cosmo's Factory",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-32",
+    "artist": "Creedence Clearwater Revival",
+    "title": "Green River",
+    "priority": "A"
+  },
+  {
+    "id": "procura-33",
+    "artist": "Creedence Clearwater Revival",
+    "title": "Willy and the Poor Boys",
+    "priority": "A"
+  },
+  {
+    "id": "procura-34",
+    "artist": "Simon & Garfunkel",
+    "title": "Bridge Over Troubled Water",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-35",
+    "artist": "Simon & Garfunkel",
+    "title": "Bookends",
+    "priority": "A"
+  },
+  {
+    "id": "procura-36",
+    "artist": "Simon & Garfunkel",
+    "title": "Parsley, Sage, Rosemary and Thyme",
+    "priority": "B"
+  },
+  {
+    "id": "procura-37",
+    "artist": "Fleetwood Mac",
+    "title": "Rumours",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-38",
+    "artist": "Bob Dylan",
+    "title": "Highway 61 Revisited",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-39",
+    "artist": "Van Morrison",
+    "title": "Astral Weeks",
+    "priority": "A"
+  },
+  {
+    "id": "procura-40",
+    "artist": "Santana",
+    "title": "Abraxas",
+    "priority": "A"
+  },
+  {
+    "id": "procura-41",
+    "artist": "King Crimson",
+    "title": "In the Court of the Crimson King",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-42",
+    "artist": "Yes",
+    "title": "Close to the Edge",
+    "priority": "A"
+  },
+  {
+    "id": "procura-43",
+    "artist": "Genesis",
+    "title": "Selling England by the Pound",
+    "priority": "A"
+  },
+  {
+    "id": "procura-44",
+    "artist": "Steely Dan",
+    "title": "Aja",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-45",
+    "artist": "Metallica",
+    "title": "Ride the Lightning",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-46",
+    "artist": "Metallica",
+    "title": "...And Justice for All",
+    "priority": "A"
+  },
+  {
+    "id": "procura-47",
+    "artist": "Metallica",
+    "title": "Metallica (Black Album)",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-48",
+    "artist": "Iron Maiden",
+    "title": "The Number of the Beast",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-49",
+    "artist": "Iron Maiden",
+    "title": "Powerslave",
+    "priority": "A"
+  },
+  {
+    "id": "procura-50",
+    "artist": "Judas Priest",
+    "title": "British Steel",
+    "priority": "A"
+  },
+  {
+    "id": "procura-51",
+    "artist": "The Cure",
+    "title": "The Head on the Door",
+    "priority": "A"
+  },
+  {
+    "id": "procura-52",
+    "artist": "The Cure",
+    "title": "Pornography",
+    "priority": "A"
+  },
+  {
+    "id": "procura-53",
+    "artist": "Echo & The Bunnymen",
+    "title": "Ocean Rain",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-54",
+    "artist": "Echo & The Bunnymen",
+    "title": "Porcupine",
+    "priority": "A"
+  },
+  {
+    "id": "procura-55",
+    "artist": "U2",
+    "title": "The Joshua Tree",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-56",
+    "artist": "U2",
+    "title": "Achtung Baby",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-57",
+    "artist": "U2",
+    "title": "War",
+    "priority": "A"
+  },
+  {
+    "id": "procura-58",
+    "artist": "Joy Division",
+    "title": "Unknown Pleasures",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-59",
+    "artist": "The Smiths",
+    "title": "The Queen Is Dead",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-60",
+    "artist": "New Order",
+    "title": "Power, Corruption & Lies",
+    "priority": "A"
+  },
+  {
+    "id": "procura-61",
+    "artist": "Talking Heads",
+    "title": "Remain in Light",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-62",
+    "artist": "R.E.M.",
+    "title": "Automatic for the People",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-63",
+    "artist": "Radiohead",
+    "title": "OK Computer",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-64",
+    "artist": "Pearl Jam",
+    "title": "Vitalogy",
+    "priority": "A"
+  },
+  {
+    "id": "procura-65",
+    "artist": "Alice in Chains",
+    "title": "Dirt",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-66",
+    "artist": "Alice in Chains",
+    "title": "Jar of Flies",
+    "priority": "A"
+  },
+  {
+    "id": "procura-67",
+    "artist": "Rage Against the Machine",
+    "title": "Rage Against the Machine",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-68",
+    "artist": "Rage Against the Machine",
+    "title": "Evil Empire",
+    "priority": "A"
+  },
+  {
+    "id": "procura-69",
+    "artist": "Nirvana",
+    "title": "MTV Unplugged in New York",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-70",
+    "artist": "Soundgarden",
+    "title": "Superunknown",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-71",
+    "artist": "Stone Temple Pilots",
+    "title": "Purple",
+    "priority": "A"
+  },
+  {
+    "id": "procura-72",
+    "artist": "Foo Fighters",
+    "title": "The Colour and the Shape",
+    "priority": "A"
+  },
+  {
+    "id": "procura-73",
+    "artist": "Marvin Gaye",
+    "title": "What's Going On",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-74",
+    "artist": "Stevie Wonder",
+    "title": "Songs in the Key of Life",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-75",
+    "artist": "Stevie Wonder",
+    "title": "Innervisions",
+    "priority": "A"
+  },
+  {
+    "id": "procura-76",
+    "artist": "Aretha Franklin",
+    "title": "I Never Loved a Man the Way I Love You",
+    "priority": "A"
+  },
+  {
+    "id": "procura-77",
+    "artist": "Otis Redding",
+    "title": "Otis Blue",
+    "priority": "A"
+  },
+  {
+    "id": "procura-78",
+    "artist": "Curtis Mayfield",
+    "title": "Super Fly",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-79",
+    "artist": "Isaac Hayes",
+    "title": "Hot Buttered Soul",
+    "priority": "A"
+  },
+  {
+    "id": "procura-80",
+    "artist": "Al Green",
+    "title": "Call Me",
+    "priority": "A"
+  },
+  {
+    "id": "procura-81",
+    "artist": "Bill Withers",
+    "title": "Still Bill",
+    "priority": "A"
+  },
+  {
+    "id": "procura-82",
+    "artist": "Sly & The Family Stone",
+    "title": "There's a Riot Goin' On",
+    "priority": "A"
+  },
+  {
+    "id": "procura-83",
+    "artist": "Parliament",
+    "title": "Mothership Connection",
+    "priority": "B"
+  },
+  {
+    "id": "procura-84",
+    "artist": "Earth, Wind & Fire",
+    "title": "That's the Way of the World",
+    "priority": "A"
+  },
+  {
+    "id": "procura-85",
+    "artist": "Milton Nascimento & Lô Borges",
+    "title": "Clube da Esquina",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-86",
+    "artist": "Milton Nascimento",
+    "title": "Minas",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-87",
+    "artist": "Milton Nascimento",
+    "title": "Geraes",
+    "priority": "A"
+  },
+  {
+    "id": "procura-88",
+    "artist": "Beto Guedes",
+    "title": "A Página do Relâmpago Elétrico",
+    "priority": "A"
+  },
+  {
+    "id": "procura-89",
+    "artist": "Beto Guedes",
+    "title": "Amor de Índio",
+    "priority": "A"
+  },
+  {
+    "id": "procura-90",
+    "artist": "Jorge Ben",
+    "title": "Força Bruta",
+    "priority": "A"
+  },
+  {
+    "id": "procura-91",
+    "artist": "Tim Maia",
+    "title": "Racional Vol. 1",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-92",
+    "artist": "Tim Maia",
+    "title": "Tim Maia (1970)",
+    "priority": "A"
+  },
+  {
+    "id": "procura-93",
+    "artist": "Gilberto Gil",
+    "title": "Expresso 2222",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-94",
+    "artist": "Gilberto Gil",
+    "title": "Refazenda",
+    "priority": "A"
+  },
+  {
+    "id": "procura-95",
+    "artist": "Gilberto Gil",
+    "title": "Refavela",
+    "priority": "A"
+  },
+  {
+    "id": "procura-96",
+    "artist": "Chico Buarque",
+    "title": "Construção",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-97",
+    "artist": "Chico Buarque",
+    "title": "Meus Caros Amigos",
+    "priority": "A"
+  },
+  {
+    "id": "procura-98",
+    "artist": "Maria Bethânia",
+    "title": "Álibi",
+    "priority": "A"
+  },
+  {
+    "id": "procura-99",
+    "artist": "Maria Bethânia",
+    "title": "Mel",
+    "priority": "A"
+  },
+  {
+    "id": "procura-100",
+    "artist": "Chico César",
+    "title": "Aos Vivos",
+    "priority": "A"
+  },
+  {
+    "id": "procura-101",
+    "artist": "Chico César",
+    "title": "Cuscuz Clã",
+    "priority": "A"
+  },
+  {
+    "id": "procura-102",
+    "artist": "Novos Baianos",
+    "title": "Acabou Chorare",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-103",
+    "artist": "Caetano Veloso",
+    "title": "Transa",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-104",
+    "artist": "Caetano Veloso",
+    "title": "Caetano Veloso (1968)",
+    "priority": "A"
+  },
+  {
+    "id": "procura-105",
+    "artist": "Elis Regina & Tom Jobim",
+    "title": "Elis & Tom",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-106",
+    "artist": "Jards Macalé",
+    "title": "Jards Macalé",
+    "priority": "A"
+  },
+  {
+    "id": "procura-107",
+    "artist": "Nação Zumbi",
+    "title": "Da Lama ao Caos",
+    "priority": "A"
+  },
+  {
+    "id": "procura-108",
+    "artist": "Os Mutantes",
+    "title": "Os Mutantes",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-109",
+    "artist": "Os Mutantes",
+    "title": "A Divina Comédia ou Ando Meio Desligado",
+    "priority": "A"
+  },
+  {
+    "id": "procura-110",
+    "artist": "Tropicália",
+    "title": "Tropicália ou Panis et Circencis",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-111",
+    "artist": "Luiz Melodia",
+    "title": "Pérola Negra",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-112",
+    "artist": "Luiz Melodia",
+    "title": "Maravilhas Contemporâneas",
+    "priority": "A"
+  },
+  {
+    "id": "procura-113",
+    "artist": "Belchior",
+    "title": "Alucinação",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-114",
+    "artist": "Cartola",
+    "title": "Cartola (1974)",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-115",
+    "artist": "João Gilberto",
+    "title": "Chega de Saudade",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-116",
+    "artist": "Tom Jobim",
+    "title": "Wave",
+    "priority": "A"
+  },
+  {
+    "id": "procura-117",
+    "artist": "Paulinho da Viola",
+    "title": "Nervos de Aço",
+    "priority": "A"
+  },
+  {
+    "id": "procura-118",
+    "artist": "Djavan",
+    "title": "A Voz, o Violão, a Música de Djavan",
+    "priority": "A"
+  },
+  {
+    "id": "procura-119",
+    "artist": "Raul Seixas",
+    "title": "Krig-ha, Bandolo!",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-120",
+    "artist": "Rita Lee & Tutti Frutti",
+    "title": "Fruto Proibido",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-121",
+    "artist": "Zé Ramalho",
+    "title": "Zé Ramalho (1978)",
+    "priority": "A"
+  },
+  {
+    "id": "procura-122",
+    "artist": "Tom Zé",
+    "title": "Estudando o Samba",
+    "priority": "A"
+  },
+  {
+    "id": "procura-123",
+    "artist": "Legião Urbana",
+    "title": "Dois",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-124",
+    "artist": "Legião Urbana",
+    "title": "Que País É Este",
+    "priority": "A"
+  },
+  {
+    "id": "procura-125",
+    "artist": "Legião Urbana",
+    "title": "As Quatro Estações",
+    "priority": "A"
+  },
+  {
+    "id": "procura-126",
+    "artist": "Titãs",
+    "title": "Cabeça Dinossauro",
+    "priority": "A+"
+  },
+  {
+    "id": "procura-127",
+    "artist": "Titãs",
+    "title": "Jesus Não Tem Dentes no País dos Banguelas",
+    "priority": "A"
+  },
+  {
+    "id": "procura-128",
+    "artist": "Barão Vermelho",
+    "title": "Maior Abandonado",
+    "priority": "A"
+  },
+  {
+    "id": "procura-129",
+    "artist": "Cazuza",
+    "title": "Ideologia",
+    "priority": "A"
+  },
+  {
+    "id": "procura-130",
+    "artist": "Ira!",
+    "title": "Vivendo e Não Aprendendo",
+    "priority": "A"
+  },
+  {
+    "id": "procura-131",
+    "artist": "Engenheiros do Hawaii",
+    "title": "A Revolta dos Dândis",
+    "priority": "A"
+  },
+  {
+    "id": "procura-132",
+    "artist": "Violeta de Outono",
+    "title": "Violeta de Outono",
+    "priority": "B"
+  }
+]
