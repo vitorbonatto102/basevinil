@@ -72,6 +72,8 @@ type WantedItem = {
   priority: WantedPriority;
 };
 
+type SiteView = "catalogo" | "marcio";
+
 const records = catalog.records as CatalogRecord[];
 const wantedItems = wantedData as WantedItem[];
 
@@ -1097,6 +1099,7 @@ function assessment(offer: number | null, reference: number | null) {
 }
 
 export default function Home() {
+  const [activeView, setActiveView] = useState<SiteView>("catalogo");
   const [query, setQuery] = useState("");
   const [wantedQuery, setWantedQuery] = useState("");
   const [wantedPriority, setWantedPriority] = useState("todas");
@@ -1107,6 +1110,13 @@ export default function Home() {
   const [sort, setSort] = useState("artista");
   const [offers, setOffers] = useState<Record<string, string>>({});
   const [clock, setClock] = useState<number | null>(null);
+
+  useEffect(() => {
+    const syncViewFromHash = () => setActiveView(window.location.hash === "#marcio-candido" ? "marcio" : "catalogo");
+    syncViewFromHash();
+    window.addEventListener("hashchange", syncViewFromHash);
+    return () => window.removeEventListener("hashchange", syncViewFromHash);
+  }, []);
 
   useEffect(() => {
     try {
@@ -1189,6 +1199,7 @@ export default function Home() {
   }
 
   function openCatalogMatch(item: WantedItem) {
+    selectView("catalogo");
     setQuery(item.artist + " " + item.title);
     setDecade("todas");
     setCoverage("todos");
@@ -1210,6 +1221,18 @@ export default function Home() {
     }
   }
 
+  function selectView(view: SiteView) {
+    setActiveView(view);
+    const hash = view === "marcio" ? "#marcio-candido" : "";
+    window.history.replaceState(null, "", window.location.pathname + window.location.search + hash);
+    window.scrollTo({ top: 0 });
+  }
+
+  function openAuctions() {
+    selectView("catalogo");
+    window.requestAnimationFrame(() => document.getElementById("proximos-leiloes")?.scrollIntoView({ behavior: "smooth" }));
+  }
+
   const visibleAuctionEvents = useMemo(
     () => auctionEvents.filter((event) => clock === null || clock < new Date(event.expiresAt).getTime()),
     [clock],
@@ -1228,12 +1251,21 @@ export default function Home() {
           <span><b>{records.filter((record) => referencePrice(record) !== null).length}</b> com referência</span>
           <span><b>{records.filter((record) => adornosValues(record).length > 0).length}</b> Adornos</span>
           <span><b>{comparedCount}</b> ofertas comparadas</span>
-          <a href="#procuras"><b>{wantedItems.length}</b> procurados</a>
-          <a href="#proximos-leiloes"><b>{auctionWatchCount}</b> em leilão</a>
+          <button className="status-link" type="button" onClick={() => selectView("marcio")}><b>{wantedItems.length}</b> para Márcio</button>
+          <button className="status-link" type="button" onClick={openAuctions}><b>{auctionWatchCount}</b> em leilão</button>
         </div>
       </header>
 
-      <section className="intro">
+      <nav className="site-tabs" aria-label="Áreas do site">
+        <button type="button" className={activeView === "catalogo" ? "active" : ""} aria-pressed={activeView === "catalogo"} onClick={() => selectView("catalogo")}>
+          Preços e leilões
+        </button>
+        <button type="button" className={activeView === "marcio" ? "active" : ""} aria-pressed={activeView === "marcio"} onClick={() => selectView("marcio")}>
+          Procuras · Márcio Cândido <b>{wantedItems.length}</b>
+        </button>
+      </nav>
+
+      <section className="intro" hidden={activeView !== "catalogo"}>
         <div>
           <p className="kicker">Consulta rápida de preços de vinil</p>
           <h1>Quanto vale esse disco?</h1>
@@ -1247,12 +1279,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="wanted-watch" id="procuras" aria-labelledby="wanted-title">
+      <section className="wanted-watch" id="marcio-candido" aria-labelledby="wanted-title" hidden={activeView !== "marcio"}>
         <div className="wanted-heading">
           <div>
-            <p className="kicker">Fila de procura</p>
-            <h2 id="wanted-title">Discos para encontrar</h2>
-            <p>Lista recebida com 132 títulos pendentes. A+ vem primeiro; marque “separei” quando encontrar uma cópia e copie a seleção para enviar ao contato.</p>
+            <p className="kicker">Cliente · fila de procura</p>
+            <h2 id="wanted-title">Márcio Cândido</h2>
+            <p>132 títulos pendentes para encontrar. A+ vem primeiro; marque “separei” quando localizar uma cópia e copie a seleção para enviar ao Márcio.</p>
           </div>
           <div className="wanted-summary" aria-label="Resumo das prioridades">
             <span><b>{wantedItems.filter((item) => item.priority === "A+").length}</b> A+</span>
@@ -1331,7 +1363,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="auction-watch" id="proximos-leiloes" aria-labelledby="auction-title">
+      <section className="auction-watch" id="proximos-leiloes" aria-labelledby="auction-title" hidden={activeView !== "catalogo"}>
         <div className="auction-heading">
           <div>
             <p className="kicker">Radar de oportunidades</p>
@@ -1414,7 +1446,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="controls" id="catalogo" aria-label="Busca e filtros">
+      <section className="controls" id="catalogo" aria-label="Busca e filtros" hidden={activeView !== "catalogo"}>
         <label className="search-box">
           <span className="search-symbol" aria-hidden="true" />
           <span className="sr-only">Buscar disco</span>
@@ -1432,12 +1464,12 @@ export default function Home() {
         <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
       </section>
 
-      <div className="result-line">
+      <div className="result-line" hidden={activeView !== "catalogo"}>
         <strong>{filtered.length}</strong> {filtered.length === 1 ? "disco encontrado" : "discos encontrados"}
         <span>Referência = menor valor registrado entre leilão, pesquisa e Adornos</span>
       </div>
 
-      <section className="table-shell" aria-label="Lista de preços de discos">
+      <section className="table-shell" aria-label="Lista de preços de discos" hidden={activeView !== "catalogo"}>
         <table>
           <thead>
             <tr>

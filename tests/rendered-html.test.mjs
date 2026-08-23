@@ -24,8 +24,10 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Mercado Livre/);
   assert.match(html, /Vinyl Social Club/);
   assert.match(html, /Adornos/);
-  assert.match(html, /Discos para encontrar/);
-  assert.match(html, /132 títulos pendentes/);
+  assert.match(html, /Márcio Cândido/);
+  assert.match(html, /132 títulos pendentes para encontrar/);
+  assert.match(html, /Preços e leilões/);
+  assert.match(html, /aria-pressed="true"/);
   assert.match(html, /Copiar separados/);
   assert.match(html, /Unknown Pleasures/);
   assert.match(html, /Próximos leilões/);
