@@ -59,7 +59,7 @@ test("keeps all data visible and compares offers inline", async () => {
   ]);
   const parsed = JSON.parse(catalog);
   const wantedItems = JSON.parse(wanted);
-  assert.ok(parsed.records.length >= 980);
+  assert.ok(parsed.records.length >= 1056);
   assert.equal(wantedItems.length, 132);
   assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
   assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
@@ -87,7 +87,18 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.ok(researchedMarketplaceRecords.every((record) =>
     record.market.every((entry) => entry.checkedAt !== "2026-08-20" || (entry.url && entry.shipping)),
   ));
-  assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 254);
+  assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 336);
+  const backInBlack = parsed.records.find((record) => record.artist === "AC/DC" && record.title === "Back In Black");
+  const fireball = parsed.records.find((record) => record.artist === "Deep Purple" && record.title === "Fireball");
+  const garotosPodres = parsed.records.find((record) => record.artist === "Garotos Podres" && record.title === "Pisando Na M...");
+  const metallicaJustice = parsed.records.find((record) => record.artist === "Metallica" && record.title === "...And Justice For All (2LP)");
+  const vanHalen1984 = parsed.records.find((record) => record.artist === "Van Halen" && record.title === "1984");
+  assert.equal(backInBlack?.adornosPrice, 189);
+  assert.deepEqual(fireball?.adornosPrices, [189, 148]);
+  assert.deepEqual(garotosPodres?.adornosPrices, [189, 148]);
+  assert.equal(metallicaJustice?.adornosPrice, 189);
+  assert.equal(parsed.records.some((record) => record.artist === "Metallica" && record.title === "1989"), false);
+  assert.equal(vanHalen1984?.adornosPrice, 189);
   assert.match(page, /<table>/);
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
