@@ -69,7 +69,7 @@ type EditingCell = {
 };
 
 type AuctionWatch = {
-  lot: number;
+  lot: number | string;
   artist: string;
   title: string;
   date: string;
@@ -497,6 +497,125 @@ const rtAuctionWatch: AuctionWatch[] = [
     tone: "careful",
     note: "Já existe cópia equivalente anunciada por R$ 50. O lance foi a R$ 121 e vira R$ 127,05 com a comissão, antes do frete.",
     url: "https://www.rtleiloes.com.br/peca.asp?ID=32152938",
+  },
+];
+
+const tremDasSeteAuctionWatch: AuctionWatch[] = [
+  {
+    lot: "282C",
+    artist: "Talking Heads",
+    title: "Speaking In Tongues",
+    date: "25 ago · 19h30",
+    condition: "Edição nacional de 1988; LP e capa em ótimo estado; encarte não informado",
+    currentBid: 60,
+    nextBid: 70,
+    ceiling: 120,
+    priority: "Melhor achado · 8,5/10",
+    tone: "high",
+    note: "Anúncios ativos diretamente comparáveis aparecem perto de R$ 222–230. Sem venda concluída confirmada e sem encarte descrito, o teto fica conservador.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046356",
+  },
+  {
+    lot: "282H",
+    artist: "The Police",
+    title: "Ghost In The Machine",
+    date: "25 ago · 19h30",
+    condition: "Nacional de 1982, catálogo 412.003; com encarte; LP muito bom e capa com desgaste leve",
+    currentBid: 30,
+    nextBid: 30,
+    bidLabel: "Abertura",
+    ceiling: 55,
+    priority: "Garimpo forte · 8/10",
+    tone: "high",
+    note: "Cópias ativas comparáveis com encarte aparecem por cerca de R$ 81–119. O estado usado impede subir demais.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046390",
+  },
+  {
+    lot: "282N",
+    artist: "The Alan Parsons Project",
+    title: "The Turn Of A Friendly Card",
+    date: "25 ago · 19h30",
+    condition: "Nacional Arista 203.000, 1980; LP ótimo; capa com desgaste leve",
+    currentBid: 25,
+    nextBid: 25,
+    bidLabel: "Abertura",
+    ceiling: 55,
+    priority: "Garimpo forte · 8/10",
+    tone: "high",
+    note: "Anúncios ativos da edição usada aparecem em R$ 73–94, com pedidos maiores chegando a R$ 130.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046370",
+  },
+  {
+    lot: "282L",
+    artist: "The Alan Parsons Project",
+    title: "Vulture Culture",
+    date: "25 ago · 19h30",
+    condition: "Nacional Arista/RCA 104.8315, 1985; LP ótimo; capa com desgaste leve",
+    currentBid: 20,
+    nextBid: 20,
+    bidLabel: "Abertura",
+    ceiling: 45,
+    priority: "Boa oportunidade · 7,5/10",
+    tone: "high",
+    note: "Há anúncios ativos entre R$ 50,99 e R$ 95; é comum, mas a abertura ainda deixa margem.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046406",
+  },
+  {
+    lot: "282E",
+    artist: "Tom Waits",
+    title: "Franks Wild Years",
+    date: "25 ago · 19h30",
+    condition: "Nacional Island 670.8009, 1987; LP ótimo; capa dupla com desgaste leve",
+    currentBid: 50,
+    nextBid: 50,
+    bidLabel: "Abertura",
+    ceiling: 70,
+    priority: "Boa oportunidade · 7,5/10",
+    tone: "high",
+    note: "Comparáveis nacionais aparecem em R$ 80–99,75; anúncios ativos mais altos chegam a R$ 150–175. A liquidez é menor.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046366",
+  },
+  {
+    lot: "281A",
+    artist: "The Cure",
+    title: "Standing On A Beach — The Singles",
+    date: "25 ago · 19h30",
+    condition: "Nacional Polydor/Fiction 829 239-1, 1986; com encarte; disco ótimo e capa muito boa",
+    currentBid: 80,
+    nextBid: 90,
+    ceiling: 125,
+    priority: "Boa oportunidade · 7,5/10",
+    tone: "high",
+    note: "Cópia brasileira VG+/NM com encarte está ativa por R$ 188,10; ainda há margem, mas não é lance para perseguir sem frete.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046056",
+  },
+  {
+    lot: "281H",
+    artist: "Tears For Fears",
+    title: "The Seeds Of Love",
+    date: "25 ago · 19h30",
+    condition: "Nacional 1989 com encarte; disco ótimo, mas capa com danos fortes atrás",
+    currentBid: 30,
+    nextBid: 40,
+    ceiling: 45,
+    priority: "Cópia de audição · 6,5/10",
+    tone: "careful",
+    note: "Cópias melhores aparecem de R$ 79 a R$ 185. O dano forte da capa derruba a margem e exige teto baixo.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046341",
+  },
+  {
+    lot: "281F",
+    artist: "Talking Heads",
+    title: "Naked",
+    date: "25 ago · 19h30",
+    condition: "Nacional EMI 066 790156 1, 1988; LP e capa ótimos; com encarte",
+    currentBid: 60,
+    nextBid: 70,
+    ceiling: 65,
+    priority: "Preço normal · não perseguir",
+    tone: "careful",
+    note: "Há anúncios ativos diretamente comparáveis por R$ 61,75–64,90, alguns com frete grátis. Com 5%, o lance já vai a R$ 63 antes do frete.",
+    url: "https://www.tremdas7.com.br/peca.asp?ID=32046335",
   },
 ];
 
@@ -1259,6 +1378,17 @@ const auctionEvents: AuctionEvent[] = [
     items: rtAuctionWatch,
   },
   {
+    id: "trem-das-7-64190-dia-2",
+    house: "Trem das 7",
+    title: "140º leilão · Dia 2 somente",
+    dates: "25 de agosto · 19h30",
+    expiresAt: "2026-08-26T19:30:00-03:00",
+    costs: "5% de comissão + frete; embalagem mínima de R$ 5 para etiqueta própria",
+    catalogUrl: "https://www.tremdas7.com.br/catalogo.asp?Num=64190&p=on&Dia=2",
+    updatedAt: "24 ago 2026",
+    items: tremDasSeteAuctionWatch,
+  },
+  {
     id: "bruce-angeiras-63353",
     house: "Bruce Angeiras",
     title: "47º Meier · 8º exclusivo de mídias",
@@ -1314,7 +1444,7 @@ function auctionGroups(items: AuctionWatch[]) {
       const aWanted = wantedMatch(a.artist, a.title);
       const bWanted = wantedMatch(b.artist, b.title);
       const priorityOrder = (aWanted ? ranks[aWanted.priority] : 3) - (bWanted ? ranks[bWanted.priority] : 3);
-      return priorityOrder || a.lot - b.lot;
+      return priorityOrder || String(a.lot).localeCompare(String(b.lot), "pt-BR", { numeric: true });
     })
     .forEach((item) => grouped.set(item.date, [...(grouped.get(item.date) ?? []), item]));
   return [...grouped.entries()];
