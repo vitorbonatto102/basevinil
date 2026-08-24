@@ -128,6 +128,8 @@ test("supports direct protected persistent catalog editing", async () => {
   assert.match(route, /ON CONFLICT\(record_id\) DO UPDATE/);
   assert.match(page, /Clique em uma célula para editar/);
   assert.match(page, /function inlineCell/);
+  assert.match(page, /inlineCell\(record, "leilaoVisto"/);
+  assert.match(page, /\["Leilão observado", draft\.leilaoVisto, "leilaoVisto"\]/);
   assert.match(page, /Salvar online/);
   assert.match(page, /Novo disco/);
   assert.match(page, /status: "deleted"/);
