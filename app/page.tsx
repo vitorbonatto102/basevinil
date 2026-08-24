@@ -56,7 +56,6 @@ type CatalogDraft = {
   mercadoLivre: string;
   olx: string;
   shopee: string;
-  leilaoVisto: string;
   leilao: string;
   vinylSocialClub: string;
   adornos: string;
@@ -1408,6 +1407,12 @@ function recordDraft(record: CatalogRecord): CatalogDraft {
     : record.auctionPrice != null
       ? [record.auctionPrice]
       : [];
+  const auctionSeen = [...new Set([
+    ...auction,
+    ...record.market
+      .filter((item) => item.source === "Leilão observado" && item.numeric !== null && item.numeric > 0)
+      .map((item) => item.numeric!),
+  ])];
   return {
     id: record.id,
     artist: record.artist,
@@ -1416,8 +1421,7 @@ function recordDraft(record: CatalogRecord): CatalogDraft {
     mercadoLivre: marketPriceInput(record, "Mercado Livre"),
     olx: marketPriceInput(record, "OLX"),
     shopee: marketPriceInput(record, "Shopee"),
-    leilaoVisto: marketPriceInput(record, "Leilão observado"),
-    leilao: auction.join("/"),
+    leilao: auctionSeen.join("/"),
     vinylSocialClub: marketPriceInput(record, "Vinyl Social Club"),
     adornos: adornosValues(record).join("/"),
   };
@@ -1442,15 +1446,17 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     ["Mercado Livre", draft.mercadoLivre, "mercadoLivre"],
     ["OLX", draft.olx, "olx"],
     ["Shopee", draft.shopee, "shopee"],
-    ["Leilão observado", draft.leilaoVisto, "leilaoVisto"],
     ["Vinyl Social Club", draft.vinylSocialClub, "vinylSocialClub"],
   ];
-  const market = sourceValues.reduce(
+  const updatedMarket = sourceValues.reduce(
     (current, [sourceName, value, field]) => value === previous[field]
       ? current
       : replaceMarketPrices(current, sourceName, value),
     record.market,
   );
+  const market = draft.leilao === previous.leilao
+    ? updatedMarket
+    : updatedMarket.filter((item) => item.source !== "Leilão observado");
   const marketNumbers = market
     .map((item) => item.numeric)
     .filter((value): value is number => value !== null && value > 0);
@@ -1479,7 +1485,12 @@ function yearDisplay(record: CatalogRecord) {
 }
 
 function auctionDisplay(record: CatalogRecord) {
-  const values = record.auctionPrices?.length ? record.auctionPrices : record.auctionPrice != null ? [record.auctionPrice] : [];
+  const values = [...new Set([
+    ...(record.auctionPrices?.length ? record.auctionPrices : record.auctionPrice != null ? [record.auctionPrice] : []),
+    ...record.market
+      .filter((item) => item.source === "Leilão observado" && item.numeric !== null && item.numeric > 0)
+      .map((item) => item.numeric!),
+  ])];
   return values.length ? `R$ ${values.map((value) => new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 }).format(value)).join("/")}` : "—";
 }
 
@@ -2122,8 +2133,7 @@ export default function Home() {
               <label><span>Mercado Livre</span><input inputMode="decimal" placeholder="60/80" value={draft.mercadoLivre} onChange={(event) => updateDraft("mercadoLivre", event.target.value)} /></label>
               <label><span>OLX</span><input inputMode="decimal" placeholder="60/80" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
               <label><span>Shopee</span><input inputMode="decimal" placeholder="60/80" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
-              <label><span>Leilão visto</span><input inputMode="decimal" placeholder="20/30" value={draft.leilaoVisto} onChange={(event) => updateDraft("leilaoVisto", event.target.value)} /></label>
-              <label><span>Valor leilão</span><input inputMode="decimal" placeholder="20/30" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
+              <label><span>Leilão visto</span><input inputMode="decimal" placeholder="20/30" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
               <label><span>Vinyl Social Club</span><input inputMode="decimal" placeholder="59" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
               <label><span>Adornos</span><input inputMode="decimal" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
             </div>
@@ -2159,7 +2169,6 @@ export default function Home() {
               <th>OLX</th>
               <th>Shopee</th>
               <th>Leilão visto</th>
-              <th>Valor leilão</th>
               <th>Vinyl Social Club</th>
               <th className="adornos-head">Adornos</th>
               <th className="reference-head">Referência</th>
@@ -2187,7 +2196,6 @@ export default function Home() {
                   {inlineCell(record, "mercadoLivre", source(record, "Mercado Livre"), "price-source", "decimal")}
                   {inlineCell(record, "olx", source(record, "OLX"), "price-source", "decimal")}
                   {inlineCell(record, "shopee", source(record, "Shopee"), "price-source", "decimal")}
-                  {inlineCell(record, "leilaoVisto", source(record, "Leilão observado"), "price-source", "decimal")}
                   {inlineCell(record, "leilao", auctionDisplay(record), "money-cell", "decimal")}
                   {inlineCell(record, "vinylSocialClub", source(record, "Vinyl Social Club"), "price-source", "decimal")}
                   {inlineCell(record, "adornos", adornosDisplay(record), "adornos-cell", "decimal")}
