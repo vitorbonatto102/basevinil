@@ -2264,7 +2264,7 @@ export default function Home() {
               <label><span>OLX</span><input inputMode="decimal" placeholder="60/80" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
               <label><span>Shopee</span><input inputMode="decimal" placeholder="60/80" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
               <label><span>Leilão visto</span><input inputMode="decimal" placeholder="20/30" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
-              <label><span>Vinyl Social Club</span><input inputMode="decimal" placeholder="59" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
+              <label><span>VSC / outras lojas</span><input inputMode="decimal" placeholder="59" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
               <label><span>Adornos</span><input inputMode="decimal" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
             </div>
             <footer>
@@ -2299,7 +2299,7 @@ export default function Home() {
               <th>OLX</th>
               <th>Shopee</th>
               <th>Leilão visto</th>
-              <th>Vinyl Social Club</th>
+              <th>VSC / outras lojas</th>
               <th className="adornos-head">Adornos</th>
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>

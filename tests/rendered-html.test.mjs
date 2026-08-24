@@ -102,6 +102,7 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /<table>/);
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
+  assert.match(page, /VSC \/ outras lojas/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.match(page, /preco-de-disco-procuras-separadas/);
