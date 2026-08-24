@@ -1,4 +1,10 @@
-// Intentionally empty by default.
-// Add Drizzle tables here when the site actually needs a database.
-// See examples/d1/db/schema.ts for an opt-in example.
-export {};
+import { sql } from "drizzle-orm";
+import { sqliteTable, text } from "drizzle-orm/sqlite-core";
+
+export const catalogEdits = sqliteTable("catalog_edits", {
+  recordId: text("record_id").primaryKey(),
+  status: text("status", { enum: ["upserted", "deleted"] }).notNull(),
+  payload: text("payload").notNull().default("{}"),
+  updatedBy: text("updated_by").notNull(),
+  updatedAt: text("updated_at").notNull().default(sql`CURRENT_TIMESTAMP`),
+});

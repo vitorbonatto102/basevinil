@@ -167,6 +167,40 @@ button, input, select { font: inherit; }
 .search-symbol { width: 15px; height: 15px; border: 1.5px solid var(--ink); border-radius: 50%; position: relative; flex: 0 0 auto; }
 .search-symbol::after { content: ""; position: absolute; width: 6px; height: 1.5px; background: var(--ink); right: -5px; bottom: -2px; transform: rotate(45deg); }
 
+.catalog-editor { border-bottom: 1px solid var(--ink); background: #ece8de; }
+.catalog-editor-status { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 8px 28px; }
+.catalog-editor-status > div:first-child { display: flex; flex-direction: column; gap: 3px; }
+.catalog-editor-status strong { font-size: 11px; }
+.catalog-editor-status > div:first-child span, .catalog-editor-actions > span { color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; }
+.catalog-editor-actions { display: flex; align-items: center; justify-content: flex-end; gap: 10px; }
+.catalog-editor-actions button, .editor-signin { min-height: 32px; padding: 7px 12px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 500 8px "DM Mono", monospace; text-decoration: none; text-transform: uppercase; cursor: pointer; }
+.catalog-editor-actions button:hover, .editor-signin:hover { background: #fffbed; }
+.catalog-editor-actions .editor-toggle.active, .catalog-editor-actions .editor-add { background: var(--ink); color: var(--panel); }
+.catalog-editor-actions .editor-add:hover { background: var(--accent); border-color: var(--accent); }
+.editor-denied { color: var(--red) !important; }
+.catalog-editor-panel { margin: 0 28px 18px; border: 1px solid var(--ink); background: var(--panel); box-shadow: 7px 7px 0 rgba(23,24,21,.08); }
+.catalog-editor-panel > header { min-height: 54px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 9px 14px; border-bottom: 1px solid var(--ink); }
+.catalog-editor-panel > header div { min-width: 0; }
+.catalog-editor-panel > header span { display: block; color: var(--accent); font: 8px "DM Mono", monospace; text-transform: uppercase; }
+.catalog-editor-panel > header strong { display: block; margin-top: 3px; overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+.catalog-editor-panel > header button { width: 32px; height: 32px; border: 0; background: transparent; color: var(--muted); font-size: 23px; cursor: pointer; }
+.catalog-editor-fields { display: grid; grid-template-columns: repeat(7, minmax(110px, 1fr)); }
+.catalog-editor-fields label { min-width: 0; min-height: 68px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 8px 11px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.catalog-editor-fields label span { color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; }
+.catalog-editor-fields input { width: 100%; min-width: 0; border: 0; border-bottom: 1px solid var(--strong-line); outline: 0; padding: 5px 2px; background: transparent; color: var(--ink); font-size: 12px; font-weight: 700; }
+.catalog-editor-fields input:focus { border-color: var(--accent); background: #fffbed; }
+.catalog-editor-fields .editor-field-wide { grid-column: span 3; }
+.catalog-editor-panel > footer { min-height: 51px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 8px 12px; border-top: 0; font: inherit; letter-spacing: 0; text-transform: none; }
+.catalog-editor-panel > footer > div { display: flex; gap: 8px; }
+.catalog-editor-panel > footer button { min-height: 33px; padding: 7px 13px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 500 8px "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }
+.catalog-editor-panel > footer button:disabled { opacity: .5; cursor: wait; }
+.catalog-editor-panel > footer .editor-save { background: var(--green); border-color: var(--green); color: white; }
+.catalog-editor-panel > footer .editor-delete { border-color: var(--red); color: var(--red); }
+.edit-head { width: 82px; background: var(--green); }
+.edit-cell { min-width: 82px; text-align: center; background: #e3eee6 !important; }
+.edit-cell button { border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--green); font: 600 8px "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }
+.editing-row td { background: #fff3cf !important; }
+
 .result-line { padding: 11px 28px; display: flex; align-items: center; gap: 5px; border-bottom: 1px solid var(--line); font: 9px "DM Mono", monospace; text-transform: uppercase; color: var(--muted); }
 .result-line strong { color: var(--ink); }
 .result-line span { margin-left: auto; text-transform: none; letter-spacing: 0; }
@@ -326,5 +360,11 @@ footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: s
   .auction-priority { grid-column: 2; grid-row: 3; min-height: 30px; padding: 6px 0; border-right: 0; }
   .auction-open-lot { grid-column: 3; grid-row: 1 / span 3; border-left: 1px solid var(--line); }
   .auction-footnote { align-items: start; flex-direction: column; gap: 6px; }
+  .catalog-editor-status { align-items: flex-start; flex-direction: column; padding: 12px 16px; }
+  .catalog-editor-actions { width: 100%; justify-content: flex-start; flex-wrap: wrap; }
+  .catalog-editor-actions > span { width: 100%; }
+  .catalog-editor-panel { margin: 0 16px 18px; }
+  .catalog-editor-fields { grid-template-columns: 1fr 1fr; }
+  .catalog-editor-fields .editor-field-wide { grid-column: 1 / -1; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }

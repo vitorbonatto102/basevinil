@@ -35,6 +35,31 @@ type CatalogRecord = {
   adornosPrices?: number[];
 };
 
+type CatalogEdit = {
+  id: string;
+  status: "upserted" | "deleted";
+  record: CatalogRecord | null;
+};
+
+type EditorSession = {
+  signedIn: boolean;
+  canEdit: boolean;
+  email: string | null;
+};
+
+type CatalogDraft = {
+  id: string;
+  artist: string;
+  title: string;
+  year: string;
+  mercadoLivre: string;
+  olx: string;
+  shopee: string;
+  leilao: string;
+  vinylSocialClub: string;
+  adornos: string;
+};
+
 type AuctionWatch = {
   lot: number;
   artist: string;
@@ -74,7 +99,7 @@ type WantedItem = {
 
 type SiteView = "catalogo" | "marcio";
 
-const records = catalog.records as CatalogRecord[];
+const baseRecords = catalog.records as CatalogRecord[];
 const wantedItems = wantedData as WantedItem[];
 const preparedWanted = wantedItems.map((item) => ({
   item,
@@ -1252,6 +1277,107 @@ function source(record: CatalogRecord, name: string) {
   return `R$ ${displays.map((display) => display.replace(/^R\$\s*/, "")).join("/")}`;
 }
 
+function mergeCatalogEdits(edits: CatalogEdit[]) {
+  const edited = new Map<string, CatalogRecord>();
+  const deleted = new Set<string>();
+  for (const edit of edits) {
+    if (edit.status === "deleted") deleted.add(edit.id);
+    else if (edit.record) edited.set(edit.id, edit.record);
+  }
+  const merged = baseRecords
+    .filter((record) => !deleted.has(record.id))
+    .map((record) => edited.get(record.id) ?? record);
+  const baseIds = new Set(baseRecords.map((record) => record.id));
+  for (const edit of edits) {
+    if (edit.status === "upserted" && edit.record && !baseIds.has(edit.id) && !deleted.has(edit.id)) {
+      merged.push(edit.record);
+    }
+  }
+  return merged;
+}
+
+function parseNumberList(value: string) {
+  return [...new Set(value
+    .split(/[/;]/)
+    .map((part) => Number(part.trim().replace(",", ".").replace(/[^0-9.]/g, "")))
+    .filter((number) => Number.isFinite(number) && number > 0))];
+}
+
+function marketPriceInput(record: CatalogRecord, name: string) {
+  return [...new Set(record.market
+    .filter((item) => item.source === name && item.numeric !== null && item.numeric > 0)
+    .map((item) => item.numeric!))]
+    .join("/");
+}
+
+function recordDraft(record: CatalogRecord): CatalogDraft {
+  const years = record.years?.length ? record.years : record.year != null ? [record.year] : [];
+  const auction = record.auctionPrices?.length
+    ? record.auctionPrices
+    : record.auctionPrice != null
+      ? [record.auctionPrice]
+      : [];
+  return {
+    id: record.id,
+    artist: record.artist,
+    title: record.title,
+    year: years.join("/"),
+    mercadoLivre: marketPriceInput(record, "Mercado Livre"),
+    olx: marketPriceInput(record, "OLX"),
+    shopee: marketPriceInput(record, "Shopee"),
+    leilao: auction.join("/") || marketPriceInput(record, "Leilão observado"),
+    vinylSocialClub: marketPriceInput(record, "Vinyl Social Club"),
+    adornos: adornosValues(record).join("/"),
+  };
+}
+
+function replaceMarketPrices(market: MarketObservation[], sourceName: string, value: string) {
+  const retained = market.filter((item) => item.source !== sourceName);
+  const checkedAt = new Date().toISOString().slice(0, 10);
+  const additions = parseNumberList(value).map((numeric) => ({
+    source: sourceName,
+    display: money(numeric),
+    numeric,
+    checkedAt,
+    status: "editado no site",
+  }));
+  return [...retained, ...additions];
+}
+
+function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRecord {
+  const sourceValues: Array<[string, string]> = [
+    ["Mercado Livre", draft.mercadoLivre],
+    ["OLX", draft.olx],
+    ["Shopee", draft.shopee],
+    ["Leilão observado", draft.leilao],
+    ["Vinyl Social Club", draft.vinylSocialClub],
+  ];
+  const market = sourceValues.reduce(
+    (current, [sourceName, value]) => replaceMarketPrices(current, sourceName, value),
+    record.market,
+  );
+  const marketNumbers = market
+    .map((item) => item.numeric)
+    .filter((value): value is number => value !== null && value > 0);
+  const years = parseNumberList(draft.year).map((value) => Math.round(value));
+  const auctionPrices = parseNumberList(draft.leilao);
+  const adornosPrices = parseNumberList(draft.adornos);
+  return {
+    ...record,
+    artist: draft.artist.trim(),
+    title: draft.title.trim(),
+    year: years[0] ?? null,
+    years: years.length > 1 ? years : undefined,
+    auctionPrice: auctionPrices.length ? Math.min(...auctionPrices) : null,
+    auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
+    auctionPriceStatus: undefined,
+    market,
+    marketMin: marketNumbers.length ? Math.min(...marketNumbers) : null,
+    adornosPrice: adornosPrices[0] ?? null,
+    adornosPrices: adornosPrices.length > 1 ? adornosPrices : undefined,
+  };
+}
+
 function yearDisplay(record: CatalogRecord) {
   const years = record.years?.length ? record.years : record.year != null ? [record.year] : [];
   return years.length ? years.join("/") : "n/d";
@@ -1304,6 +1430,7 @@ function assessment(offer: number | null, reference: number | null) {
 }
 
 export default function Home() {
+  const [records, setRecords] = useState<CatalogRecord[]>(baseRecords);
   const [activeView, setActiveView] = useState<SiteView>("catalogo");
   const [query, setQuery] = useState("");
   const [wantedQuery, setWantedQuery] = useState("");
@@ -1315,6 +1442,36 @@ export default function Home() {
   const [sort, setSort] = useState("artista");
   const [offers, setOffers] = useState<Record<string, string>>({});
   const [clock, setClock] = useState<number | null>(null);
+  const [editor, setEditor] = useState<EditorSession | null>(null);
+  const [editMode, setEditMode] = useState(false);
+  const [editingRecord, setEditingRecord] = useState<CatalogRecord | null>(null);
+  const [draft, setDraft] = useState<CatalogDraft | null>(null);
+  const [savingRecord, setSavingRecord] = useState(false);
+  const [editorFeedback, setEditorFeedback] = useState("");
+
+  useEffect(() => {
+    let cancelled = false;
+    async function loadCatalogEdits() {
+      try {
+        const response = await fetch("/api/catalog", { cache: "no-store" });
+        const data = await response.json() as {
+          edits?: CatalogEdit[];
+          editor?: EditorSession;
+          error?: string;
+        };
+        if (!response.ok) throw new Error(data.error ?? "Não foi possível carregar as edições.");
+        if (cancelled) return;
+        setRecords(mergeCatalogEdits(data.edits ?? []));
+        setEditor(data.editor ?? { signedIn: false, canEdit: false, email: null });
+      } catch {
+        if (cancelled) return;
+        setEditor({ signedIn: false, canEdit: false, email: null });
+        setEditorFeedback("A consulta continua disponível, mas a edição online está temporariamente indisponível.");
+      }
+    }
+    loadCatalogEdits();
+    return () => { cancelled = true; };
+  }, []);
 
   useEffect(() => {
     const syncViewFromHash = () => setActiveView(window.location.hash === "#marcio-candido" ? "marcio" : "catalogo");
@@ -1353,7 +1510,7 @@ export default function Home() {
 
   const decades = useMemo(
     () => [...new Set(records.flatMap((record) => record.year ? [Math.floor(record.year / 10) * 10] : []))].sort(),
-    [],
+    [records],
   );
 
   const filtered = useMemo(() => {
@@ -1385,7 +1542,7 @@ export default function Home() {
         }
         return a.artist.localeCompare(b.artist, "pt-BR") || a.title.localeCompare(b.title, "pt-BR");
       });
-  }, [activeView, query, decade, coverage, sort, offers]);
+  }, [activeView, query, decade, coverage, sort, offers, records]);
 
   const comparedCount = Object.values(offers).filter(Boolean).length;
   const separatedCount = Object.values(wantedSeparated).filter(Boolean).length;
@@ -1419,6 +1576,107 @@ export default function Home() {
     const hash = view === "marcio" ? "#marcio-candido" : "";
     window.history.replaceState(null, "", window.location.pathname + window.location.search + hash);
     window.scrollTo({ top: 0 });
+  }
+
+  function beginEdit(record: CatalogRecord) {
+    setEditingRecord(record);
+    setDraft(recordDraft(record));
+    setEditorFeedback("");
+    window.requestAnimationFrame(() => document.getElementById("catalog-editor-panel")?.scrollIntoView({ behavior: "smooth", block: "center" }));
+  }
+
+  function cancelEdit() {
+    setEditingRecord(null);
+    setDraft(null);
+  }
+
+  function updateDraft(field: keyof CatalogDraft, value: string) {
+    setDraft((current) => current ? { ...current, [field]: value } : current);
+  }
+
+  function toggleEditMode() {
+    setEditMode((current) => {
+      if (current) cancelEdit();
+      return !current;
+    });
+    setEditorFeedback("");
+  }
+
+  function addRecord() {
+    const newRecord: CatalogRecord = {
+      id: `site-${crypto.randomUUID()}`,
+      sourceRow: Math.max(0, ...records.map((record) => record.sourceRow)) + 1,
+      lot: null,
+      artist: "",
+      title: "",
+      year: null,
+      auctionPrice: null,
+      marketMin: null,
+      market: [],
+      tags: [],
+      adornosPrice: null,
+    };
+    setEditingRecord(newRecord);
+    setDraft(recordDraft(newRecord));
+    setEditorFeedback("Novo disco: preencha artista e álbum.");
+  }
+
+  async function saveDraft() {
+    if (!draft || !editingRecord || savingRecord) return;
+    if (!draft.artist.trim() || !draft.title.trim()) {
+      setEditorFeedback("Preencha artista e álbum antes de salvar.");
+      return;
+    }
+    const savedRecord = recordFromDraft(editingRecord, draft);
+    setSavingRecord(true);
+    setEditorFeedback("Salvando...");
+    try {
+      const response = await fetch("/api/catalog", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: savedRecord.id, status: "upserted", record: savedRecord }),
+      });
+      const data = await response.json() as { error?: string };
+      if (!response.ok) throw new Error(data.error ?? "Não foi possível salvar.");
+      setRecords((current) => current.some((record) => record.id === savedRecord.id)
+        ? current.map((record) => record.id === savedRecord.id ? savedRecord : record)
+        : [...current, savedRecord]);
+      setEditingRecord(null);
+      setDraft(null);
+      setEditorFeedback("Alteração salva online.");
+    } catch (error) {
+      setEditorFeedback(error instanceof Error ? error.message : "Não foi possível salvar.");
+    } finally {
+      setSavingRecord(false);
+    }
+  }
+
+  async function deleteEditingRecord() {
+    if (!editingRecord || savingRecord) return;
+    if (!records.some((record) => record.id === editingRecord.id)) {
+      cancelEdit();
+      return;
+    }
+    if (!window.confirm(`Excluir ${editingRecord.artist} — ${editingRecord.title} da tabela?`)) return;
+    setSavingRecord(true);
+    setEditorFeedback("Excluindo...");
+    try {
+      const response = await fetch("/api/catalog", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: editingRecord.id, status: "deleted" }),
+      });
+      const data = await response.json() as { error?: string };
+      if (!response.ok) throw new Error(data.error ?? "Não foi possível excluir.");
+      setRecords((current) => current.filter((record) => record.id !== editingRecord.id));
+      setEditingRecord(null);
+      setDraft(null);
+      setEditorFeedback("Disco excluído da tabela.");
+    } catch (error) {
+      setEditorFeedback(error instanceof Error ? error.message : "Não foi possível excluir.");
+    } finally {
+      setSavingRecord(false);
+    }
   }
 
   function openAuctions() {
@@ -1639,13 +1897,76 @@ export default function Home() {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Artista, álbum ou ano..."
-            autoFocus
           />
           {query && <button type="button" onClick={() => setQuery("")} aria-label="Limpar busca">×</button>}
         </label>
         <label><span>Década</span><select value={decade} onChange={(event) => setDecade(event.target.value)}><option value="todas">Todas</option>{decades.map((value) => <option key={value} value={value}>{value}</option>)}</select></label>
         <label><span>Mostrar</span><select value={coverage} onChange={(event) => setCoverage(event.target.value)}><option value="todos">Tudo</option><option value="com-referencia">Com referência</option><option value="adornos">Com preço Adornos</option><option value="mercado">Com pesquisa de mercado</option><option value="sem-referencia">Sem referência</option><option value="com-oferta">Minhas comparações</option></select></label>
         <label><span>Ordenar</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="artista">Artista A–Z</option><option value="album">Álbum A–Z</option><option value="planilha">Ordem original</option><option value="ano">Ano recente</option><option value="referencia-menor">Menor referência</option><option value="referencia-maior">Maior referência</option><option value="melhor-oferta">Melhor negócio</option></select></label>
+      </section>
+
+      <section className="catalog-editor" aria-label="Edição da tabela" hidden={activeView !== "catalogo"}>
+        <div className="catalog-editor-status">
+          <div>
+            <strong>Tabela online</strong>
+            <span>{editor?.canEdit ? `Edição autorizada · ${editor.email}` : "Consulta pública · edição protegida"}</span>
+          </div>
+          <div className="catalog-editor-actions">
+            <span aria-live="polite">{editorFeedback}</span>
+            {editor?.canEdit ? (
+              <>
+                {editMode && <button className="editor-add" type="button" onClick={addRecord}>+ Novo disco</button>}
+                <button className={editMode ? "editor-toggle active" : "editor-toggle"} type="button" onClick={toggleEditMode}>
+                  {editMode ? "Sair da edição" : "Editar tabela"}
+                </button>
+              </>
+            ) : editor?.signedIn ? (
+              <span className="editor-denied">Conta sem permissão de edição</span>
+            ) : editor ? (
+              <a className="editor-signin" href="/signin-with-chatgpt?return_to=%2F">Entrar para editar</a>
+            ) : (
+              <span className="editor-loading">Verificando acesso...</span>
+            )}
+          </div>
+        </div>
+
+        {editMode && draft && editingRecord && (
+          <form
+            className="catalog-editor-panel"
+            id="catalog-editor-panel"
+            onSubmit={(event) => { event.preventDefault(); saveDraft(); }}
+          >
+            <header>
+              <div>
+                <span>{records.some((record) => record.id === editingRecord.id) ? "Editando disco" : "Novo disco"}</span>
+                <strong>{draft.artist || "Artista"} — {draft.title || "Álbum"}</strong>
+              </div>
+              <button type="button" onClick={cancelEdit} aria-label="Fechar edição">×</button>
+            </header>
+            <div className="catalog-editor-fields">
+              <label className="editor-field-wide"><span>Artista</span><input value={draft.artist} onChange={(event) => updateDraft("artist", event.target.value)} /></label>
+              <label className="editor-field-wide"><span>Álbum / edição</span><input value={draft.title} onChange={(event) => updateDraft("title", event.target.value)} /></label>
+              <label><span>Ano</span><input inputMode="numeric" placeholder="1989" value={draft.year} onChange={(event) => updateDraft("year", event.target.value)} /></label>
+              <label><span>Mercado Livre</span><input inputMode="decimal" placeholder="60/80" value={draft.mercadoLivre} onChange={(event) => updateDraft("mercadoLivre", event.target.value)} /></label>
+              <label><span>OLX</span><input inputMode="decimal" placeholder="60/80" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
+              <label><span>Shopee</span><input inputMode="decimal" placeholder="60/80" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
+              <label><span>Leilão</span><input inputMode="decimal" placeholder="20/30" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
+              <label><span>Vinyl Social Club</span><input inputMode="decimal" placeholder="59" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
+              <label><span>Adornos</span><input inputMode="decimal" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
+            </div>
+            <footer>
+              <div>
+                {records.some((record) => record.id === editingRecord.id) && (
+                  <button className="editor-delete" type="button" onClick={deleteEditingRecord} disabled={savingRecord}>Excluir</button>
+                )}
+              </div>
+              <div>
+                <button className="editor-cancel" type="button" onClick={cancelEdit} disabled={savingRecord}>Cancelar</button>
+                <button className="editor-save" type="submit" disabled={savingRecord}>{savingRecord ? "Salvando..." : "Salvar online"}</button>
+              </div>
+            </footer>
+          </form>
+        )}
       </section>
 
       <div className="result-line" hidden={activeView !== "catalogo"}>
@@ -1671,6 +1992,7 @@ export default function Home() {
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>
               <th className="verdict-head">Avaliação</th>
+              {editMode && <th className="edit-head">Editar</th>}
             </tr>
           </thead>
           <tbody>
@@ -1680,8 +2002,13 @@ export default function Home() {
               const parsedOffer = offerText ? Number(offerText.replace(",", ".")) : null;
               const validOffer = parsedOffer !== null && Number.isFinite(parsedOffer) && parsedOffer >= 0 ? parsedOffer : null;
               const result = assessment(validOffer, reference);
+              const rowClass = [
+                offerText ? `compared ${result.tone}` : "",
+                editMode ? "editable-row" : "",
+                editingRecord?.id === record.id ? "editing-row" : "",
+              ].filter(Boolean).join(" ") || undefined;
               return (
-                <tr key={record.id} className={offerText ? `compared ${result.tone}` : undefined}>
+                <tr key={record.id} className={rowClass}>
                   <td className="row-number">{index + 1}</td>
                   <td className="artist-cell">{record.artist}</td>
                   <td className="album-cell">{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</td>
@@ -1709,6 +2036,13 @@ export default function Home() {
                     <strong>{result.label}</strong>
                     {result.delta !== null && <small>{result.delta > 0 ? "+" : ""}{result.delta}%</small>}
                   </td>
+                  {editMode && (
+                    <td className="edit-cell">
+                      <button type="button" onClick={() => beginEdit(record)}>
+                        {editingRecord?.id === record.id ? "Editando" : "Editar"}
+                      </button>
+                    </td>
+                  )}
                 </tr>
               );
             })}
@@ -1719,7 +2053,7 @@ export default function Home() {
 
       <footer>
         <span>A lista preserva os dados da planilha original.</span>
-        <span>Os preços digitados ficam somente neste navegador.</span>
+        <span>Alterações autorizadas na tabela ficam salvas online.</span>
       </footer>
     </main>
   );

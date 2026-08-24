@@ -113,3 +113,21 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(css, /thead \{ position: relative;/);
   assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);
 });
+
+test("supports protected persistent catalog editing", async () => {
+  const [page, route, schema, hosting] = await Promise.all([
+    readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../app/api/catalog/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../db/schema.ts", import.meta.url), "utf8"),
+    readFile(new URL("../.openai/hosting.json", import.meta.url), "utf8"),
+  ]);
+  assert.equal(JSON.parse(hosting).d1, "DB");
+  assert.match(schema, /catalog_edits/);
+  assert.match(route, /EDITOR_EMAILS/);
+  assert.match(route, /Esta conta não pode editar o catálogo/);
+  assert.match(route, /ON CONFLICT\(record_id\) DO UPDATE/);
+  assert.match(page, /Editar tabela/);
+  assert.match(page, /Salvar online/);
+  assert.match(page, /Novo disco/);
+  assert.match(page, /status: "deleted"/);
+});
