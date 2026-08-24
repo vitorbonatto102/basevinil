@@ -6,6 +6,15 @@ Este projeto é uma lista de consulta de preços e oportunidades de compra de di
 
 Nunca dê uma nota de garimpo com base apenas em memória, fama do artista, aparência de raridade ou no fato de a edição ser promocional. Toda avaliação deve ser uma investigação de mercado atual, verificável e cética.
 
+## Fluxo automático de leilões
+
+Sempre que o usuário pedir para analisar ou garimpar um leilão, a solicitação também autoriza cadastrar automaticamente no radar de **Próximos leilões** do site os discos selecionados ou recomendados na análise. Não espere um segundo pedido para adicionar.
+
+- Mantenha cada leilão recolhido por padrão e organize seus itens em lista compacta, agrupada por data da sessão e ordenada por lote.
+- Registre lance atual, próximo lance, comissão, teto, conservação, leitura, link direto e correspondência com a lista do Márcio quando houver.
+- O evento deve desaparecer do radar 24 horas após o encerramento da última sessão.
+- Esta autorização automática vale para o radar de leilões; não autoriza gravar preços no catálogo geral sem pedido específico.
+
 ## Procedimento obrigatório
 
 1. Pesquise a web no momento da consulta. Não responda apenas pelo conhecimento interno.
