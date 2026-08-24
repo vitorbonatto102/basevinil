@@ -200,6 +200,12 @@ button, input, select { font: inherit; }
 .edit-cell { min-width: 82px; text-align: center; background: #e3eee6 !important; }
 .edit-cell button { border: 0; border-bottom: 1px solid currentColor; background: transparent; color: var(--green); font: 600 8px "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }
 .editing-row td { background: #fff3cf !important; }
+.inline-editable-cell { cursor: text; position: relative; }
+.inline-editable-cell:hover::after { content: "editar"; position: absolute; top: 3px; right: 5px; color: var(--green); font: 600 6px "DM Mono", monospace; text-transform: uppercase; opacity: .72; }
+.inline-editable-cell:focus { outline: 2px solid var(--green); outline-offset: -2px; }
+.inline-editing-cell { padding: 3px 5px; background: #fff3cf !important; }
+.inline-editing-cell::after { display: none; }
+.inline-cell-input { width: 100%; min-width: 58px; height: 34px; border: 1px solid var(--green); outline: 0; padding: 5px 7px; background: #fffef7; color: var(--ink); font-size: 11px; font-weight: 700; box-shadow: 2px 2px 0 rgba(34, 93, 68, .14); }
 
 .result-line { padding: 11px 28px; display: flex; align-items: center; gap: 5px; border-bottom: 1px solid var(--line); font: 9px "DM Mono", monospace; text-transform: uppercase; color: var(--muted); }
 .result-line strong { color: var(--ink); }

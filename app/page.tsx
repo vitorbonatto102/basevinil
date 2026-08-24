@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import type { ReactNode } from "react";
 import catalog from "./data/catalog.json";
 import wantedData from "./data/wanted.json";
 
@@ -58,6 +59,13 @@ type CatalogDraft = {
   leilao: string;
   vinylSocialClub: string;
   adornos: string;
+};
+
+type EditableCatalogField = Exclude<keyof CatalogDraft, "id">;
+
+type EditingCell = {
+  recordId: string;
+  field: EditableCatalogField;
 };
 
 type AuctionWatch = {
@@ -1345,15 +1353,18 @@ function replaceMarketPrices(market: MarketObservation[], sourceName: string, va
 }
 
 function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRecord {
-  const sourceValues: Array<[string, string]> = [
-    ["Mercado Livre", draft.mercadoLivre],
-    ["OLX", draft.olx],
-    ["Shopee", draft.shopee],
-    ["Leilão observado", draft.leilao],
-    ["Vinyl Social Club", draft.vinylSocialClub],
+  const previous = recordDraft(record);
+  const sourceValues: Array<[string, string, keyof CatalogDraft]> = [
+    ["Mercado Livre", draft.mercadoLivre, "mercadoLivre"],
+    ["OLX", draft.olx, "olx"],
+    ["Shopee", draft.shopee, "shopee"],
+    ["Leilão observado", draft.leilao, "leilao"],
+    ["Vinyl Social Club", draft.vinylSocialClub, "vinylSocialClub"],
   ];
   const market = sourceValues.reduce(
-    (current, [sourceName, value]) => replaceMarketPrices(current, sourceName, value),
+    (current, [sourceName, value, field]) => value === previous[field]
+      ? current
+      : replaceMarketPrices(current, sourceName, value),
     record.market,
   );
   const marketNumbers = market
@@ -1443,7 +1454,8 @@ export default function Home() {
   const [offers, setOffers] = useState<Record<string, string>>({});
   const [clock, setClock] = useState<number | null>(null);
   const [editor, setEditor] = useState<EditorSession | null>(null);
-  const [editMode, setEditMode] = useState(false);
+  const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
+  const [inlineValue, setInlineValue] = useState("");
   const [editingRecord, setEditingRecord] = useState<CatalogRecord | null>(null);
   const [draft, setDraft] = useState<CatalogDraft | null>(null);
   const [savingRecord, setSavingRecord] = useState(false);
@@ -1578,28 +1590,22 @@ export default function Home() {
     window.scrollTo({ top: 0 });
   }
 
-  function beginEdit(record: CatalogRecord) {
-    setEditingRecord(record);
-    setDraft(recordDraft(record));
+  function beginCellEdit(record: CatalogRecord, field: EditableCatalogField) {
+    if (!editor?.canEdit || savingRecord) return;
+    setEditingCell({ recordId: record.id, field });
+    setInlineValue(String(recordDraft(record)[field]));
     setEditorFeedback("");
-    window.requestAnimationFrame(() => document.getElementById("catalog-editor-panel")?.scrollIntoView({ behavior: "smooth", block: "center" }));
   }
 
   function cancelEdit() {
+    setEditingCell(null);
+    setInlineValue("");
     setEditingRecord(null);
     setDraft(null);
   }
 
   function updateDraft(field: keyof CatalogDraft, value: string) {
     setDraft((current) => current ? { ...current, [field]: value } : current);
-  }
-
-  function toggleEditMode() {
-    setEditMode((current) => {
-      if (current) cancelEdit();
-      return !current;
-    });
-    setEditorFeedback("");
   }
 
   function addRecord() {
@@ -1619,6 +1625,93 @@ export default function Home() {
     setEditingRecord(newRecord);
     setDraft(recordDraft(newRecord));
     setEditorFeedback("Novo disco: preencha artista e álbum.");
+  }
+
+  async function saveInlineCell(cell: EditingCell, value: string) {
+    if (savingRecord) return;
+    const record = records.find((item) => item.id === cell.recordId);
+    if (!record) return;
+    const currentDraft = recordDraft(record);
+    if (value === String(currentDraft[cell.field])) {
+      setEditingCell(null);
+      setInlineValue("");
+      return;
+    }
+    const nextDraft = { ...currentDraft, [cell.field]: value };
+    if (!nextDraft.artist.trim() || !nextDraft.title.trim()) {
+      setEditorFeedback("Artista e álbum não podem ficar vazios.");
+      return;
+    }
+    const savedRecord = recordFromDraft(record, nextDraft);
+    setEditingCell(null);
+    setInlineValue("");
+    setSavingRecord(true);
+    setEditorFeedback("Salvando...");
+    try {
+      const response = await fetch("/api/catalog", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: savedRecord.id, status: "upserted", record: savedRecord }),
+      });
+      const data = await response.json() as { error?: string };
+      if (!response.ok) throw new Error(data.error ?? "Não foi possível salvar.");
+      setRecords((current) => current.map((item) => item.id === savedRecord.id ? savedRecord : item));
+      setEditorFeedback("Alteração salva online.");
+    } catch (error) {
+      setEditorFeedback(error instanceof Error ? error.message : "Não foi possível salvar.");
+    } finally {
+      setSavingRecord(false);
+    }
+  }
+
+  function inlineCell(
+    record: CatalogRecord,
+    field: EditableCatalogField,
+    display: ReactNode,
+    className = "",
+    inputMode?: "text" | "numeric" | "decimal",
+  ) {
+    const active = editingCell?.recordId === record.id && editingCell.field === field;
+    const editable = Boolean(editor?.canEdit);
+    return (
+      <td
+        className={[className, editable ? "inline-editable-cell" : "", active ? "inline-editing-cell" : ""].filter(Boolean).join(" ") || undefined}
+        onClick={() => !active && beginCellEdit(record, field)}
+        onKeyDown={(event) => {
+          if (!active && editable && (event.key === "Enter" || event.key === " ")) {
+            event.preventDefault();
+            beginCellEdit(record, field);
+          }
+        }}
+        tabIndex={editable && !active ? 0 : undefined}
+        title={editable ? "Clique para editar" : undefined}
+      >
+        {active ? (
+          <input
+            ref={(element) => {
+              if (element && document.activeElement !== element) element.focus();
+            }}
+            className="inline-cell-input"
+            inputMode={inputMode}
+            value={inlineValue}
+            onChange={(event) => setInlineValue(event.target.value)}
+            onClick={(event) => event.stopPropagation()}
+            onBlur={() => saveInlineCell({ recordId: record.id, field }, inlineValue)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                event.preventDefault();
+                saveInlineCell({ recordId: record.id, field }, inlineValue);
+              } else if (event.key === "Escape") {
+                event.preventDefault();
+                setEditingCell(null);
+                setInlineValue("");
+              }
+            }}
+            aria-label={"Editar " + field + " de " + record.artist + " — " + record.title}
+          />
+        ) : display}
+      </td>
+    );
   }
 
   async function saveDraft() {
@@ -1909,17 +2002,12 @@ export default function Home() {
         <div className="catalog-editor-status">
           <div>
             <strong>Tabela online</strong>
-            <span>{editor?.canEdit ? `Edição autorizada · ${editor.email}` : "Consulta pública · edição protegida"}</span>
+            <span>{editor?.canEdit ? `Clique em uma célula para editar · ${editor.email}` : "Consulta pública · edição protegida"}</span>
           </div>
           <div className="catalog-editor-actions">
             <span aria-live="polite">{editorFeedback}</span>
             {editor?.canEdit ? (
-              <>
-                {editMode && <button className="editor-add" type="button" onClick={addRecord}>+ Novo disco</button>}
-                <button className={editMode ? "editor-toggle active" : "editor-toggle"} type="button" onClick={toggleEditMode}>
-                  {editMode ? "Sair da edição" : "Editar tabela"}
-                </button>
-              </>
+              <button className="editor-add" type="button" onClick={addRecord}>+ Novo disco</button>
             ) : editor?.signedIn ? (
               <span className="editor-denied">Conta sem permissão de edição</span>
             ) : editor ? (
@@ -1930,7 +2018,7 @@ export default function Home() {
           </div>
         </div>
 
-        {editMode && draft && editingRecord && (
+        {draft && editingRecord && (
           <form
             className="catalog-editor-panel"
             id="catalog-editor-panel"
@@ -1992,7 +2080,6 @@ export default function Home() {
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>
               <th className="verdict-head">Avaliação</th>
-              {editMode && <th className="edit-head">Editar</th>}
             </tr>
           </thead>
           <tbody>
@@ -2004,22 +2091,21 @@ export default function Home() {
               const result = assessment(validOffer, reference);
               const rowClass = [
                 offerText ? `compared ${result.tone}` : "",
-                editMode ? "editable-row" : "",
-                editingRecord?.id === record.id ? "editing-row" : "",
+                editingCell?.recordId === record.id ? "editing-row" : "",
               ].filter(Boolean).join(" ") || undefined;
               return (
                 <tr key={record.id} className={rowClass}>
                   <td className="row-number">{index + 1}</td>
-                  <td className="artist-cell">{record.artist}</td>
-                  <td className="album-cell">{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</td>
-                  <td className={record.year === null && !record.years?.length ? "missing" : ""}>{yearDisplay(record)}</td>
-                  <td className="price-source">{source(record, "Mercado Livre")}</td>
-                  <td className="price-source">{source(record, "OLX")}</td>
-                  <td className="price-source">{source(record, "Shopee")}</td>
+                  {inlineCell(record, "artist", record.artist, "artist-cell", "text")}
+                  {inlineCell(record, "title", <>{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</>, "album-cell", "text")}
+                  {inlineCell(record, "year", yearDisplay(record), record.year === null && !record.years?.length ? "missing" : "", "numeric")}
+                  {inlineCell(record, "mercadoLivre", source(record, "Mercado Livre"), "price-source", "decimal")}
+                  {inlineCell(record, "olx", source(record, "OLX"), "price-source", "decimal")}
+                  {inlineCell(record, "shopee", source(record, "Shopee"), "price-source", "decimal")}
                   <td className="price-source">{source(record, "Leilão observado")}</td>
-                  <td className="money-cell">{auctionDisplay(record)}</td>
-                  <td className="price-source">{source(record, "Vinyl Social Club")}</td>
-                  <td className="adornos-cell">{adornosDisplay(record)}</td>
+                  {inlineCell(record, "leilao", auctionDisplay(record), "money-cell", "decimal")}
+                  {inlineCell(record, "vinylSocialClub", source(record, "Vinyl Social Club"), "price-source", "decimal")}
+                  {inlineCell(record, "adornos", adornosDisplay(record), "adornos-cell", "decimal")}
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
                     <span>R$</span>
@@ -2036,13 +2122,6 @@ export default function Home() {
                     <strong>{result.label}</strong>
                     {result.delta !== null && <small>{result.delta > 0 ? "+" : ""}{result.delta}%</small>}
                   </td>
-                  {editMode && (
-                    <td className="edit-cell">
-                      <button type="button" onClick={() => beginEdit(record)}>
-                        {editingRecord?.id === record.id ? "Editando" : "Editar"}
-                      </button>
-                    </td>
-                  )}
                 </tr>
               );
             })}

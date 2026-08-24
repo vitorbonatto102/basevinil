@@ -114,7 +114,7 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);
 });
 
-test("supports protected persistent catalog editing", async () => {
+test("supports direct protected persistent catalog editing", async () => {
   const [page, route, schema, hosting] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/api/catalog/route.ts", import.meta.url), "utf8"),
@@ -126,7 +126,8 @@ test("supports protected persistent catalog editing", async () => {
   assert.match(route, /EDITOR_EMAILS/);
   assert.match(route, /Esta conta não pode editar o catálogo/);
   assert.match(route, /ON CONFLICT\(record_id\) DO UPDATE/);
-  assert.match(page, /Editar tabela/);
+  assert.match(page, /Clique em uma célula para editar/);
+  assert.match(page, /function inlineCell/);
   assert.match(page, /Salvar online/);
   assert.match(page, /Novo disco/);
   assert.match(page, /status: "deleted"/);
