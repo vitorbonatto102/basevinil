@@ -41,6 +41,8 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Love Songs \(2LP\)/);
   assert.match(html, /Cosmo&#x27;s Factory|Cosmo's Factory/);
   assert.match(html, /Willy and the Poor Boys/);
+  assert.match(html, /Willy And The Poor Boys[\s\S]{0,700}?R\$ 60/);
+  assert.match(html, /Speaking In Tongues[\s\S]{0,700}?R\$ 60/);
   assert.match(html, /The Game/);
   assert.match(html, /<details[^>]*auction-window/i);
   assert.match(html, /<summary>/i);
@@ -103,6 +105,8 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
   assert.match(page, /VSC \/ outras lojas/);
+  assert.match(page, /mergeAuctionWatchIntoCatalog\(baseRecords, auctionEvents\)/);
+  assert.match(page, /auctionWatchPrices/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.match(page, /preco-de-disco-procuras-separadas/);

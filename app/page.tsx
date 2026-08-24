@@ -28,6 +28,7 @@ type CatalogRecord = {
   years?: number[];
   auctionPrice: number | null;
   auctionPrices?: number[];
+  auctionWatchPrices?: number[];
   auctionPriceStatus?: "unverified-copy";
   marketMin: number | null;
   market: MarketObservation[];
@@ -1497,6 +1498,91 @@ function source(record: CatalogRecord, name: string) {
   return `R$ ${displays.map((display) => display.replace(/^R\$\s*/, "")).join("/")}`;
 }
 
+function catalogIdentity(artist: string, title: string) {
+  const titleKey = lookupText(title)
+    .replace(/\b(2lp|duplo)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  return lookupText(artist) + "::" + titleKey;
+}
+
+function auctionRecordId(artist: string, title: string) {
+  const identity = catalogIdentity(artist, title);
+  const slug = identity.replace("::", "-").replace(/\s+/g, "-").slice(0, 150);
+  let hash = 2166136261;
+  for (let index = 0; index < identity.length; index += 1) {
+    hash = Math.imul(hash ^ identity.charCodeAt(index), 16777619);
+  }
+  return "auction-" + slug + "-" + (hash >>> 0).toString(36);
+}
+
+function mergeAuctionWatchIntoCatalog(
+  records: CatalogRecord[],
+  events: AuctionEvent[],
+  deletedIds = new Set<string>(),
+) {
+  const merged = records.map((record) => ({
+    ...record,
+    auctionPrices: record.auctionPrices ? [...record.auctionPrices] : undefined,
+    auctionWatchPrices: record.auctionWatchPrices ? [...record.auctionWatchPrices] : undefined,
+  }));
+  const indexes = new Map<string, number>();
+  merged.forEach((record, index) => {
+    const identity = catalogIdentity(record.artist, record.title);
+    if (!indexes.has(identity)) indexes.set(identity, index);
+  });
+  const deletedIdentities = new Set(baseRecords
+    .filter((record) => deletedIds.has(record.id))
+    .map((record) => catalogIdentity(record.artist, record.title)));
+  let nextSourceRow = Math.max(0, ...merged.map((record) => record.sourceRow)) + 1;
+
+  for (const item of events.flatMap((event) => event.items)) {
+    if (!Number.isFinite(item.currentBid) || item.currentBid <= 0) continue;
+    const identity = catalogIdentity(item.artist, item.title);
+    const generatedId = auctionRecordId(item.artist, item.title);
+    if (deletedIdentities.has(identity) || deletedIds.has(generatedId)) continue;
+    const recordIndex = indexes.get(identity);
+    if (recordIndex === undefined) {
+      merged.push({
+        id: generatedId,
+        sourceRow: nextSourceRow,
+        lot: null,
+        artist: item.artist,
+        title: item.title,
+        year: null,
+        auctionPrice: item.currentBid,
+        auctionWatchPrices: [item.currentBid],
+        marketMin: null,
+        market: [],
+        tags: ["Radar de leilão"],
+        adornosPrice: null,
+      });
+      indexes.set(identity, merged.length - 1);
+      nextSourceRow += 1;
+      continue;
+    }
+
+    const record = merged[recordIndex];
+    const previousPrices = record.auctionPrices?.length
+      ? record.auctionPrices
+      : record.auctionPrice != null
+        ? [record.auctionPrice]
+        : [];
+    const auctionPrices = [...new Set([...previousPrices, item.currentBid])];
+    const auctionWatchPrices = [...new Set([...(record.auctionWatchPrices ?? []), item.currentBid])];
+    merged[recordIndex] = {
+      ...record,
+      auctionPrice: record.auctionPriceStatus === "unverified-copy"
+        ? record.auctionPrice
+        : Math.min(...auctionPrices),
+      auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
+      auctionWatchPrices,
+    };
+  }
+
+  return merged;
+}
+
 function mergeCatalogEdits(edits: CatalogEdit[]) {
   const edited = new Map<string, CatalogRecord>();
   const deleted = new Set<string>();
@@ -1513,7 +1599,7 @@ function mergeCatalogEdits(edits: CatalogEdit[]) {
       merged.push(edit.record);
     }
   }
-  return merged;
+  return mergeAuctionWatchIntoCatalog(merged, auctionEvents, deleted);
 }
 
 function parseNumberList(value: string) {
@@ -1539,6 +1625,7 @@ function recordDraft(record: CatalogRecord): CatalogDraft {
       : [];
   const auctionSeen = [...new Set([
     ...auction,
+    ...(record.auctionWatchPrices ?? []),
     ...record.market
       .filter((item) => item.source === "Leilão observado" && item.numeric !== null && item.numeric > 0)
       .map((item) => item.numeric!),
@@ -1617,6 +1704,7 @@ function yearDisplay(record: CatalogRecord) {
 function auctionDisplay(record: CatalogRecord) {
   const values = [...new Set([
     ...(record.auctionPrices?.length ? record.auctionPrices : record.auctionPrice != null ? [record.auctionPrice] : []),
+    ...(record.auctionWatchPrices ?? []),
     ...record.market
       .filter((item) => item.source === "Leilão observado" && item.numeric !== null && item.numeric > 0)
       .map((item) => item.numeric!),
@@ -1646,10 +1734,14 @@ function referencePrice(record: CatalogRecord) {
   // Several rows came from one pasted auction list whose repeated R$ 19 was not
   // tied to a verifiable lot. Keep that historical value visible, but do not let
   // it override a newly researched marketplace price.
-  const auctionReference = record.auctionPriceStatus === "unverified-copy"
-    ? null
-    : record.auctionPrice;
-  const values = [auctionReference, record.marketMin, ...adornosValues(record)].filter(
+  const auctionReferences = record.auctionPriceStatus === "unverified-copy"
+    ? record.auctionWatchPrices ?? []
+    : record.auctionPrices?.length
+      ? record.auctionPrices
+      : record.auctionPrice != null
+        ? [record.auctionPrice]
+        : [];
+  const values = [...auctionReferences, record.marketMin, ...adornosValues(record)].filter(
     (value): value is number => value !== null && value > 0,
   );
   return values.length ? Math.min(...values) : null;
@@ -1666,7 +1758,7 @@ function assessment(offer: number | null, reference: number | null) {
 }
 
 export default function Home() {
-  const [records, setRecords] = useState<CatalogRecord[]>(baseRecords);
+  const [records, setRecords] = useState<CatalogRecord[]>(() => mergeAuctionWatchIntoCatalog(baseRecords, auctionEvents));
   const [activeView, setActiveView] = useState<SiteView>("catalogo");
   const [query, setQuery] = useState("");
   const [wantedQuery, setWantedQuery] = useState("");
