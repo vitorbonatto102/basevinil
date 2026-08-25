@@ -114,6 +114,9 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /trem-das-7-64190/);
   assert.match(page, /lot: "282C"/);
   assert.match(page, /Speaking In Tongues/);
+  assert.match(page, /lot: 341/);
+  assert.match(page, /The Rhythm Of The Saints/);
+  assert.match(page, /Robertinho de Recife & Emilinha/);
   assert.match(page, /lot: 923/);
   assert.match(page, /Canções De Amor E Liberdade/);
   assert.match(page, /24 a 28 de agosto · 19h30/);
