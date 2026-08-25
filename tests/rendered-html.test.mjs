@@ -117,6 +117,10 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /lot: 923/);
   assert.match(page, /Canções De Amor E Liberdade/);
   assert.match(page, /24 a 28 de agosto · 19h30/);
+  assert.match(page, /discos-esquecidos-64691/);
+  assert.match(page, /lot: 184/);
+  assert.match(page, /The Stonewall Celebration Concert/);
+  assert.match(page, /8 de setembro · 19h/);
   assert.match(page, /wanted-hit/);
   assert.match(page, /activeView === "marcio" && filteredWanted\.map/);
   assert.doesNotMatch(page, /function catalogMatch|function openCatalogMatch|wanted-reference|coverage === "procuras"/);
