@@ -147,6 +147,9 @@ test("supports direct protected persistent catalog editing", async () => {
   assert.match(page, /Clique em uma célula para editar/);
   assert.match(page, /function inlineCell/);
   assert.match(page, /inlineCell\(record, "leilao", auctionDisplay/);
+  assert.match(page, /auctionWatchOverride/);
+  assert.match(page, /if \(record\.auctionWatchOverride\) continue/);
+  assert.match(page, /auctionWatchPrices: auctionChanged \? undefined/);
   assert.doesNotMatch(page, /<th>Valor leilão<\/th>/);
   assert.match(page, /Salvar online/);
   assert.match(page, /Novo disco/);

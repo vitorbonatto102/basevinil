@@ -29,6 +29,7 @@ type CatalogRecord = {
   auctionPrice: number | null;
   auctionPrices?: number[];
   auctionWatchPrices?: number[];
+  auctionWatchOverride?: boolean;
   auctionPriceStatus?: "unverified-copy";
   marketMin: number | null;
   market: MarketObservation[];
@@ -2022,6 +2023,7 @@ function mergeAuctionWatchIntoCatalog(
     }
 
     const record = merged[recordIndex];
+    if (record.auctionWatchOverride) continue;
     const previousPrices = record.auctionPrices?.length
       ? record.auctionPrices
       : record.auctionPrice != null
@@ -2118,6 +2120,7 @@ function replaceMarketPrices(market: MarketObservation[], sourceName: string, va
 
 function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRecord {
   const previous = recordDraft(record);
+  const auctionChanged = draft.leilao !== previous.leilao;
   const sourceValues: Array<[string, string, keyof CatalogDraft]> = [
     ["Mercado Livre", draft.mercadoLivre, "mercadoLivre"],
     ["OLX", draft.olx, "olx"],
@@ -2130,7 +2133,7 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
       : replaceMarketPrices(current, sourceName, value),
     record.market,
   );
-  const market = draft.leilao === previous.leilao
+  const market = !auctionChanged
     ? updatedMarket
     : updatedMarket.filter((item) => item.source !== "Leilão observado");
   const marketNumbers = market
@@ -2147,6 +2150,8 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     years: years.length > 1 ? years : undefined,
     auctionPrice: auctionPrices.length ? Math.min(...auctionPrices) : null,
     auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
+    auctionWatchPrices: auctionChanged ? undefined : record.auctionWatchPrices,
+    auctionWatchOverride: auctionChanged ? true : record.auctionWatchOverride,
     auctionPriceStatus: undefined,
     market,
     marketMin: marketNumbers.length ? Math.min(...marketNumbers) : null,
