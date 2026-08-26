@@ -98,6 +98,11 @@ type AuctionEvent = {
   items: AuctionWatch[];
 };
 
+const auctionMonths: Record<string, number> = {
+  jan: 1, fev: 2, mar: 3, abr: 4, mai: 5, jun: 6,
+  jul: 7, ago: 8, set: 9, out: 10, nov: 11, dez: 12,
+};
+
 type WantedPriority = "A+" | "A" | "B";
 
 type WantedItem = {
@@ -2003,6 +2008,30 @@ function auctionGroups(items: AuctionWatch[]) {
   return [...grouped.entries()];
 }
 
+function auctionDateKey(label: string, year = 2026) {
+  const match = normalize(label).match(/^(\d{1,2})\s+([a-z]{3})/);
+  if (!match) return null;
+  const month = auctionMonths[match[2]];
+  if (!month) return null;
+  return `${year}-${String(month).padStart(2, "0")}-${String(Number(match[1])).padStart(2, "0")}`;
+}
+
+function localDateKey(timestamp: number) {
+  const date = new Date(timestamp);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+}
+
+function auctionDateParts(key: string, todayKey: string) {
+  const [year, month, day] = key.split("-").map(Number);
+  const date = new Date(year, month - 1, day);
+  const today = new Date(`${todayKey}T00:00:00`);
+  const difference = Math.round((date.getTime() - today.getTime()) / 86_400_000);
+  const weekday = new Intl.DateTimeFormat("pt-BR", { weekday: "short" }).format(date).replace(".", "");
+  const monthName = new Intl.DateTimeFormat("pt-BR", { month: "short" }).format(date).replace(".", "");
+  const relation = difference === 0 ? "Hoje" : difference === 1 ? "Amanhã" : weekday;
+  return { relation, date: `${day} ${monthName}` };
+}
+
 function normalize(value: string) {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
@@ -2326,6 +2355,7 @@ export default function Home() {
   const [sort, setSort] = useState("artista");
   const [offers, setOffers] = useState<Record<string, string>>({});
   const [clock, setClock] = useState<number | null>(null);
+  const [selectedAuctionDate, setSelectedAuctionDate] = useState<string | null>(null);
   const [editor, setEditor] = useState<EditorSession | null>(null);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
   const [inlineValue, setInlineValue] = useState("");
@@ -2654,7 +2684,21 @@ export default function Home() {
     () => auctionEvents.filter((event) => clock === null || clock < new Date(event.expiresAt).getTime()),
     [clock],
   );
-  const auctionWatchCount = visibleAuctionEvents.reduce((total, event) => total + event.items.length, 0);
+  const todayAuctionKey = clock === null ? "2026-08-26" : localDateKey(clock);
+  const availableAuctionDates = useMemo(() => [...new Set(visibleAuctionEvents
+    .flatMap((event) => event.items.map((item) => auctionDateKey(item.date)))
+    .filter((date): date is string => Boolean(date) && date >= todayAuctionKey))]
+    .sort(), [todayAuctionKey, visibleAuctionEvents]);
+  const activeAuctionDate = selectedAuctionDate && availableAuctionDates.includes(selectedAuctionDate)
+    ? selectedAuctionDate
+    : availableAuctionDates.includes(todayAuctionKey) ? todayAuctionKey : availableAuctionDates[0] ?? null;
+  const datedAuctionEvents = useMemo(() => activeAuctionDate === null ? [] : visibleAuctionEvents
+    .map((event) => ({
+      ...event,
+      items: event.items.filter((item) => auctionDateKey(item.date) === activeAuctionDate),
+    }))
+    .filter((event) => event.items.length > 0), [activeAuctionDate, visibleAuctionEvents]);
+  const auctionWatchCount = datedAuctionEvents.reduce((total, event) => total + event.items.length, 0);
 
   return (
     <main>
@@ -2779,8 +2823,28 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="auction-date-tabs" role="tablist" aria-label="Datas dos próximos leilões">
+          {availableAuctionDates.map((dateKey) => {
+            const label = auctionDateParts(dateKey, todayAuctionKey);
+            const active = dateKey === activeAuctionDate;
+            return (
+              <button
+                type="button"
+                role="tab"
+                aria-selected={active}
+                className={active ? "active" : ""}
+                key={dateKey}
+                onClick={() => setSelectedAuctionDate(dateKey)}
+              >
+                <strong>{label.relation}</strong>
+                <span>{label.date}</span>
+              </button>
+            );
+          })}
+        </div>
+
         <div className="auction-windows">
-          {activeView === "catalogo" && visibleAuctionEvents.map((event) => (
+          {activeView === "catalogo" && datedAuctionEvents.map((event) => (
             <details className="auction-window" key={event.id}>
               <summary>
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
