@@ -384,7 +384,7 @@ const rtAuctionWatch: AuctionWatch[] = [
     ceiling: 40,
     priority: "Só até o teto",
     tone: "medium",
-    note: "Edição de 1990. O lance já está em R$ 33; com 5%, vira R$ 34,65 antes do frete. Piso ativo visto em R$ 44–49.",
+    note: "Edição de 1990. Para entrar no próximo lance de R$ 38, o custo fica em R$ 39,90 com 5%, antes do frete. Piso ativo visto em R$ 44–49.",
     url: "https://www.rtleiloes.com.br/peca.asp?ID=32152815",
   },
   {
@@ -497,7 +497,7 @@ const rtAuctionWatch: AuctionWatch[] = [
     ceiling: 60,
     priority: "Teto estourado · passar",
     tone: "careful",
-    note: "Já existe cópia equivalente anunciada por R$ 50. O lance foi a R$ 121 e vira R$ 127,05 com a comissão, antes do frete.",
+    note: "Já existe cópia equivalente anunciada por R$ 50. Para entrar no próximo lance de R$ 126, o custo fica em R$ 132,30 com a comissão, antes do frete.",
     url: "https://www.rtleiloes.com.br/peca.asp?ID=32152938",
   },
 ];
@@ -616,7 +616,7 @@ const tremDasSeteAuctionWatch: AuctionWatch[] = [
     ceiling: 65,
     priority: "Preço normal · não perseguir",
     tone: "careful",
-    note: "Há anúncios ativos diretamente comparáveis por R$ 61,75–64,90, alguns com frete grátis. Com 5%, o lance já vai a R$ 63 antes do frete.",
+    note: "Há anúncios ativos diretamente comparáveis por R$ 61,75–64,90, alguns com frete grátis. Para entrar no próximo lance de R$ 70, o custo fica em R$ 73,50 com 5%, antes do frete.",
     url: "https://www.tremdas7.com.br/peca.asp?ID=32046335",
   },
   {
@@ -755,7 +755,7 @@ const tremDasSeteAuctionWatch: AuctionWatch[] = [
     lot: "580D", artist: "Tom Waits", title: "Big Time", date: "26 ago · 19h30",
     condition: "Nacional Island 670.4250, 1989; LP ótimo; capa com leve desgaste",
     currentBid: 30, nextBid: 35, ceiling: 50, priority: "Melhor do dia · 8,5/10", tone: "high",
-    note: "Com 5%, o lance atual fica em R$ 31,50 antes do frete. Comparáveis nacionais ativos aparecem em R$ 69,99–70, R$ 98 e R$ 110; sem venda concluída confirmada.",
+    note: "Para entrar no próximo lance de R$ 35, o custo fica em R$ 36,75 com 5%, antes do frete. Comparáveis nacionais ativos aparecem em R$ 69,99–70, R$ 98 e R$ 110; sem venda concluída confirmada.",
     url: "https://www.tremdas7.com.br/peca.asp?ID=32067506",
   },
   {
@@ -769,14 +769,14 @@ const tremDasSeteAuctionWatch: AuctionWatch[] = [
     lot: "580H", artist: "The Cure", title: "The Top", date: "26 ago · 19h30",
     condition: "Nacional Polydor 821 136-1, 1987; LP ótimo; capa com leve desgaste; encarte não informado",
     currentBid: 90, nextBid: 100, ceiling: 95, priority: "Passar — acima do teto", tone: "careful",
-    note: "O atual já custa R$ 94,50 com comissão, antes do frete; o próximo vira R$ 105. Há ofertas ativas a R$ 100–110, então a margem acabou.",
+    note: "Para entrar no próximo lance de R$ 100, o custo fica em R$ 105 com comissão, antes do frete. Há ofertas ativas a R$ 100–110, então a margem acabou.",
     url: "https://www.tremdas7.com.br/peca.asp?ID=32067512",
   },
   {
     lot: "586A", artist: "a-ha", title: "Scoundrel Days", date: "26 ago · 19h30",
     condition: "Nacional Warner de 1987; com encarte; LP ótimo; capa com leve desgaste e sujidades",
     currentBid: 20, nextBid: 20, bidLabel: "Abertura", ceiling: 30, priority: "Boa compra, não achado · 6,5/10", tone: "medium",
-    note: "O lance fica em R$ 21 com comissão, mas há cópia ativa com encarte por R$ 25 e anúncios no Mercado Livre a R$ 38–39,90. Vantagem real, porém pequena.",
+    note: "A abertura de R$ 20 fica em R$ 21 com comissão, mas há cópia ativa com encarte por R$ 25 e anúncios no Mercado Livre a R$ 38–39,90. Vantagem real, porém pequena.",
     url: "https://www.tremdas7.com.br/peca.asp?ID=32084248",
   },
   {
@@ -790,7 +790,7 @@ const tremDasSeteAuctionWatch: AuctionWatch[] = [
     lot: "725", artist: "Odair José", title: "Luz Acesa", date: "26 ago · 19h30",
     condition: "Original nacional de 1994; LP novo, sem uso; encarte como novo; capa ótima",
     currentBid: 30, nextBid: 30, bidLabel: "Abertura", ceiling: 35, priority: "Boa compra pela condição · 7/10", tone: "medium",
-    note: "O atual custa R$ 31,50 com comissão. A cópia ativa mais barata encontrada está em R$ 40 com encarte; as demais se concentram em R$ 63–79.",
+    note: "A abertura de R$ 30 fica em R$ 31,50 com comissão. A cópia ativa mais barata encontrada está em R$ 40 com encarte; as demais se concentram em R$ 63–79.",
     url: "https://www.tremdas7.com.br/peca.asp?ID=31943178",
   },
   {
@@ -894,7 +894,7 @@ const cataventoAuctionWatch: AuctionWatch[] = [
     ceiling: 69,
     priority: "Teto ultrapassado · passar",
     tone: "careful",
-    note: "O lance já vira R$ 93,45 com comissão antes do frete; há anúncios ativos entre R$ 60 e R$ 100.",
+    note: "Para entrar no próximo lance de R$ 99, o custo fica em R$ 103,95 com comissão, antes do frete; há anúncios ativos entre R$ 60 e R$ 100.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?ID=32025535",
   },
   {
@@ -1414,7 +1414,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 30,
     priority: "Ótima abertura · 8/10",
     tone: "high",
-    note: "Com 5%, o atual fica em R$ 15,75 antes do frete. Cópias ativas com encarte começam em R$ 39–45 e nossa Adornos registra R$ 65.",
+    note: "Para entrar no próximo lance de R$ 25, o custo fica em R$ 26,25 com 5%, antes do frete. Cópias ativas com encarte começam em R$ 39–45 e nossa Adornos registra R$ 65.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32104981",
   },
   {
@@ -1442,7 +1442,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 30,
     priority: "Boa compra · 7/10",
     tone: "medium",
-    note: "Com 5%, o atual fica em R$ 15,75. Há cópia ativa na Shopee por R$ 40 + R$ 8,39 de frete; sem venda concluída confirmada.",
+    note: "Para entrar no próximo lance de R$ 25, o custo fica em R$ 26,25 com 5%. Há cópia ativa na Shopee por R$ 40 + R$ 8,39 de frete; sem venda concluída confirmada.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32104997",
   },
   {
@@ -1456,7 +1456,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 330,
     priority: "Passar — margem acabou",
     tone: "careful",
-    note: "O atual já custa R$ 357 com comissão, antes do frete. Reedição ativa aparece por R$ 349,90 e nacionais usados a partir de cerca de R$ 375; a edição do lote ainda não está confirmada.",
+    note: "Para entrar no próximo lance de R$ 360, o custo fica em R$ 378 com comissão, antes do frete. Reedição ativa aparece por R$ 349,90 e nacionais usados a partir de cerca de R$ 375; a edição do lote ainda não está confirmada.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32105003",
   },
   {
@@ -1470,7 +1470,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 25,
     priority: "Boa compra · 7/10",
     tone: "medium",
-    note: "O atual fica em R$ 15,75 com comissão. Há cópias ativas por R$ 30–40 e nossa Adornos registra R$ 43; o estado VG limita o teto.",
+    note: "Para entrar no próximo lance de R$ 25, o custo fica em R$ 26,25 com comissão. Há cópias ativas por R$ 30–40 e nossa Adornos registra R$ 43; o estado VG limita o teto.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32105007",
   },
   {
@@ -1513,7 +1513,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 180,
     priority: "Garimpo principal · 8/10",
     tone: "high",
-    note: "Com 5%, o atual fica em R$ 128,10. Anúncios ativos brasileiros aparecem em R$ 300–365 e sobem a R$ 480; uma cópia com encarte a R$ 225 está esgotada. Teto de R$ 180 sem encarte confirmado.",
+    note: "Para entrar no próximo lance de R$ 142, o custo fica em R$ 149,10 com 5%. Anúncios ativos brasileiros aparecem em R$ 300–365 e sobem a R$ 480; uma cópia com encarte a R$ 225 está esgotada. Teto de R$ 180 sem encarte confirmado.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32105147",
   },
   {
@@ -1527,7 +1527,7 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     ceiling: 45,
     priority: "Melhor achado · 8,5/10",
     tone: "high",
-    note: "Com 5%, o atual fica em R$ 26,25. Comparáveis ativos aparecem em R$ 60 numa cópia inferior, R$ 82,56, R$ 129 e R$ 149–159; sem venda concluída confirmada.",
+    note: "Para entrar no próximo lance de R$ 35, o custo fica em R$ 36,75 com 5%. Comparáveis ativos aparecem em R$ 60 numa cópia inferior, R$ 82,56, R$ 129 e R$ 149–159; sem venda concluída confirmada.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32105235",
   },
   {
@@ -2775,7 +2775,7 @@ export default function Home() {
           <div>
             <p className="kicker">Radar de oportunidades</p>
             <h2 id="auction-title">Próximos leilões</h2>
-            <p>Os discos que você escolheu acompanhar, com o custo da comissão e um teto prático para não se empolgar no lance.</p>
+            <p>Os discos que você escolheu acompanhar, com o custo do próximo lance já acrescido da comissão e um teto prático para não se empolgar.</p>
           </div>
         </div>
 
@@ -2807,12 +2807,12 @@ export default function Home() {
                       </header>
                       <div className="auction-list-head" aria-hidden="true">
                         <span>Lote</span><span>Disco / estado</span>
-                        <span className="auction-price-head"><i>Lance</i><i>Próximo</i><i>Com 5%</i><i>Teto</i></span>
+                        <span className="auction-price-head"><i>Lance</i><i>Próximo</i><i>Próximo + 5%</i><i>Teto</i></span>
                         <span>Leitura</span><span />
                       </div>
                       <div className="auction-list">
                         {items.map((item) => {
-                          const withCommission = item.currentBid * 1.05;
+                          const withCommission = item.nextBid * 1.05;
                           const wanted = wantedMatch(item.artist, item.title);
                           return (
                             <article className={`auction-row ${item.tone}`} key={item.lot}>
@@ -2828,7 +2828,7 @@ export default function Home() {
                               <dl className="auction-row-prices">
                                 <div><dt>{item.bidLabel ?? "Lance"}</dt><dd>{money(item.currentBid)}</dd></div>
                                 <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
-                                <div><dt>Com 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
+                                <div><dt>Próximo + 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
                                 <div className="ceiling"><dt>Teto</dt><dd>{money(item.ceiling)}</dd></div>
                               </dl>
                               <div className="auction-priority"><b>{item.priority}</b></div>
@@ -2845,7 +2845,7 @@ export default function Home() {
 
                 <div className="auction-footnote">
                   <span>Atualizado em {event.updatedAt}</span>
-                  <p>Os lances mudam. Antes de ofertar, abra o lote e some comissão, frete e embalagem.</p>
+                  <p>A coluna “Próximo + 5%” usa sempre o próximo lance. Antes de ofertar, confirme também frete e embalagem.</p>
                   <a href={event.catalogUrl} target="_blank" rel="noreferrer">Abrir este leilão <span aria-hidden="true">↗</span></a>
                 </div>
               </div>
