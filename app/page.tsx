@@ -1058,7 +1058,7 @@ const credanAuctionWatch: AuctionWatch[] = [
     ceiling: 140,
     priority: "Garimpo forte · 8,5/10",
     tone: "high",
-    note: "Próximo lance custa R$ 111 antes do frete (lance + 5% + R$ 6). Mesmo catálogo com encarte aparece ativo a partir de R$ 230; há venda internacional concluída por € 89. Não passar do teto.",
+    note: "Com 5% de comissão e R$ 6 de embalagem, o lance de R$ 100 totaliza R$ 111 antes do frete. Mesmo catálogo com encarte aparece ativo a partir de R$ 230; há venda internacional concluída por € 89. Não passar do teto.",
     url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122211",
   },
   {
@@ -1072,7 +1072,7 @@ const credanAuctionWatch: AuctionWatch[] = [
     ceiling: 300,
     priority: "Garimpo forte · 8,5/10",
     tone: "high",
-    note: "Próximo lance custa R$ 216 antes do frete (R$ 200 + 5% + R$ 6). Há pedido ativo diretamente comparável a R$ 450 e outros a R$ 800–850; faltou venda brasileira recente, então não perseguir acima de R$ 300.",
+    note: "Com 5% de comissão e R$ 6 de embalagem, o lance de R$ 200 totaliza R$ 216 antes do frete. Há pedido ativo diretamente comparável a R$ 450 e outros a R$ 800–850; faltou venda brasileira recente, então não perseguir acima de R$ 300.",
     url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122322",
   },
   {
@@ -1086,7 +1086,7 @@ const credanAuctionWatch: AuctionWatch[] = [
     ceiling: 90,
     priority: "Márcio A+ · 9/10",
     tone: "high",
-    note: "Próximo lance custa R$ 53,25 antes do frete (R$ 45 + 5% + R$ 6). Comparáveis nacionais aparecem entre R$ 120 e R$ 215; teto de R$ 90 segue conservador mesmo com o disco VG.",
+    note: "Com 5% de comissão e R$ 6 de embalagem, o lance de R$ 45 totaliza R$ 53,25 antes do frete. Comparáveis nacionais aparecem entre R$ 120 e R$ 215; teto de R$ 90 segue conservador mesmo com o disco VG.",
     url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122330",
   },
   {
@@ -1142,7 +1142,7 @@ const credanAuctionWatch: AuctionWatch[] = [
     ceiling: 65,
     priority: "Boa compra · 8/10",
     tone: "medium",
-    note: "Próximo lance custa R$ 48 antes do frete (R$ 40 + 5% + R$ 6). Conservação muito acima da média; ativos com encarte aparecem de R$ 115 a R$ 229 e há esgotados de R$ 45 a R$ 59.",
+    note: "Com 5% de comissão e R$ 6 de embalagem, o lance de R$ 40 totaliza R$ 48 antes do frete. Conservação muito acima da média; ativos com encarte aparecem de R$ 115 a R$ 229 e há esgotados de R$ 45 a R$ 59.",
     url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122324",
   },
   {
@@ -1156,7 +1156,7 @@ const credanAuctionWatch: AuctionWatch[] = [
     ceiling: 110,
     priority: "Opção secundária · 6,5/10",
     tone: "careful",
-    note: "Próximo lance custa R$ 100,50 antes do frete (R$ 90 + 5% + R$ 6). Pedidos ativos de edições brasileiras começam perto de R$ 130, mas faltou venda concluída equivalente da reedição de 1994.",
+    note: "Com 5% de comissão e R$ 6 de embalagem, o lance de R$ 90 totaliza R$ 100,50 antes do frete. Pedidos ativos de edições brasileiras começam perto de R$ 130, mas faltou venda concluída equivalente da reedição de 1994.",
     url: "https://www.credanceleiloes.com.br/peca.asp?ID=32122262",
   },
   {
