@@ -2227,8 +2227,20 @@ function auctionDateKey(label: string, year = 2026) {
 }
 
 function localDateKey(timestamp: number) {
-  const date = new Date(timestamp);
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+  const parts = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "America/Sao_Paulo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(new Date(timestamp));
+  const part = (type: Intl.DateTimeFormatPartTypes) => parts.find((item) => item.type === type)?.value ?? "";
+  return `${part("year")}-${part("month")}-${part("day")}`;
+}
+
+function shiftDateKey(key: string, days: number) {
+  const [year, month, day] = key.split("-").map(Number);
+  const shifted = new Date(Date.UTC(year, month - 1, day + days, 12));
+  return `${shifted.getUTCFullYear()}-${String(shifted.getUTCMonth() + 1).padStart(2, "0")}-${String(shifted.getUTCDate()).padStart(2, "0")}`;
 }
 
 function auctionDateParts(key: string, todayKey: string) {
@@ -2238,7 +2250,11 @@ function auctionDateParts(key: string, todayKey: string) {
   const difference = Math.round((date.getTime() - today.getTime()) / 86_400_000);
   const weekday = new Intl.DateTimeFormat("pt-BR", { weekday: "short" }).format(date).replace(".", "");
   const monthName = new Intl.DateTimeFormat("pt-BR", { month: "short" }).format(date).replace(".", "");
-  const relation = difference === 0 ? "Hoje" : difference === 1 ? "Amanhã" : weekday;
+  const relation = difference === -2 ? "Anteontem"
+    : difference === -1 ? "Ontem"
+      : difference === 0 ? "Hoje"
+        : difference === 1 ? "Amanhã"
+          : weekday;
   return { relation, date: `${day} ${monthName}` };
 }
 
@@ -2564,7 +2580,7 @@ export default function Home() {
   const [coverage, setCoverage] = useState("todos");
   const [sort, setSort] = useState("artista");
   const [offers, setOffers] = useState<Record<string, string>>({});
-  const [clock, setClock] = useState<number | null>(null);
+  const [clock, setClock] = useState(() => Date.now());
   const [selectedAuctionDate, setSelectedAuctionDate] = useState<string | null>(null);
   const [editor, setEditor] = useState<EditorSession | null>(null);
   const [editingCell, setEditingCell] = useState<EditingCell | null>(null);
@@ -2890,18 +2906,25 @@ export default function Home() {
     window.requestAnimationFrame(() => document.getElementById("proximos-leiloes")?.scrollIntoView({ behavior: "smooth" }));
   }
 
-  const visibleAuctionEvents = useMemo(
-    () => auctionEvents.filter((event) => clock === null || clock < new Date(event.expiresAt).getTime()),
-    [clock],
-  );
-  const todayAuctionKey = clock === null ? "2026-08-26" : localDateKey(clock);
+  const todayAuctionKey = localDateKey(clock);
+  const earliestAuctionKey = shiftDateKey(todayAuctionKey, -2);
+  const visibleAuctionEvents = useMemo(() => auctionEvents.filter((event) =>
+    event.items.some((item) => {
+      const date = auctionDateKey(item.date);
+      return date !== null && date >= earliestAuctionKey;
+    })), [earliestAuctionKey]);
   const availableAuctionDates = useMemo(() => [...new Set(visibleAuctionEvents
     .flatMap((event) => event.items.map((item) => auctionDateKey(item.date)))
-    .filter((date): date is string => Boolean(date) && date >= todayAuctionKey))]
-    .sort(), [todayAuctionKey, visibleAuctionEvents]);
+    .filter((date): date is string => Boolean(date) && date >= earliestAuctionKey))]
+    .sort(), [earliestAuctionKey, visibleAuctionEvents]);
+  const defaultAuctionDate = availableAuctionDates.includes(todayAuctionKey)
+    ? todayAuctionKey
+    : availableAuctionDates.find((date) => date > todayAuctionKey)
+      ?? availableAuctionDates.at(-1)
+      ?? null;
   const activeAuctionDate = selectedAuctionDate && availableAuctionDates.includes(selectedAuctionDate)
     ? selectedAuctionDate
-    : availableAuctionDates.includes(todayAuctionKey) ? todayAuctionKey : availableAuctionDates[0] ?? null;
+    : defaultAuctionDate;
   const datedAuctionEvents = useMemo(() => activeAuctionDate === null ? [] : visibleAuctionEvents
     .map((event) => ({
       ...event,
@@ -3029,7 +3052,7 @@ export default function Home() {
           <div>
             <p className="kicker">Radar de oportunidades</p>
             <h2 id="auction-title">Próximos leilões</h2>
-            <p>Os discos que você escolheu acompanhar, com o custo do próximo lance já acrescido da comissão e um teto prático para não se empolgar.</p>
+            <p>Os discos que você escolheu acompanhar, com o custo do próximo lance já acrescido da comissão e um teto prático para não se empolgar. Hoje abre marcado; ontem e anteontem continuam disponíveis para consulta.</p>
           </div>
         </div>
 
