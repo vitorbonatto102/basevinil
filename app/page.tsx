@@ -3355,7 +3355,7 @@ export default function Home() {
 
       <div className="result-line" hidden={activeView !== "catalogo"}>
         <strong>{filtered.length}</strong> {filtered.length === 1 ? "disco encontrado" : "discos encontrados"}
-        <span><b>*</b> vendido/esgotado/indisponível · <b>-</b> avaria relevante · referência = menor valor registrado</span>
+        <span>Referência = menor valor registrado entre leilão, pesquisa e Adornos</span>
       </div>
 
       <section className="table-shell" aria-label="Lista de preços de discos" hidden={activeView !== "catalogo"}>
@@ -3426,6 +3426,7 @@ export default function Home() {
 
       <footer>
         <span>A lista preserva os dados da planilha original.</span>
+        <span className="footer-price-legend"><b>*</b> = vendido, esgotado ou anúncio indisponível<br /><b>-</b> = exemplar com avaria/estado inferior</span>
         <span>Alterações autorizadas na tabela ficam salvas online.</span>
       </footer>
     </main>

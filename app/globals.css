@@ -264,6 +264,8 @@ tr.compared.high td:first-child { box-shadow: inset 4px 0 var(--red); }
 .empty button { border: 0; border-bottom: 1px solid var(--ink); background: transparent; cursor: pointer; }
 
 footer { min-height: 70px; padding: 20px 28px; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--ink); color: var(--muted); font: 8px "DM Mono", monospace; text-transform: uppercase; letter-spacing: .07em; }
+.footer-price-legend { color: var(--ink); line-height: 1.8; text-align: center; text-transform: none; letter-spacing: 0; }
+.footer-price-legend b { color: var(--accent); }
 
 /* Readable desktop density without CSS zoom. Keeping the document at its real
    width prevents the right side from being clipped on ultrawide displays. */
