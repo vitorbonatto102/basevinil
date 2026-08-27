@@ -24,6 +24,8 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Mercado Livre/);
   assert.match(html, /Vinyl Social Club/);
   assert.match(html, /Adornos/);
+  assert.match(html, /vendido\/esgotado\/indisponível/);
+  assert.match(html, /R\$ 55\*-?/);
   assert.match(html, /Márcio Cândido/);
   assert.match(html, /132 títulos pendentes para encontrar/);
   assert.match(html, /Preços e leilões/);
@@ -106,6 +108,9 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /VSC \/ outras lojas/);
   assert.match(page, /mergeAuctionWatchIntoCatalog\(baseRecords, auctionEvents\)/);
   assert.match(page, /auctionWatchPrices/);
+  assert.match(page, /currentBidMarkers: "\*-"/);
+  assert.match(page, /parseMarkedPriceList/);
+  assert.match(page, /avaria ou estado inferior relevante/);
   assert.match(page, /Muito barato/);
   assert.match(page, /localStorage/);
   assert.match(page, /preco-de-disco-procuras-separadas/);

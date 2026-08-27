@@ -196,6 +196,8 @@ button, input, select { font: inherit; }
 .catalog-editor-fields input { width: 100%; min-width: 0; border: 0; border-bottom: 1px solid var(--strong-line); outline: 0; padding: 5px 2px; background: transparent; color: var(--ink); font-size: 12px; font-weight: 700; }
 .catalog-editor-fields input:focus { border-color: var(--accent); background: #fffbed; }
 .catalog-editor-fields .editor-field-wide { grid-column: span 3; }
+.price-marker-help { margin: 0; padding: 8px 12px; border-bottom: 1px solid var(--line); color: var(--muted); font: 8px "DM Mono", monospace; }
+.price-marker-help strong, .result-line b { color: var(--ink); }
 .catalog-editor-panel > footer { min-height: 51px; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 8px 12px; border-top: 0; font: inherit; letter-spacing: 0; text-transform: none; }
 .catalog-editor-panel > footer > div { display: flex; gap: 8px; }
 .catalog-editor-panel > footer button { min-height: 33px; padding: 7px 13px; border: 1px solid var(--ink); background: transparent; color: var(--ink); font: 500 8px "DM Mono", monospace; text-transform: uppercase; cursor: pointer; }

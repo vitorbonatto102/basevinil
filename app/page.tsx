@@ -29,6 +29,7 @@ type CatalogRecord = {
   auctionPrice: number | null;
   auctionPrices?: number[];
   auctionWatchPrices?: number[];
+  auctionPriceMarkers?: Record<string, string>;
   auctionWatchOverride?: boolean;
   auctionPriceStatus?: "unverified-copy";
   marketMin: number | null;
@@ -36,6 +37,7 @@ type CatalogRecord = {
   tags: string[];
   adornosPrice?: number | null;
   adornosPrices?: number[];
+  adornosPriceMarkers?: Record<string, string>;
 };
 
 type CatalogEdit = {
@@ -78,6 +80,7 @@ type AuctionWatch = {
   condition: string;
   currentBid: number;
   nextBid: number;
+  currentBidMarkers?: string;
   bidLabel?: string;
   ceiling: number;
   priority: string;
@@ -1695,12 +1698,14 @@ const albertoLopesAuctionWatch: AuctionWatch[] = [
     title: "Revenge",
     date: "27 ago · 19h",
     condition: "Disco perfeito; capa em mau estado; edição não confirmada",
-    currentBid: 15,
-    nextBid: 25,
+    currentBid: 55,
+    nextBid: 55,
+    currentBidMarkers: "*-",
+    bidLabel: "Final",
     ceiling: 110,
-    priority: "Garimpo principal · 8,5/10",
+    priority: "Vendido por R$ 55",
     tone: "high",
-    note: "Comparáveis ativos em R$ 270–445. Até R$ 150 somente se a edição de 1992 for confirmada.",
+    note: "Venda encerrada em R$ 55. A capa em mau estado torna este exemplar uma referência inferior de conservação.",
     url: "https://www.albertolopesleiloeiro.com.br/peca.asp?ID=32105415",
   },
   {
@@ -2338,10 +2343,67 @@ function exactMoney(value: number) {
   }).format(value);
 }
 
+type MarkedPrice = {
+  numeric: number;
+  markers: string;
+};
+
+function normalizePriceMarkers(value = "") {
+  return `${value.includes("*") ? "*" : ""}${value.includes("-") ? "-" : ""}`;
+}
+
+function priceMarkerKey(value: number) {
+  return String(value);
+}
+
+function mergePriceMarkers(...values: Array<string | undefined>) {
+  return normalizePriceMarkers(values.filter(Boolean).join(""));
+}
+
+function parseMarkedPriceList(value: string): MarkedPrice[] {
+  const parsed = new Map<number, string>();
+  for (const part of value.split(/[/;]/)) {
+    const numeric = Number(part.trim().replace(",", ".").replace(/[^0-9.]/g, ""));
+    if (!Number.isFinite(numeric) || numeric <= 0) continue;
+    parsed.set(numeric, mergePriceMarkers(parsed.get(numeric), normalizePriceMarkers(part)));
+  }
+  return [...parsed].map(([numeric, markers]) => ({ numeric, markers }));
+}
+
+function priceMarkerMap(entries: MarkedPrice[]) {
+  const markers = Object.fromEntries(entries
+    .filter((entry) => entry.markers)
+    .map((entry) => [priceMarkerKey(entry.numeric), entry.markers]));
+  return Object.keys(markers).length ? markers : undefined;
+}
+
+function editablePrice(value: number) {
+  return String(value).replace(".", ",");
+}
+
+function markedPriceInput(values: number[], markers?: Record<string, string>) {
+  return [...new Set(values)]
+    .map((value) => `${editablePrice(value)}${normalizePriceMarkers(markers?.[priceMarkerKey(value)])}`)
+    .join("/");
+}
+
+function observationMarkers(item: MarketObservation) {
+  const status = normalize(item.status ?? "");
+  const condition = normalize(item.condition ?? "");
+  const unavailable = /(vendid|esgotad|indisponivel|encerrad)/.test(status);
+  const inferior = /(rasgad|avari|danific|estado inferior|capa ruim|mau estado)/.test(condition);
+  return `${unavailable ? "*" : ""}${inferior ? "-" : ""}`;
+}
+
+function observationDisplay(item: MarketObservation) {
+  const base = item.display.replace(/[*-]+\s*$/, "").trim();
+  return `${base}${observationMarkers(item)}`;
+}
+
 function source(record: CatalogRecord, name: string) {
   const displays = [...new Set(record.market
     .filter((item) => item.source === name)
-    .map((item) => item.display))];
+    .map(observationDisplay))];
   if (!displays.length) return "—";
   if (displays.length === 1) return displays[0];
   return `R$ ${displays.map((display) => display.replace(/^R\$\s*/, "")).join("/")}`;
@@ -2374,6 +2436,7 @@ function mergeAuctionWatchIntoCatalog(
     ...record,
     auctionPrices: record.auctionPrices ? [...record.auctionPrices] : undefined,
     auctionWatchPrices: record.auctionWatchPrices ? [...record.auctionWatchPrices] : undefined,
+    auctionPriceMarkers: record.auctionPriceMarkers ? { ...record.auctionPriceMarkers } : undefined,
   }));
   const indexes = new Map<string, number>();
   merged.forEach((record, index) => {
@@ -2401,6 +2464,9 @@ function mergeAuctionWatchIntoCatalog(
         year: null,
         auctionPrice: item.currentBid,
         auctionWatchPrices: [item.currentBid],
+        auctionPriceMarkers: item.currentBidMarkers
+          ? { [priceMarkerKey(item.currentBid)]: normalizePriceMarkers(item.currentBidMarkers) }
+          : undefined,
         marketMin: null,
         market: [],
         tags: ["Radar de leilão"],
@@ -2420,6 +2486,16 @@ function mergeAuctionWatchIntoCatalog(
         : [];
     const auctionPrices = [...new Set([...previousPrices, item.currentBid])];
     const auctionWatchPrices = [...new Set([...(record.auctionWatchPrices ?? []), item.currentBid])];
+    const currentBidMarkers = normalizePriceMarkers(item.currentBidMarkers);
+    const auctionPriceMarkers = currentBidMarkers
+      ? {
+        ...(record.auctionPriceMarkers ?? {}),
+        [priceMarkerKey(item.currentBid)]: mergePriceMarkers(
+          record.auctionPriceMarkers?.[priceMarkerKey(item.currentBid)],
+          currentBidMarkers,
+        ),
+      }
+      : record.auctionPriceMarkers;
     merged[recordIndex] = {
       ...record,
       auctionPrice: record.auctionPriceStatus === "unverified-copy"
@@ -2427,6 +2503,7 @@ function mergeAuctionWatchIntoCatalog(
         : Math.min(...auctionPrices),
       auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
       auctionWatchPrices,
+      auctionPriceMarkers,
     };
   }
 
@@ -2453,17 +2530,18 @@ function mergeCatalogEdits(edits: CatalogEdit[]) {
 }
 
 function parseNumberList(value: string) {
-  return [...new Set(value
-    .split(/[/;]/)
-    .map((part) => Number(part.trim().replace(",", ".").replace(/[^0-9.]/g, "")))
-    .filter((number) => Number.isFinite(number) && number > 0))];
+  return parseMarkedPriceList(value).map((entry) => entry.numeric);
 }
 
 function marketPriceInput(record: CatalogRecord, name: string) {
-  return [...new Set(record.market
+  const entries = new Map<number, string>();
+  record.market
     .filter((item) => item.source === name && item.numeric !== null && item.numeric > 0)
-    .map((item) => item.numeric!))]
-    .join("/");
+    .forEach((item) => entries.set(
+      item.numeric!,
+      mergePriceMarkers(entries.get(item.numeric!), observationMarkers(item)),
+    ));
+  return [...entries].map(([numeric, markers]) => `${editablePrice(numeric)}${markers}`).join("/");
 }
 
 function recordDraft(record: CatalogRecord): CatalogDraft {
@@ -2488,21 +2566,22 @@ function recordDraft(record: CatalogRecord): CatalogDraft {
     mercadoLivre: marketPriceInput(record, "Mercado Livre"),
     olx: marketPriceInput(record, "OLX"),
     shopee: marketPriceInput(record, "Shopee"),
-    leilao: auctionSeen.join("/"),
+    leilao: markedPriceInput(auctionSeen, record.auctionPriceMarkers),
     vinylSocialClub: marketPriceInput(record, "Vinyl Social Club"),
-    adornos: adornosValues(record).join("/"),
+    adornos: markedPriceInput(adornosValues(record), record.adornosPriceMarkers),
   };
 }
 
 function replaceMarketPrices(market: MarketObservation[], sourceName: string, value: string) {
   const retained = market.filter((item) => item.source !== sourceName);
   const checkedAt = new Date().toISOString().slice(0, 10);
-  const additions = parseNumberList(value).map((numeric) => ({
+  const additions = parseMarkedPriceList(value).map(({ numeric, markers }) => ({
     source: sourceName,
     display: money(numeric),
     numeric,
     checkedAt,
-    status: "editado no site",
+    status: markers.includes("*") ? "vendido/esgotado" : "editado no site",
+    condition: markers.includes("-") ? "avaria relevante" : undefined,
   }));
   return [...retained, ...additions];
 }
@@ -2529,8 +2608,10 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     .map((item) => item.numeric)
     .filter((value): value is number => value !== null && value > 0);
   const years = parseNumberList(draft.year).map((value) => Math.round(value));
-  const auctionPrices = parseNumberList(draft.leilao);
-  const adornosPrices = parseNumberList(draft.adornos);
+  const markedAuctionPrices = parseMarkedPriceList(draft.leilao);
+  const auctionPrices = markedAuctionPrices.map((entry) => entry.numeric);
+  const markedAdornosPrices = parseMarkedPriceList(draft.adornos);
+  const adornosPrices = markedAdornosPrices.map((entry) => entry.numeric);
   return {
     ...record,
     artist: draft.artist.trim(),
@@ -2539,6 +2620,7 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     years: years.length > 1 ? years : undefined,
     auctionPrice: auctionPrices.length ? Math.min(...auctionPrices) : null,
     auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
+    auctionPriceMarkers: priceMarkerMap(markedAuctionPrices),
     auctionWatchPrices: auctionChanged ? undefined : record.auctionWatchPrices,
     auctionWatchOverride: auctionChanged ? true : record.auctionWatchOverride,
     auctionPriceStatus: undefined,
@@ -2546,6 +2628,7 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     marketMin: marketNumbers.length ? Math.min(...marketNumbers) : null,
     adornosPrice: adornosPrices[0] ?? null,
     adornosPrices: adornosPrices.length > 1 ? adornosPrices : undefined,
+    adornosPriceMarkers: priceMarkerMap(markedAdornosPrices),
   };
 }
 
@@ -2562,7 +2645,7 @@ function auctionDisplay(record: CatalogRecord) {
       .filter((item) => item.source === "Leilão observado" && item.numeric !== null && item.numeric > 0)
       .map((item) => item.numeric!),
   ])];
-  return values.length ? `R$ ${values.map((value) => new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 }).format(value)).join("/")}` : "—";
+  return values.length ? `R$ ${values.map((value) => `${new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 2 }).format(value)}${normalizePriceMarkers(record.auctionPriceMarkers?.[priceMarkerKey(value)])}`).join("/")}` : "—";
 }
 
 function adornosValues(record: CatalogRecord) {
@@ -2577,9 +2660,9 @@ function adornosValues(record: CatalogRecord) {
 function adornosDisplay(record: CatalogRecord) {
   const values = adornosValues(record);
   if (!values.length) return "—";
-  const formatted = values.map((value) => new Intl.NumberFormat("pt-BR", {
+  const formatted = values.map((value) => `${new Intl.NumberFormat("pt-BR", {
     maximumFractionDigits: 0,
-  }).format(value));
+  }).format(value)}${normalizePriceMarkers(record.adornosPriceMarkers?.[priceMarkerKey(value)])}`);
   return `R$ ${formatted.join("/")}`;
 }
 
@@ -3247,13 +3330,14 @@ export default function Home() {
               <label className="editor-field-wide"><span>Artista</span><input value={draft.artist} onChange={(event) => updateDraft("artist", event.target.value)} /></label>
               <label className="editor-field-wide"><span>Álbum / edição</span><input value={draft.title} onChange={(event) => updateDraft("title", event.target.value)} /></label>
               <label><span>Ano</span><input inputMode="numeric" placeholder="1989" value={draft.year} onChange={(event) => updateDraft("year", event.target.value)} /></label>
-              <label><span>Mercado Livre</span><input inputMode="decimal" placeholder="60/80" value={draft.mercadoLivre} onChange={(event) => updateDraft("mercadoLivre", event.target.value)} /></label>
-              <label><span>OLX</span><input inputMode="decimal" placeholder="60/80" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
-              <label><span>Shopee</span><input inputMode="decimal" placeholder="60/80" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
-              <label><span>Leilão visto</span><input inputMode="decimal" placeholder="20/30" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
-              <label><span>VSC / outras lojas</span><input inputMode="decimal" placeholder="59" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
-              <label><span>Adornos</span><input inputMode="decimal" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
+              <label><span>Mercado Livre</span><input inputMode="text" placeholder="60/80*" value={draft.mercadoLivre} onChange={(event) => updateDraft("mercadoLivre", event.target.value)} /></label>
+              <label><span>OLX</span><input inputMode="text" placeholder="60/80*" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
+              <label><span>Shopee</span><input inputMode="text" placeholder="60/80*" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
+              <label><span>Leilão visto</span><input inputMode="text" placeholder="20/55*-" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
+              <label><span>VSC / outras lojas</span><input inputMode="text" placeholder="59*" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
+              <label><span>Adornos</span><input inputMode="text" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
             </div>
+            <p className="price-marker-help"><strong>*</strong> vendido, esgotado ou indisponível · <strong>-</strong> avaria ou estado inferior relevante · exemplo: 55*-</p>
             <footer>
               <div>
                 {records.some((record) => record.id === editingRecord.id) && (
@@ -3271,7 +3355,7 @@ export default function Home() {
 
       <div className="result-line" hidden={activeView !== "catalogo"}>
         <strong>{filtered.length}</strong> {filtered.length === 1 ? "disco encontrado" : "discos encontrados"}
-        <span>Referência = menor valor registrado entre leilão, pesquisa e Adornos</span>
+        <span><b>*</b> vendido/esgotado/indisponível · <b>-</b> avaria relevante · referência = menor valor registrado</span>
       </div>
 
       <section className="table-shell" aria-label="Lista de preços de discos" hidden={activeView !== "catalogo"}>
@@ -3310,12 +3394,12 @@ export default function Home() {
                   {inlineCell(record, "artist", record.artist, "artist-cell", "text")}
                   {inlineCell(record, "title", <>{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</>, "album-cell", "text")}
                   {inlineCell(record, "year", yearDisplay(record), record.year === null && !record.years?.length ? "missing" : "", "numeric")}
-                  {inlineCell(record, "mercadoLivre", source(record, "Mercado Livre"), "price-source", "decimal")}
-                  {inlineCell(record, "olx", source(record, "OLX"), "price-source", "decimal")}
-                  {inlineCell(record, "shopee", source(record, "Shopee"), "price-source", "decimal")}
-                  {inlineCell(record, "leilao", auctionDisplay(record), "money-cell", "decimal")}
-                  {inlineCell(record, "vinylSocialClub", source(record, "Vinyl Social Club"), "price-source", "decimal")}
-                  {inlineCell(record, "adornos", adornosDisplay(record), "adornos-cell", "decimal")}
+                  {inlineCell(record, "mercadoLivre", source(record, "Mercado Livre"), "price-source", "text")}
+                  {inlineCell(record, "olx", source(record, "OLX"), "price-source", "text")}
+                  {inlineCell(record, "shopee", source(record, "Shopee"), "price-source", "text")}
+                  {inlineCell(record, "leilao", auctionDisplay(record), "money-cell", "text")}
+                  {inlineCell(record, "vinylSocialClub", source(record, "Vinyl Social Club"), "price-source", "text")}
+                  {inlineCell(record, "adornos", adornosDisplay(record), "adornos-cell", "text")}
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
                     <span>R$</span>
