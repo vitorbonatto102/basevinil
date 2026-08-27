@@ -4,6 +4,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Preço de Disco — lista de consulta",
   description: "Lista rápida para consultar referências e descobrir se um disco está barato.",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
+  },
   openGraph: {
     title: "Preço de Disco — lista de consulta",
     description: "Pesquise, compare e saiba se um disco está barato.",
