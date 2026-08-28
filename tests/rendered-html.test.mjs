@@ -117,6 +117,12 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /lot: 177/);
   assert.match(page, /32192536/);
   assert.match(page, /Principal seu · Procura Márcio · A\+/);
+  const cavernaBlock = page.match(/const cavernaVintageAuctionWatch: AuctionWatch\[\] = \[[\s\S]*?\n\];/)?.[0] ?? "";
+  assert.ok(cavernaBlock);
+  for (const lot of [4, 6, 19, 74, 85, 91, 101, 113, 114, 121, 129, 139, 164, 177, 185, 189, 203, 204, 211, 223, 231, 238]) {
+    assert.match(cavernaBlock, new RegExp(`lot: ${lot},`));
+  }
+  assert.doesNotMatch(cavernaBlock, /Tape Deck|Receiver Kenwood|Audio-Technica/);
   assert.match(page, /lot: "282C"/);
   assert.match(page, /Speaking In Tongues/);
   assert.match(page, /lot: 341/);
