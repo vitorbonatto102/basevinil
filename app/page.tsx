@@ -2684,6 +2684,7 @@ function observationDisplay(item: MarketObservation) {
 }
 
 const OTHER_STORE_SOURCES = ["VNN", "Vinyl Social Club", "Outras lojas"] as const;
+const HIDDEN_SOURCE_TAGS = new Set(["VNN", "Vinyl Social Club", "Outras lojas", "Adornos", "Radar de leilão"]);
 
 function matchesSource(item: MarketObservation, names: string | readonly string[]) {
   return typeof names === "string" ? item.source === names : names.includes(item.source);
@@ -2812,7 +2813,58 @@ function mergeCatalogEdits(edits: CatalogEdit[]) {
   const baseIds = new Set(baseRecords.map((record) => record.id));
   for (const edit of edits) {
     if (edit.status === "upserted" && edit.record && !baseIds.has(edit.id) && !deleted.has(edit.id)) {
-      merged.push(edit.record);
+      const duplicateIndex = merged.findIndex((record) =>
+        catalogIdentity(record.artist, record.title) === catalogIdentity(edit.record!.artist, edit.record!.title));
+      if (duplicateIndex === -1) {
+        merged.push(edit.record);
+        continue;
+      }
+
+      const primary = merged[duplicateIndex];
+      const secondary = edit.record;
+      const market = [...primary.market];
+      for (const observation of secondary.market) {
+        const duplicate = market.some((current) =>
+          current.source === observation.source
+          && current.numeric === observation.numeric
+          && current.display.replace(/\s+/g, " ") === observation.display.replace(/\s+/g, " "));
+        if (!duplicate) market.push(observation);
+      }
+      const marketNumbers = market
+        .map((observation) => observation.numeric)
+        .filter((value): value is number => value !== null && value > 0);
+      const primaryAuction = primary.auctionPrices?.length
+        ? primary.auctionPrices
+        : primary.auctionPrice != null ? [primary.auctionPrice] : [];
+      const secondaryAuction = secondary.auctionPrices?.length
+        ? secondary.auctionPrices
+        : secondary.auctionPrice != null ? [secondary.auctionPrice] : [];
+      const auctionPrices = secondary.auctionWatchOverride
+        ? [...new Set(secondaryAuction)]
+        : [...new Set([...primaryAuction, ...secondaryAuction])];
+      const adornosPrices = [...new Set([...adornosValues(primary), ...adornosValues(secondary)])];
+      const years = [...new Set([
+        ...(primary.years ?? (primary.year != null ? [primary.year] : [])),
+        ...(secondary.years ?? (secondary.year != null ? [secondary.year] : [])),
+      ])];
+      merged[duplicateIndex] = {
+        ...primary,
+        lot: primary.lot ?? secondary.lot,
+        year: years[0] ?? null,
+        years: years.length > 1 ? years : undefined,
+        auctionPrice: auctionPrices.length ? Math.min(...auctionPrices) : null,
+        auctionPrices: auctionPrices.length > 1 ? auctionPrices : undefined,
+        auctionWatchPrices: [...new Set([...(primary.auctionWatchPrices ?? []), ...(secondary.auctionWatchPrices ?? [])])],
+        auctionPriceMarkers: { ...(primary.auctionPriceMarkers ?? {}), ...(secondary.auctionPriceMarkers ?? {}) },
+        auctionWatchOverride: secondary.auctionWatchOverride ?? primary.auctionWatchOverride,
+        auctionPriceStatus: secondary.auctionPriceStatus ?? primary.auctionPriceStatus,
+        market,
+        marketMin: marketNumbers.length ? Math.min(...marketNumbers) : null,
+        tags: [...new Set([...primary.tags, ...secondary.tags])],
+        adornosPrice: adornosPrices[0] ?? null,
+        adornosPrices: adornosPrices.length > 1 ? adornosPrices : undefined,
+        adornosPriceMarkers: { ...(primary.adornosPriceMarkers ?? {}), ...(secondary.adornosPriceMarkers ?? {}) },
+      };
     }
   }
   return mergeAuctionWatchIntoCatalog(merged, auctionEvents, deleted);
@@ -3680,6 +3732,7 @@ export default function Home() {
               const parsedOffer = offerText ? Number(offerText.replace(",", ".")) : null;
               const validOffer = parsedOffer !== null && Number.isFinite(parsedOffer) && parsedOffer >= 0 ? parsedOffer : null;
               const result = assessment(validOffer, reference);
+              const visibleTags = record.tags.filter((tag) => !HIDDEN_SOURCE_TAGS.has(tag));
               const rowClass = [
                 offerText ? `compared ${result.tone}` : "",
                 editingCell?.recordId === record.id ? "editing-row" : "",
@@ -3688,7 +3741,7 @@ export default function Home() {
                 <tr key={record.id} className={rowClass}>
                   <td className="row-number">{index + 1}</td>
                   {inlineCell(record, "artist", record.artist, "artist-cell", "text")}
-                  {inlineCell(record, "title", <>{record.title}{record.tags.length > 0 && <small>{record.tags.join(" · ")}</small>}</>, "album-cell", "text")}
+                  {inlineCell(record, "title", <>{record.title}{visibleTags.length > 0 && <small>{visibleTags.join(" · ")}</small>}</>, "album-cell", "text")}
                   {inlineCell(record, "year", yearDisplay(record), record.year === null && !record.years?.length ? "missing" : "", "numeric")}
                   {inlineCell(record, "mercadoLivre", source(record, "Mercado Livre"), "price-source", "text")}
                   {inlineCell(record, "olx", source(record, "OLX"), "price-source", "text")}

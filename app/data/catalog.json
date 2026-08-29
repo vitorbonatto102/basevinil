@@ -17327,19 +17327,27 @@
       "lot": null,
       "artist": "R.E.M.",
       "title": "Out of Time",
-      "year": null,
-      "auctionPrice": null,
+      "year": 1991,
+      "auctionPrice": 75,
       "marketMin": 70,
       "market": [
         {
           "source": "VNN",
           "display": "R$ 70",
           "numeric": 70
+        },
+        {
+          "source": "Mercado Livre",
+          "display": "R$ 150",
+          "numeric": 150,
+          "checkedAt": "2026-08-24",
+          "status": "editado no site"
         }
       ],
       "tags": [
         "VNN"
-      ]
+      ],
+      "auctionWatchOverride": true
     },
     {
       "id": "vnn-1115",

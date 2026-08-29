@@ -165,7 +165,7 @@ for (const result of results) {
       auctionPrice: null,
       marketMin: numeric,
       market: [{ source: SOURCE, display, numeric }],
-      tags: [SOURCE],
+      tags: [],
     });
     nextSourceRow += 1;
     added += 1;

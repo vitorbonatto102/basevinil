@@ -22,7 +22,7 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Quanto vale esse disco\?/);
   assert.match(html, /Preço encontrado/);
   assert.match(html, /Mercado Livre/);
-  assert.match(html, /Vinyl Social Club/);
+  assert.match(html, /VNN\/VSC\/outras/);
   assert.match(html, /Adornos/);
   assert.match(html, /R\$ 55\*-?/);
   assert.match(html, /footer-price-legend/);
@@ -86,6 +86,11 @@ test("keeps all data visible and compares offers inline", async () => {
   const vnnHurting = parsed.records.find((record) => normalize(record.artist) === "tears for fears" && normalize(record.title) === "the hurting");
   assert.equal(vnnHurting?.market.filter((entry) => entry.source === "VNN").length, 1);
   assert.equal(vnnHurting?.market.find((entry) => entry.source === "VNN")?.numeric, 70);
+  const remRecords = parsed.records.filter((record) => normalize(record.artist) === "r e m" && normalize(record.title) === "out of time");
+  assert.equal(remRecords.length, 1);
+  assert.equal(remRecords[0].auctionPrice, 75);
+  assert.equal(remRecords[0].market.find((entry) => entry.source === "Mercado Livre")?.numeric, 150);
+  assert.equal(remRecords[0].market.find((entry) => entry.source === "VNN")?.numeric, 70);
   const researchedMarketplaceRecords = parsed.records.filter((record) =>
     record.market.some((entry) => entry.checkedAt === "2026-08-20"),
   );
@@ -112,6 +117,8 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
   assert.match(page, /VNN\/VSC\/outras/);
+  assert.match(page, /HIDDEN_SOURCE_TAGS/);
+  assert.match(page, /const duplicateIndex = merged\.findIndex/);
   assert.match(page, /mergeAuctionWatchIntoCatalog\(baseRecords, auctionEvents\)/);
   assert.match(page, /auctionWatchPrices/);
   assert.match(page, /currentBidMarkers: "\*-"/);
