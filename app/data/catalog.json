@@ -388,8 +388,14 @@
       "title": "20 Greatest Hits",
       "year": 1986,
       "auctionPrice": 89,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
       "tags": []
     },
     {
@@ -843,8 +849,14 @@
       "title": "For Unlawful Carnal Knowledge",
       "year": 1991,
       "auctionPrice": 29,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
       "tags": []
     },
     {
@@ -940,8 +952,14 @@
       "title": "The Dark Side Of The Moon",
       "year": 1973,
       "auctionPrice": 120,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
       "tags": [],
       "adornosPrice": 148
     },
@@ -1048,6 +1066,11 @@
           "source": "Mercado Livre",
           "display": "R$ 79",
           "numeric": 79
+        },
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
         }
       ],
       "tags": []
@@ -2015,12 +2038,17 @@
       "title": "Casa De Rock",
       "year": 1976,
       "auctionPrice": 109,
-      "marketMin": 279,
+      "marketMin": 200,
       "market": [
         {
           "source": "Mercado Livre",
           "display": "R$ 279",
           "numeric": 279
+        },
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
         }
       ],
       "tags": []
@@ -2179,8 +2207,14 @@
       "title": "Tim Maia",
       "year": 1985,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 220,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 220",
+          "numeric": 220
+        }
+      ],
       "tags": [],
       "adornosPrice": 189
     },
@@ -3194,8 +3228,14 @@
       "title": "Índia",
       "year": 2022,
       "auctionPrice": 69,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
       "tags": []
     },
     {
@@ -3352,12 +3392,17 @@
       "title": "Bem Bom",
       "year": 1985,
       "auctionPrice": 19,
-      "marketMin": 59,
+      "marketMin": 20,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
         }
       ],
       "tags": []
@@ -3664,8 +3709,14 @@
       "title": "Ao Vivo",
       "year": 1970,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
       "tags": []
     },
     {
@@ -5112,8 +5163,14 @@
       "title": "Easy Pieces",
       "year": 1985,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
       "tags": []
     },
     {
@@ -6155,8 +6212,14 @@
       "title": "Electric",
       "year": 1989,
       "auctionPrice": 39,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
       "tags": []
     },
     {
@@ -7207,6 +7270,11 @@
           "source": "Mercado Livre",
           "display": "R$ 57",
           "numeric": 57
+        },
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
         }
       ],
       "tags": []
@@ -7656,8 +7724,14 @@
       "title": "Anjo Avesso",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -8277,8 +8351,14 @@
       "title": "Volume 3",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -8751,8 +8831,14 @@
       "title": "A Arte De (2LP)",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -9051,8 +9137,14 @@
       "title": "Raça Humana",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10170,8 +10262,14 @@
       "title": "Greatest Hits",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10476,8 +10574,14 @@
       "title": "1973",
       "year": 1973,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 190,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 190",
+          "numeric": 190
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10677,8 +10781,14 @@
       "title": "The Head On The Door",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -11085,8 +11195,14 @@
       "title": "The Division Bell",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -11265,12 +11381,17 @@
       "title": "Intuição",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 39,
+      "marketMin": 30,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 39",
           "numeric": 39
+        },
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
         }
       ],
       "tags": [
@@ -15656,11 +15777,17 @@
       "sourceRow": 1028,
       "lot": null,
       "artist": "Jorge Ben",
-      "title": "A Tábua De Esmeralda (OG)",
+      "title": "A Tábua De Esmeralda",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 190,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 190",
+          "numeric": 190
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -15884,8 +16011,14 @@
       "title": "No Remorse (2LP)",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -15944,8 +16077,14 @@
       "title": "Cowboys From Hell",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -16154,8 +16293,14 @@
       "title": "Meat Is Murder",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -16235,6 +16380,1586 @@
         "Adornos"
       ],
       "adornosPrice": 109
+    },
+    {
+      "id": "vnn-1067",
+      "sourceRow": 1067,
+      "lot": null,
+      "artist": "Aerosmith",
+      "title": "Get a Grip",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1068",
+      "sourceRow": 1068,
+      "lot": null,
+      "artist": "Alberta Hunter",
+      "title": "Look For The Silver Lining",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1069",
+      "sourceRow": 1069,
+      "lot": null,
+      "artist": "Alice in Chains",
+      "title": "Dirt",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1070",
+      "sourceRow": 1070,
+      "lot": null,
+      "artist": "Alice in Chains",
+      "title": "Face Lift",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1071",
+      "sourceRow": 1071,
+      "lot": null,
+      "artist": "Almir Ricardi",
+      "title": "Fest Funk",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1072",
+      "sourceRow": 1072,
+      "lot": null,
+      "artist": "Amy Winehouse",
+      "title": "Back to Black",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1073",
+      "sourceRow": 1073,
+      "lot": null,
+      "artist": "The Beatles",
+      "title": "Please Please Me",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1074",
+      "sourceRow": 1074,
+      "lot": null,
+      "artist": "Black Sabbath",
+      "title": "Master of Reality",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1075",
+      "sourceRow": 1075,
+      "lot": null,
+      "artist": "Black Sabbath",
+      "title": "Black Sabbath",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1076",
+      "sourceRow": 1076,
+      "lot": null,
+      "artist": "Bon Iver",
+      "title": "For Emma, Forever Ago",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1077",
+      "sourceRow": 1077,
+      "lot": null,
+      "artist": "Camisa de Venus",
+      "title": "Batalhoes de Estranhos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1078",
+      "sourceRow": 1078,
+      "lot": null,
+      "artist": "Casa das Máquinas",
+      "title": "Casa das Máquinas (1974)",
+      "year": 1974,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1079",
+      "sourceRow": 1079,
+      "lot": null,
+      "artist": "Cesar Camargo Mariano",
+      "title": "Octeto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1080",
+      "sourceRow": 1080,
+      "lot": null,
+      "artist": "Milton Nascimento & Lô Borges",
+      "title": "Clube da Esquina",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 450,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 450",
+          "numeric": 450
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1081",
+      "sourceRow": 1081,
+      "lot": null,
+      "artist": "Coletanea",
+      "title": "Super Estrelas da Musica Popular Brasileira - Box 4 Lps",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1082",
+      "sourceRow": 1082,
+      "lot": null,
+      "artist": "Coletanea",
+      "title": "74.5 Uma Onda No Ar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1083",
+      "sourceRow": 1083,
+      "lot": null,
+      "artist": "Dead Kennedys",
+      "title": "Fresh Fruit for Rotting Vegetables",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1084",
+      "sourceRow": 1084,
+      "lot": null,
+      "artist": "Deee-Lite",
+      "title": "World Clique",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1085",
+      "sourceRow": 1085,
+      "lot": null,
+      "artist": "Diana Pequeno",
+      "title": "O Misterio das Estrelas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1086",
+      "sourceRow": 1086,
+      "lot": null,
+      "artist": "Echo & the Bunnymen",
+      "title": "Ocean Rain (reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 220,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 220",
+          "numeric": 220
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1087",
+      "sourceRow": 1087,
+      "lot": null,
+      "artist": "Emílio Santiago",
+      "title": "Mais que Um Momento",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1088",
+      "sourceRow": 1088,
+      "lot": null,
+      "artist": "Eric Clapton",
+      "title": "August",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1089",
+      "sourceRow": 1089,
+      "lot": null,
+      "artist": "Foo Fighters",
+      "title": "Foo Fighters (1995, reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1090",
+      "sourceRow": 1090,
+      "lot": null,
+      "artist": "George Michael",
+      "title": "Faith",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1091",
+      "sourceRow": 1091,
+      "lot": null,
+      "artist": "Iron Maiden",
+      "title": "Powerslave",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1092",
+      "sourceRow": 1092,
+      "lot": null,
+      "artist": "Iron Maiden",
+      "title": "Fear of the Dark",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1093",
+      "sourceRow": 1093,
+      "lot": null,
+      "artist": "James Brown",
+      "title": "Cold Sweat",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1094",
+      "sourceRow": 1094,
+      "lot": null,
+      "artist": "Jimi Hendrix",
+      "title": "Live",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1095",
+      "sourceRow": 1095,
+      "lot": null,
+      "artist": "Joan Jett",
+      "title": "Bad Reputation",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1096",
+      "sourceRow": 1096,
+      "lot": null,
+      "artist": "João Gilberto",
+      "title": "1972",
+      "year": 1972,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1097",
+      "sourceRow": 1097,
+      "lot": null,
+      "artist": "Jorge Ben",
+      "title": "Africa Brasil (Reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 190,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 190",
+          "numeric": 190
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1098",
+      "sourceRow": 1098,
+      "lot": null,
+      "artist": "Jovelina",
+      "title": "Perola Negra",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1099",
+      "sourceRow": 1099,
+      "lot": null,
+      "artist": "Kwick",
+      "title": "Fore Play",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1100",
+      "sourceRow": 1100,
+      "lot": null,
+      "artist": "Marcos Valle",
+      "title": "Tempo da Gente",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1101",
+      "sourceRow": 1101,
+      "lot": null,
+      "artist": "Metallica",
+      "title": "Ride the Lightning",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1102",
+      "sourceRow": 1102,
+      "lot": null,
+      "artist": "Metallica",
+      "title": "Metallica (Black Album)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1103",
+      "sourceRow": 1103,
+      "lot": null,
+      "artist": "Morrissey",
+      "title": "Viva Hate",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1104",
+      "sourceRow": 1104,
+      "lot": null,
+      "artist": "MPBC",
+      "title": "Nelson Ayres",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1105",
+      "sourceRow": 1105,
+      "lot": null,
+      "artist": "Mr. Big",
+      "title": "Lean Into It",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1106",
+      "sourceRow": 1106,
+      "lot": null,
+      "artist": "Mutantes",
+      "title": "1969",
+      "year": 1969,
+      "auctionPrice": null,
+      "marketMin": 500,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 500",
+          "numeric": 500
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1107",
+      "sourceRow": 1107,
+      "lot": null,
+      "artist": "New Order",
+      "title": "Low Life",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1108",
+      "sourceRow": 1108,
+      "lot": null,
+      "artist": "New Order",
+      "title": "Movement (FACT 50, 1981, reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1109",
+      "sourceRow": 1109,
+      "lot": null,
+      "artist": "Originais do Samba",
+      "title": "Os Bons Sambistas Vão Voltar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1110",
+      "sourceRow": 1110,
+      "lot": null,
+      "artist": "Paul McCartney",
+      "title": "McCartney III",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 280,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 280",
+          "numeric": 280
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1111",
+      "sourceRow": 1111,
+      "lot": null,
+      "artist": "Pink Floyd",
+      "title": "A Momentary Lapse of Reason",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1112",
+      "sourceRow": 1112,
+      "lot": null,
+      "artist": "Pixies",
+      "title": "Bossanova",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1113",
+      "sourceRow": 1113,
+      "lot": null,
+      "artist": "Planet Hemp",
+      "title": "Os Cães Ladram mas a Caravana Não Para",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 190,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 190",
+          "numeric": 190
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1114",
+      "sourceRow": 1114,
+      "lot": null,
+      "artist": "R.E.M.",
+      "title": "Out of Time",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1115",
+      "sourceRow": 1115,
+      "lot": null,
+      "artist": "Radiohead",
+      "title": "The Bends",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 320,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 320",
+          "numeric": 320
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1116",
+      "sourceRow": 1116,
+      "lot": null,
+      "artist": "Rage Against The Machine",
+      "title": "Evil Empire",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1117",
+      "sourceRow": 1117,
+      "lot": null,
+      "artist": "Rainbow",
+      "title": "Long Live Rock 'n Roll",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1118",
+      "sourceRow": 1118,
+      "lot": null,
+      "artist": "Rainbow",
+      "title": "Rising",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1119",
+      "sourceRow": 1119,
+      "lot": null,
+      "artist": "Rainbow",
+      "title": "Ritchie Blackmore's Rainbow",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 400,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 400",
+          "numeric": 400
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1120",
+      "sourceRow": 1120,
+      "lot": null,
+      "artist": "Ramones",
+      "title": "Mania",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 300,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 300",
+          "numeric": 300
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1121",
+      "sourceRow": 1121,
+      "lot": null,
+      "artist": "Ratt",
+      "title": "Out of the Cellar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1122",
+      "sourceRow": 1122,
+      "lot": null,
+      "artist": "Red Hot Chili Peppers",
+      "title": "Blood Sugar Sex Magik",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1123",
+      "sourceRow": 1123,
+      "lot": null,
+      "artist": "Rita Lee e Roberto de Carvalho",
+      "title": "Rita e Roberto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1124",
+      "sourceRow": 1124,
+      "lot": null,
+      "artist": "Robert Johnson",
+      "title": "King of the Delta Blues Singers",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1125",
+      "sourceRow": 1125,
+      "lot": null,
+      "artist": "Roxette",
+      "title": "Tourism",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1126",
+      "sourceRow": 1126,
+      "lot": null,
+      "artist": "Santa Cruz",
+      "title": "Flor Incendiaria",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1127",
+      "sourceRow": 1127,
+      "lot": null,
+      "artist": "Sarah Vaughan & Billy Eckstine",
+      "title": "The Irving Berlin Songbook",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 20,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 20",
+          "numeric": 20
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1128",
+      "sourceRow": 1128,
+      "lot": null,
+      "artist": "Saxon",
+      "title": "1983",
+      "year": 1983,
+      "auctionPrice": null,
+      "marketMin": 100,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 100",
+          "numeric": 100
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1129",
+      "sourceRow": 1129,
+      "lot": null,
+      "artist": "Sepultura",
+      "title": "Beneath The Remains",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1130",
+      "sourceRow": 1130,
+      "lot": null,
+      "artist": "Sepultura",
+      "title": "Arise",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1131",
+      "sourceRow": 1131,
+      "lot": null,
+      "artist": "The Smiths",
+      "title": "Best... I",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1132",
+      "sourceRow": 1132,
+      "lot": null,
+      "artist": "System of a Down",
+      "title": "System of a Down (1998)",
+      "year": 1998,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1133",
+      "sourceRow": 1133,
+      "lot": null,
+      "artist": "Talking Heads",
+      "title": "Talking Heads: 77 (reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 250,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 250",
+          "numeric": 250
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1134",
+      "sourceRow": 1134,
+      "lot": null,
+      "artist": "Tears for Fears",
+      "title": "The Hurting",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1135",
+      "sourceRow": 1135,
+      "lot": null,
+      "artist": "The Smiths",
+      "title": "The Queen is Dead",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 150,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 150",
+          "numeric": 150
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1136",
+      "sourceRow": 1136,
+      "lot": null,
+      "artist": "Tim Maia",
+      "title": "A Arte de (Duplo)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 120,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 120",
+          "numeric": 120
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1137",
+      "sourceRow": 1137,
+      "lot": null,
+      "artist": "Tim Maia",
+      "title": "1973 (Reedição)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 220,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 220",
+          "numeric": 220
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1138",
+      "sourceRow": 1138,
+      "lot": null,
+      "artist": "Toto",
+      "title": "The Seventh One",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1139",
+      "sourceRow": 1139,
+      "lot": null,
+      "artist": "Tribalistas",
+      "title": "Segundo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 190,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 190",
+          "numeric": 190
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1140",
+      "sourceRow": 1140,
+      "lot": null,
+      "artist": "Trilha Sonora do Filme",
+      "title": "Bete Balanço",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1141",
+      "sourceRow": 1141,
+      "lot": null,
+      "artist": "Trilha Sonora do Filme",
+      "title": "Sem Destino",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 50,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 50",
+          "numeric": 50
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1142",
+      "sourceRow": 1142,
+      "lot": null,
+      "artist": "Vários Artistas",
+      "title": "Tropicália ou Panis et Circencis (Série Reprise)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1143",
+      "sourceRow": 1143,
+      "lot": null,
+      "artist": "U2",
+      "title": "Wide Awake in America",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 70,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 70",
+          "numeric": 70
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1144",
+      "sourceRow": 1144,
+      "lot": null,
+      "artist": "Ultraje a Rigor",
+      "title": "Sexo!",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 30,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 30",
+          "numeric": 30
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
+    },
+    {
+      "id": "vnn-1145",
+      "sourceRow": 1145,
+      "lot": null,
+      "artist": "ZZ Top",
+      "title": "Tejas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 200,
+      "market": [
+        {
+          "source": "VNN",
+          "display": "R$ 200",
+          "numeric": 200
+        }
+      ],
+      "tags": [
+        "VNN"
+      ]
     }
   ],
   "sources": [
@@ -16242,6 +17967,7 @@
     "Adornos",
     "Mercado Livre",
     "Vinyl Social Club",
-    "OLX"
+    "OLX",
+    "VNN"
   ]
 }

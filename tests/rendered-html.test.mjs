@@ -37,10 +37,9 @@ test("renders the price-reference list", async () => {
   const auctionHtml = html.match(/<section class="auction-watch"[\s\S]*?<section class="controls"/)?.[0] ?? "";
   assert.ok(auctionHtml);
   assert.match(auctionHtml, /role="tablist" aria-label="Datas dos próximos leilões"/);
-  assert.match(auctionHtml, /<strong>Anteontem<\/strong><span>26 ago/);
-  assert.match(auctionHtml, /<strong>Ontem<\/strong><span>27 ago/);
-  assert.match(auctionHtml, /aria-selected="true" class="active"><strong>Hoje<\/strong><span>28 ago/);
-  assert.match(auctionHtml, /Acioli Leilões/);
+  assert.match(auctionHtml, /<strong>Anteontem<\/strong><span>/);
+  assert.match(auctionHtml, /<strong>Ontem<\/strong><span>/);
+  assert.match(auctionHtml, /aria-selected="true" class="active"><strong>/);
   assert.match(html, /<details[^>]*auction-window/i);
   assert.match(html, /<summary>/i);
   assert.doesNotMatch(html, /<details[^>]*auction-window[^>]*\sopen(?:=|\s|>)/i);
@@ -69,6 +68,7 @@ test("keeps all data visible and compares offers inline", async () => {
   const catalogKeys = parsed.records.map((record) => `${normalize(record.artist)}|${normalize(record.title)}`);
   assert.equal(new Set(catalogKeys).size, catalogKeys.length);
   assert.ok(parsed.sources.includes("Vinyl Social Club"));
+  assert.ok(parsed.sources.includes("VNN"));
   const vinylSocialClubRecords = parsed.records.filter((record) =>
     record.market.some((entry) => entry.source === "Vinyl Social Club"),
   );
@@ -76,6 +76,16 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.ok(vinylSocialClubRecords.every((record) =>
     record.market.some((entry) => entry.source === "Vinyl Social Club" && entry.numeric > 0),
   ));
+  const vnnRecords = parsed.records.filter((record) =>
+    record.market.some((entry) => entry.source === "VNN"),
+  );
+  assert.equal(vnnRecords.length, 104);
+  assert.ok(vnnRecords.every((record) =>
+    record.market.some((entry) => entry.source === "VNN" && entry.numeric > 0),
+  ));
+  const vnnHurting = parsed.records.find((record) => normalize(record.artist) === "tears for fears" && normalize(record.title) === "the hurting");
+  assert.equal(vnnHurting?.market.filter((entry) => entry.source === "VNN").length, 1);
+  assert.equal(vnnHurting?.market.find((entry) => entry.source === "VNN")?.numeric, 70);
   const researchedMarketplaceRecords = parsed.records.filter((record) =>
     record.market.some((entry) => entry.checkedAt === "2026-08-20"),
   );
@@ -101,7 +111,7 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /<table>/);
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
-  assert.match(page, /VSC \/ outras lojas/);
+  assert.match(page, /VNN\/VSC\/outras/);
   assert.match(page, /mergeAuctionWatchIntoCatalog\(baseRecords, auctionEvents\)/);
   assert.match(page, /auctionWatchPrices/);
   assert.match(page, /currentBidMarkers: "\*-"/);

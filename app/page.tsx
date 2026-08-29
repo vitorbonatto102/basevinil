@@ -2683,9 +2683,15 @@ function observationDisplay(item: MarketObservation) {
   return `${base}${observationMarkers(item)}`;
 }
 
-function source(record: CatalogRecord, name: string) {
+const OTHER_STORE_SOURCES = ["VNN", "Vinyl Social Club", "Outras lojas"] as const;
+
+function matchesSource(item: MarketObservation, names: string | readonly string[]) {
+  return typeof names === "string" ? item.source === names : names.includes(item.source);
+}
+
+function source(record: CatalogRecord, names: string | readonly string[]) {
   const displays = [...new Set(record.market
-    .filter((item) => item.source === name)
+    .filter((item) => matchesSource(item, names))
     .map(observationDisplay))];
   if (!displays.length) return "—";
   if (displays.length === 1) return displays[0];
@@ -2816,10 +2822,10 @@ function parseNumberList(value: string) {
   return parseMarkedPriceList(value).map((entry) => entry.numeric);
 }
 
-function marketPriceInput(record: CatalogRecord, name: string) {
+function marketPriceInput(record: CatalogRecord, names: string | readonly string[]) {
   const entries = new Map<number, string>();
   record.market
-    .filter((item) => item.source === name && item.numeric !== null && item.numeric > 0)
+    .filter((item) => matchesSource(item, names) && item.numeric !== null && item.numeric > 0)
     .forEach((item) => entries.set(
       item.numeric!,
       mergePriceMarkers(entries.get(item.numeric!), observationMarkers(item)),
@@ -2850,13 +2856,18 @@ function recordDraft(record: CatalogRecord): CatalogDraft {
     olx: marketPriceInput(record, "OLX"),
     shopee: marketPriceInput(record, "Shopee"),
     leilao: markedPriceInput(auctionSeen, record.auctionPriceMarkers),
-    vinylSocialClub: marketPriceInput(record, "Vinyl Social Club"),
+    vinylSocialClub: marketPriceInput(record, OTHER_STORE_SOURCES),
     adornos: markedPriceInput(adornosValues(record), record.adornosPriceMarkers),
   };
 }
 
-function replaceMarketPrices(market: MarketObservation[], sourceName: string, value: string) {
-  const retained = market.filter((item) => item.source !== sourceName);
+function replaceMarketPrices(
+  market: MarketObservation[],
+  sourceName: string,
+  value: string,
+  sourceAliases: readonly string[] = [sourceName],
+) {
+  const retained = market.filter((item) => !sourceAliases.includes(item.source));
   const checkedAt = new Date().toISOString().slice(0, 10);
   const additions = parseMarkedPriceList(value).map(({ numeric, markers }) => ({
     source: sourceName,
@@ -2876,7 +2887,6 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
     ["Mercado Livre", draft.mercadoLivre, "mercadoLivre"],
     ["OLX", draft.olx, "olx"],
     ["Shopee", draft.shopee, "shopee"],
-    ["Vinyl Social Club", draft.vinylSocialClub, "vinylSocialClub"],
   ];
   const updatedMarket = sourceValues.reduce(
     (current, [sourceName, value, field]) => value === previous[field]
@@ -2884,9 +2894,12 @@ function recordFromDraft(record: CatalogRecord, draft: CatalogDraft): CatalogRec
       : replaceMarketPrices(current, sourceName, value),
     record.market,
   );
-  const market = !auctionChanged
+  const updatedStores = draft.vinylSocialClub === previous.vinylSocialClub
     ? updatedMarket
-    : updatedMarket.filter((item) => item.source !== "Leilão observado");
+    : replaceMarketPrices(updatedMarket, "Outras lojas", draft.vinylSocialClub, OTHER_STORE_SOURCES);
+  const market = !auctionChanged
+    ? updatedStores
+    : updatedStores.filter((item) => item.source !== "Leilão observado");
   const marketNumbers = market
     .map((item) => item.numeric)
     .filter((value): value is number => value !== null && value > 0);
@@ -3617,7 +3630,7 @@ export default function Home() {
               <label><span>OLX</span><input inputMode="text" placeholder="60/80*" value={draft.olx} onChange={(event) => updateDraft("olx", event.target.value)} /></label>
               <label><span>Shopee</span><input inputMode="text" placeholder="60/80*" value={draft.shopee} onChange={(event) => updateDraft("shopee", event.target.value)} /></label>
               <label><span>Leilão visto</span><input inputMode="text" placeholder="20/55*-" value={draft.leilao} onChange={(event) => updateDraft("leilao", event.target.value)} /></label>
-              <label><span>VSC / outras lojas</span><input inputMode="text" placeholder="59*" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
+              <label><span>VNN/VSC/outras</span><input inputMode="text" placeholder="59*" value={draft.vinylSocialClub} onChange={(event) => updateDraft("vinylSocialClub", event.target.value)} /></label>
               <label><span>Adornos</span><input inputMode="text" placeholder="148/189" value={draft.adornos} onChange={(event) => updateDraft("adornos", event.target.value)} /></label>
             </div>
             <p className="price-marker-help"><strong>*</strong> vendido, esgotado ou indisponível · <strong>-</strong> avaria ou estado inferior relevante · exemplo: 55*-</p>
@@ -3653,7 +3666,7 @@ export default function Home() {
               <th>OLX</th>
               <th>Shopee</th>
               <th>Leilão visto</th>
-              <th>VSC / outras lojas</th>
+              <th>VNN/VSC/outras</th>
               <th className="adornos-head">Adornos</th>
               <th className="reference-head">Referência</th>
               <th className="offer-head">Preço encontrado</th>
@@ -3681,7 +3694,7 @@ export default function Home() {
                   {inlineCell(record, "olx", source(record, "OLX"), "price-source", "text")}
                   {inlineCell(record, "shopee", source(record, "Shopee"), "price-source", "text")}
                   {inlineCell(record, "leilao", auctionDisplay(record), "money-cell", "text")}
-                  {inlineCell(record, "vinylSocialClub", source(record, "Vinyl Social Club"), "price-source", "text")}
+                  {inlineCell(record, "vinylSocialClub", source(record, OTHER_STORE_SOURCES), "price-source", "text")}
                   {inlineCell(record, "adornos", adornosDisplay(record), "adornos-cell", "text")}
                   <td className="reference-cell">{money(reference)}</td>
                   <td className="offer-cell">
