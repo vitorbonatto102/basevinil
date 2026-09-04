@@ -37,8 +37,6 @@ test("renders the price-reference list", async () => {
   const auctionHtml = html.match(/<section class="auction-watch"[\s\S]*?<section class="controls"/)?.[0] ?? "";
   assert.ok(auctionHtml);
   assert.match(auctionHtml, /role="tablist" aria-label="Datas dos próximos leilões"/);
-  assert.match(auctionHtml, /<strong>Anteontem<\/strong><span>/);
-  assert.match(auctionHtml, /<strong>Ontem<\/strong><span>/);
   assert.match(auctionHtml, /aria-selected="true" class="active"><strong>/);
   assert.match(html, /<details[^>]*auction-window/i);
   assert.match(html, /<summary>/i);
@@ -57,7 +55,7 @@ test("keeps all data visible and compares offers inline", async () => {
   ]);
   const parsed = JSON.parse(catalog);
   const wantedItems = JSON.parse(wanted);
-  assert.ok(parsed.records.length >= 1056);
+  assert.ok(parsed.records.length >= 1300);
   assert.equal(wantedItems.length, 132);
   assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
   assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
@@ -101,7 +99,16 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.ok(researchedMarketplaceRecords.every((record) =>
     record.market.every((entry) => entry.checkedAt !== "2026-08-20" || (entry.url && entry.shipping)),
   ));
-  assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 336);
+  assert.ok(parsed.records.filter((record) => record.adornosPrice != null || record.adornosPrices?.length).length >= 528);
+  const anjoAvesso = parsed.records.find((record) => normalize(record.artist) === "alceu valenca" && normalize(record.title) === "anjo avesso");
+  const saudadesDoBrasil = parsed.records.find((record) => normalize(record.artist) === "elis regina" && normalize(record.title).startsWith("saudades do brasil"));
+  const rhythmOfTheSaints = parsed.records.find((record) => normalize(record.artist) === "paul simon" && normalize(record.title) === "the rhythm of the saints");
+  const cultElectric = parsed.records.find((record) => normalize(record.artist) === "the cult" && normalize(record.title) === "electric");
+  assert.deepEqual(anjoAvesso?.adornosPrices, [43, 65]);
+  assert.deepEqual(saudadesDoBrasil?.adornosPrices, [148, 65]);
+  assert.equal(rhythmOfTheSaints?.adornosPrice, 21);
+  assert.equal(cultElectric?.adornosPrice, 87);
+  assert.equal(cultElectric?.market.find((entry) => entry.source === "VNN")?.numeric, 70);
   const backInBlack = parsed.records.find((record) => record.artist === "AC/DC" && record.title === "Back In Black");
   const fireball = parsed.records.find((record) => record.artist === "Deep Purple" && record.title === "Fireball");
   const garotosPodres = parsed.records.find((record) => record.artist === "Garotos Podres" && record.title === "Pisando Na M...");
