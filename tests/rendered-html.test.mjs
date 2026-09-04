@@ -156,6 +156,14 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /Canções De Amor E Liberdade/);
   assert.match(page, /24 a 28 de agosto · 19h30/);
   assert.match(page, /discos-esquecidos-64691/);
+  assert.match(page, /catavento-discos-64681/);
+  assert.match(page, /const catavento64681AuctionWatch/);
+  assert.match(page, /syncCatalog: false/);
+  assert.match(page, /event\.syncCatalog !== false/);
+  assert.match(page, /lot: 178/);
+  assert.match(page, /Paris \(2LP\)/);
+  assert.match(page, /lot: 341/);
+  assert.match(page, /Stop Making Sense/);
   assert.match(page, /lot: 184/);
   assert.match(page, /The Stonewall Celebration Concert/);
   assert.match(page, /8 de setembro · 19h/);
