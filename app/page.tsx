@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import catalog from "./data/catalog.json";
+import auctionResultData from "./data/auction-results.json";
 import wantedData from "./data/wanted.json";
 
 type MarketObservation = {
@@ -103,6 +104,16 @@ type AuctionEvent = {
   syncCatalog?: boolean;
   items: AuctionWatch[];
 };
+
+type SettledAuctionResult = {
+  artist: string;
+  title: string;
+  price: number;
+};
+
+const catavento64681DayOneResults: SettledAuctionResult[] = (
+  auctionResultData.catavento64681Day1 as [string, string, number][]
+).map(([artist, title, price]) => ({ artist, title, price }));
 
 const auctionMonths: Record<string, number> = {
   jan: 1, fev: 2, mar: 3, abr: 4, mai: 5, jun: 6,
@@ -2994,6 +3005,14 @@ function catalogIdentity(artist: string, title: string) {
   return lookupText(artist) + "::" + titleKey;
 }
 
+function comparableCatalogTitle(title: string) {
+  return lookupText(title)
+    .replace(/\b(capa dupla|reedicao|edicao|original|importado|nacional|japan|og|trilha sonora|filme)\b/g, " ")
+    .replace(/\b(the|of|do|da|de|dos|das|e)\b/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function auctionRecordId(artist: string, title: string) {
   const identity = catalogIdentity(artist, title);
   const slug = identity.replace("::", "-").replace(/\s+/g, "-").slice(0, 150);
@@ -3025,13 +3044,46 @@ function mergeAuctionWatchIntoCatalog(
     .map((record) => catalogIdentity(record.artist, record.title)));
   let nextSourceRow = Math.max(0, ...merged.map((record) => record.sourceRow)) + 1;
 
-  for (const { event, item } of events.flatMap((event) => event.items.map((item) => ({ event, item })))) {
-    const catalogPrice = item.settledPrice ?? (event.syncCatalog !== false ? item.currentBid : null);
+  const catalogItems = [
+    ...catavento64681DayOneResults.map((result) => ({
+      artist: result.artist,
+      title: result.title,
+      catalogPrice: result.price,
+      priceMarkers: undefined as string | undefined,
+      provisional: false,
+    })),
+    ...events.flatMap((event) => event.items.map((item) => ({
+      artist: item.artist,
+      title: item.title,
+      catalogPrice: item.settledPrice ?? (event.syncCatalog !== false ? item.currentBid : null),
+      priceMarkers: item.currentBidMarkers,
+      provisional: item.settledPrice == null,
+    }))),
+  ];
+
+  for (const item of catalogItems) {
+    const { catalogPrice } = item;
     if (catalogPrice === null || !Number.isFinite(catalogPrice) || catalogPrice <= 0) continue;
     const identity = catalogIdentity(item.artist, item.title);
     const generatedId = auctionRecordId(item.artist, item.title);
     if (deletedIdentities.has(identity) || deletedIds.has(generatedId)) continue;
-    const recordIndex = indexes.get(identity);
+    let recordIndex = indexes.get(identity);
+    if (recordIndex === undefined) {
+      const artistKey = lookupText(item.artist);
+      const titleKey = comparableCatalogTitle(item.title);
+      const selfTitled = titleKey === comparableCatalogTitle(item.artist);
+      if (!selfTitled && titleKey.length >= 4) {
+        recordIndex = merged.findIndex((record) => {
+          if (lookupText(record.artist) !== artistKey) return false;
+          const recordTitleKey = comparableCatalogTitle(record.title);
+          return recordTitleKey === titleKey
+            || (recordTitleKey.length >= 4
+              && (recordTitleKey.includes(titleKey) || titleKey.includes(recordTitleKey)));
+        });
+        if (recordIndex >= 0) indexes.set(identity, recordIndex);
+        else recordIndex = undefined;
+      }
+    }
     if (recordIndex === undefined) {
       merged.push({
         id: generatedId,
@@ -3041,13 +3093,13 @@ function mergeAuctionWatchIntoCatalog(
         title: item.title,
         year: null,
         auctionPrice: catalogPrice,
-        auctionWatchPrices: item.settledPrice == null ? [catalogPrice] : undefined,
-        auctionPriceMarkers: item.currentBidMarkers
-          ? { [priceMarkerKey(catalogPrice)]: normalizePriceMarkers(item.currentBidMarkers) }
+        auctionWatchPrices: item.provisional ? [catalogPrice] : undefined,
+        auctionPriceMarkers: item.priceMarkers
+          ? { [priceMarkerKey(catalogPrice)]: normalizePriceMarkers(item.priceMarkers) }
           : undefined,
         marketMin: null,
         market: [],
-        tags: ["Radar de leilão"],
+        tags: [item.provisional ? "Radar de leilão" : "Resultado de leilão"],
         adornosPrice: null,
       });
       indexes.set(identity, merged.length - 1);
@@ -3063,10 +3115,10 @@ function mergeAuctionWatchIntoCatalog(
         ? [record.auctionPrice]
         : [];
     const auctionPrices = [...new Set([...previousPrices, catalogPrice])];
-    const auctionWatchPrices = item.settledPrice == null
+    const auctionWatchPrices = item.provisional || record.auctionPriceStatus === "unverified-copy"
       ? [...new Set([...(record.auctionWatchPrices ?? []), catalogPrice])]
       : record.auctionWatchPrices;
-    const currentBidMarkers = normalizePriceMarkers(item.currentBidMarkers);
+    const currentBidMarkers = normalizePriceMarkers(item.priceMarkers);
     const auctionPriceMarkers = currentBidMarkers
       ? {
         ...(record.auctionPriceMarkers ?? {}),

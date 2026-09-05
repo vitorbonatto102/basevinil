@@ -47,15 +47,18 @@ test("renders the price-reference list", async () => {
 });
 
 test("keeps all data visible and compares offers inline", async () => {
-  const [page, catalog, wanted, css] = await Promise.all([
+  const [page, catalog, auctionResults, wanted, css] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/data/catalog.json", import.meta.url), "utf8"),
+    readFile(new URL("../app/data/auction-results.json", import.meta.url), "utf8"),
     readFile(new URL("../app/data/wanted.json", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
+  const parsedAuctionResults = JSON.parse(auctionResults);
   const wantedItems = JSON.parse(wanted);
   assert.ok(parsed.records.length >= 1300);
+  assert.equal(parsedAuctionResults.catavento64681Day1.length, 184);
   assert.equal(wantedItems.length, 132);
   assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
   assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
@@ -166,7 +169,8 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /settledPrice: 99/);
   assert.match(page, /settledPrice: 90/);
   assert.match(page, /saleStatus: "unsold"/);
-  assert.match(page, /const catalogPrice = item\.settledPrice/);
+  assert.match(page, /catavento64681DayOneResults/);
+  assert.match(page, /catalogPrice: result\.price/);
   assert.match(page, /lot: 178/);
   assert.match(page, /Paris \(2LP\)/);
   assert.match(page, /lot: 341/);
