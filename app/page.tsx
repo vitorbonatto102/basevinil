@@ -82,6 +82,8 @@ type AuctionWatch = {
   nextBid: number;
   currentBidMarkers?: string;
   bidLabel?: string;
+  settledPrice?: number;
+  saleStatus?: "sold" | "unsold";
   ceiling: number;
   priority: string;
   tone: "high" | "medium" | "careful";
@@ -2443,10 +2445,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "Brasil 1982; capa regular; com encarte; disco não testado",
     currentBid: 59,
     nextBid: 69,
+    settledPrice: 89,
+    saleStatus: "sold",
     ceiling: 100,
     priority: "Garimpo forte · 8/10",
     tone: "high",
-    note: "Pedidos ativos diretamente comparáveis com encarte aparecem perto de R$ 260–300. O desconto é grande, mas o estado é apenas visual e o teto fica bem abaixo do varejo.",
+    note: "Vendido por R$ 89. Pedidos ativos diretamente comparáveis com encarte aparecem perto de R$ 260–300; o estado do lote era apenas visual.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32267178",
   },
   {
@@ -2457,10 +2461,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "Brasil 1979; capa regular; com encarte; disco não testado",
     currentBid: 18,
     nextBid: 28,
+    settledPrice: 28,
+    saleStatus: "sold",
     ceiling: 30,
     priority: "Complemento barato · 6,5/10",
     tone: "medium",
-    note: "Há anúncios ativos desde R$ 22–38 e cópias melhores a R$ 50–79. Vale como acréscimo no mesmo frete, mas é comum e não merece disputa.",
+    note: "Vendido por R$ 28. Há anúncios ativos desde R$ 22–38 e cópias melhores a R$ 50–79; saiu em preço normal.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32267217",
   },
   {
@@ -2471,10 +2477,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "1979; capa regular; com encarte; disco não testado; país não confirmado",
     currentBid: 89,
     nextBid: 99,
+    settledPrice: 89,
+    saleStatus: "sold",
     ceiling: 120,
     priority: "Procura Márcio · A · 7,5/10",
     tone: "high",
-    note: "Cópias VG+/VG+ estão anunciadas por cerca de R$ 200–220. Ainda há margem, mas origem e reprodução precisam ser confirmadas antes de usar o teto.",
+    note: "Vendido por R$ 89. Cópias VG+/VG+ estão anunciadas por cerca de R$ 200–220; a origem desta cópia não foi confirmada.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32274617",
   },
   {
@@ -2485,10 +2493,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "Brasil 1980; gatefold regular; com encarte; discos não testados",
     currentBid: 39,
     nextBid: 49,
+    settledPrice: 59,
+    saleStatus: "sold",
     ceiling: 60,
     priority: "Boa compra · 7/10",
     tone: "high",
-    note: "Um comparável brasileiro com encarte foi vendido por R$ 100; anúncios atuais começam em R$ 70–90. A vantagem existe no próximo lance, não numa disputa longa.",
+    note: "Vendido por R$ 59. Um comparável brasileiro com encarte foi vendido por R$ 100 e anúncios atuais começam em R$ 70–90.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32275697",
   },
   {
@@ -2499,10 +2509,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "1976; gatefold regular; encarte não mencionado; disco não testado; país não confirmado",
     currentBid: 79,
     nextBid: 89,
+    settledPrice: 99,
+    saleStatus: "sold",
     ceiling: 130,
     priority: "Garimpo forte · 8/10",
     tone: "high",
-    note: "A edição nacional usada com encarte está anunciada a R$ 266 e uma cópia NM a R$ 310. O lote é inferior e incompleto até prova contrária, por isso o teto é conservador.",
+    note: "Vendido por R$ 99. A edição nacional usada com encarte está anunciada a R$ 266 e uma cópia NM a R$ 310; este lote era inferior e incompleto até prova contrária.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32279601",
   },
   {
@@ -2513,10 +2525,12 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     condition: "1971; capa regular; disco não testado; país/prensagem não confirmados",
     currentBid: 69,
     nextBid: 79,
+    settledPrice: 90,
+    saleStatus: "sold",
     ceiling: 100,
     priority: "Interessante · 7/10",
     tone: "medium",
-    note: "Pedidos brasileiros usados aparecem a partir de R$ 120 e normalmente em R$ 143–160. A identificação incompleta e o estado visual limitam a margem.",
+    note: "Vendido por R$ 90. Pedidos brasileiros usados aparecem a partir de R$ 120 e normalmente em R$ 143–160; identificação e prensagem seguiram incompletas.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32279603",
   },
   {
@@ -2528,10 +2542,11 @@ const catavento64681AuctionWatch: AuctionWatch[] = [
     currentBid: 20,
     nextBid: 20,
     bidLabel: "Abertura",
+    saleStatus: "unsold",
     ceiling: 70,
     priority: "Melhor custo do dia · 8,5/10",
     tone: "high",
-    note: "Anúncios atuais comparáveis começam em R$ 117 para importado usado e R$ 153 para nacional; cópia nacional NM chega a R$ 181. Confirmar a prensagem nas fotos.",
+    note: "Encerrado sem lance; os R$ 20 eram apenas o valor inicial e não entram no catálogo como venda. Anúncios atuais comparáveis começam em R$ 117.",
     url: "https://leiloes.cataventodiscos.com.br/peca.asp?id=32281515",
   },
   {
@@ -2702,7 +2717,7 @@ const auctionEvents: AuctionEvent[] = [
     expiresAt: "2026-09-07T00:00:00-03:00",
     costs: "5% de comissão + frete/embalagem; discos avaliados visualmente e não testados",
     catalogUrl: "https://leiloes.cataventodiscos.com.br/catalogo.asp?Num=64681&Nav=lista&Sec=Catalogo&Pag=1&Srt=0&tipo=129",
-    updatedAt: "4 set 2026 · 490 discos conferidos",
+    updatedAt: "5 set 2026 · primeira sessão encerrada; segunda sessão às 20h",
     syncCatalog: false,
     items: catavento64681AuctionWatch,
   },
@@ -3010,8 +3025,9 @@ function mergeAuctionWatchIntoCatalog(
     .map((record) => catalogIdentity(record.artist, record.title)));
   let nextSourceRow = Math.max(0, ...merged.map((record) => record.sourceRow)) + 1;
 
-  for (const item of events.filter((event) => event.syncCatalog !== false).flatMap((event) => event.items)) {
-    if (!Number.isFinite(item.currentBid) || item.currentBid <= 0) continue;
+  for (const { event, item } of events.flatMap((event) => event.items.map((item) => ({ event, item })))) {
+    const catalogPrice = item.settledPrice ?? (event.syncCatalog !== false ? item.currentBid : null);
+    if (catalogPrice === null || !Number.isFinite(catalogPrice) || catalogPrice <= 0) continue;
     const identity = catalogIdentity(item.artist, item.title);
     const generatedId = auctionRecordId(item.artist, item.title);
     if (deletedIdentities.has(identity) || deletedIds.has(generatedId)) continue;
@@ -3024,10 +3040,10 @@ function mergeAuctionWatchIntoCatalog(
         artist: item.artist,
         title: item.title,
         year: null,
-        auctionPrice: item.currentBid,
-        auctionWatchPrices: [item.currentBid],
+        auctionPrice: catalogPrice,
+        auctionWatchPrices: item.settledPrice == null ? [catalogPrice] : undefined,
         auctionPriceMarkers: item.currentBidMarkers
-          ? { [priceMarkerKey(item.currentBid)]: normalizePriceMarkers(item.currentBidMarkers) }
+          ? { [priceMarkerKey(catalogPrice)]: normalizePriceMarkers(item.currentBidMarkers) }
           : undefined,
         marketMin: null,
         market: [],
@@ -3046,14 +3062,16 @@ function mergeAuctionWatchIntoCatalog(
       : record.auctionPrice != null
         ? [record.auctionPrice]
         : [];
-    const auctionPrices = [...new Set([...previousPrices, item.currentBid])];
-    const auctionWatchPrices = [...new Set([...(record.auctionWatchPrices ?? []), item.currentBid])];
+    const auctionPrices = [...new Set([...previousPrices, catalogPrice])];
+    const auctionWatchPrices = item.settledPrice == null
+      ? [...new Set([...(record.auctionWatchPrices ?? []), catalogPrice])]
+      : record.auctionWatchPrices;
     const currentBidMarkers = normalizePriceMarkers(item.currentBidMarkers);
     const auctionPriceMarkers = currentBidMarkers
       ? {
         ...(record.auctionPriceMarkers ?? {}),
-        [priceMarkerKey(item.currentBid)]: mergePriceMarkers(
-          record.auctionPriceMarkers?.[priceMarkerKey(item.currentBid)],
+        [priceMarkerKey(catalogPrice)]: mergePriceMarkers(
+          record.auctionPriceMarkers?.[priceMarkerKey(catalogPrice)],
           currentBidMarkers,
         ),
       }
@@ -3841,7 +3859,9 @@ export default function Home() {
                 </div>
 
                 <div className="auction-days">
-                  {auctionGroups(event.items).map(([date, items]) => (
+                  {auctionGroups(event.items).map(([date, items]) => {
+                    const settledDay = items.every((item) => item.saleStatus != null);
+                    return (
                     <section className="auction-day" key={date} aria-label={`Lotes de ${date}`}>
                       <header>
                         <strong>{date}</strong>
@@ -3849,12 +3869,19 @@ export default function Home() {
                       </header>
                       <div className="auction-list-head" aria-hidden="true">
                         <span>Lote</span><span>Disco / estado</span>
-                        <span className="auction-price-head"><i>Lance</i><i>Próximo</i><i>Próximo + 5%</i><i>Teto</i></span>
+                        <span className="auction-price-head">
+                          {settledDay
+                            ? <><i>Venda</i><i>Resultado</i><i>Venda + 5%</i><i>Teto</i></>
+                            : <><i>Lance</i><i>Próximo</i><i>Próximo + 5%</i><i>Teto</i></>}
+                        </span>
                         <span>Leitura</span><span />
                       </div>
                       <div className="auction-list">
                         {items.map((item) => {
-                          const withCommission = item.nextBid * 1.05;
+                          const isSold = item.saleStatus === "sold" && item.settledPrice != null;
+                          const isUnsold = item.saleStatus === "unsold";
+                          const displayPrice = isSold ? item.settledPrice! : item.currentBid;
+                          const withCommission = (isSold ? item.settledPrice! : item.nextBid) * 1.05;
                           const wanted = wantedMatch(item.artist, item.title);
                           return (
                             <article className={`auction-row ${item.tone}`} key={item.lot}>
@@ -3868,9 +3895,9 @@ export default function Home() {
                                 <small title={item.note}>{item.note}</small>
                               </div>
                               <dl className="auction-row-prices">
-                                <div><dt>{item.bidLabel ?? "Lance"}</dt><dd>{money(item.currentBid)}</dd></div>
-                                <div><dt>Próximo</dt><dd>{money(item.nextBid)}</dd></div>
-                                <div><dt>Próximo + 5%</dt><dd>{exactMoney(withCommission)}</dd></div>
+                                <div><dt>{isSold ? "Venda" : item.bidLabel ?? "Lance"}</dt><dd>{money(displayPrice)}</dd></div>
+                                <div><dt>{item.saleStatus ? "Resultado" : "Próximo"}</dt><dd>{isSold ? "Vendido" : isUnsold ? "Sem lance" : money(item.nextBid)}</dd></div>
+                                <div><dt>{isSold ? "Venda + 5%" : "Próximo + 5%"}</dt><dd>{isUnsold ? "—" : exactMoney(withCommission)}</dd></div>
                                 <div className="ceiling"><dt>Teto</dt><dd>{money(item.ceiling)}</dd></div>
                               </dl>
                               <div className="auction-priority"><b>{item.priority}</b></div>
@@ -3882,12 +3909,13 @@ export default function Home() {
                         })}
                       </div>
                     </section>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 <div className="auction-footnote">
                   <span>Atualizado em {event.updatedAt}</span>
-                  <p>A coluna “Próximo + 5%” usa sempre o próximo lance. Antes de ofertar, confirme também frete e embalagem.</p>
+                  <p>Nas sessões abertas, os 5% usam o próximo lance; nas encerradas, usam o valor de venda. Frete e embalagem não estão incluídos.</p>
                   <a href={event.catalogUrl} target="_blank" rel="noreferrer">Abrir este leilão <span aria-hidden="true">↗</span></a>
                 </div>
               </div>

@@ -160,6 +160,13 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /const catavento64681AuctionWatch/);
   assert.match(page, /syncCatalog: false/);
   assert.match(page, /event\.syncCatalog !== false/);
+  assert.match(page, /settledPrice: 89/);
+  assert.match(page, /settledPrice: 28/);
+  assert.match(page, /settledPrice: 59/);
+  assert.match(page, /settledPrice: 99/);
+  assert.match(page, /settledPrice: 90/);
+  assert.match(page, /saleStatus: "unsold"/);
+  assert.match(page, /const catalogPrice = item\.settledPrice/);
   assert.match(page, /lot: 178/);
   assert.match(page, /Paris \(2LP\)/);
   assert.match(page, /lot: 341/);
