@@ -59,6 +59,7 @@ test("keeps all data visible and compares offers inline", async () => {
   const wantedItems = JSON.parse(wanted);
   assert.ok(parsed.records.length >= 1300);
   assert.equal(parsedAuctionResults.catavento64681Day1.length, 184);
+  assert.equal(parsedAuctionResults.catavento64681Day2TopFive.length, 128);
   assert.equal(wantedItems.length, 132);
   assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
   assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
@@ -169,7 +170,7 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /settledPrice: 99/);
   assert.match(page, /settledPrice: 90/);
   assert.match(page, /saleStatus: "unsold"/);
-  assert.match(page, /catavento64681DayOneResults/);
+  assert.match(page, /catavento64681SettledResults/);
   assert.match(page, /catalogPrice: result\.price/);
   assert.match(page, /lot: 178/);
   assert.match(page, /Paris \(2LP\)/);

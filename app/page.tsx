@@ -115,6 +115,15 @@ const catavento64681DayOneResults: SettledAuctionResult[] = (
   auctionResultData.catavento64681Day1 as [string, string, number][]
 ).map(([artist, title, price]) => ({ artist, title, price }));
 
+const catavento64681DayTwoTopFiveResults: SettledAuctionResult[] = (
+  auctionResultData.catavento64681Day2TopFive as [string, string, number][]
+).map(([artist, title, price]) => ({ artist, title, price }));
+
+const catavento64681SettledResults = [
+  ...catavento64681DayOneResults,
+  ...catavento64681DayTwoTopFiveResults,
+];
+
 const auctionMonths: Record<string, number> = {
   jan: 1, fev: 2, mar: 3, abr: 4, mai: 5, jun: 6,
   jul: 7, ago: 8, set: 9, out: 10, nov: 11, dez: 12,
@@ -3045,7 +3054,7 @@ function mergeAuctionWatchIntoCatalog(
   let nextSourceRow = Math.max(0, ...merged.map((record) => record.sourceRow)) + 1;
 
   const catalogItems = [
-    ...catavento64681DayOneResults.map((result) => ({
+    ...catavento64681SettledResults.map((result) => ({
       artist: result.artist,
       title: result.title,
       catalogPrice: result.price,
