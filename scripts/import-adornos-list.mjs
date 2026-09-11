@@ -38,9 +38,11 @@ const titleKey = (value) => normalize(value)
 
 const artistAliases = new Map([
   [normalize("BTO"), normalize("Bachman-Turner Overdrive")],
+  [normalize("Hamony Cats"), normalize("Harmony Cats")],
   [normalize("Motorhead"), normalize("Motörhead")],
   [normalize("Motley Crue"), normalize("Mötley Crüe")],
   [normalize("Oscar Perterson"), normalize("Oscar Peterson")],
+  [normalize("Reinassance"), normalize("Renaissance")],
   [normalize("The Doobies"), normalize("The Doobie Brothers")],
 ]);
 
@@ -55,9 +57,16 @@ const canonicalItems = new Map([
   [`${normalize("Oscar Perterson")}\u0000${titleKey("The Way I Really Play")}`, { artist: "Oscar Peterson", title: "The Way I Really Play" }],
   [`${normalize("Elis Regina")}\u0000${titleKey("Saudade Do Brasil")}`, { artist: "Elis Regina", title: "Saudades Do Brasil (Box - 2 LP)" }],
   [`${normalize("Leandro & Leonardo")}\u0000${titleKey("1990")}`, { artist: "Leandro & Leonardo", title: "Leandro & Leonardo" }],
+  [`${normalize("Hamony Cats")}\u0000${titleKey("Show")}`, { artist: "Harmony Cats", title: "The Harmony Cats Show" }],
+  [`${normalize("Genesis")}\u0000${titleKey("Wind And Whutering")}`, { artist: "Genesis", title: "Winds & Wuthering" }],
+  [`${normalize("Led Zeppelin")}\u0000${titleKey("House Of The Holy")}`, { artist: "Led Zeppelin", title: "Houses Of The Holy" }],
+  [`${normalize("Lynyrd Skynyrd")}\u0000${titleKey("Seconds Helping")}`, { artist: "Lynyrd Skynyrd", title: "Second Helping" }],
   [`${normalize("Paul Simon")}\u0000${titleKey("The Rhythm Of The Saints")}`, { artist: "Paul Simon", title: "The Rhythm Of The Saints" }],
+  [`${normalize("Reinassance")}\u0000${titleKey("Ashes Are Burning")}`, { artist: "Renaissance", title: "Ashes Are Burning" }],
   [`${normalize("Simply Red")}\u0000${titleKey("Man And Woman")}`, { artist: "Simply Red", title: "Men And Women" }],
+  [`${normalize("Stevie Wonder")}\u0000${titleKey("In A Square Circle")}`, { artist: "Stevie Wonder", title: "In Square Circle" }],
   [`${normalize("The Beatles")}\u0000${titleKey("Os Reis Do Ie, Ie, Ie")}`, { artist: "The Beatles", title: "Help!" }],
+  [`${normalize("The Beatles")}\u0000${titleKey("St Pepper´s")}`, { artist: "The Beatles", title: "Sgt. Pepper's Lonely Hearts Club Band" }],
   [`${normalize("The Cult")}\u0000${titleKey("Eletric")}`, { artist: "The Cult", title: "Electric" }],
   [`${normalize("The Doobies")}\u0000${titleKey("The Best Of")}`, { artist: "The Doobie Brothers", title: "Best Of The Doobies" }],
 ]);
