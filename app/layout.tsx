@@ -7,18 +7,18 @@ export const metadata: Metadata = {
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
     shortcut: "/favicon.png",
-    apple: "/favicon.png",
+    apple: "/apple-touch-icon.png",
   },
   openGraph: {
     title: "Preço de Disco — lista de consulta",
     description: "Pesquise, compare e saiba se um disco está barato.",
-    images: [{ url: "https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.png", width: 1200, height: 630 }],
+    images: [{ url: "https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Preço de Disco — lista de consulta",
     description: "Pesquise, compare e saiba se um disco está barato.",
-    images: ["https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.png"],
+    images: ["https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.jpg"],
   },
 };
 

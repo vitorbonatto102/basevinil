@@ -6,7 +6,10 @@
     "node": ">=22.13.0"
   },
   "scripts": {
+    "sync:catalog": "node scripts/sync-public-catalog.mjs",
+    "predev": "npm run sync:catalog",
     "dev": "vinext dev",
+    "prebuild": "npm run sync:catalog",
     "build": "vinext build",
     "start": "vinext start",
     "test": "npm run build && node --test tests/rendered-html.test.mjs",

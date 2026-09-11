@@ -24,35 +24,34 @@ test("renders the price-reference list", async () => {
   assert.match(html, /Mercado Livre/);
   assert.match(html, /VNN\/VSC\/outras/);
   assert.match(html, /Adornos/);
-  assert.match(html, /R\$ 55\*-?/);
+  assert.match(html, /Carregando catálogo/);
   assert.match(html, /footer-price-legend/);
   assert.match(html, /vendido, esgotado ou anúncio indisponível/);
   assert.match(html, /exemplar com avaria\/estado inferior/);
   assert.match(html, /Márcio Cândido/);
   assert.match(html, /132 títulos pendentes para encontrar/);
-  assert.match(html, /Preços e leilões/);
+  assert.match(html, /Tabela de preços/);
   assert.match(html, /aria-pressed="true"/);
   assert.match(html, /Copiar separados/);
   assert.match(html, /Próximos leilões/);
   const auctionHtml = html.match(/<section class="auction-watch"[\s\S]*?<section class="controls"/)?.[0] ?? "";
   assert.ok(auctionHtml);
   assert.match(auctionHtml, /role="tablist" aria-label="Datas dos próximos leilões"/);
-  assert.match(auctionHtml, /aria-selected="true" class="active"><strong>/);
-  assert.match(html, /<details[^>]*auction-window/i);
-  assert.match(html, /<summary>/i);
-  assert.doesNotMatch(html, /<details[^>]*auction-window[^>]*\sopen(?:=|\s|>)/i);
-  assert.match(html, /auction-day/i);
+  assert.doesNotMatch(html, /<details[^>]*auction-window/i);
+  assert.doesNotMatch(html, /<article[^>]*catalog-row/i);
   assert.doesNotMatch(html, /auction-card/i);
   assert.doesNotMatch(html, /Explore o catálogo|role="dialog"|cover-art/i);
 });
 
-test("keeps all data visible and compares offers inline", async () => {
-  const [page, catalog, auctionResults, wanted, css] = await Promise.all([
+test("loads the catalog separately and renders a virtualized editable table", async () => {
+  const [page, catalog, auctionResults, wanted, css, syncScript, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/data/catalog.json", import.meta.url), "utf8"),
     readFile(new URL("../app/data/auction-results.json", import.meta.url), "utf8"),
     readFile(new URL("../app/data/wanted.json", import.meta.url), "utf8"),
     readFile(new URL("../app/globals.css", import.meta.url), "utf8"),
+    readFile(new URL("../scripts/sync-public-catalog.mjs", import.meta.url), "utf8"),
+    readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
   const parsed = JSON.parse(catalog);
   const parsedAuctionResults = JSON.parse(auctionResults);
@@ -124,13 +123,19 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.equal(metallicaJustice?.adornosPrice, 189);
   assert.equal(parsed.records.some((record) => record.artist === "Metallica" && record.title === "1989"), false);
   assert.equal(vanHalen1984?.adornosPrice, 189);
-  assert.match(page, /<table>/);
+  assert.match(page, /<table\b/);
   assert.doesNotMatch(page, /<th>Lote<\/th>/);
   assert.match(page, /Vinyl Social Club/);
   assert.match(page, /VNN\/VSC\/outras/);
   assert.match(page, /HIDDEN_SOURCE_TAGS/);
   assert.match(page, /const duplicateIndex = merged\.findIndex/);
-  assert.match(page, /mergeAuctionWatchIntoCatalog\(baseRecords, auctionEvents\)/);
+  assert.doesNotMatch(page, /import catalog from "\.\/data\/catalog\.json"/);
+  assert.match(page, /fetch\("\/catalog\.json"/);
+  assert.match(page, /setRecords\(mergeCatalogEdits\(baseRecords, \[\]\)\)/);
+  assert.match(page, /if \(editData\.edits\?\.length\) setRecords\(mergeCatalogEdits\(baseRecords, editData\.edits\)\)/);
+  assert.match(syncScript, /app\/data\/catalog\.json/);
+  assert.match(syncScript, /public\/catalog\.json/);
+  assert.equal(JSON.parse(packageJson).scripts.prebuild, "npm run sync:catalog");
   assert.match(page, /auctionWatchPrices/);
   assert.match(page, /currentBidMarkers: "\*-"/);
   assert.match(page, /parseMarkedPriceList/);
@@ -181,12 +186,16 @@ test("keeps all data visible and compares offers inline", async () => {
   assert.match(page, /8 de setembro · 19h/);
   assert.match(page, /wanted-hit/);
   assert.match(page, /activeView === "marcio" && filteredWanted\.map/);
+  assert.match(page, /activeView === "leiloes" && datedAuctionEvents\.map/);
   assert.doesNotMatch(page, /function catalogMatch|function openCatalogMatch|wanted-reference|coverage === "procuras"/);
   assert.match(page, /availableAuctionDates/);
   assert.match(page, /datedAuctionEvents/);
   assert.doesNotMatch(page, /record-card|load-more/);
-  assert.match(css, /thead \{ position: relative;/);
-  assert.doesNotMatch(css, /thead \{ position: sticky|\.controls \{[^}]*position: sticky/s);
+  assert.match(page, /const TABLE_OVERSCAN = 12/);
+  assert.match(page, /virtualTable\.rows\.map/);
+  assert.match(page, /className="virtual-spacer"/);
+  assert.match(css, /thead \{ position: sticky;/);
+  assert.match(css, /\.table-shell \{[^}]*height: clamp\(440px, 70vh, 760px\)/s);
 });
 
 test("supports direct protected persistent catalog editing", async () => {

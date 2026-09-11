@@ -1,8 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
-import catalog from "./data/catalog.json";
 import auctionResultData from "./data/auction-results.json";
 import wantedData from "./data/wanted.json";
 
@@ -138,9 +137,8 @@ type WantedItem = {
   priority: WantedPriority;
 };
 
-type SiteView = "catalogo" | "marcio";
+type SiteView = "catalogo" | "leiloes" | "marcio";
 
-const baseRecords = catalog.records as CatalogRecord[];
 const wantedItems = wantedData as WantedItem[];
 const preparedWanted = wantedItems.map((item) => ({
   item,
@@ -3036,6 +3034,7 @@ function mergeAuctionWatchIntoCatalog(
   records: CatalogRecord[],
   events: AuctionEvent[],
   deletedIds = new Set<string>(),
+  sourceRecords = records,
 ) {
   const merged = records.map((record) => ({
     ...record,
@@ -3048,7 +3047,7 @@ function mergeAuctionWatchIntoCatalog(
     const identity = catalogIdentity(record.artist, record.title);
     if (!indexes.has(identity)) indexes.set(identity, index);
   });
-  const deletedIdentities = new Set(baseRecords
+  const deletedIdentities = new Set(sourceRecords
     .filter((record) => deletedIds.has(record.id))
     .map((record) => catalogIdentity(record.artist, record.title)));
   let nextSourceRow = Math.max(0, ...merged.map((record) => record.sourceRow)) + 1;
@@ -3151,7 +3150,7 @@ function mergeAuctionWatchIntoCatalog(
   return merged;
 }
 
-function mergeCatalogEdits(edits: CatalogEdit[]) {
+function mergeCatalogEdits(baseRecords: CatalogRecord[], edits: CatalogEdit[]) {
   const edited = new Map<string, CatalogRecord>();
   const deleted = new Set<string>();
   for (const edit of edits) {
@@ -3218,7 +3217,7 @@ function mergeCatalogEdits(edits: CatalogEdit[]) {
       };
     }
   }
-  return mergeAuctionWatchIntoCatalog(merged, auctionEvents, deleted);
+  return mergeAuctionWatchIntoCatalog(merged, auctionEvents, deleted, baseRecords);
 }
 
 function parseNumberList(value: string) {
@@ -3392,8 +3391,13 @@ function assessment(offer: number | null, reference: number | null) {
   return { label: "Caro", tone: "high", delta };
 }
 
+const TABLE_ROW_HEIGHT = 54;
+const TABLE_HEADER_HEIGHT = 47;
+const TABLE_OVERSCAN = 12;
+
 export default function Home() {
-  const [records, setRecords] = useState<CatalogRecord[]>(() => mergeAuctionWatchIntoCatalog(baseRecords, auctionEvents));
+  const [records, setRecords] = useState<CatalogRecord[]>([]);
+  const [catalogLoading, setCatalogLoading] = useState(true);
   const [activeView, setActiveView] = useState<SiteView>("catalogo");
   const [query, setQuery] = useState("");
   const [wantedQuery, setWantedQuery] = useState("");
@@ -3413,33 +3417,57 @@ export default function Home() {
   const [draft, setDraft] = useState<CatalogDraft | null>(null);
   const [savingRecord, setSavingRecord] = useState(false);
   const [editorFeedback, setEditorFeedback] = useState("");
+  const tableShellRef = useRef<HTMLElement | null>(null);
+  const tableScrollFrame = useRef<number | null>(null);
+  const [tableViewport, setTableViewport] = useState({ scrollTop: 0, height: 640 });
 
   useEffect(() => {
     let cancelled = false;
-    async function loadCatalogEdits() {
+    async function loadCatalog() {
       try {
-        const response = await fetch("/api/catalog", { cache: "no-store" });
-        const data = await response.json() as {
-          edits?: CatalogEdit[];
-          editor?: EditorSession;
-          error?: string;
-        };
-        if (!response.ok) throw new Error(data.error ?? "Não foi possível carregar as edições.");
+        const baseResponse = await fetch("/catalog.json", { cache: "no-cache" });
+        const baseData = await baseResponse.json() as { records?: CatalogRecord[]; error?: string };
+        if (!baseResponse.ok) throw new Error(baseData.error ?? "Não foi possível carregar o catálogo.");
         if (cancelled) return;
-        setRecords(mergeCatalogEdits(data.edits ?? []));
-        setEditor(data.editor ?? { signedIn: false, canEdit: false, email: null });
-      } catch {
+        const baseRecords = baseData.records ?? [];
+        setRecords(mergeCatalogEdits(baseRecords, []));
+        setCatalogLoading(false);
+        try {
+          const editsResponse = await fetch("/api/catalog", { cache: "no-store" });
+          const editData = await editsResponse.json() as {
+            edits?: CatalogEdit[];
+            editor?: EditorSession;
+            error?: string;
+          };
+          if (!editsResponse.ok) throw new Error(editData.error ?? "Não foi possível carregar as edições.");
+          if (cancelled) return;
+          if (editData.edits?.length) setRecords(mergeCatalogEdits(baseRecords, editData.edits));
+          setEditor(editData.editor ?? { signedIn: false, canEdit: false, email: null });
+        } catch {
+          if (cancelled) return;
+          setEditor({ signedIn: false, canEdit: false, email: null });
+          setEditorFeedback("Catálogo carregado; a edição online está temporariamente indisponível.");
+        }
+      } catch (error) {
         if (cancelled) return;
         setEditor({ signedIn: false, canEdit: false, email: null });
-        setEditorFeedback("A consulta continua disponível, mas a edição online está temporariamente indisponível.");
+        setEditorFeedback(error instanceof Error ? error.message : "Não foi possível carregar o catálogo.");
+      } finally {
+        if (!cancelled) setCatalogLoading(false);
       }
     }
-    loadCatalogEdits();
+    loadCatalog();
     return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
-    const syncViewFromHash = () => setActiveView(window.location.hash === "#marcio-candido" ? "marcio" : "catalogo");
+    const syncViewFromHash = () => setActiveView(
+      window.location.hash === "#marcio-candido"
+        ? "marcio"
+        : window.location.hash === "#proximos-leiloes"
+          ? "leiloes"
+          : "catalogo",
+    );
     syncViewFromHash();
     window.addEventListener("hashchange", syncViewFromHash);
     return () => window.removeEventListener("hashchange", syncViewFromHash);
@@ -3472,6 +3500,26 @@ export default function Home() {
     return () => window.clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    if (activeView !== "catalogo") return;
+    const element = tableShellRef.current;
+    if (!element) return;
+    const measure = () => setTableViewport((current) => {
+      const height = element.clientHeight || current.height;
+      return height === current.height ? current : { ...current, height };
+    });
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, [activeView]);
+
+  useEffect(() => () => {
+    if (tableScrollFrame.current !== null) cancelAnimationFrame(tableScrollFrame.current);
+  }, []);
+
+  const deferredQuery = useDeferredValue(query);
+
 
   const decades = useMemo(
     () => [...new Set(records.flatMap((record) => record.year ? [Math.floor(record.year / 10) * 10] : []))].sort(),
@@ -3480,7 +3528,7 @@ export default function Home() {
 
   const filtered = useMemo(() => {
     if (activeView !== "catalogo") return [];
-    const needle = normalize(query.trim());
+    const needle = normalize(deferredQuery.trim());
     return records
       .filter((record) => {
         const matchesQuery = !needle || normalize(`${record.artist} ${record.title} ${record.year ?? ""}`).includes(needle);
@@ -3507,7 +3555,41 @@ export default function Home() {
         }
         return a.artist.localeCompare(b.artist, "pt-BR") || a.title.localeCompare(b.title, "pt-BR");
       });
-  }, [activeView, query, decade, coverage, sort, offers, records]);
+  }, [activeView, deferredQuery, decade, coverage, sort, offers, records]);
+
+  useEffect(() => {
+    const element = tableShellRef.current;
+    if (!element || activeView !== "catalogo") return;
+    element.scrollTop = 0;
+    setTableViewport((current) => current.scrollTop === 0 ? current : { ...current, scrollTop: 0 });
+  }, [activeView, deferredQuery, decade, coverage, sort]);
+
+  const virtualTable = useMemo(() => {
+    const visibleHeight = Math.max(TABLE_ROW_HEIGHT, tableViewport.height - TABLE_HEADER_HEIGHT);
+    const firstVisible = Math.floor(Math.max(0, tableViewport.scrollTop - TABLE_HEADER_HEIGHT) / TABLE_ROW_HEIGHT);
+    const start = Math.max(0, firstVisible - TABLE_OVERSCAN);
+    const visibleCount = Math.ceil(visibleHeight / TABLE_ROW_HEIGHT) + TABLE_OVERSCAN * 2;
+    const end = Math.min(filtered.length, start + visibleCount);
+    return {
+      start,
+      rows: filtered.slice(start, end),
+      top: start * TABLE_ROW_HEIGHT,
+      bottom: Math.max(0, (filtered.length - end) * TABLE_ROW_HEIGHT),
+    };
+  }, [filtered, tableViewport]);
+
+  function handleTableScroll() {
+    if (tableScrollFrame.current !== null) return;
+    tableScrollFrame.current = requestAnimationFrame(() => {
+      tableScrollFrame.current = null;
+      const element = tableShellRef.current;
+      if (!element) return;
+      setTableViewport((current) => {
+        const next = { scrollTop: element.scrollTop, height: element.clientHeight || current.height };
+        return next.scrollTop === current.scrollTop && next.height === current.height ? current : next;
+      });
+    });
+  }
 
   const comparedCount = Object.values(offers).filter(Boolean).length;
   const separatedCount = Object.values(wantedSeparated).filter(Boolean).length;
@@ -3538,7 +3620,11 @@ export default function Home() {
 
   function selectView(view: SiteView) {
     setActiveView(view);
-    const hash = view === "marcio" ? "#marcio-candido" : "";
+    const hash = view === "marcio"
+      ? "#marcio-candido"
+      : view === "leiloes"
+        ? "#proximos-leiloes"
+        : "";
     window.history.replaceState(null, "", window.location.pathname + window.location.search + hash);
     window.scrollTo({ top: 0 });
   }
@@ -3726,8 +3812,7 @@ export default function Home() {
   }
 
   function openAuctions() {
-    selectView("catalogo");
-    window.requestAnimationFrame(() => document.getElementById("proximos-leiloes")?.scrollIntoView({ behavior: "smooth" }));
+    selectView("leiloes");
   }
 
   const todayAuctionKey = localDateKey(clock);
@@ -3776,7 +3861,10 @@ export default function Home() {
 
       <nav className="site-tabs" aria-label="Áreas do site">
         <button type="button" className={activeView === "catalogo" ? "active" : ""} aria-pressed={activeView === "catalogo"} onClick={() => selectView("catalogo")}>
-          Preços e leilões
+          Tabela de preços
+        </button>
+        <button type="button" className={activeView === "leiloes" ? "active" : ""} aria-pressed={activeView === "leiloes"} onClick={() => selectView("leiloes")}>
+          Próximos leilões <b>{auctionWatchCount}</b>
         </button>
         <button type="button" className={activeView === "marcio" ? "active" : ""} aria-pressed={activeView === "marcio"} onClick={() => selectView("marcio")}>
           Procuras · Márcio Cândido <b>{wantedItems.length}</b>
@@ -3871,7 +3959,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="auction-watch" id="proximos-leiloes" aria-labelledby="auction-title" hidden={activeView !== "catalogo"}>
+      <section className="auction-watch" id="proximos-leiloes" aria-labelledby="auction-title" hidden={activeView !== "leiloes"}>
         <div className="auction-heading">
           <div>
             <p className="kicker">Radar de oportunidades</p>
@@ -3901,7 +3989,7 @@ export default function Home() {
         </div>
 
         <div className="auction-windows">
-          {activeView === "catalogo" && datedAuctionEvents.map((event) => (
+          {activeView === "leiloes" && datedAuctionEvents.map((event) => (
             <details className="auction-window" key={event.id}>
               <summary>
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
@@ -4067,8 +4155,14 @@ export default function Home() {
         <span>Referência = menor valor registrado entre leilão, pesquisa e Adornos</span>
       </div>
 
-      <section className="table-shell" aria-label="Lista de preços de discos" hidden={activeView !== "catalogo"}>
-        <table>
+      <section
+        ref={tableShellRef}
+        className="table-shell"
+        aria-label="Lista de preços de discos"
+        hidden={activeView !== "catalogo"}
+        onScroll={handleTableScroll}
+      >
+        <table aria-rowcount={filtered.length + 1}>
           <thead>
             <tr>
               <th className="col-index">#</th>
@@ -4087,7 +4181,11 @@ export default function Home() {
             </tr>
           </thead>
           <tbody>
-            {activeView === "catalogo" && filtered.map((record, index) => {
+            {virtualTable.top > 0 && (
+              <tr className="virtual-spacer" aria-hidden="true"><td colSpan={13} style={{ height: virtualTable.top }} /></tr>
+            )}
+            {activeView === "catalogo" && !catalogLoading && virtualTable.rows.map((record, windowIndex) => {
+              const index = virtualTable.start + windowIndex;
               const reference = referencePrice(record);
               const offerText = offers[record.id] ?? "";
               const parsedOffer = offerText ? Number(offerText.replace(",", ".")) : null;
@@ -4095,11 +4193,13 @@ export default function Home() {
               const result = assessment(validOffer, reference);
               const visibleTags = record.tags.filter((tag) => !HIDDEN_SOURCE_TAGS.has(tag));
               const rowClass = [
+                "catalog-row",
+                index % 2 === 1 ? "row-even" : "",
                 offerText ? `compared ${result.tone}` : "",
                 editingCell?.recordId === record.id ? "editing-row" : "",
               ].filter(Boolean).join(" ") || undefined;
               return (
-                <tr key={record.id} className={rowClass}>
+                <tr key={record.id} className={rowClass} aria-rowindex={index + 2}>
                   <td className="row-number">{index + 1}</td>
                   {inlineCell(record, "artist", record.artist, "artist-cell", "text")}
                   {inlineCell(record, "title", <>{record.title}{visibleTags.length > 0 && <small>{visibleTags.join(" · ")}</small>}</>, "album-cell", "text")}
@@ -4129,9 +4229,13 @@ export default function Home() {
                 </tr>
               );
             })}
+            {virtualTable.bottom > 0 && (
+              <tr className="virtual-spacer" aria-hidden="true"><td colSpan={13} style={{ height: virtualTable.bottom }} /></tr>
+            )}
           </tbody>
         </table>
-        {filtered.length === 0 && <div className="empty"><strong>Nenhum disco encontrado.</strong><button type="button" onClick={() => { setQuery(""); setDecade("todas"); setCoverage("todos"); }}>Limpar filtros</button></div>}
+        {catalogLoading && <div className="catalog-loading" role="status"><strong>Carregando catálogo…</strong><span>A tabela aparece em instantes.</span></div>}
+        {!catalogLoading && filtered.length === 0 && <div className="empty"><strong>Nenhum disco encontrado.</strong><button type="button" onClick={() => { setQuery(""); setDecade("todas"); setCoverage("todos"); }}>Limpar filtros</button></div>}
       </section>
 
       <footer>

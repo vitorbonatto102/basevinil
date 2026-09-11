@@ -18,19 +18,28 @@ type CatalogEditRow = {
 };
 
 const runtimeEnv = env as unknown as RuntimeEnv;
+let catalogTablePromise: Promise<D1Database> | null = null;
 
 async function ensureCatalogEditsTable() {
   if (!runtimeEnv.DB) throw new Error("Banco de dados indisponível.");
-  await runtimeEnv.DB.prepare(`
-    CREATE TABLE IF NOT EXISTS catalog_edits (
-      record_id TEXT PRIMARY KEY NOT NULL,
-      status TEXT NOT NULL,
-      payload TEXT NOT NULL DEFAULT '{}',
-      updated_by TEXT NOT NULL,
-      updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-    )
-  `).run();
-  return runtimeEnv.DB;
+  if (!catalogTablePromise) {
+    const db = runtimeEnv.DB;
+    catalogTablePromise = db.prepare(`
+      CREATE TABLE IF NOT EXISTS catalog_edits (
+        record_id TEXT PRIMARY KEY NOT NULL,
+        status TEXT NOT NULL,
+        payload TEXT NOT NULL DEFAULT '{}',
+        updated_by TEXT NOT NULL,
+        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+      )
+    `).run()
+      .then(() => db)
+      .catch((error) => {
+        catalogTablePromise = null;
+        throw error;
+      });
+  }
+  return catalogTablePromise;
 }
 
 function editorEmails() {
