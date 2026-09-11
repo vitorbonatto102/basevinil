@@ -3871,20 +3871,6 @@ export default function Home() {
         </button>
       </nav>
 
-      <section className="intro" hidden={activeView !== "catalogo"}>
-        <div>
-          <p className="kicker">Consulta rápida de preços de vinil</p>
-          <h1>Quanto vale esse disco?</h1>
-          <p>Pesquise, compare as referências e digite o preço que encontrou. A lista mostra na hora se está barato.</p>
-        </div>
-        <div className="legend" aria-label="Legenda da comparação">
-          <span><i className="great" /> muito barato</span>
-          <span><i className="good" /> barato</span>
-          <span><i className="fair" /> na faixa</span>
-          <span><i className="high" /> caro</span>
-        </div>
-      </section>
-
       <section className="wanted-watch" id="marcio-candido" aria-labelledby="wanted-title" hidden={activeView !== "marcio"}>
         <div className="wanted-heading">
           <div>

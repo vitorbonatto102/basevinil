@@ -49,5 +49,5 @@ test("protects pages, assets and APIs with the configured password", async () =>
 
   const allowed = await siteFetch("/", { headers: { cookie } });
   assert.equal(allowed.status, 200);
-  assert.match(await allowed.text(), /Quanto vale esse disco\?/);
+  assert.match(await allowed.text(), /Tabela de preços/i);
 });

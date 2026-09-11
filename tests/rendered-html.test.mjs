@@ -19,7 +19,8 @@ test("renders the price-reference list", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
   const html = await response.text();
   assert.match(html, /<title>Preço de Disco — lista de consulta<\/title>/i);
-  assert.match(html, /Quanto vale esse disco\?/);
+  assert.doesNotMatch(html, /Quanto vale esse disco\?/);
+  assert.match(html, /Buscar disco/i);
   assert.match(html, /Preço encontrado/);
   assert.match(html, /Mercado Livre/);
   assert.match(html, /VNN\/VSC\/outras/);
