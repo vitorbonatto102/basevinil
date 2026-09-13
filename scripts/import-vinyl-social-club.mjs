@@ -51,9 +51,47 @@ const artistAliases = new Map([
   [normalize("Lloyd and the Commotions"), normalize("Lloyd Cole and the Commotions")],
   [normalize("Emilio Santioago"), normalize("Emílio Santiago")],
   [normalize("Red Hot Chilli Peppers"), normalize("Red Hot Chili Peppers")],
+  [normalize("Adriana Calcanhoto"), normalize("Adriana Calcanhotto")],
+  [normalize("Beach Boys"), normalize("The Beach Boys")],
+  [normalize("Big Brother Holding and the Company (Janis Joplin)"), normalize("Big Brother & The Holding Company")],
+  [normalize("Cleedence Clearwater Revival"), normalize("Creedence Clearwater Revival")],
+  [normalize("Clube da Esquina - Milton Nascimento/ Lo Borges"), normalize("Milton Nascimento & Lô Borges")],
+  [normalize("Eletric Light Orchestra"), normalize("Electric Light Orchestra")],
+  [normalize("Fagner (Raimundo Fagner)"), normalize("Fagner")],
+  [normalize("Gangstaar"), normalize("Gang Starr")],
+  [normalize("Nothing Hillbillies"), normalize("The Notting Hillbillies")],
+  [normalize("Queen Of the Stone Age"), normalize("Queens of the Stone Age")],
+  [normalize("Spryro Gyra"), normalize("Spyro Gyra")],
+  [normalize("Temple of the Dogs"), normalize("Temple of the Dog")],
+  [normalize("Type o Negative"), normalize("Type O Negative")],
 ]);
 
 const artistKey = (value) => artistAliases.get(normalize(value)) ?? normalize(value);
+const artistDisplayAliases = new Map([
+  [normalize("Adriana Calcanhoto"), "Adriana Calcanhotto"],
+  [normalize("Beach Boys"), "The Beach Boys"],
+  [normalize("Beatles"), "The Beatles"],
+  [normalize("Big Brother Holding and the Company (Janis Joplin)"), "Big Brother & The Holding Company"],
+  [normalize("Cassia Eller"), "Cássia Eller"],
+  [normalize("Cleedence Clearwater Revival"), "Creedence Clearwater Revival"],
+  [normalize("Clube da Esquina - Milton Nascimento/ Lo Borges"), "Milton Nascimento & Lô Borges"],
+  [normalize("Eletric Light Orchestra"), "Electric Light Orchestra"],
+  [normalize("Fagner (Raimundo Fagner)"), "Fagner"],
+  [normalize("Gangstaar"), "Gang Starr"],
+  [normalize("Milionarios e Jose Rico"), "Milionários & José Rico"],
+  [normalize("Nene Capitão e Messias de Jesus"), "Nenê Capitão & Messias de Jesus"],
+  [normalize("Nona Hendrix"), "Nona Hendryx"],
+  [normalize("Nothing Hillbillies"), "The Notting Hillbillies"],
+  [normalize("Queen Of the Stone Age"), "Queens of the Stone Age"],
+  [normalize("Rpm"), "RPM"],
+  [normalize("Som Imaginario"), "Som Imaginário"],
+  [normalize("Spryro Gyra"), "Spyro Gyra"],
+  [normalize("Temple of the Dogs"), "Temple of the Dog"],
+  [normalize("The Marias"), "The Marías"],
+  [normalize("Type o Negative"), "Type O Negative"],
+  [normalize("Vania Bastos"), "Vânia Bastos"],
+  [normalize("Who"), "The Who"],
+]);
 const canonicalItems = new Map([
   [`${normalize("Amy Winehouse")}\u0000${titleKey("Back in Black")}`, { artist: "Amy Winehouse", title: "Back to Black" }],
   [`${normalize("Beatles")}\u0000${titleKey("Please Please")}`, { artist: "The Beatles", title: "Please Please Me" }],
@@ -82,6 +120,35 @@ const canonicalItems = new Map([
   [`${normalize("The Cult")}\u0000${titleKey("Eletric")}`, { artist: "The Cult", title: "Electric" }],
   [`${normalize("Tim Maia")}\u0000${titleKey("1970 (Reedição)")}`, { artist: "Tim Maia", title: "Tim Maia" }],
   [`${normalize("Tropicalia ou Panis et Circencis")}\u0000${titleKey("Serie Reprise")}`, { artist: "Vários Artistas", title: "Tropicália ou Panis et Circencis (Série Reprise)" }],
+  [`${normalize("Barão Vermelho")}\u0000${titleKey("Primeiro")}`, { artist: "Barão Vermelho", title: "Barão" }],
+  [`${normalize("Big Brother Holding and the Company (Janis Joplin)")}\u0000${titleKey("Cheaper Thrills")}`, { artist: "Big Brother & The Holding Company", title: "Cheap Thrills" }],
+  [`${normalize("Clube da Esquina - Milton Nascimento/ Lo Borges")}\u0000${titleKey("cod 164 422902")}`, { artist: "Milton Nascimento & Lô Borges", title: "Clube da Esquina" }],
+  [`${normalize("Clube da Esquina - Milton Nascimento/ Lo Borges")}\u0000${titleKey("Reedição Importada Capa Simples")}`, { artist: "Milton Nascimento & Lô Borges", title: "Clube da Esquina" }],
+  [`${normalize("Cyndi Lauper")}\u0000${titleKey("Twelve Deadly Cyns and then Some")}`, { artist: "Cyndi Lauper", title: "Twelve Deadly Guns" }],
+  [`${normalize("Elvis Presley")}\u0000${titleKey("Now")}`, { artist: "Elvis Presley", title: "Elvis Now" }],
+  [`${normalize("Jorge Ben")}\u0000${titleKey("Tabua de Esmeralda (Reedição)")}`, { artist: "Jorge Ben", title: "A Tábua De Esmeralda" }],
+  [`${normalize("Milt Jackson")}\u0000${titleKey("Be Bop")}`, { artist: "Milt Jackson", title: "Bob Bop" }],
+  [`${normalize("Renaissance")}\u0000${titleKey("Ashes Are Buring")}`, { artist: "Renaissance", title: "Ashes Are Burning" }],
+  [`${normalize("Rolling Stones")}\u0000${titleKey("Thought the Past Darkly (Big Hits Vol.2) (Reedição)")}`, { artist: "The Rolling Stones", title: "Throgh The Past, Darkly" }],
+  [`${normalize("Sepultura")}\u0000${titleKey("Beneath the Remais")}`, { artist: "Sepultura", title: "Beneath The Remains" }],
+  [`${normalize("Secos e Molhados")}\u0000${titleKey("Primeiro Album (Reedição)")}`, { artist: "Secos & Molhados", title: "1973" }],
+  [`${normalize("Tim Maia")}\u0000${titleKey("(Contém Não Quero Dinheiro)")}`, { artist: "Tim Maia", title: "Tim Maia" }],
+  [`${normalize("Al Jarreau")}\u0000${titleKey("Is For Love")}`, { artist: "Al Jarreau", title: "L Is for Lover" }],
+  [`${normalize("Carly Simon")}\u0000${titleKey("The Best")}`, { artist: "Carly Simon", title: "The Best Of" }],
+  [`${normalize("Cyndi Lauper")}\u0000${titleKey("Night to Remeber")}`, { artist: "Cyndi Lauper", title: "A Night to Remember" }],
+  [`${normalize("Dad")}\u0000${titleKey("No Fuel Left For")}`, { artist: "D-A-D", title: "No Fuel Left for the Pilgrims" }],
+  [`${normalize("Dio")}\u0000${titleKey("Angay Machines")}`, { artist: "Dio", title: "Angry Machines" }],
+  [`${normalize("DMM")}\u0000${titleKey("Born Like This")}`, { artist: "DOOM", title: "Born Like This" }],
+  [`${normalize("Genesis")}\u0000${titleKey("Invisible TOuch")}`, { artist: "Genesis", title: "Invisible Touch" }],
+  [`${normalize("Judas Priest")}\u0000${titleKey("British Steel (Reedição")}`, { artist: "Judas Priest", title: "British Steel (reedição)" }],
+  [`${normalize("Malevolant Assault of TOmorrow")}\u0000${titleKey("Violent Force")}`, { artist: "Violent Force", title: "Malevolent Assault of Tomorrow" }],
+  [`${normalize("Nothing Hillbillies")}\u0000${titleKey("Missing")}`, { artist: "The Notting Hillbillies", title: "Missing... Presumed Having a Good Time" }],
+  [`${normalize("Rush")}\u0000${titleKey("Roll the Bonus")}`, { artist: "Rush", title: "Roll the Bones" }],
+  [`${normalize("Sepultura")}\u0000${titleKey("Morbid e Visions")}`, { artist: "Sepultura", title: "Morbid Visions" }],
+  [`${normalize("Temple of the Dogs")}\u0000${titleKey("1991")}`, { artist: "Temple of the Dog", title: "Temple of the Dog (1991)" }],
+  [`${normalize("Tent")}\u0000${titleKey("Intuition")}`, { artist: "TNT", title: "Intuition" }],
+  [`${normalize("Toto")}\u0000${titleKey("Past to Presence")}`, { artist: "Toto", title: "Past to Present 1977–1990" }],
+  [`${normalize("Weather Report")}\u0000${titleKey("Sportin Life")}`, { artist: "Weather Report", title: "Sportin' Life" }],
 ]);
 const inferYear = (title) => {
   const match = title.match(/(?:^|\()((?:19|20)\d{2})(?:\)|$)/);
@@ -92,7 +159,10 @@ for (let index = 0; index < lines.length; index += 3) {
   const [artist, title, priceText] = lines.slice(index, index + 3);
   const match = priceText.match(/^R\$\s*([0-9]+)(?:[.,]([0-9]{2}))?$/i);
   if (!match) throw new Error(`Preço inválido para ${artist} — ${title}: ${priceText}`);
-  const canonical = canonicalItems.get(`${normalize(artist)}\u0000${titleKey(title)}`) ?? { artist, title };
+  const canonical = canonicalItems.get(`${normalize(artist)}\u0000${titleKey(title)}`) ?? {
+    artist: artistDisplayAliases.get(normalize(artist)) ?? artist,
+    title,
+  };
   input.push({ ...canonical, price: Number(match[1]) + Number(match[2] ?? 0) / 100 });
 }
 
@@ -201,6 +271,7 @@ for (const result of results.filter((entry) => entry.method === "new")) {
 }
 
 if (shouldApply) {
+  catalog.generatedAt = new Date().toISOString();
   fs.writeFileSync(catalogPath, `${JSON.stringify(catalog, null, 2)}\n`);
   console.log(`\nCatálogo atualizado em ${catalogPath}`);
 } else {
