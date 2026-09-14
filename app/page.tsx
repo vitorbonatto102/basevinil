@@ -135,11 +135,15 @@ type WantedItem = {
   artist: string;
   title: string;
   priority: WantedPriority;
+  separated?: boolean;
 };
 
 type SiteView = "catalogo" | "leiloes" | "marcio";
 
 const wantedItems = wantedData as WantedItem[];
+const defaultWantedSeparated = Object.fromEntries(
+  wantedItems.filter((item) => item.separated).map((item) => [item.id, true]),
+);
 const preparedWanted = wantedItems.map((item) => ({
   item,
   artistKey: lookupText(item.artist),
@@ -3402,7 +3406,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [wantedQuery, setWantedQuery] = useState("");
   const [wantedPriority, setWantedPriority] = useState("todas");
-  const [wantedSeparated, setWantedSeparated] = useState<Record<string, boolean>>({});
+  const [wantedSeparated, setWantedSeparated] = useState<Record<string, boolean>>(defaultWantedSeparated);
   const [copyFeedback, setCopyFeedback] = useState("");
   const [decade, setDecade] = useState("todas");
   const [coverage, setCoverage] = useState("todos");
@@ -3477,7 +3481,7 @@ export default function Home() {
     try {
       const saved = window.localStorage.getItem("preco-de-disco-ofertas");
       if (saved) setOffers(JSON.parse(saved));
-      const savedWanted = window.localStorage.getItem("preco-de-disco-procuras-separadas");
+      const savedWanted = window.localStorage.getItem("preco-de-disco-procuras-separadas-v2");
       if (savedWanted) setWantedSeparated(JSON.parse(savedWanted));
     } catch { /* preferência local opcional */ }
   }, []);
@@ -3490,7 +3494,7 @@ export default function Home() {
 
   useEffect(() => {
     try {
-      window.localStorage.setItem("preco-de-disco-procuras-separadas", JSON.stringify(wantedSeparated));
+      window.localStorage.setItem("preco-de-disco-procuras-separadas-v2", JSON.stringify(wantedSeparated));
     } catch { /* preferência local opcional */ }
   }, [wantedSeparated]);
   useEffect(() => {
@@ -3876,7 +3880,7 @@ export default function Home() {
           <div>
             <p className="kicker">Cliente · fila de procura</p>
             <h2 id="wanted-title">Márcio Cândido</h2>
-            <p>132 títulos pendentes para encontrar. A+ vem primeiro; marque “separei” quando localizar uma cópia e copie a seleção para enviar ao Márcio.</p>
+            <p>{wantedItems.length - separatedCount} títulos pendentes para encontrar. A+ vem primeiro; marque “separei” quando localizar uma cópia e copie a seleção para enviar ao Márcio.</p>
           </div>
           <div className="wanted-summary" aria-label="Resumo das prioridades">
             <span><b>{wantedItems.filter((item) => item.priority === "A+").length}</b> A+</span>

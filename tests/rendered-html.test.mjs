@@ -30,7 +30,7 @@ test("renders the price-reference list", async () => {
   assert.match(html, /vendido, esgotado ou anúncio indisponível/);
   assert.match(html, /exemplar com avaria\/estado inferior/);
   assert.match(html, /Márcio Cândido/);
-  assert.match(html, /132 títulos pendentes para encontrar/);
+  assert.match(html, /126(?:<!-- -->)? títulos pendentes para encontrar/);
   assert.match(html, /Tabela de preços/);
   assert.match(html, /aria-pressed="true"/);
   assert.match(html, /Copiar separados/);
@@ -60,10 +60,32 @@ test("loads the catalog separately and renders a virtualized editable table", as
   assert.ok(parsed.records.length >= 1300);
   assert.equal(parsedAuctionResults.catavento64681Day1.length, 184);
   assert.equal(parsedAuctionResults.catavento64681Day2TopFive.length, 128);
-  assert.equal(wantedItems.length, 132);
+  assert.equal(wantedItems.length, 142);
   assert.equal(wantedItems.filter((item) => item.priority === "A+").length, 61);
-  assert.equal(wantedItems.filter((item) => item.priority === "A").length, 65);
+  assert.equal(wantedItems.filter((item) => item.priority === "A").length, 75);
   assert.equal(wantedItems.filter((item) => item.priority === "B").length, 6);
+  assert.equal(wantedItems.filter((item) => item.separated).length, 16);
+  const separatedWantedKeys = new Set(wantedItems
+    .filter((item) => item.separated)
+    .map((item) => `${item.artist}|${item.title}`));
+  for (const key of [
+    "The Doors|L.A. Woman",
+    "Dire Straits|Brothers in Arms",
+    "Jethro Tull|Aqualung",
+    "John Coltrane|A Love Supreme",
+    "Al Green|Call Me",
+    "Aretha Franklin|Lady Soul",
+    "Milt Jackson & John Coltrane|Bags & Trane",
+    "Prince|Purple Rain",
+    "Supertramp|Breakfast in America",
+    "Radiohead|OK Computer",
+    "Prince|1999",
+    "Ramones|Ramones",
+    "Yes|Fragile",
+    "The Smashing Pumpkins|Siamese Dream",
+    "Pixies|Doolittle",
+    "Funkadelic|Maggot Brain",
+  ]) assert.ok(separatedWantedKeys.has(key), `${key} deveria estar marcado como separado`);
   assert.equal(new Set(wantedItems.map((item) => item.artist + "|" + item.title)).size, wantedItems.length);
   assert.equal(new Set(parsed.records.map((record) => record.id)).size, parsed.records.length);
   const normalize = (value) => value.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();

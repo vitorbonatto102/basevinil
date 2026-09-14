@@ -129,7 +129,8 @@
     "id": "procura-22",
     "artist": "The Doors",
     "title": "L.A. Woman",
-    "priority": "A+"
+    "priority": "A+",
+    "separated": true
   },
   {
     "id": "procura-23",
@@ -141,13 +142,15 @@
     "id": "procura-24",
     "artist": "Dire Straits",
     "title": "Brothers in Arms",
-    "priority": "A+"
+    "priority": "A+",
+    "separated": true
   },
   {
     "id": "procura-25",
     "artist": "Supertramp",
     "title": "Breakfast in America",
-    "priority": "A+"
+    "priority": "A+",
+    "separated": true
   },
   {
     "id": "procura-26",
@@ -165,7 +168,8 @@
     "id": "procura-28",
     "artist": "Jethro Tull",
     "title": "Aqualung",
-    "priority": "A+"
+    "priority": "A+",
+    "separated": true
   },
   {
     "id": "procura-29",
@@ -375,7 +379,8 @@
     "id": "procura-63",
     "artist": "Radiohead",
     "title": "OK Computer",
-    "priority": "A+"
+    "priority": "A+",
+    "separated": true
   },
   {
     "id": "procura-64",
@@ -477,7 +482,8 @@
     "id": "procura-80",
     "artist": "Al Green",
     "title": "Call Me",
-    "priority": "A"
+    "priority": "A",
+    "separated": true
   },
   {
     "id": "procura-81",
@@ -790,5 +796,75 @@
     "artist": "Violeta de Outono",
     "title": "Violeta de Outono",
     "priority": "B"
+  },
+  {
+    "id": "procura-133",
+    "artist": "John Coltrane",
+    "title": "A Love Supreme",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-134",
+    "artist": "Aretha Franklin",
+    "title": "Lady Soul",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-135",
+    "artist": "Milt Jackson & John Coltrane",
+    "title": "Bags & Trane",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-136",
+    "artist": "Prince",
+    "title": "Purple Rain",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-137",
+    "artist": "Prince",
+    "title": "1999",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-138",
+    "artist": "Ramones",
+    "title": "Ramones",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-139",
+    "artist": "Yes",
+    "title": "Fragile",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-140",
+    "artist": "The Smashing Pumpkins",
+    "title": "Siamese Dream",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-141",
+    "artist": "Pixies",
+    "title": "Doolittle",
+    "priority": "A",
+    "separated": true
+  },
+  {
+    "id": "procura-142",
+    "artist": "Funkadelic",
+    "title": "Maggot Brain",
+    "priority": "A",
+    "separated": true
   }
 ]
