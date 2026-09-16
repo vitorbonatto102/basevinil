@@ -37,13 +37,33 @@ const titleKey = (value) => normalize(value)
   .trim();
 
 const artistAliases = new Map([
+  [normalize("A Split - Second"), normalize("A Split-Second")],
   [normalize("BTO"), normalize("Bachman-Turner Overdrive")],
+  [normalize("Benata"), normalize("Pat Benatar")],
   [normalize("Hamony Cats"), normalize("Harmony Cats")],
   [normalize("Motorhead"), normalize("Motörhead")],
+  [normalize("Motohead"), normalize("Motörhead")],
   [normalize("Motley Crue"), normalize("Mötley Crüe")],
   [normalize("Oscar Perterson"), normalize("Oscar Peterson")],
   [normalize("Reinassance"), normalize("Renaissance")],
   [normalize("The Doobies"), normalize("The Doobie Brothers")],
+  [normalize("The Sugar Cubes"), normalize("The Sugarcubes")],
+]);
+
+const artistDisplayAliases = new Map([
+  [normalize("A Split - Second"), "A Split-Second"],
+  [normalize("Benata"), "Pat Benatar"],
+  [normalize("Biquini Cavadao"), "Biquini Cavadão"],
+  [normalize("Camisa De Venus"), "Camisa de Vênus"],
+  [normalize("Guns´N´Roses"), "Guns N' Roses"],
+  [normalize("Heróis da Resistencia"), "Heróis da Resistência"],
+  [normalize("Lobao"), "Lobão"],
+  [normalize("Maria Bethania"), "Maria Bethânia"],
+  [normalize("Motohead"), "Motörhead"],
+  [normalize("Raíces De America"), "Raíces de América"],
+  [normalize("Sá E Guarabyra"), "Sá & Guarabyra"],
+  [normalize("The Sugar Cubes"), "The Sugarcubes"],
+  [normalize("Yngwie J Malmsteen"), "Yngwie J. Malmsteen"],
 ]);
 
 const artistKey = (value) => artistAliases.get(normalize(value)) ?? normalize(value);
@@ -69,6 +89,15 @@ const canonicalItems = new Map([
   [`${normalize("The Beatles")}\u0000${titleKey("St Pepper´s")}`, { artist: "The Beatles", title: "Sgt. Pepper's Lonely Hearts Club Band" }],
   [`${normalize("The Cult")}\u0000${titleKey("Eletric")}`, { artist: "The Cult", title: "Electric" }],
   [`${normalize("The Doobies")}\u0000${titleKey("The Best Of")}`, { artist: "The Doobie Brothers", title: "Best Of The Doobies" }],
+  [`${normalize("Biquini Cavadao")}\u0000${titleKey("A Era Da Inceteza")}`, { artist: "Biquini Cavadão", title: "A era da incerteza" }],
+  [`${normalize("Camisa De Venus")}\u0000${titleKey("Correndo Risco")}`, { artist: "Camisa de Vênus", title: "Correndo o Risco" }],
+  [`${normalize("Capital Inicial")}\u0000${titleKey("1986")}`, { artist: "Capital Inicial", title: "Capital Inicial" }],
+  [`${normalize("Elton John")}\u0000${titleKey("Spleeping With The Past")}`, { artist: "Elton John", title: "Sleeping with the Past" }],
+  [`${normalize("Heróis da Resistencia")}\u0000${titleKey("1986")}`, { artist: "Heróis da Resistência", title: "Heróis da Resistência" }],
+  [`${normalize("Iron Maiden")}\u0000${titleKey("Power Slave")}`, { artist: "Iron Maiden", title: "Powerslave" }],
+  [`${normalize("Raul Seixas")}\u0000${titleKey("Krig-Ha Bandolo")}`, { artist: "Raul Seixas", title: "Krig-Ha, Bondolo" }],
+  [`${normalize("Rick Wakeman")}\u0000${titleKey("Journey To The Center Of The Earth")}`, { artist: "Rick Wakeman", title: "Journey To The Centre Of The Earth" }],
+  [`${normalize("Tracy Chapman")}\u0000${titleKey("1988")}`, { artist: "Tracy Chapman", title: "Tracy Chapman" }],
 ]);
 
 const input = [];
@@ -76,7 +105,10 @@ for (let index = 0; index < lines.length; index += 3) {
   const [artist, title, priceText] = lines.slice(index, index + 3);
   const match = priceText.match(/^R\$\s*([0-9]+)(?:[.,]([0-9]{2}))?$/i);
   if (!match) throw new Error(`Preço inválido para ${artist} — ${title}: ${priceText}`);
-  const canonical = canonicalItems.get(`${normalize(artist)}\u0000${titleKey(title)}`) ?? { artist, title };
+  const canonical = canonicalItems.get(`${normalize(artist)}\u0000${titleKey(title)}`) ?? {
+    artist: artistDisplayAliases.get(normalize(artist)) ?? artist,
+    title,
+  };
   input.push({ ...canonical, price: Number(match[1]) + Number(match[2] ?? 0) / 100 });
 }
 
