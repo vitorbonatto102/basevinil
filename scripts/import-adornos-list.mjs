@@ -38,8 +38,10 @@ const titleKey = (value) => normalize(value)
 
 const artistAliases = new Map([
   [normalize("A Split - Second"), normalize("A Split-Second")],
+  [normalize("Adoniran Brabosa"), normalize("Adoniran Barbosa")],
   [normalize("BTO"), normalize("Bachman-Turner Overdrive")],
   [normalize("Benata"), normalize("Pat Benatar")],
+  [normalize("Cindy Lauper"), normalize("Cyndi Lauper")],
   [normalize("Hamony Cats"), normalize("Harmony Cats")],
   [normalize("Motorhead"), normalize("Motörhead")],
   [normalize("Motohead"), normalize("Motörhead")],
@@ -48,21 +50,31 @@ const artistAliases = new Map([
   [normalize("Reinassance"), normalize("Renaissance")],
   [normalize("The Doobies"), normalize("The Doobie Brothers")],
   [normalize("The Sugar Cubes"), normalize("The Sugarcubes")],
+  [normalize("Tlaking Heads"), normalize("Talking Heads")],
 ]);
 
 const artistDisplayAliases = new Map([
   [normalize("A Split - Second"), "A Split-Second"],
+  [normalize("Ac/Dc"), "AC/DC"],
+  [normalize("Adoniran Brabosa"), "Adoniran Barbosa"],
   [normalize("Benata"), "Pat Benatar"],
   [normalize("Biquini Cavadao"), "Biquini Cavadão"],
   [normalize("Camisa De Venus"), "Camisa de Vênus"],
+  [normalize("Capoeria"), "Capoeira"],
+  [normalize("Cindy Lauper"), "Cyndi Lauper"],
+  [normalize("Diana Ross, Marvin Gaye"), "Diana Ross, Marvin Gaye"],
   [normalize("Guns´N´Roses"), "Guns N' Roses"],
   [normalize("Heróis da Resistencia"), "Heróis da Resistência"],
+  [normalize("Harry Nilson, Ringo Starr"), "Harry Nilsson & Ringo Starr"],
   [normalize("Lobao"), "Lobão"],
   [normalize("Maria Bethania"), "Maria Bethânia"],
+  [normalize("Miucha"), "Miúcha"],
+  [normalize("Miucha & Tom"), "Miúcha & Tom"],
   [normalize("Motohead"), "Motörhead"],
   [normalize("Raíces De America"), "Raíces de América"],
   [normalize("Sá E Guarabyra"), "Sá & Guarabyra"],
   [normalize("The Sugar Cubes"), "The Sugarcubes"],
+  [normalize("Tlaking Heads"), "Talking Heads"],
   [normalize("Yngwie J Malmsteen"), "Yngwie J. Malmsteen"],
 ]);
 
@@ -98,6 +110,22 @@ const canonicalItems = new Map([
   [`${normalize("Raul Seixas")}\u0000${titleKey("Krig-Ha Bandolo")}`, { artist: "Raul Seixas", title: "Krig-Ha, Bondolo" }],
   [`${normalize("Rick Wakeman")}\u0000${titleKey("Journey To The Center Of The Earth")}`, { artist: "Rick Wakeman", title: "Journey To The Centre Of The Earth" }],
   [`${normalize("Tracy Chapman")}\u0000${titleKey("1988")}`, { artist: "Tracy Chapman", title: "Tracy Chapman" }],
+  [`${normalize("A-Ha")}\u0000${titleKey("Scroundel Days")}`, { artist: "A-Ha", title: "Scoundrel Days" }],
+  [`${normalize("Adoniran Brabosa")}\u0000${titleKey("1980")}`, { artist: "Adoniran Barbosa", title: "1980" }],
+  [`${normalize("Harry Nilson, Ringo Starr")}\u0000${titleKey("Son Of Dracula")}`, { artist: "Harry Nilsson & Ringo Starr", title: "Son of Dracula" }],
+  [`${normalize("Herb Alpert´s Tijuana Brass")}\u0000${titleKey("Whiped Cream & Other Delights")}`, { artist: "Herb Alpert's Tijuana Brass", title: "Whipped Cream & Other Delights" }],
+  [`${normalize("Janis Joplin")}\u0000${titleKey("Cheao Thrills")}`, { artist: "Janis Joplin", title: "Cheap Thrills" }],
+  [`${normalize("João Bosco")}\u0000${titleKey("Gagabiro")}`, { artist: "João Bosco", title: "Gagabirô" }],
+  [`${normalize("João Bosco")}\u0000${titleKey("Tiro De Misericórdia")}`, { artist: "João Bosco", title: "Tiro De Misricórdia" }],
+  [`${normalize("Joy Division")}\u0000${titleKey("Unknow Pleasures")}`, { artist: "Joy Division", title: "Unknown Pleasures" }],
+  [`${normalize("Mano Negra")}\u0000${titleKey("King Of The Bongo")}`, { artist: "Mano Negra", title: "King of Bongo" }],
+  [`${normalize("Miucha & Tom")}\u0000${titleKey("Micha & Antonio Carlos Jobim")}`, { artist: "Miúcha & Tom Jobim", title: "Miúcha & Antônio Carlos Jobim" }],
+  [`${normalize("Rolling Stones")}\u0000${titleKey("Goat Head Soup")}`, { artist: "Rolling Stones", title: "Goats Head Soup" }],
+  [`${normalize("Skyy Light")}\u0000${titleKey("Skyy")}`, { artist: "Skyy", title: "Skyy Light" }],
+  [`${normalize("Supertramp")}\u0000${titleKey("Even In The Quiest Moments")}`, { artist: "Supertramp", title: "Even In The Quietest Moments..." }],
+  [`${normalize("The Beatles")}\u0000${titleKey("St Peppers")}`, { artist: "The Beatles", title: "Sgt. Pepper's Lonely Hearts Club Band" }],
+  [`${normalize("The Cure")}\u0000${titleKey("Kiss Me (2LP)")}`, { artist: "The Cure", title: "Kiss Me, Kiss Me, Kiss Me (2LP)" }],
+  [`${normalize("Tlaking Heads")}\u0000${titleKey("Speaking In Toungues")}`, { artist: "Talking Heads", title: "Speaking in Tongues" }],
 ]);
 
 const input = [];

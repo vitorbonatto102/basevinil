@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T15:19:33.744Z",
+  "generatedAt": "2026-09-20T19:05:50.393Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -157,7 +157,10 @@
         }
       ],
       "tags": [],
-      "adornosPrice": 65
+      "adornosPrices": [
+        65,
+        87
+      ]
     },
     {
       "id": "planilha-10",
@@ -449,7 +452,10 @@
       ],
       "tags": [],
       "auctionPriceStatus": "unverified-copy",
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        109
+      ]
     },
     {
       "id": "planilha-28",
@@ -1097,7 +1103,8 @@
           "numeric": 150
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 148
     },
     {
       "id": "planilha-72",
@@ -1349,7 +1356,8 @@
       "sourceLots": [
         68,
         496
-      ]
+      ],
+      "adornosPrice": 43
     },
     {
       "id": "planilha-89",
@@ -1765,7 +1773,8 @@
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 65
     },
     {
       "id": "planilha-119",
@@ -2124,7 +2133,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        65
+      ]
     },
     {
       "id": "planilha-143",
@@ -2809,7 +2821,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        43
+      ]
     },
     {
       "id": "planilha-197",
@@ -2834,7 +2849,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        109
+      ]
     },
     {
       "id": "planilha-199",
@@ -3081,7 +3099,8 @@
       "auctionPrice": 29,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 109
     },
     {
       "id": "planilha-219",
@@ -3093,7 +3112,8 @@
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 65
     },
     {
       "id": "planilha-220",
@@ -3195,7 +3215,8 @@
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 87
     },
     {
       "id": "planilha-228",
@@ -3214,7 +3235,10 @@
         }
       ],
       "tags": [],
-      "adornosPrice": 43
+      "adornosPrices": [
+        43,
+        65
+      ]
     },
     {
       "id": "planilha-229",
@@ -3323,7 +3347,8 @@
       "auctionPrice": 19,
       "marketMin": null,
       "market": [],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 87
     },
     {
       "id": "planilha-237",
@@ -3446,7 +3471,8 @@
           "numeric": 20
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 43
     },
     {
       "id": "planilha-246",
@@ -4769,7 +4795,8 @@
         }
       ],
       "tags": [],
-      "auctionPriceStatus": "unverified-copy"
+      "auctionPriceStatus": "unverified-copy",
+      "adornosPrice": 65
     },
     {
       "id": "planilha-352",
@@ -7064,7 +7091,10 @@
         }
       ],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        109
+      ]
     },
     {
       "id": "planilha-524",
@@ -7082,7 +7112,8 @@
           "numeric": 40
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 65
     },
     {
       "id": "planilha-525",
@@ -7362,7 +7393,8 @@
           "numeric": 79
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 65
     },
     {
       "id": "planilha-540",
@@ -8041,7 +8073,10 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 43
+      "adornosPrices": [
+        43,
+        65
+      ]
     },
     {
       "id": "adornos-21",
@@ -8131,7 +8166,10 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 65
+      "adornosPrices": [
+        65,
+        87
+      ]
     },
     {
       "id": "adornos-27",
@@ -9367,7 +9405,10 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 109
+      "adornosPrices": [
+        109,
+        148
+      ]
     },
     {
       "id": "adornos-105",
@@ -10471,7 +10512,10 @@
       "tags": [
         "Adornos"
       ],
-      "adornosPrice": 109
+      "adornosPrices": [
+        109,
+        148
+      ]
     },
     {
       "id": "adornos-176",
@@ -11694,7 +11738,8 @@
       ],
       "tags": [
         "Vinyl Social Club"
-      ]
+      ],
+      "adornosPrice": 65
     },
     {
       "id": "vinyl-social-club-810",
@@ -11734,7 +11779,8 @@
       ],
       "tags": [
         "Vinyl Social Club"
-      ]
+      ],
+      "adornosPrice": 109
     },
     {
       "id": "vinyl-social-club-812",
@@ -12188,7 +12234,8 @@
       ],
       "tags": [
         "Vinyl Social Club"
-      ]
+      ],
+      "adornosPrice": 65
     },
     {
       "id": "vinyl-social-club-834",
@@ -14872,7 +14919,8 @@
       ],
       "tags": [
         "Vinyl Social Club"
-      ]
+      ],
+      "adornosPrice": 87
     },
     {
       "id": "vinyl-social-club-966",
@@ -16939,7 +16987,8 @@
       ],
       "tags": [
         "VNN"
-      ]
+      ],
+      "adornosPrice": 189
     },
     {
       "id": "vnn-1084",
@@ -18645,7 +18694,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        109
+      ]
     },
     {
       "id": "adornos-1180",
@@ -19873,7 +19925,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 109
+      "adornosPrices": [
+        109,
+        148
+      ]
     },
     {
       "id": "adornos-1274",
@@ -22687,7 +22742,8 @@
           "numeric": 100
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 109
     },
     {
       "id": "vnn-1477",
@@ -24470,7 +24526,8 @@
           "numeric": 20
         }
       ],
-      "tags": []
+      "tags": [],
+      "adornosPrice": 43
     },
     {
       "id": "vnn-1576",
@@ -27516,7 +27573,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 65
+      "adornosPrices": [
+        65,
+        43
+      ]
     },
     {
       "id": "adornos-1747",
@@ -27971,7 +28031,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 87
+      "adornosPrices": [
+        87,
+        65
+      ]
     },
     {
       "id": "adornos-1782",
@@ -28530,7 +28593,10 @@
       "marketMin": null,
       "market": [],
       "tags": [],
-      "adornosPrice": 43
+      "adornosPrices": [
+        43,
+        21
+      ]
     },
     {
       "id": "adornos-1825",
@@ -29129,6 +29195,1982 @@
       "market": [],
       "tags": [],
       "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1871",
+      "sourceRow": 1871,
+      "lot": null,
+      "artist": "10,000 Maniacs",
+      "title": "In My Tribe",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1872",
+      "sourceRow": 1872,
+      "lot": null,
+      "artist": "AC/DC",
+      "title": "Blow Up Your Video",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1873",
+      "sourceRow": 1873,
+      "lot": null,
+      "artist": "Aerosmith",
+      "title": "Rocks",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1874",
+      "sourceRow": 1874,
+      "lot": null,
+      "artist": "Alcione",
+      "title": "Alerta Geral",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1875",
+      "sourceRow": 1875,
+      "lot": null,
+      "artist": "Aretha Franklin",
+      "title": "Soul´69",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1876",
+      "sourceRow": 1876,
+      "lot": null,
+      "artist": "Aretha Franklin",
+      "title": "Spirit In The Dark",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1877",
+      "sourceRow": 1877,
+      "lot": null,
+      "artist": "Arnaldo Baptista",
+      "title": "Sanguinho Novo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1878",
+      "sourceRow": 1878,
+      "lot": null,
+      "artist": "Astor Piazzolla",
+      "title": "Adios, Nonino",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1879",
+      "sourceRow": 1879,
+      "lot": null,
+      "artist": "Bebeto",
+      "title": "Nos Bailes Da Vida",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1880",
+      "sourceRow": 1880,
+      "lot": null,
+      "artist": "Bezerra Da Silva",
+      "title": "Eu Não Sou Santo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1881",
+      "sourceRow": 1881,
+      "lot": null,
+      "artist": "Blondie",
+      "title": "The Best Of",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1882",
+      "sourceRow": 1882,
+      "lot": null,
+      "artist": "Bob Marley",
+      "title": "Reggae, The Music Of Jamaica",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1883",
+      "sourceRow": 1883,
+      "lot": null,
+      "artist": "Boney M",
+      "title": "Oceans Of Fantasy",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1884",
+      "sourceRow": 1884,
+      "lot": null,
+      "artist": "Bryan Adams",
+      "title": "So Far So Good (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1885",
+      "sourceRow": 1885,
+      "lot": null,
+      "artist": "Bryan Adams",
+      "title": "Waking Up The Neighbours (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1886",
+      "sourceRow": 1886,
+      "lot": null,
+      "artist": "Capital Inicial",
+      "title": "Eletricidade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1887",
+      "sourceRow": 1887,
+      "lot": null,
+      "artist": "Capoeira",
+      "title": "Mestre Suassuna E Dirceu",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1888",
+      "sourceRow": 1888,
+      "lot": null,
+      "artist": "Cassiano",
+      "title": "Cedo Ou Tarde",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1889",
+      "sourceRow": 1889,
+      "lot": null,
+      "artist": "Chitãozinho E Xororó",
+      "title": "Amante Amada",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1890",
+      "sourceRow": 1890,
+      "lot": null,
+      "artist": "Coletânea",
+      "title": "Sugarhill Funk Vol. 1 (104.8235)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1891",
+      "sourceRow": 1891,
+      "lot": null,
+      "artist": "Creedence Clearwater Revival",
+      "title": "Pendulum",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1892",
+      "sourceRow": 1892,
+      "lot": null,
+      "artist": "Creedence Clearwater Revival",
+      "title": "Grandes Sucessos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1893",
+      "sourceRow": 1893,
+      "lot": null,
+      "artist": "Deny & Dino",
+      "title": "1967",
+      "year": 1967,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1894",
+      "sourceRow": 1894,
+      "lot": null,
+      "artist": "Dharana",
+      "title": "Guerreiros Do Arco Íris",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1896",
+      "sourceRow": 1896,
+      "lot": null,
+      "artist": "Dire Straits",
+      "title": "On Every Street",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1897",
+      "sourceRow": 1897,
+      "lot": null,
+      "artist": "Earth, Wind And Fire",
+      "title": "Powerlight",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1898",
+      "sourceRow": 1898,
+      "lot": null,
+      "artist": "Egberto Gismonti",
+      "title": "Sonho 70",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1899",
+      "sourceRow": 1899,
+      "lot": null,
+      "artist": "Elis Regina",
+      "title": "Trem Azul (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1900",
+      "sourceRow": 1900,
+      "lot": null,
+      "artist": "Elis Regina",
+      "title": "Essa Mulher",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1901",
+      "sourceRow": 1901,
+      "lot": null,
+      "artist": "Elis Regina",
+      "title": "Luz Das Estrelas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1902",
+      "sourceRow": 1902,
+      "lot": null,
+      "artist": "Elis Regina",
+      "title": "Nada Será Como Antes",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1903",
+      "sourceRow": 1903,
+      "lot": null,
+      "artist": "Elza Soares",
+      "title": "Somos Todos Iguais",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1904",
+      "sourceRow": 1904,
+      "lot": null,
+      "artist": "Emílio Santiago",
+      "title": "Aquarela Brasileira 3",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1905",
+      "sourceRow": 1905,
+      "lot": null,
+      "artist": "Engenheiros Do Hawaii",
+      "title": "A Revolta Dos Dandis",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1906",
+      "sourceRow": 1906,
+      "lot": null,
+      "artist": "Eric Clapton",
+      "title": "Time Pieces",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1907",
+      "sourceRow": 1907,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "1980",
+      "year": 1980,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1908",
+      "sourceRow": 1908,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "Romance No Deserto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1909",
+      "sourceRow": 1909,
+      "lot": null,
+      "artist": "Faith No More",
+      "title": "Angel Dust",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1910",
+      "sourceRow": 1910,
+      "lot": null,
+      "artist": "Fundo De Quintal",
+      "title": "Divina Luz",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1911",
+      "sourceRow": 1911,
+      "lot": null,
+      "artist": "Furacão 2000",
+      "title": "1988",
+      "year": 1988,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1912",
+      "sourceRow": 1912,
+      "lot": null,
+      "artist": "Garotos Podres",
+      "title": "Canções Para Ninar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1913",
+      "sourceRow": 1913,
+      "lot": null,
+      "artist": "Genesis",
+      "title": "Three Sides Live (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1914",
+      "sourceRow": 1914,
+      "lot": null,
+      "artist": "Genesis",
+      "title": "A Trick Of The Tail",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1915",
+      "sourceRow": 1915,
+      "lot": null,
+      "artist": "George Harrison",
+      "title": "Somewhere In England",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1916",
+      "sourceRow": 1916,
+      "lot": null,
+      "artist": "Gloria Gaynor",
+      "title": "Love Tracks",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1917",
+      "sourceRow": 1917,
+      "lot": null,
+      "artist": "Gonzaguinha",
+      "title": "Começaria Tudo Outra Vez",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1918",
+      "sourceRow": 1918,
+      "lot": null,
+      "artist": "Grace Jones",
+      "title": "Night Clubbing",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1919",
+      "sourceRow": 1919,
+      "lot": null,
+      "artist": "Harry Nilsson & Ringo Starr",
+      "title": "Son of Dracula",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1920",
+      "sourceRow": 1920,
+      "lot": null,
+      "artist": "Helloween",
+      "title": "I",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1921",
+      "sourceRow": 1921,
+      "lot": null,
+      "artist": "Herb Alpert's Tijuana Brass",
+      "title": "Whipped Cream & Other Delights",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1922",
+      "sourceRow": 1922,
+      "lot": null,
+      "artist": "Herva Doce",
+      "title": "1982",
+      "year": 1982,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1923",
+      "sourceRow": 1923,
+      "lot": null,
+      "artist": "Information Society",
+      "title": "Hack",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1924",
+      "sourceRow": 1924,
+      "lot": null,
+      "artist": "Information Society",
+      "title": "The Best Of",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1925",
+      "sourceRow": 1925,
+      "lot": null,
+      "artist": "Ira!",
+      "title": "Meninos Da Rua Paulo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1926",
+      "sourceRow": 1926,
+      "lot": null,
+      "artist": "Iron Butterfly",
+      "title": "In-A-Gadda-Da-Vida",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1927",
+      "sourceRow": 1927,
+      "lot": null,
+      "artist": "Jackson Do Pandeiro",
+      "title": "Sua Majestade, O Rei Do Ritmo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1928",
+      "sourceRow": 1928,
+      "lot": null,
+      "artist": "Jethro Tull",
+      "title": "Heavy Horses",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1929",
+      "sourceRow": 1929,
+      "lot": null,
+      "artist": "Jimi Hendrix",
+      "title": "1971",
+      "year": 1971,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1930",
+      "sourceRow": 1930,
+      "lot": null,
+      "artist": "Jimi Hendrix",
+      "title": "1977",
+      "year": 1977,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1931",
+      "sourceRow": 1931,
+      "lot": null,
+      "artist": "Jimi Hendrix",
+      "title": "The Cry Of Love",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1932",
+      "sourceRow": 1932,
+      "lot": null,
+      "artist": "Jimi Hendrix",
+      "title": "A Arte De (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1933",
+      "sourceRow": 1933,
+      "lot": null,
+      "artist": "Jimmy Cliff",
+      "title": "Images",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1934",
+      "sourceRow": 1934,
+      "lot": null,
+      "artist": "Jimmy Cliff",
+      "title": "The Power And The Glory",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1935",
+      "sourceRow": 1935,
+      "lot": null,
+      "artist": "João Bosco",
+      "title": "Gagabirô",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1936",
+      "sourceRow": 1936,
+      "lot": null,
+      "artist": "João Gilberto",
+      "title": "Interpreta Tom Jobim",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1937",
+      "sourceRow": 1937,
+      "lot": null,
+      "artist": "João Mineiro E Marciano",
+      "title": "A Procura Da Paz",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1938",
+      "sourceRow": 1938,
+      "lot": null,
+      "artist": "Joy Division",
+      "title": "Unknown Pleasures",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1939",
+      "sourceRow": 1939,
+      "lot": null,
+      "artist": "King Crimson",
+      "title": "Beat",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1940",
+      "sourceRow": 1940,
+      "lot": null,
+      "artist": "Kiss",
+      "title": "Destroyer",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1941",
+      "sourceRow": 1941,
+      "lot": null,
+      "artist": "Kitaro",
+      "title": "Ten Years (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1942",
+      "sourceRow": 1942,
+      "lot": null,
+      "artist": "Kool And The Gang",
+      "title": "In The Heart",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1943",
+      "sourceRow": 1943,
+      "lot": null,
+      "artist": "Kool And The Gang",
+      "title": "Something Special",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1944",
+      "sourceRow": 1944,
+      "lot": null,
+      "artist": "Madonna",
+      "title": "Like A Prayer",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1945",
+      "sourceRow": 1945,
+      "lot": null,
+      "artist": "Mano Negra",
+      "title": "King of Bongo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1946",
+      "sourceRow": 1946,
+      "lot": null,
+      "artist": "Mano Negra",
+      "title": "Puta´s Fever",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1947",
+      "sourceRow": 1947,
+      "lot": null,
+      "artist": "Marçal",
+      "title": "Senti Firmeza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1948",
+      "sourceRow": 1948,
+      "lot": null,
+      "artist": "Marina Lima",
+      "title": "Fullgás",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1949",
+      "sourceRow": 1949,
+      "lot": null,
+      "artist": "Martinho Da Vila",
+      "title": "Samba Enredo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1950",
+      "sourceRow": 1950,
+      "lot": null,
+      "artist": "Martinho Da Vila",
+      "title": "Tendinha",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1951",
+      "sourceRow": 1951,
+      "lot": null,
+      "artist": "Milton Nascimento",
+      "title": "Courage",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1952",
+      "sourceRow": 1952,
+      "lot": null,
+      "artist": "Miúcha",
+      "title": "1988 (Autografado)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1953",
+      "sourceRow": 1953,
+      "lot": null,
+      "artist": "Miúcha & Tom",
+      "title": "Falando De Amor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1954",
+      "sourceRow": 1954,
+      "lot": null,
+      "artist": "Miúcha & Tom Jobim",
+      "title": "Miúcha & Antônio Carlos Jobim",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1955",
+      "sourceRow": 1955,
+      "lot": null,
+      "artist": "Moraes Moreira",
+      "title": "Pintando O Sete",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1956",
+      "sourceRow": 1956,
+      "lot": null,
+      "artist": "Moraes Moreira",
+      "title": "Mancha De Dendê Não Sai",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1957",
+      "sourceRow": 1957,
+      "lot": null,
+      "artist": "Neil Young",
+      "title": "Reactor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1958",
+      "sourceRow": 1958,
+      "lot": null,
+      "artist": "New Order",
+      "title": "Substance (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1959",
+      "sourceRow": 1959,
+      "lot": null,
+      "artist": "Novela",
+      "title": "Locomotivas (Nacional)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1960",
+      "sourceRow": 1960,
+      "lot": null,
+      "artist": "O Terço",
+      "title": "Casa Encantada",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1961",
+      "sourceRow": 1961,
+      "lot": null,
+      "artist": "Obina Shok",
+      "title": "1986",
+      "year": 1986,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1962",
+      "sourceRow": 1962,
+      "lot": null,
+      "artist": "Os Originais Do Samba",
+      "title": "Alegria De Sambar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1963",
+      "sourceRow": 1963,
+      "lot": null,
+      "artist": "Os Originais Do Samba",
+      "title": "O Samba É A Corda",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1964",
+      "sourceRow": 1964,
+      "lot": null,
+      "artist": "Papete",
+      "title": "Bandeira De Aço",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1965",
+      "sourceRow": 1965,
+      "lot": null,
+      "artist": "Pat Metheny",
+      "title": "80/81 (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1966",
+      "sourceRow": 1966,
+      "lot": null,
+      "artist": "Phil Collins",
+      "title": "Hello, I Must Be Going",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1967",
+      "sourceRow": 1967,
+      "lot": null,
+      "artist": "Picassos Falsos",
+      "title": "1987",
+      "year": 1987,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1968",
+      "sourceRow": 1968,
+      "lot": null,
+      "artist": "Possessed",
+      "title": "Beyond The Gates",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1969",
+      "sourceRow": 1969,
+      "lot": null,
+      "artist": "Prince",
+      "title": "1999",
+      "year": 1999,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1970",
+      "sourceRow": 1970,
+      "lot": null,
+      "artist": "Raça Negra",
+      "title": "1995",
+      "year": 1995,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1971",
+      "sourceRow": 1971,
+      "lot": null,
+      "artist": "Radio Taxi",
+      "title": "1982",
+      "year": 1982,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1972",
+      "sourceRow": 1972,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "Metrô Linha 743",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1973",
+      "sourceRow": 1973,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "Novo Aeon",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1974",
+      "sourceRow": 1974,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "A Panela Do Diabo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1975",
+      "sourceRow": 1975,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "O Melhor De",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1976",
+      "sourceRow": 1976,
+      "lot": null,
+      "artist": "Reinaldo",
+      "title": "Retrato Cantado De Um Amor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1977",
+      "sourceRow": 1977,
+      "lot": null,
+      "artist": "Ringo Starr",
+      "title": "Time Takes Time",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1978",
+      "sourceRow": 1978,
+      "lot": null,
+      "artist": "Rita Lee",
+      "title": "1990",
+      "year": 1990,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1979",
+      "sourceRow": 1979,
+      "lot": null,
+      "artist": "Roberto Carlos",
+      "title": "1970",
+      "year": 1970,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1980",
+      "sourceRow": 1980,
+      "lot": null,
+      "artist": "Roberto Carlos",
+      "title": "Jovem Guarda",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1981",
+      "sourceRow": 1981,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "As Tears Go By",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1982",
+      "sourceRow": 1982,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Exile On Main Street (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-1983",
+      "sourceRow": 1983,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "1964",
+      "year": 1964,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1984",
+      "sourceRow": 1984,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Flowers",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1985",
+      "sourceRow": 1985,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Goats Head Soup",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1986",
+      "sourceRow": 1986,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Their Satanic Majesties Request",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1987",
+      "sourceRow": 1987,
+      "lot": null,
+      "artist": "Rolling Stones",
+      "title": "Undercover",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1988",
+      "sourceRow": 1988,
+      "lot": null,
+      "artist": "Sábado Som",
+      "title": "1975",
+      "year": 1975,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1989",
+      "sourceRow": 1989,
+      "lot": null,
+      "artist": "Sade",
+      "title": "Promise",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-1990",
+      "sourceRow": 1990,
+      "lot": null,
+      "artist": "Samba De Terreiro E Enredo",
+      "title": "Historia Da MPB",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1991",
+      "sourceRow": 1991,
+      "lot": null,
+      "artist": "Sandra De Sá",
+      "title": "Sandra!",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1992",
+      "sourceRow": 1992,
+      "lot": null,
+      "artist": "Santana",
+      "title": "Amigos",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1993",
+      "sourceRow": 1993,
+      "lot": null,
+      "artist": "Shalamar",
+      "title": "Friends",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1994",
+      "sourceRow": 1994,
+      "lot": null,
+      "artist": "Simone",
+      "title": "Gotas D´Água",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-1995",
+      "sourceRow": 1995,
+      "lot": null,
+      "artist": "Simple Minds",
+      "title": "In The City Of Light (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-1996",
+      "sourceRow": 1996,
+      "lot": null,
+      "artist": "Skank",
+      "title": "Calango",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-1997",
+      "sourceRow": 1997,
+      "lot": null,
+      "artist": "Skyy",
+      "title": "Skyy Light",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-1998",
+      "sourceRow": 1998,
+      "lot": null,
+      "artist": "Snap",
+      "title": "The Madman´s Return",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-1999",
+      "sourceRow": 1999,
+      "lot": null,
+      "artist": "Spandau Ballet",
+      "title": "Parade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-2000",
+      "sourceRow": 2000,
+      "lot": null,
+      "artist": "Stevie Wonder",
+      "title": "Innervisions",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-2001",
+      "sourceRow": 2001,
+      "lot": null,
+      "artist": "Supertramp",
+      "title": "Even In The Quietest Moments...",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-2002",
+      "sourceRow": 2002,
+      "lot": null,
+      "artist": "Suzi Quatro",
+      "title": "1974",
+      "year": 1974,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-2003",
+      "sourceRow": 2003,
+      "lot": null,
+      "artist": "Tempo Nublado",
+      "title": "1993",
+      "year": 1993,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-2004",
+      "sourceRow": 2004,
+      "lot": null,
+      "artist": "The Alan Parsons Project",
+      "title": "Vulture Culture",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 65
+    },
+    {
+      "id": "adornos-2005",
+      "sourceRow": 2005,
+      "lot": null,
+      "artist": "The Cure",
+      "title": "Kiss Me, Kiss Me, Kiss Me (2LP)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2006",
+      "sourceRow": 2006,
+      "lot": null,
+      "artist": "The Smiths",
+      "title": "The World Won´t Listen",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2007",
+      "sourceRow": 2007,
+      "lot": null,
+      "artist": "Talking Heads",
+      "title": "Speaking in Tongues",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2008",
+      "sourceRow": 2008,
+      "lot": null,
+      "artist": "TNT",
+      "title": "1987",
+      "year": 1987,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2009",
+      "sourceRow": 2009,
+      "lot": null,
+      "artist": "Toquinho",
+      "title": "Coisas Do Coração",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-2010",
+      "sourceRow": 2010,
+      "lot": null,
+      "artist": "Trilha Da Série",
+      "title": "Twin Peaks",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2011",
+      "sourceRow": 2011,
+      "lot": null,
+      "artist": "U2",
+      "title": "Achtung Baby",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-2012",
+      "sourceRow": 2012,
+      "lot": null,
+      "artist": "Umbanda",
+      "title": "Pomba Gira",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-2013",
+      "sourceRow": 2013,
+      "lot": null,
+      "artist": "Umbanda",
+      "title": "Candomblé Da Bahia",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-2014",
+      "sourceRow": 2014,
+      "lot": null,
+      "artist": "Umbanda",
+      "title": "Gege-Gexa-Keto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-2015",
+      "sourceRow": 2015,
+      "lot": null,
+      "artist": "Umbanda",
+      "title": "Xire Aos Orixas",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 87
+    },
+    {
+      "id": "adornos-2016",
+      "sourceRow": 2016,
+      "lot": null,
+      "artist": "Vinicius De Moraes",
+      "title": "Cinco Anos Sem Vinicius",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 21
+    },
+    {
+      "id": "adornos-2017",
+      "sourceRow": 2017,
+      "lot": null,
+      "artist": "Violeta De Outono",
+      "title": "Em Toda Parte",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 189
+    },
+    {
+      "id": "adornos-2018",
+      "sourceRow": 2018,
+      "lot": null,
+      "artist": "Wagner Tiso",
+      "title": "Toca Brasil",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-2019",
+      "sourceRow": 2019,
+      "lot": null,
+      "artist": "Yes",
+      "title": "Big Generator",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 43
+    },
+    {
+      "id": "adornos-2020",
+      "sourceRow": 2020,
+      "lot": null,
+      "artist": "Zé Ramalho",
+      "title": "Frevoador",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
+    },
+    {
+      "id": "adornos-2021",
+      "sourceRow": 2021,
+      "lot": null,
+      "artist": "Zimbo Trio",
+      "title": "1978 (Autografado)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-2022",
+      "sourceRow": 2022,
+      "lot": null,
+      "artist": "Zimbo Trio",
+      "title": "Tristeza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 109
+    },
+    {
+      "id": "adornos-2023",
+      "sourceRow": 2023,
+      "lot": null,
+      "artist": "ZZ Top",
+      "title": "Afterburner",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": null,
+      "market": [],
+      "tags": [],
+      "adornosPrice": 148
     }
   ],
   "sources": [
