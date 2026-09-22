@@ -32,7 +32,7 @@ const normalize = (value) => value
   .replace(/\s+/g, " ");
 
 const titleKey = (value) => normalize(value)
-  .replace(/\b(usado|lp|duplo|nacional|importado|vinil)\b/g, " ")
+  .replace(/\b(usado|lp|2lp|3lp|4lp|duplo|nacional|importado|importada|vinil|reedicao|picture|180g)\b/g, " ")
   .replace(/\s+/g, " ")
   .trim();
 
@@ -64,6 +64,9 @@ const artistAliases = new Map([
   [normalize("Spryro Gyra"), normalize("Spyro Gyra")],
   [normalize("Temple of the Dogs"), normalize("Temple of the Dog")],
   [normalize("Type o Negative"), normalize("Type O Negative")],
+  [normalize("Krafterwerk"), normalize("Kraftwerk")],
+  [normalize("Led Zepellin"), normalize("Led Zeppelin")],
+  [normalize("Replicantes"), normalize("Os Replicantes")],
 ]);
 
 const artistKey = (value) => artistAliases.get(normalize(value)) ?? normalize(value);
@@ -89,6 +92,10 @@ const artistDisplayAliases = new Map([
   [normalize("Temple of the Dogs"), "Temple of the Dog"],
   [normalize("The Marias"), "The Marías"],
   [normalize("Type o Negative"), "Type O Negative"],
+  [normalize("Krafterwerk"), "Kraftwerk"],
+  [normalize("Led Zepellin"), "Led Zeppelin"],
+  [normalize("Replicantes"), "Os Replicantes"],
+  [normalize("Wasp"), "W.A.S.P."],
   [normalize("Vania Bastos"), "Vânia Bastos"],
   [normalize("Who"), "The Who"],
 ]);
@@ -149,6 +156,32 @@ const canonicalItems = new Map([
   [`${normalize("Tent")}\u0000${titleKey("Intuition")}`, { artist: "TNT", title: "Intuition" }],
   [`${normalize("Toto")}\u0000${titleKey("Past to Presence")}`, { artist: "Toto", title: "Past to Present 1977–1990" }],
   [`${normalize("Weather Report")}\u0000${titleKey("Sportin Life")}`, { artist: "Weather Report", title: "Sportin' Life" }],
+  [`${normalize("Big Audio Dynamite")}\u0000${titleKey("This is/ New Rock Collection")}`, { artist: "Big Audio Dynamite", title: "This Is Big Audio Dynamite" }],
+  [`${normalize("Chico Science & Nação Zumbi")}\u0000${titleKey("Afrociderbelia (reedição)")}`, { artist: "Chico Science & Nação Zumbi", title: "Afrociberdelia" }],
+  [`${normalize("Clube da Esquina")}\u0000${titleKey("Milton Nascimento e Lô Borges")}`, { artist: "Milton Nascimento & Lô Borges", title: "Clube da Esquina" }],
+  [`${normalize("Depeche Mode")}\u0000${titleKey("Music fot the Masses")}`, { artist: "Depeche Mode", title: "Music for the Masses" }],
+  [`${normalize("Duran Duran")}\u0000${titleKey("Notorius")}`, { artist: "Duran Duran", title: "Notorious" }],
+  [`${normalize("Elis Regina")}\u0000${titleKey("Trem Azul")}`, { artist: "Elis Regina", title: "Trem Azul (2LP)" }],
+  [`${normalize("Elvis Presley")}\u0000${titleKey("Sing the Blues")}`, { artist: "Elvis Presley", title: "Sings the Blues" }],
+  [`${normalize("Ira!")}\u0000${titleKey("Psicoacustica")}`, { artist: "Ira!", title: "Psicoacústica" }],
+  [`${normalize("João Mineiro e Marciano")}\u0000${titleKey("Tarde Para Esquecer")}`, { artist: "João Mineiro & Marciano", title: "Tarde Demais Para Esquecer" }],
+  [`${normalize("Krafterwerk")}\u0000${titleKey("Computer World")}`, { artist: "Kraftwerk", title: "Computer World" }],
+  [`${normalize("Led Zepellin")}\u0000${titleKey("House of the Holy")}`, { artist: "Led Zeppelin", title: "Houses Of The Holy" }],
+  [`${normalize("Legião Urbana")}\u0000${titleKey("Música P/ Acampamento")}`, { artist: "Legião Urbana", title: "Música para Acampamentos" }],
+  [`${normalize("Lo Borges")}\u0000${titleKey("Tenis (Reedição)")}`, { artist: "Lô Borges", title: "Lô Borges (Disco do Tênis)" }],
+  [`${normalize("Milionario e José Rico")}\u0000${titleKey("Vol. 14")}`, { artist: "Milionário & José Rico", title: "Vol. 14" }],
+  [`${normalize("Planet Hemp")}\u0000${titleKey("Os Cães Ladram mas a Caravana não Pará (reedição)")}`, { artist: "Planet Hemp", title: "Os Cães Ladram mas a Caravana Não Para" }],
+  [`${normalize("Pink Floyd")}\u0000${titleKey("Atom Heart")}`, { artist: "Pink Floyd", title: "Atom Heart Mother" }],
+  [`${normalize("Replicantes")}\u0000${titleKey("O Futuro é Vortwx")}`, { artist: "Os Replicantes", title: "O Futuro É Vortex" }],
+  [`${normalize("Rob Zombie")}\u0000${titleKey("Helbilly Deluxe")}`, { artist: "Rob Zombie", title: "Hellbilly Deluxe" }],
+  [`${normalize("Rolling Stones")}\u0000${titleKey("Voodo Lounge")}`, { artist: "The Rolling Stones", title: "Voodoo Lounge" }],
+  [`${normalize("Scorpions")}\u0000${titleKey("Face the Heart")}`, { artist: "Scorpions", title: "Face the Heat" }],
+  [`${normalize("Secos e Molhados")}\u0000${titleKey("Primeiro (Reedição)")}`, { artist: "Secos & Molhados", title: "1973" }],
+  [`${normalize("Secos e Molhados")}\u0000${titleKey("II (Reedição)")}`, { artist: "Secos & Molhados", title: "2" }],
+  [`${normalize("Titãs")}\u0000${titleKey("Tudo Ao Mesmo Tempos Agora")}`, { artist: "Titãs", title: "Tudo Ao Mesmo Tempo Agora" }],
+  [`${normalize("Titãs")}\u0000${titleKey("Cabeça Dinossauro (Reediçõ)")}`, { artist: "Titãs", title: "Cabeça Dinossauro" }],
+  [`${normalize("Tribalistas")}\u0000${titleKey("Primeiro 2002")}`, { artist: "Tribalistas", title: "Tribalistas (2002)" }],
+  [`${normalize("Wasp")}\u0000${titleKey("Inside theE Eletric Circus")}`, { artist: "W.A.S.P.", title: "Inside the Electric Circus" }],
 ]);
 const inferYear = (title) => {
   const match = title.match(/(?:^|\()((?:19|20)\d{2})(?:\)|$)/);
@@ -181,19 +214,6 @@ for (const item of groups.values()) {
   const exact = records.filter((record) => artistKey(record.artist) === artistKey(item.artist) && titleKey(record.title) === titleKey(item.title));
   let matched = exact.length >= 1 ? exact.sort((a, b) => a.sourceRow - b.sourceRow)[0] : null;
   let method = matched ? "exact" : "new";
-
-  if (!matched) {
-    const sameArtist = records.filter((record) => artistKey(record.artist) === artistKey(item.artist));
-    const contained = sameArtist.filter((record) => {
-      const a = titleKey(record.title);
-      const b = titleKey(item.title);
-      return a.length >= 5 && b.length >= 5 && (a.includes(b) || b.includes(a));
-    });
-    if (contained.length === 1 && !/\bvivo\b/i.test(contained[0].title.replace(item.title, ""))) {
-      matched = contained[0];
-      method = "contained";
-    }
-  }
 
   results.push({ item, matched, method });
 }

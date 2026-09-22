@@ -103,7 +103,7 @@ test("loads the catalog separately and renders a virtualized editable table", as
   const vnnRecords = parsed.records.filter((record) =>
     record.market.some((entry) => entry.source === "VNN"),
   );
-  assert.equal(vnnRecords.length, 424);
+  assert.equal(vnnRecords.length, 517);
   assert.ok(vnnRecords.every((record) =>
     record.market.some((entry) => entry.source === "VNN" && entry.numeric > 0),
   ));
