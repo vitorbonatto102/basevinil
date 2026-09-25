@@ -3,21 +3,11 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
-  const workerUrl = new URL("../dist/server/index.js", import.meta.url);
-  workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
-  const { default: worker } = await import(workerUrl.href);
-  return worker.fetch(
-    new Request("http://localhost/", { headers: { accept: "text/html" } }),
-    { ASSETS: { fetch: async () => new Response("Not found", { status: 404 }) } },
-    { waitUntil() {}, passThroughOnException() {} },
-  );
+  return readFile(new URL("../.next/server/app/index.html", import.meta.url), "utf8");
 }
 
 test("renders the price-reference list", async () => {
-  const response = await render();
-  assert.equal(response.status, 200);
-  assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
-  const html = await response.text();
+  const html = await render();
   assert.match(html, /<title>Preço de Disco — lista de consulta<\/title>/i);
   assert.doesNotMatch(html, /Quanto vale esse disco\?/);
   assert.match(html, /Buscar disco/i);
@@ -221,18 +211,21 @@ test("loads the catalog separately and renders a virtualized editable table", as
   assert.match(css, /\.table-shell \{[^}]*height: clamp\(440px, 70vh, 760px\)/s);
 });
 
-test("supports direct protected persistent catalog editing", async () => {
-  const [page, route, schema, hosting] = await Promise.all([
+test("supports direct password-protected persistent catalog editing on Vercel", async () => {
+  const [page, route, store, proxy, packageJson] = await Promise.all([
     readFile(new URL("../app/page.tsx", import.meta.url), "utf8"),
     readFile(new URL("../app/api/catalog/route.ts", import.meta.url), "utf8"),
-    readFile(new URL("../db/schema.ts", import.meta.url), "utf8"),
-    readFile(new URL("../.openai/hosting.json", import.meta.url), "utf8"),
+    readFile(new URL("../lib/catalog-store.ts", import.meta.url), "utf8"),
+    readFile(new URL("../proxy.ts", import.meta.url), "utf8"),
+    readFile(new URL("../package.json", import.meta.url), "utf8"),
   ]);
-  assert.equal(JSON.parse(hosting).d1, "DB");
-  assert.match(schema, /catalog_edits/);
-  assert.match(route, /EDITOR_EMAILS/);
-  assert.match(route, /Esta conta não pode editar o catálogo/);
-  assert.match(route, /ON CONFLICT\(record_id\) DO UPDATE/);
+  assert.equal(JSON.parse(packageJson).scripts.build, "next build");
+  assert.match(proxy, /SITE_PASSWORD/);
+  assert.match(route, /writeCatalogEdit/);
+  assert.match(route, /hasSitePasswordSession/);
+  assert.match(store, /@vercel\/blob/);
+  assert.match(store, /ifMatch/);
+  assert.match(store, /useCache: false/);
   assert.match(page, /Clique em uma célula para editar/);
   assert.match(page, /function inlineCell/);
   assert.match(page, /inlineCell\(record, "leilao", auctionDisplay/);

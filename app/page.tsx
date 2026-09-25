@@ -3357,7 +3357,7 @@ function mergeAuctionWatchIntoCatalog(
   deletedIds = new Set<string>(),
   sourceRecords = records,
 ) {
-  const merged = records.map((record) => ({
+  const merged: CatalogRecord[] = records.map((record) => ({
     ...record,
     auctionPrices: record.auctionPrices ? [...record.auctionPrices] : undefined,
     auctionWatchPrices: record.auctionWatchPrices ? [...record.auctionWatchPrices] : undefined,
@@ -3797,6 +3797,8 @@ export default function Home() {
   useEffect(() => {
     try {
       const saved = window.localStorage.getItem("preco-de-disco-ofertas");
+      // Hydrate the browser-only preference after the server render.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       if (saved) setOffers(JSON.parse(saved));
       const savedWanted = window.localStorage.getItem("preco-de-disco-procuras-separadas-v2");
       if (savedWanted) setWantedSeparated(JSON.parse(savedWanted));
@@ -4138,15 +4140,15 @@ export default function Home() {
 
   const todayAuctionKey = localDateKey(clock);
   const earliestAuctionKey = shiftDateKey(todayAuctionKey, -2);
-  const visibleAuctionEvents = useMemo(() => auctionEvents.filter((event) =>
+  const visibleAuctionEvents = auctionEvents.filter((event) =>
     event.items.some((item) => {
       const date = auctionDateKey(item.date);
       return date !== null && date >= earliestAuctionKey;
-    })), [earliestAuctionKey]);
-  const availableAuctionDates = useMemo(() => [...new Set(visibleAuctionEvents
+    }));
+  const availableAuctionDates = [...new Set(visibleAuctionEvents
     .flatMap((event) => event.items.map((item) => auctionDateKey(item.date)))
-    .filter((date): date is string => Boolean(date) && date >= earliestAuctionKey))]
-    .sort(), [earliestAuctionKey, visibleAuctionEvents]);
+    .filter((date): date is string => date !== null && date >= earliestAuctionKey))]
+    .sort();
   const defaultAuctionDate = availableAuctionDates.includes(todayAuctionKey)
     ? todayAuctionKey
     : availableAuctionDates.find((date) => date > todayAuctionKey)
@@ -4155,12 +4157,12 @@ export default function Home() {
   const activeAuctionDate = selectedAuctionDate && availableAuctionDates.includes(selectedAuctionDate)
     ? selectedAuctionDate
     : defaultAuctionDate;
-  const datedAuctionEvents = useMemo(() => activeAuctionDate === null ? [] : visibleAuctionEvents
+  const datedAuctionEvents = activeAuctionDate === null ? [] : visibleAuctionEvents
     .map((event) => ({
       ...event,
       items: event.items.filter((item) => auctionDateKey(item.date) === activeAuctionDate),
     }))
-    .filter((event) => event.items.length > 0), [activeAuctionDate, visibleAuctionEvents]);
+    .filter((event) => event.items.length > 0);
   const auctionWatchCount = datedAuctionEvents.reduce((total, event) => total + event.items.length, 0);
 
   return (
@@ -4401,7 +4403,7 @@ export default function Home() {
         <div className="catalog-editor-status">
           <div>
             <strong>Tabela online</strong>
-            <span>{editor?.canEdit ? `Clique em uma célula para editar · ${editor.email}` : "Consulta pública · edição protegida"}</span>
+            <span>{editor?.canEdit ? `Clique em uma célula para editar · ${editor.email ?? "senha compartilhada"}` : "Consulta protegida · edição indisponível"}</span>
           </div>
           <div className="catalog-editor-actions">
             <span aria-live="polite">{editorFeedback}</span>
@@ -4410,7 +4412,7 @@ export default function Home() {
             ) : editor?.signedIn ? (
               <span className="editor-denied">Conta sem permissão de edição</span>
             ) : editor ? (
-              <a className="editor-signin" href="/signin-with-chatgpt?return_to=%2F">Entrar para editar</a>
+              <a className="editor-signin" href="/_site-login?return_to=%2F">Entrar com senha para editar</a>
             ) : (
               <span className="editor-loading">Verificando acesso...</span>
             )}

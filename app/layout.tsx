@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const siteUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+  : "http://localhost:3000";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Preço de Disco — lista de consulta",
   description: "Lista rápida para consultar referências e descobrir se um disco está barato.",
   icons: {
@@ -12,13 +17,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Preço de Disco — lista de consulta",
     description: "Pesquise, compare e saiba se um disco está barato.",
-    images: [{ url: "https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/og.jpg", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Preço de Disco — lista de consulta",
     description: "Pesquise, compare e saiba se um disco está barato.",
-    images: ["https://acervo-33-vinil.anamerischneider65.chatgpt.site/og.jpg"],
+    images: ["/og.jpg"],
   },
 };
 

@@ -1,64 +1,18 @@
-import { env } from "cloudflare:workers";
-import { getChatGPTUser } from "../../chatgpt-auth";
+import { catalogStorageConfigured, readCatalogEdits, writeCatalogEdit } from "../../../lib/catalog-store";
+import { hasSitePasswordSession } from "../../../lib/site-password";
 
 export const dynamic = "force-dynamic";
 
 type CatalogEditStatus = "upserted" | "deleted";
 
-type RuntimeEnv = {
-  DB?: D1Database;
-  EDITOR_EMAILS?: string;
-};
-
-type CatalogEditRow = {
-  record_id: string;
-  status: CatalogEditStatus;
-  payload: string;
-  updated_at: string;
-};
-
-const runtimeEnv = env as unknown as RuntimeEnv;
-let catalogTablePromise: Promise<D1Database> | null = null;
-
-async function ensureCatalogEditsTable() {
-  if (!runtimeEnv.DB) throw new Error("Banco de dados indisponível.");
-  if (!catalogTablePromise) {
-    const db = runtimeEnv.DB;
-    catalogTablePromise = db.prepare(`
-      CREATE TABLE IF NOT EXISTS catalog_edits (
-        record_id TEXT PRIMARY KEY NOT NULL,
-        status TEXT NOT NULL,
-        payload TEXT NOT NULL DEFAULT '{}',
-        updated_by TEXT NOT NULL,
-        updated_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
-      )
-    `).run()
-      .then(() => db)
-      .catch((error) => {
-        catalogTablePromise = null;
-        throw error;
-      });
-  }
-  return catalogTablePromise;
-}
-
-function editorEmails() {
-  return new Set((runtimeEnv.EDITOR_EMAILS ?? "")
-    .split(",")
-    .map((email) => email.trim().toLowerCase())
-    .filter(Boolean));
-}
-
-async function editorSession() {
-  const user = await getChatGPTUser();
-  const canEdit = Boolean(user && editorEmails().has(user.email.toLowerCase()));
+async function editorSession(request: Request) {
+  const password = process.env.SITE_PASSWORD;
+  const signedIn = Boolean(password && await hasSitePasswordSession(request, password));
+  const canEdit = signedIn && catalogStorageConfigured();
   return {
-    user,
-    public: {
-      signedIn: Boolean(user),
-      canEdit,
-      email: canEdit ? user?.email ?? null : null,
-    },
+    signedIn,
+    canEdit,
+    email: canEdit ? "senha compartilhada" : null,
   };
 }
 
@@ -82,7 +36,7 @@ function safeRecord(value: unknown, expectedId: string) {
   }
   const serialized = JSON.stringify(record);
   if (serialized.length > 100_000) throw new Error("Registro grande demais.");
-  return serialized;
+  return JSON.parse(serialized) as Record<string, unknown>;
 }
 
 function errorResponse(error: unknown) {
@@ -90,23 +44,11 @@ function errorResponse(error: unknown) {
   return Response.json({ error: message }, { status: 500 });
 }
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const db = await ensureCatalogEditsTable();
-    const result = await db.prepare(`
-      SELECT record_id, status, payload, updated_at
-      FROM catalog_edits
-      ORDER BY updated_at ASC, record_id ASC
-    `).all<CatalogEditRow>();
-    const session = await editorSession();
-    const edits = (result.results ?? []).map((row) => ({
-      id: row.record_id,
-      status: row.status,
-      record: row.status === "deleted" ? null : JSON.parse(row.payload),
-      updatedAt: row.updated_at,
-    }));
+    const edits = await readCatalogEdits();
     return Response.json(
-      { edits, editor: session.public },
+      { edits, editor: await editorSession(request) },
       { headers: { "Cache-Control": "private, no-store" } },
     );
   } catch (error) {
@@ -116,9 +58,9 @@ export async function GET() {
 
 export async function PUT(request: Request) {
   try {
-    const session = await editorSession();
-    if (!session.user) return Response.json({ error: "Entre com o ChatGPT para editar." }, { status: 401 });
-    if (!session.public.canEdit) return Response.json({ error: "Esta conta não pode editar o catálogo." }, { status: 403 });
+    const session = await editorSession(request);
+    if (!session.signedIn) return Response.json({ error: "Entre com a senha para editar." }, { status: 401 });
+    if (!session.canEdit) return Response.json({ error: "O armazenamento online ainda não está configurado." }, { status: 503 });
 
     const body = await request.json() as { id?: unknown; status?: unknown; record?: unknown };
     const id = typeof body.id === "string" ? body.id.trim() : "";
@@ -128,19 +70,16 @@ export async function PUT(request: Request) {
       return Response.json({ error: "Operação inválida." }, { status: 400 });
     }
 
-    const payload = status === "deleted" ? "{}" : safeRecord(body.record, id);
-    const db = await ensureCatalogEditsTable();
-    await db.prepare(`
-      INSERT INTO catalog_edits (record_id, status, payload, updated_by, updated_at)
-      VALUES (?, ?, ?, ?, CURRENT_TIMESTAMP)
-      ON CONFLICT(record_id) DO UPDATE SET
-        status = excluded.status,
-        payload = excluded.payload,
-        updated_by = excluded.updated_by,
-        updated_at = CURRENT_TIMESTAMP
-    `).bind(id, status, payload, session.user.email).run();
+    const updatedAt = new Date().toISOString();
+    await writeCatalogEdit({
+      id,
+      status,
+      record: status === "deleted" ? null : safeRecord(body.record, id),
+      updatedAt,
+      updatedBy: "shared-password",
+    });
 
-    return Response.json({ ok: true, id, status });
+    return Response.json({ ok: true, id, status, updatedAt });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Erro inesperado.";
     const status = /inválid|grande demais/i.test(message) ? 400 : 500;
