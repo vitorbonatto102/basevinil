@@ -18,7 +18,11 @@ const BLOB_PATH = "catalog/catalog-edits.json";
 const EMPTY_SNAPSHOT: CatalogSnapshot = { version: 1, edits: [], updatedAt: null };
 
 export function catalogStorageConfigured() {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN || (process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN));
+  return Boolean(
+    process.env.BLOB_READ_WRITE_TOKEN
+      || (process.env.BLOB_STORE_ID && process.env.VERCEL_OIDC_TOKEN)
+      || process.env.VERCEL === "1",
+  );
 }
 
 async function readSnapshot(): Promise<{ snapshot: CatalogSnapshot; etag: string | null }> {

@@ -224,6 +224,7 @@ test("supports direct password-protected persistent catalog editing on Vercel", 
   assert.match(route, /writeCatalogEdit/);
   assert.match(route, /hasSitePasswordSession/);
   assert.match(store, /@vercel\/blob/);
+  assert.match(store, /process\.env\.VERCEL === "1"/);
   assert.match(store, /ifMatch/);
   assert.match(store, /useCache: false/);
   assert.match(page, /Clique em uma célula para editar/);
