@@ -2,7 +2,7 @@
 
 ## Publicação
 
-Após cada alteração solicitada neste projeto, valide com `npm run build` e publique na Vercel pelo fluxo conectado ao repositório (`git push origin main`, que aciona o deploy automático). Não considere a tarefa publicada até confirmar o push/deploy. Se houver falha de rede, autenticação ou certificado, não desative verificações de segurança; informe o bloqueio e mantenha o commit local pronto para envio.
+Após cada alteração solicitada neste projeto, valide com `npm run build` e publique na Vercel pelo fluxo conectado ao repositório (`git push origin main`, que aciona o deploy automático). Não considere a tarefa publicada até confirmar o push/deploy. Se a verificação de certificado bloquear o push, prefira corrigir a cadeia confiável; só use uma opção de linha de comando que desative a validação SSL se o usuário autorizar explicitamente, nunca como configuração persistente.
 
 Este projeto é uma lista de consulta de preços e oportunidades de compra de discos. Não é um acervo pessoal. Em qualquer pergunta sobre preço, raridade, oportunidade, custo-benefício ou se um disco "está barato", ative automaticamente o **Modo Mega Garimpo**.
 
