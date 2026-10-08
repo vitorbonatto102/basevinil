@@ -64,6 +64,7 @@ const artistAliases = new Map([
   [normalize("Spryro Gyra"), normalize("Spyro Gyra")],
   [normalize("Temple of the Dogs"), normalize("Temple of the Dog")],
   [normalize("Type o Negative"), normalize("Type O Negative")],
+  [normalize("Ultrage a Rigor"), normalize("Ultraje a Rigor")],
   [normalize("Krafterwerk"), normalize("Kraftwerk")],
   [normalize("Led Zepellin"), normalize("Led Zeppelin")],
   [normalize("Replicantes"), normalize("Os Replicantes")],
@@ -92,6 +93,7 @@ const artistDisplayAliases = new Map([
   [normalize("Temple of the Dogs"), "Temple of the Dog"],
   [normalize("The Marias"), "The Marías"],
   [normalize("Type o Negative"), "Type O Negative"],
+  [normalize("Ultrage a Rigor"), "Ultraje a Rigor"],
   [normalize("Krafterwerk"), "Kraftwerk"],
   [normalize("Led Zepellin"), "Led Zeppelin"],
   [normalize("Replicantes"), "Os Replicantes"],
@@ -182,6 +184,16 @@ const canonicalItems = new Map([
   [`${normalize("Titãs")}\u0000${titleKey("Cabeça Dinossauro (Reediçõ)")}`, { artist: "Titãs", title: "Cabeça Dinossauro" }],
   [`${normalize("Tribalistas")}\u0000${titleKey("Primeiro 2002")}`, { artist: "Tribalistas", title: "Tribalistas (2002)" }],
   [`${normalize("Wasp")}\u0000${titleKey("Inside theE Eletric Circus")}`, { artist: "W.A.S.P.", title: "Inside the Electric Circus" }],
+  [`${normalize("Barão Vermelho")}\u0000${titleKey("Barão Vermelho (Novo)")}`, { artist: "Barão Vermelho", title: "Barão" }],
+  [`${normalize("Capital Inicial")}\u0000${titleKey("1986")}`, { artist: "Capital Inicial", title: "Capital Inicial" }],
+  [`${normalize("Diana Ross")}\u0000${titleKey("Theme from Mahogany")}`, { artist: "Diana Ross", title: "Theme from Mahagony" }],
+  [`${normalize("Gal Costa")}\u0000${titleKey("A Arte de (Duplo)")}`, { artist: "Gal Costa", title: "A Arte De Gal Costa" }],
+  [`${normalize("Jethro Tull")}\u0000${titleKey("A")}`, { artist: "Jethro Tull", title: "A (1980)" }],
+  [`${normalize("Nina Hagen")}\u0000${titleKey("Ekstasy")}`, { artist: "Nina Hagen", title: "In Ekstase" }],
+  [`${normalize("Nina Hagen")}\u0000${titleKey("NunSexMonkRock")}`, { artist: "Nina Hagen", title: "NunsSextMonkRock" }],
+  [`${normalize("Rita Lee & Roberto de Carvalho")}\u0000${titleKey("Flerte Fatal")}`, { artist: "Rita Lee", title: "Flerte Fatal" }],
+  [`${normalize("Rita Lee & Roberto de Carvalho")}\u0000${titleKey("Zona Zen")}`, { artist: "Rita Lee", title: "Zona Zen" }],
+  [`${normalize("Ultrage a Rigor")}\u0000${titleKey("Sexo")}`, { artist: "Ultraje a Rigor", title: "Sexo!" }],
 ]);
 const inferYear = (title) => {
   const match = title.match(/(?:^|\()((?:19|20)\d{2})(?:\)|$)/);

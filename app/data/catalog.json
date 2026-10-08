@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T15:42:34.060Z",
+  "generatedAt": "2026-10-08T23:50:11.766Z",
   "source": "Planilha original de preços de discos",
   "records": [
     {
@@ -2196,8 +2196,14 @@
       "title": "Capital Inicial",
       "year": 1986,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
       "tags": [],
       "adornosPrice": 65
     },
@@ -2280,8 +2286,14 @@
       "title": "Mulheres",
       "year": 1993,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
       "tags": []
     },
     {
@@ -2501,8 +2513,14 @@
       "title": "Fool On The Hill",
       "year": 1968,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
       "tags": []
     },
     {
@@ -3332,6 +3350,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 129",
           "numeric": 129
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": []
@@ -3374,8 +3397,14 @@
       "title": "Aquarela Do Brasil",
       "year": 1980,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
       "tags": [],
       "adornosPrice": 43
     },
@@ -3523,6 +3552,11 @@
           "source": "VNN",
           "display": "R$ 20",
           "numeric": 20
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
         }
       ],
       "tags": [],
@@ -3916,8 +3950,14 @@
       "title": "Fina Estampa",
       "year": 1994,
       "auctionPrice": 19,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
       "tags": []
     },
     {
@@ -5426,7 +5466,7 @@
       "title": "The Freddie Mercury Album",
       "year": 1992,
       "auctionPrice": 19,
-      "marketMin": 329,
+      "marketMin": 139,
       "market": [
         {
           "source": "OLX",
@@ -5439,6 +5479,11 @@
           "shipping": "frete grátis anunciado",
           "note": "Preço pedido; sem venda concluída verificada.",
           "checkedAt": "2026-08-20"
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": [],
@@ -5941,12 +5986,17 @@
       "title": "Sold",
       "year": 1987,
       "auctionPrice": 19,
-      "marketMin": 49,
+      "marketMin": 39,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 49",
           "numeric": 49
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": []
@@ -6309,6 +6359,11 @@
           "shipping": "não informado",
           "note": "Preço pedido; confirmar prensagem e conservação.",
           "checkedAt": "2026-08-20"
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": [],
@@ -7616,6 +7671,11 @@
           "source": "VNN",
           "display": "R$ 100",
           "numeric": 100
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": []
@@ -8992,12 +9052,17 @@
       "title": "Trem Caipira",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 69,
+      "marketMin": 59,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 69",
           "numeric": 69
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": [
@@ -9064,6 +9129,11 @@
           "source": "VNN",
           "display": "R$ 30",
           "numeric": 30
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": [
@@ -9697,8 +9767,14 @@
       "title": "Salve Simpatia",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10636,8 +10712,14 @@
       "title": "Flerte Fatal",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -10681,8 +10763,14 @@
       "title": "Zona Zen",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
       "tags": [
         "Adornos"
       ],
@@ -11578,6 +11666,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 89",
           "numeric": 89
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
         }
       ],
       "tags": [
@@ -11600,6 +11693,11 @@
           "source": "Mercado Livre",
           "display": "R$ 60/80",
           "numeric": 60
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
         }
       ],
       "tags": [
@@ -11860,6 +11958,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 69",
           "numeric": 69
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -12081,12 +12184,17 @@
       "title": "Baby I'm-A Want You",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 59,
+      "marketMin": 49,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [
@@ -12290,6 +12398,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 79",
           "numeric": 79
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
         }
       ],
       "tags": [
@@ -12335,6 +12448,11 @@
           "source": "VNN",
           "display": "R$ 50",
           "numeric": 50
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
         }
       ],
       "tags": [
@@ -12350,12 +12468,17 @@
       "title": "Stormbringer",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 149,
+      "marketMin": 139,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 149",
           "numeric": 149
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": [
@@ -12397,6 +12520,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 39",
           "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": [
@@ -12415,6 +12543,11 @@
       "market": [
         {
           "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
           "display": "R$ 39",
           "numeric": 39
         }
@@ -12457,6 +12590,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 49",
           "numeric": 49
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": [
@@ -12531,12 +12669,17 @@
       "title": "Alma",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 69,
+      "marketMin": 59,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 69",
           "numeric": 69
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": [
@@ -12751,12 +12894,17 @@
       "title": "Coração Imprevisto",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 69,
+      "marketMin": 49,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 69",
           "numeric": 69
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [
@@ -13189,6 +13337,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 49",
           "numeric": 49
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [
@@ -13207,6 +13360,11 @@
       "market": [
         {
           "source": "Vinyl Social Club",
+          "display": "R$ 39",
+          "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
           "display": "R$ 39",
           "numeric": 39
         }
@@ -13314,6 +13472,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 89",
           "numeric": 89
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
         }
       ],
       "tags": [
@@ -13374,6 +13537,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 29",
           "numeric": 29
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": [
@@ -13520,6 +13688,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 49",
           "numeric": 49
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [
@@ -13574,12 +13747,17 @@
       "title": "Normal",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 59,
+      "marketMin": 39,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": [
@@ -13600,6 +13778,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 89",
           "numeric": 89
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
         }
       ],
       "tags": [
@@ -13645,6 +13828,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 49",
           "numeric": 49
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -13707,6 +13895,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -13884,12 +14077,17 @@
       "title": "Midnight Star",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 129,
+      "marketMin": 89,
       "market": [
         {
           "source": "Vinyl Social Club",
           "display": "R$ 129",
           "numeric": 129
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
         }
       ],
       "tags": [
@@ -14059,6 +14257,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 39",
           "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [
@@ -14124,6 +14327,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 39",
           "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -14144,6 +14352,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 39",
           "numeric": 39
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -14266,6 +14479,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -14286,6 +14504,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 59",
           "numeric": 59
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
         }
       ],
       "tags": [
@@ -14633,6 +14856,11 @@
           "source": "VNN",
           "display": "R$ 50",
           "numeric": 50
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": [
@@ -15385,6 +15613,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 29",
           "numeric": 29
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": [
@@ -15426,6 +15659,11 @@
           "source": "Vinyl Social Club",
           "display": "R$ 89",
           "numeric": 89
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
         }
       ],
       "tags": [
@@ -15525,6 +15763,11 @@
       "market": [
         {
           "source": "Vinyl Social Club",
+          "display": "R$ 69",
+          "numeric": 69
+        },
+        {
+          "source": "Outras lojas",
           "display": "R$ 69",
           "numeric": 69
         }
@@ -16939,6 +17182,11 @@
           "source": "VNN",
           "display": "R$ 100",
           "numeric": 100
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": [
@@ -18175,6 +18423,11 @@
           "source": "VNN",
           "display": "R$ 70",
           "numeric": 70
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": [
@@ -18376,6 +18629,11 @@
           "source": "VNN",
           "display": "R$ 30",
           "numeric": 30
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
         }
       ],
       "tags": [
@@ -18475,12 +18733,17 @@
       "title": "Barão",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 300,
+      "marketMin": 189,
       "market": [
         {
           "source": "VNN",
           "display": "R$ 300",
           "numeric": 300
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
         }
       ],
       "tags": [],
@@ -21462,8 +21725,14 @@
       "title": "And Then There Were Three",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
       "tags": [],
       "adornosPrice": 65
     },
@@ -25159,6 +25428,11 @@
           "source": "VNN",
           "display": "R$ 20",
           "numeric": 20
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
         }
       ],
       "tags": []
@@ -25826,6 +26100,11 @@
           "source": "VNN",
           "display": "R$ 30",
           "numeric": 30
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": []
@@ -26819,6 +27098,11 @@
           "source": "VNN",
           "display": "R$ 30",
           "numeric": 30
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
         }
       ],
       "tags": [],
@@ -29778,6 +30062,11 @@
           "source": "VNN",
           "display": "R$ 50",
           "numeric": 50
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": [],
@@ -30883,8 +31172,14 @@
       "title": "Flowers",
       "year": null,
       "auctionPrice": null,
-      "marketMin": null,
-      "market": [],
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
       "tags": [],
       "adornosPrice": 148
     },
@@ -31848,12 +32143,17 @@
       "title": "Rock of the Westies (Reedição Importada)",
       "year": null,
       "auctionPrice": null,
-      "marketMin": 150,
+      "marketMin": 139,
       "market": [
         {
           "source": "VNN",
           "display": "R$ 150",
           "numeric": 150
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
         }
       ],
       "tags": []
@@ -32124,6 +32424,11 @@
           "source": "VNN",
           "display": "R$ 20",
           "numeric": 20
+        },
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
         }
       ],
       "tags": []
@@ -35399,6 +35704,1284 @@
       "market": [],
       "tags": [],
       "adornosPrice": 87
+    },
+    {
+      "id": "outras-lojas-2303",
+      "sourceRow": 2303,
+      "lot": null,
+      "artist": "A Cor do Som",
+      "title": "Frutificar",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2304",
+      "sourceRow": 2304,
+      "lot": null,
+      "artist": "Adoniran Barbosa",
+      "title": "1989",
+      "year": 1989,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2305",
+      "sourceRow": 2305,
+      "lot": null,
+      "artist": "Armandinho e o Trio Elétrico Dodô & Osmar",
+      "title": "A Banda da Carmem Miranda",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2306",
+      "sourceRow": 2306,
+      "lot": null,
+      "artist": "Arrigo Barnabé",
+      "title": "Suspeito",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2307",
+      "sourceRow": 2307,
+      "lot": null,
+      "artist": "Banda Mel",
+      "title": "Prefixo de Verão",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2308",
+      "sourceRow": 2308,
+      "lot": null,
+      "artist": "Bebop Deluxe",
+      "title": "Modern Music",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2309",
+      "sourceRow": 2309,
+      "lot": null,
+      "artist": "Bee Gees",
+      "title": "Série Autógrafos de Sucesso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2310",
+      "sourceRow": 2310,
+      "lot": null,
+      "artist": "Belchior",
+      "title": "Um homem em seu tempo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2311",
+      "sourceRow": 2311,
+      "lot": null,
+      "artist": "Bob Marley & The Wailers feat. Peter Tosh",
+      "title": "Early Music",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2312",
+      "sourceRow": 2312,
+      "lot": null,
+      "artist": "Bon Jovi",
+      "title": "Keep The Faith",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2313",
+      "sourceRow": 2313,
+      "lot": null,
+      "artist": "César Costa Filho",
+      "title": "E os sambas viverão",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2314",
+      "sourceRow": 2314,
+      "lot": null,
+      "artist": "Chuck Berry",
+      "title": "Chuck Berry",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2315",
+      "sourceRow": 2315,
+      "lot": null,
+      "artist": "Clara Nunes",
+      "title": "O Canto da Guerreira",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2316",
+      "sourceRow": 2316,
+      "lot": null,
+      "artist": "Clara Petraglia",
+      "title": "Canções do Brasil Vol. 2",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2317",
+      "sourceRow": 2317,
+      "lot": null,
+      "artist": "Creedence Clearwater Revival",
+      "title": "Cosmo's Factory",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2318",
+      "sourceRow": 2318,
+      "lot": null,
+      "artist": "David Bowie",
+      "title": "Never Let Me Down",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2319",
+      "sourceRow": 2319,
+      "lot": null,
+      "artist": "David Gilmour",
+      "title": "About Face",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2320",
+      "sourceRow": 2320,
+      "lot": null,
+      "artist": "Djavan",
+      "title": "Seduzir",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2321",
+      "sourceRow": 2321,
+      "lot": null,
+      "artist": "Dollar Co.",
+      "title": "Country Beatles",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2322",
+      "sourceRow": 2322,
+      "lot": null,
+      "artist": "Durval Ferreira",
+      "title": "Os gatos (Novo)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2323",
+      "sourceRow": 2323,
+      "lot": null,
+      "artist": "Ed Motta & Conexão Japeri",
+      "title": "Ed Motta & Conexão Japeri",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2324",
+      "sourceRow": 2324,
+      "lot": null,
+      "artist": "Elis Regina",
+      "title": "Elis",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2325",
+      "sourceRow": 2325,
+      "lot": null,
+      "artist": "Elis Regina & Toots Thielemans",
+      "title": "Elis Regina e Toots Thielemans",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2326",
+      "sourceRow": 2326,
+      "lot": null,
+      "artist": "Elizeth Cardoso, Zimbo Trio & Jacob do Bandolim",
+      "title": "Recital v.1",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2327",
+      "sourceRow": 2327,
+      "lot": null,
+      "artist": "Emílio Santiago",
+      "title": "Aquarela Brasileira",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2328",
+      "sourceRow": 2328,
+      "lot": null,
+      "artist": "Emílio Santiago",
+      "title": "Aquarela Brasileira 4",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2329",
+      "sourceRow": 2329,
+      "lot": null,
+      "artist": "Enoch Light and The Light Brigade",
+      "title": "Big Band Hits",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2330",
+      "sourceRow": 2330,
+      "lot": null,
+      "artist": "Erasmo Carlos",
+      "title": "Amar Pra Viver, ou Morrer de Amor",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2331",
+      "sourceRow": 2331,
+      "lot": null,
+      "artist": "Fafá de Belém",
+      "title": "Fruto Proibido",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2332",
+      "sourceRow": 2332,
+      "lot": null,
+      "artist": "Fafá de Belém",
+      "title": "Atrevida",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2333",
+      "sourceRow": 2333,
+      "lot": null,
+      "artist": "Fagner",
+      "title": "Traduzir-se (ou Pau de Arara)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2334",
+      "sourceRow": 2334,
+      "lot": null,
+      "artist": "George Benson",
+      "title": "Weekend in L.A.",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2335",
+      "sourceRow": 2335,
+      "lot": null,
+      "artist": "Gilberto Gil",
+      "title": "Ao Vivo (Montreux)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2336",
+      "sourceRow": 2336,
+      "lot": null,
+      "artist": "Jards Macalé / Luiz Melodia",
+      "title": "Nova História da Música Popular Brasileira: Jards Macalé / Luiz Melodia",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2337",
+      "sourceRow": 2337,
+      "lot": null,
+      "artist": "João Gilberto",
+      "title": "Amoroso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2338",
+      "sourceRow": 2338,
+      "lot": null,
+      "artist": "John Denver",
+      "title": "Poems, Prayers & Promises",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2339",
+      "sourceRow": 2339,
+      "lot": null,
+      "artist": "Juca Chaves",
+      "title": "As músicas proibidas de",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2340",
+      "sourceRow": 2340,
+      "lot": null,
+      "artist": "Kid Abelha & Os Abóboras Selvagens",
+      "title": "Kid Abelha & Os Abóboras Selvagens",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2341",
+      "sourceRow": 2341,
+      "lot": null,
+      "artist": "Lobão",
+      "title": "O Rock Errou",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2342",
+      "sourceRow": 2342,
+      "lot": null,
+      "artist": "Luiz Afonso",
+      "title": "Luiz Afonso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2343",
+      "sourceRow": 2343,
+      "lot": null,
+      "artist": "Marco Antônio Araújo",
+      "title": "Entre um Silêncio e Outro",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2344",
+      "sourceRow": 2344,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Autógrafos de Sucesso",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2345",
+      "sourceRow": 2345,
+      "lot": null,
+      "artist": "Maria Bethânia",
+      "title": "Realeza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2346",
+      "sourceRow": 2346,
+      "lot": null,
+      "artist": "Martinha",
+      "title": "Martinha",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2347",
+      "sourceRow": 2347,
+      "lot": null,
+      "artist": "Naná Vasconcelos",
+      "title": "Amazonas (Novo)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2348",
+      "sourceRow": 2348,
+      "lot": null,
+      "artist": "Nilze Carvalho",
+      "title": "Choro de Menina Vol. 4",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2349",
+      "sourceRow": 2349,
+      "lot": null,
+      "artist": "Nilze Carvalho",
+      "title": "Choro de Menina v. 2",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2350",
+      "sourceRow": 2350,
+      "lot": null,
+      "artist": "Nilze Carvalho",
+      "title": "Choro de Menina v. 1 (Autografado)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2351",
+      "sourceRow": 2351,
+      "lot": null,
+      "artist": "Pat Metheny Group",
+      "title": "First Circle",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2352",
+      "sourceRow": 2352,
+      "lot": null,
+      "artist": "Paul McCartney & Wings",
+      "title": "Band on the Run",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2353",
+      "sourceRow": 2353,
+      "lot": null,
+      "artist": "Pepeu Gomes",
+      "title": "Ao Vivo (14th Montreux Jazz Festival)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2354",
+      "sourceRow": 2354,
+      "lot": null,
+      "artist": "Petra",
+      "title": "Not of this world",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2355",
+      "sourceRow": 2355,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "...Por Quem os Sinos Dobram",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2356",
+      "sourceRow": 2356,
+      "lot": null,
+      "artist": "Raul Seixas",
+      "title": "30 Anos de Rock",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2357",
+      "sourceRow": 2357,
+      "lot": null,
+      "artist": "Ringo Starr",
+      "title": "Ringo",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 139,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 139",
+          "numeric": 139
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2358",
+      "sourceRow": 2358,
+      "lot": null,
+      "artist": "Rita Lee",
+      "title": "Atrás do Porto tem uma Cidade",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2359",
+      "sourceRow": 2359,
+      "lot": null,
+      "artist": "Rita Lee",
+      "title": "Babilônia",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2360",
+      "sourceRow": 2360,
+      "lot": null,
+      "artist": "Rui Maurity",
+      "title": "Natureza",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 109,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 109",
+          "numeric": 109
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2361",
+      "sourceRow": 2361,
+      "lot": null,
+      "artist": "Sérgio Mendes & Brasil '77",
+      "title": "Love Music",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 59,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 59",
+          "numeric": 59
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2362",
+      "sourceRow": 2362,
+      "lot": null,
+      "artist": "Slack Alice",
+      "title": "1975",
+      "year": 1975,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2363",
+      "sourceRow": 2363,
+      "lot": null,
+      "artist": "Tadeu Franco",
+      "title": "Alma Animal",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 49,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 49",
+          "numeric": 49
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2364",
+      "sourceRow": 2364,
+      "lot": null,
+      "artist": "Talking Heads",
+      "title": "Fear of Music",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2365",
+      "sourceRow": 2365,
+      "lot": null,
+      "artist": "The Beatles",
+      "title": "Rubber Soul (Mono)",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 289,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 289",
+          "numeric": 289
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2366",
+      "sourceRow": 2366,
+      "lot": null,
+      "artist": "The Who",
+      "title": "Tommy",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2367",
+      "sourceRow": 2367,
+      "lot": null,
+      "artist": "Tom Jobim",
+      "title": "Matita Perê",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 239,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 239",
+          "numeric": 239
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2368",
+      "sourceRow": 2368,
+      "lot": null,
+      "artist": "Vários Artistas",
+      "title": "O Melhor dos Festivais de Minas — Ano IV",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 89,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 89",
+          "numeric": 89
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2369",
+      "sourceRow": 2369,
+      "lot": null,
+      "artist": "Vários Artistas",
+      "title": "Os Grandes Momentos dos Festivais",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 69,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 69",
+          "numeric": 69
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2370",
+      "sourceRow": 2370,
+      "lot": null,
+      "artist": "Vários Artistas",
+      "title": "Choro é isto",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2371",
+      "sourceRow": 2371,
+      "lot": null,
+      "artist": "Vários Artistas",
+      "title": "Música Regional do Brasil",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 39,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 39",
+          "numeric": 39
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2372",
+      "sourceRow": 2372,
+      "lot": null,
+      "artist": "Wagner Tiso",
+      "title": "1978",
+      "year": 1978,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
+    },
+    {
+      "id": "outras-lojas-2373",
+      "sourceRow": 2373,
+      "lot": null,
+      "artist": "Zé Rodrix e a Agência do Malandro",
+      "title": "Quem Sabe Sabe...",
+      "year": null,
+      "auctionPrice": null,
+      "marketMin": 189,
+      "market": [
+        {
+          "source": "Outras lojas",
+          "display": "R$ 189",
+          "numeric": 189
+        }
+      ],
+      "tags": []
     }
   ],
   "sources": [
@@ -35407,6 +36990,7 @@
     "Mercado Livre",
     "Vinyl Social Club",
     "OLX",
-    "VNN"
+    "VNN",
+    "Outras lojas"
   ]
 }
