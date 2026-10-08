@@ -41,8 +41,12 @@ const artistAliases = new Map([
   [normalize("Adoniran Brabosa"), normalize("Adoniran Barbosa")],
   [normalize("BTO"), normalize("Bachman-Turner Overdrive")],
   [normalize("Benata"), normalize("Pat Benatar")],
+  [normalize("CC Music Factory"), normalize("C+C Music Factory")],
   [normalize("Cindy Lauper"), normalize("Cyndi Lauper")],
+  [normalize("Girl School"), normalize("Girlschool")],
   [normalize("Hamony Cats"), normalize("Harmony Cats")],
+  [normalize("Jimmi Hendrix"), normalize("Jimi Hendrix")],
+  [normalize("Mettalica"), normalize("Metallica")],
   [normalize("Motorhead"), normalize("Motörhead")],
   [normalize("Motohead"), normalize("Motörhead")],
   [normalize("Motley Crue"), normalize("Mötley Crüe")],
@@ -59,13 +63,18 @@ const artistDisplayAliases = new Map([
   [normalize("Adoniran Brabosa"), "Adoniran Barbosa"],
   [normalize("Benata"), "Pat Benatar"],
   [normalize("Biquini Cavadao"), "Biquini Cavadão"],
+  [normalize("CC Music Factory"), "C+C Music Factory"],
   [normalize("Camisa De Venus"), "Camisa de Vênus"],
   [normalize("Capoeria"), "Capoeira"],
   [normalize("Cindy Lauper"), "Cyndi Lauper"],
   [normalize("Diana Ross, Marvin Gaye"), "Diana Ross, Marvin Gaye"],
   [normalize("Guns´N´Roses"), "Guns N' Roses"],
+  [normalize("Girl School"), "Girlschool"],
+  [normalize("Freddie Mercury, Monserrat Cabalet"), "Freddie Mercury & Montserrat Caballé"],
   [normalize("Heróis da Resistencia"), "Heróis da Resistência"],
   [normalize("Harry Nilson, Ringo Starr"), "Harry Nilsson & Ringo Starr"],
+  [normalize("Jimmi Hendrix"), "Jimi Hendrix"],
+  [normalize("Mettalica"), "Metallica"],
   [normalize("Lobao"), "Lobão"],
   [normalize("Maria Bethania"), "Maria Bethânia"],
   [normalize("Miucha"), "Miúcha"],
@@ -79,7 +88,15 @@ const artistDisplayAliases = new Map([
 ]);
 
 const artistKey = (value) => artistAliases.get(normalize(value)) ?? normalize(value);
+const noContainedMatch = new Set([
+  `${normalize("Capoeira")}\u0000${titleKey("Mestre Suassuna E Dirceu - Cordão De Ouro Vol 2")}`,
+  `${normalize("Scorpions")}\u0000${titleKey("World")}`,
+]);
 const canonicalItems = new Map([
+  [`${normalize("Chico Buarque")}\u0000${titleKey("A Ópera Do Malandro (2LP)")}`, { artist: "Chico Buarque", title: "Ópera Do Malandro (2LP)" }],
+  [`${normalize("Coverdale")}\u0000${titleKey("Page")}`, { artist: "Coverdale/Page", title: "Coverdale/Page" }],
+  [`${normalize("Mettalica")}\u0000${titleKey("Black Album (2LP)")}`, { artist: "Metallica", title: "Metallica (Black Album)" }],
+  [`${normalize("The Firm")}\u0000${titleKey("Mean Bussiness")}`, { artist: "The Firm", title: "Mean Business" }],
   [`${normalize("Bruce Springsteen")}\u0000${titleKey("Asbury Park")}`, { artist: "Bruce Springsteen", title: "Greetings From Asbury Park, N.J." }],
   [`${normalize("BTO")}\u0000${titleKey("Freeways")}`, { artist: "Bachman-Turner Overdrive", title: "Freeways" }],
   [`${normalize("Márcia, Eduardo Gudin, PC Pinheiro")}\u0000${titleKey("O Imporante É Que Nossa Emoção Sobreviva")}`, { artist: "Márcia, Eduardo Gudin & Paulo César Pinheiro", title: "O Importante É Que Nossa Emoção Sobreviva" }],
@@ -167,7 +184,7 @@ for (const item of groups.values()) {
   let matched = exact.sort((a, b) => a.sourceRow - b.sourceRow)[0] ?? null;
   let method = matched ? "exact" : "new";
 
-  if (!matched) {
+  if (!matched && !noContainedMatch.has(`${normalize(item.artist)}\u0000${titleKey(item.title)}`)) {
     const sameArtist = records.filter((record) => artistKey(record.artist) === artistKey(item.artist));
     const contained = sameArtist.filter((record) => {
       const existing = titleKey(record.title);
