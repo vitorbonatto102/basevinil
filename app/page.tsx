@@ -3737,6 +3737,7 @@ export default function Home() {
   const [editingRecord, setEditingRecord] = useState<CatalogRecord | null>(null);
   const [draft, setDraft] = useState<CatalogDraft | null>(null);
   const [savingRecord, setSavingRecord] = useState(false);
+  const saveLockRef = useRef(false);
   const [editorFeedback, setEditorFeedback] = useState("");
   const tableShellRef = useRef<HTMLElement | null>(null);
   const tableScrollFrame = useRef<number | null>(null);
@@ -3990,7 +3991,7 @@ export default function Home() {
   }
 
   async function saveInlineCell(cell: EditingCell, value: string) {
-    if (savingRecord) return;
+    if (savingRecord || saveLockRef.current) return;
     const record = records.find((item) => item.id === cell.recordId);
     if (!record) return;
     const currentDraft = recordDraft(record);
@@ -4005,6 +4006,7 @@ export default function Home() {
       return;
     }
     const savedRecord = recordFromDraft(record, nextDraft);
+    saveLockRef.current = true;
     setEditingCell(null);
     setInlineValue("");
     setSavingRecord(true);
@@ -4020,8 +4022,11 @@ export default function Home() {
       setRecords((current) => current.map((item) => item.id === savedRecord.id ? savedRecord : item));
       setEditorFeedback("Alteração salva online.");
     } catch (error) {
+      setEditingCell(cell);
+      setInlineValue(value);
       setEditorFeedback(error instanceof Error ? error.message : "Não foi possível salvar.");
     } finally {
+      saveLockRef.current = false;
       setSavingRecord(false);
     }
   }
@@ -4077,12 +4082,13 @@ export default function Home() {
   }
 
   async function saveDraft() {
-    if (!draft || !editingRecord || savingRecord) return;
+    if (!draft || !editingRecord || savingRecord || saveLockRef.current) return;
     if (!draft.artist.trim() || !draft.title.trim()) {
       setEditorFeedback("Preencha artista e álbum antes de salvar.");
       return;
     }
     const savedRecord = recordFromDraft(editingRecord, draft);
+    saveLockRef.current = true;
     setSavingRecord(true);
     setEditorFeedback("Salvando...");
     try {
@@ -4102,17 +4108,19 @@ export default function Home() {
     } catch (error) {
       setEditorFeedback(error instanceof Error ? error.message : "Não foi possível salvar.");
     } finally {
+      saveLockRef.current = false;
       setSavingRecord(false);
     }
   }
 
   async function deleteEditingRecord() {
-    if (!editingRecord || savingRecord) return;
+    if (!editingRecord || savingRecord || saveLockRef.current) return;
     if (!records.some((record) => record.id === editingRecord.id)) {
       cancelEdit();
       return;
     }
     if (!window.confirm(`Excluir ${editingRecord.artist} — ${editingRecord.title} da tabela?`)) return;
+    saveLockRef.current = true;
     setSavingRecord(true);
     setEditorFeedback("Excluindo...");
     try {
@@ -4130,6 +4138,7 @@ export default function Home() {
     } catch (error) {
       setEditorFeedback(error instanceof Error ? error.message : "Não foi possível excluir.");
     } finally {
+      saveLockRef.current = false;
       setSavingRecord(false);
     }
   }

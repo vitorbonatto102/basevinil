@@ -17,6 +17,13 @@ type CatalogSnapshot = {
 const BLOB_PATH = "catalog/catalog-edits.json";
 const EMPTY_SNAPSHOT: CatalogSnapshot = { version: 1, edits: [], updatedAt: null };
 
+export class CatalogWriteConflictError extends Error {
+  constructor() {
+    super("O catálogo está recebendo outra gravação ao mesmo tempo. Seus dados não foram descartados; tente salvar novamente em alguns segundos.");
+    this.name = "CatalogWriteConflictError";
+  }
+}
+
 export function catalogStorageConfigured() {
   return Boolean(
     process.env.BLOB_READ_WRITE_TOKEN
@@ -54,7 +61,7 @@ export async function readCatalogEdits() {
 export async function writeCatalogEdit(edit: StoredCatalogEdit) {
   if (!catalogStorageConfigured()) throw new Error("Armazenamento Vercel Blob ainda não configurado.");
 
-  for (let attempt = 0; attempt < 4; attempt += 1) {
+  for (let attempt = 0; attempt < 8; attempt += 1) {
     const current = await readSnapshot();
     const edits = new Map(current.snapshot.edits.map((item) => [item.id, item]));
     edits.set(edit.id, edit);
@@ -75,7 +82,12 @@ export async function writeCatalogEdit(edit: StoredCatalogEdit) {
     } catch (error) {
       const conflict = error instanceof BlobPreconditionFailedError
         || /already exists|precondition|etag/i.test(error instanceof Error ? error.message : "");
-      if (!conflict || attempt === 3) throw error;
+      if (!conflict) throw error;
+      if (attempt === 7) throw new CatalogWriteConflictError();
+
+      // Concurrent editors can invalidate the ETag between read and write.
+      // Back off so the next read has a chance to observe the winning write.
+      await new Promise((resolve) => setTimeout(resolve, 40 * (attempt + 1) + Math.random() * 60));
     }
   }
 }

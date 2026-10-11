@@ -1,4 +1,4 @@
-import { catalogStorageConfigured, readCatalogEdits, writeCatalogEdit } from "../../../lib/catalog-store";
+import { CatalogWriteConflictError, catalogStorageConfigured, readCatalogEdits, writeCatalogEdit } from "../../../lib/catalog-store";
 import { hasSitePasswordSession } from "../../../lib/site-password";
 
 export const dynamic = "force-dynamic";
@@ -82,6 +82,7 @@ export async function PUT(request: Request) {
     return Response.json({ ok: true, id, status, updatedAt });
   } catch (error) {
     const message = error instanceof Error ? error.message : "Erro inesperado.";
+    if (error instanceof CatalogWriteConflictError) return Response.json({ error: message }, { status: 409 });
     const status = /inválid|grande demais/i.test(message) ? 400 : 500;
     return Response.json({ error: message }, { status });
   }
