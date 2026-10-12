@@ -12,7 +12,8 @@
     "prebuild": "npm run sync:catalog",
     "build": "next build",
     "start": "next start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs tests/password-gate.test.mjs",
+    "test": "npm run build && npm run test:catalog-store && node --test tests/rendered-html.test.mjs tests/password-gate.test.mjs",
+    "test:catalog-store": "node --experimental-strip-types --experimental-test-module-mocks --test tests/catalog-store.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next"
   },
   "dependencies": {
