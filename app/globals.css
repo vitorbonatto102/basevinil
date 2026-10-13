@@ -139,7 +139,8 @@ button, input, select { font: inherit; }
 .auction-evidence > summary { cursor: pointer; color: var(--green); }
 .auction-record .auction-evidence p { white-space: normal; overflow: visible; display: block; font-size: 11px; line-height: 1.45; }
 .auction-comparables { max-width: 100%; overflow-x: auto; margin-top: 8px; }
-.auction-comparables table { width: 100%; border-collapse: collapse; font-size: 10px; }
+.auction-comparables table { width: 100%; min-width: 0; table-layout: fixed; border-collapse: collapse; font-size: 10px; }
+.auction-comparables thead { position: static; }
 .auction-comparables caption { text-align: left; padding-bottom: 5px; color: var(--muted); }
 .auction-comparables th, .auction-comparables td { padding: 6px; border: 1px solid var(--line); text-align: left; vertical-align: top; white-space: normal; }
 .auction-comparables a { color: var(--green); }
