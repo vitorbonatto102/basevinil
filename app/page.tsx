@@ -4,6 +4,7 @@ import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import auctionResultData from "./data/auction-results.json";
 import wantedData from "./data/wanted.json";
+import bv65902Radar from "./data/bv-65902-radar.json";
 
 type MarketObservation = {
   source: string;
@@ -89,6 +90,24 @@ type AuctionWatch = {
   tone: "high" | "medium" | "careful";
   note: string;
   url: string;
+  discs?: { artist: string; title: string }[];
+  analysis?: {
+    score: number;
+    confidence: string;
+    greatBuy: number;
+    fairBid: number;
+    market: string;
+    risks: string;
+    comparables: {
+      source: string;
+      url: string;
+      status: string;
+      edition: string;
+      price: string;
+      shipping: string;
+      checkedAt: string;
+    }[];
+  };
 };
 
 type AuctionEvent = {
@@ -3037,6 +3056,18 @@ const muller65046AuctionWatch: AuctionWatch[] = [
 
 const auctionEvents: AuctionEvent[] = [
   {
+    id: "bv-colecionismo-65902",
+    house: "BV Colecionismo",
+    title: "Vinil em dose dupla · rock, MPB, funk, soul, samba e jazz",
+    dates: "14 de outubro · 19h30",
+    expiresAt: "2026-10-16T00:00:00-03:00",
+    costs: "5% de comissão + frete/embalagem a cotar; valores e tetos pelo lote inteiro. Estado declarado pelo vendedor; conferir fotos e vídeos. Horário final não informado: expiração provisória em 16/10 às 0h, considerando encerramento em 14/10.",
+    catalogUrl: "https://www.bvcolecionismo.lel.br/catalogo.asp?Num=65902&Srt=10&pag=1",
+    updatedAt: "12 out 2026 · 7 páginas / 217 lotes varridos; preços são uma fotografia da consulta, não atualização ao vivo",
+    syncCatalog: false,
+    items: bv65902Radar as AuctionWatch[],
+  },
+  {
     id: "muller-colecoes-65046",
     house: "Muller Coleções",
     title: "Leilão 65046 · arte, antiguidades e discos",
@@ -4313,7 +4344,7 @@ export default function Home() {
                 <span className="auction-window-status"><i aria-hidden="true" /> Próximo</span>
                 <strong>{event.house}<small>{event.title}</small></strong>
                 <span className="auction-window-date">{event.dates}</span>
-                <span className="auction-window-count"><b>{event.items.length}</b> discos</span>
+                <span className="auction-window-count"><b>{event.items.length}</b> lotes</span>
                 <i className="auction-window-arrow" aria-hidden="true" />
               </summary>
 
@@ -4332,7 +4363,7 @@ export default function Home() {
                     <section className="auction-day" key={date} aria-label={`Lotes de ${date}`}>
                       <header>
                         <strong>{date}</strong>
-                        <span>{items.length} {items.length === 1 ? "disco" : "discos"} · por lote</span>
+                        <span>{items.length} {items.length === 1 ? "lote" : "lotes"} · preço do conjunto</span>
                       </header>
                       <div className="auction-list-head" aria-hidden="true">
                         <span>Lote</span><span>Disco / estado</span>
@@ -4349,17 +4380,41 @@ export default function Home() {
                           const isUnsold = item.saleStatus === "unsold";
                           const displayPrice = isSold ? item.settledPrice! : item.currentBid;
                           const withCommission = (isSold ? item.settledPrice! : item.nextBid) * 1.05;
-                          const wanted = wantedMatch(item.artist, item.title);
+                          const wanted = (item.discs ?? [item])
+                            .map((disc) => wantedMatch(disc.artist, disc.title))
+                            .filter((match) => match != null);
                           return (
                             <article className={`auction-row ${item.tone}`} key={item.lot}>
                               <div className="auction-lot"><span>Lote</span><b>{item.lot}</b></div>
                               <div className="auction-record">
-                                <h3>{item.artist}<span>{item.title}</span></h3>
-                                {wanted && (
-                                  <em className="wanted-hit">Procura Márcio · {wanted.priority}</em>
-                                )}
+                                <h3 title={`${item.artist} — ${item.title}`}>{item.artist}<span>{item.title}</span></h3>
+                                {wanted.map((match) => (
+                                  <em className="wanted-hit" key={match.id}>Procura Márcio · {match.priority}{item.discs ? ` · ${match.title}` : ""}</em>
+                                ))}
                                 <p title={item.condition}>{item.condition}</p>
                                 <small title={item.note}>{item.note}</small>
+                                {item.analysis && (
+                                  <details className="auction-evidence">
+                                    <summary>Referências e critérios · {item.analysis.score}/10 · confiança {item.analysis.confidence}</summary>
+                                    <p>{item.analysis.market}</p>
+                                    <p>Riscos: {item.analysis.risks}</p>
+                                    <p>Tetos de lance pelo conjunto: ótima compra até {money(item.analysis.greatBuy)} · justo até {money(item.analysis.fairBid)} · máximo {money(item.ceiling)}. Acrescentar 5%, frete e embalagem; estes últimos ainda não cotados.</p>
+                                    {item.analysis.comparables.length > 0 ? (
+                                      <div className="auction-comparables">
+                                        <table>
+                                          <caption>Comparáveis pesquisados; pedido não é venda realizada</caption>
+                                          <thead><tr><th>Fonte / consulta</th><th>Status</th><th>Edição / estado</th><th>Preço</th><th>Frete / total</th></tr></thead>
+                                          <tbody>{item.analysis.comparables.map((comparable, index) => (
+                                            <tr key={`${comparable.url}-${index}`}>
+                                              <td><a href={comparable.url} target="_blank" rel="noreferrer">{comparable.source}</a><br />{comparable.checkedAt}</td>
+                                              <td>{comparable.status}</td><td>{comparable.edition}</td><td>{comparable.price}</td><td>{comparable.shipping}</td>
+                                            </tr>
+                                          ))}</tbody>
+                                        </table>
+                                      </div>
+                                    ) : <p>Triagem: comparáveis equivalentes insuficientes. O teto é cautelar, não uma avaliação de revenda.</p>}
+                                  </details>
+                                )}
                               </div>
                               <dl className="auction-row-prices">
                                 <div><dt>{isSold ? "Venda" : item.bidLabel ?? "Lance"}</dt><dd>{money(displayPrice)}</dd></div>

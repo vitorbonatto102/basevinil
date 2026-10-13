@@ -135,6 +135,14 @@ button, input, select { font: inherit; }
 .auction-record h3 span::before { content: "— "; color: var(--muted); }
 .auction-record p, .auction-record small { display: block; margin: 4px 0 0; overflow: hidden; color: var(--muted); font-size: 8px; line-height: 1.25; text-overflow: ellipsis; white-space: nowrap; }
 .auction-record small { color: #55564f; }
+.auction-evidence { margin-top: 5px; font-size: 10px; }
+.auction-evidence > summary { cursor: pointer; color: var(--green); }
+.auction-record .auction-evidence p { white-space: normal; overflow: visible; display: block; font-size: 11px; line-height: 1.45; }
+.auction-comparables { max-width: 100%; overflow-x: auto; margin-top: 8px; }
+.auction-comparables table { width: 100%; border-collapse: collapse; font-size: 10px; }
+.auction-comparables caption { text-align: left; padding-bottom: 5px; color: var(--muted); }
+.auction-comparables th, .auction-comparables td { padding: 6px; border: 1px solid var(--line); text-align: left; vertical-align: top; white-space: normal; }
+.auction-comparables a { color: var(--green); }
 .auction-row-prices { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; border-left: 1px solid var(--line); }
 .auction-row-prices > div { display: flex; flex-direction: column; justify-content: center; align-items: flex-end; padding: 7px 8px; border-right: 1px solid var(--line); }
 .auction-row-prices dt { margin-bottom: 3px; color: var(--muted); font: 7px "DM Mono", monospace; text-transform: uppercase; }
